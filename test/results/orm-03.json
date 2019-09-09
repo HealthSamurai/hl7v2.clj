@@ -1,0 +1,1207 @@
+{
+  "parsedResult": [
+    [
+      {
+        "0": "MSH",
+        "1": "|",
+        "2": "^~\\&",
+        "3": null,
+        "4": null,
+        "5": {
+          "0": "^",
+          "1": "IMG_PROC_CHANGE_NEW"
+        },
+        "6": null,
+        "7": "2017-08-07T11:07:33.000Z",
+        "8": "2478",
+        "9": {
+          "0": "^",
+          "1": "ORM",
+          "2": "O01"
+        },
+        "10": "9985",
+        "11": {
+          "0": "^",
+          "1": "P"
+        },
+        "12": "2.3",
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": null,
+        "19": null,
+        "20": null,
+        "21": null,
+        "22": null
+      },
+      {
+        "0": "PID",
+        "1": "1",
+        "2": null,
+        "3": [
+          {
+            "0": "^",
+            "1": "2154876421",
+            "2": null,
+            "3": null,
+            "4": "VITAEHRMRN",
+            "5": null
+          }
+        ],
+        "4": null,
+        "5": {
+          "0": "^",
+          "1": "RAD007C",
+          "2": "ROUNDONE"
+        },
+        "6": null,
+        "7": "1978-06-03T00:00:00.000Z",
+        "8": "M",
+        "9": [],
+        "10": "WHITE",
+        "11": [
+          {
+            "0": "^",
+            "1": "987 KIWI ST",
+            "2": null,
+            "3": "FLATWOODS",
+            "4": "TN",
+            "5": "37096",
+            "6": "US",
+            "7": null
+          }
+        ],
+        "12": null,
+        "13": [
+          {
+            "0": "^",
+            "1": "(545)158-8980",
+            "2": null,
+            "3": "H"
+          }
+        ],
+        "14": [],
+        "15": null,
+        "16": [
+          "Single"
+        ],
+        "17": null,
+        "18": {
+          "0": "^",
+          "1": "45784511"
+        },
+        "19": "144-99-4458",
+        "20": null,
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": null,
+        "25": null,
+        "26": null,
+        "27": null,
+        "28": null,
+        "29": null,
+        "30": null,
+        "31": null
+      },
+      {
+        "0": "PV1",
+        "1": null,
+        "2": "2",
+        "3": {
+          "0": "^",
+          "1": "C DIAGNOSTIC",
+          "2": null,
+          "3": null,
+          "4": "505",
+          "5": null,
+          "6": null,
+          "7": null,
+          "8": null,
+          "9": null,
+          "10": null,
+          "11": null
+        },
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": {
+          "0": "^",
+          "1": "545787",
+          "2": "JOSEPH",
+          "3": "SIMON",
+          "4": null,
+          "5": null,
+          "6": null,
+          "7": null,
+          "8": null,
+          "9": "VITAEHRPHYSICIAN",
+          "10": null,
+          "11": null,
+          "12": null,
+          "13": null
+        },
+        "8": null,
+        "9": [],
+        "10": "IMAGING",
+        "11": null,
+        "12": null,
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": null,
+        "19": {
+          "0": "^",
+          "1": "100472852"
+        },
+        "20": [],
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": [],
+        "25": [],
+        "26": [],
+        "27": [],
+        "28": null,
+        "29": null,
+        "30": null,
+        "31": null,
+        "32": null,
+        "33": null,
+        "34": null,
+        "35": null,
+        "36": null,
+        "37": null,
+        "38": null,
+        "39": null,
+        "40": null,
+        "41": null,
+        "42": null,
+        "43": null,
+        "44": "2017-08-06T15:02:16.000Z",
+        "45": null,
+        "46": null,
+        "47": null,
+        "48": null,
+        "49": null,
+        "50": null,
+        "51": "V"
+      },
+      {
+        "0": "ORC",
+        "1": "NW",
+        "2": [
+          {
+            "0": "^",
+            "1": "125307696",
+            "2": "VIT"
+          }
+        ],
+        "3": {
+          "0": "^",
+          "1": "4907631",
+          "2": "VIT"
+        },
+        "4": null,
+        "5": "IP",
+        "6": null,
+        "7": {
+          "0": "^",
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": "2017-08-07T11:45:27.000Z",
+          "5": null,
+          "6": "Routine"
+        },
+        "8": null,
+        "9": "2017-08-07T11:07:33.000Z",
+        "10": {
+          "0": "^",
+          "1": "JACKHL6",
+          "2": "JACKSON",
+          "3": "HANNAH",
+          "4": "L.",
+          "5": null
+        },
+        "11": null,
+        "12": [
+          {
+            "0": "^",
+            "1": "545787",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VITAEHRPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          },
+          {
+            "0": "^",
+            "1": "54890",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "MIRRAEHRPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          },
+          {
+            "0": "^",
+            "1": "940B",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VERAEHRPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          },
+          {
+            "0": "^",
+            "1": "J796",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VERAEHRPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          },
+          {
+            "0": "^",
+            "1": "4608",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "GOLDENGATEPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          },
+          {
+            "0": "^",
+            "1": "5547",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "MEGAPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          },
+          {
+            "0": "^",
+            "1": "9804",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VERAEHRPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          }
+        ],
+        "13": {
+          "0": "^",
+          "1": "C DIAGNOSTIC",
+          "2": null,
+          "3": null,
+          "4": "505",
+          "5": null,
+          "6": null,
+          "7": null,
+          "8": null,
+          "9": null
+        },
+        "14": [
+          "(505)145-7896"
+        ],
+        "15": null,
+        "16": null,
+        "17": {
+          "0": "^",
+          "1": "5489464"
+        },
+        "18": null,
+        "19": null,
+        "20": null,
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": null,
+        "25": null,
+        "26": null,
+        "27": null,
+        "28": null,
+        "29": "I"
+      },
+      {
+        "0": "OBR",
+        "1": "1",
+        "2": [
+          {
+            "0": "^",
+            "1": "125307696",
+            "2": "VIT"
+          }
+        ],
+        "3": {
+          "0": "^",
+          "1": "4907631",
+          "2": "VIT"
+        },
+        "4": {
+          "0": "^",
+          "1": "RAD65894",
+          "2": "XC UGI AIR CONTRAST WITH KUB",
+          "3": null,
+          "4": null,
+          "5": "XC UGI AIR C"
+        },
+        "5": "Routine",
+        "6": "2017-08-07T12:14:54.000Z",
+        "7": null,
+        "8": null,
+        "9": null,
+        "10": [],
+        "11": "Norm",
+        "12": null,
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": [
+          {
+            "0": "^",
+            "1": "545787",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VITAEHRPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          },
+          {
+            "0": "^",
+            "1": "54890",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "MIRRAEHRPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          },
+          {
+            "0": "^",
+            "1": "940B",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VERAEHRPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          },
+          {
+            "0": "^",
+            "1": "J796",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VERAEHRPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          },
+          {
+            "0": "^",
+            "1": "4608",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "GOLDENGATEPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          },
+          {
+            "0": "^",
+            "1": "5547",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "MEGAPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          },
+          {
+            "0": "^",
+            "1": "9804",
+            "2": "JOSEPH",
+            "3": "SIMON",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VERAEHRPHYSICIAN",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null
+          }
+        ],
+        "17": [
+          {
+            "0": "^",
+            "1": "(505)145-7896"
+          }
+        ],
+        "18": null,
+        "19": "C DIAGNOSTIC",
+        "20": null,
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": "CR",
+        "25": "IP",
+        "26": null,
+        "27": {
+          "0": "^",
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": "2017-08-07T11:45:27.000Z",
+          "5": null,
+          "6": "Routine"
+        },
+        "28": [],
+        "29": null,
+        "30": null,
+        "31": [
+          {
+            "0": "^",
+            "1": null,
+            "2": "test"
+          }
+        ],
+        "32": null,
+        "33": [],
+        "34": [],
+        "35": [],
+        "36": "2017-08-07T11:45:27.000Z",
+        "37": null,
+        "38": [],
+        "39": [],
+        "40": null,
+        "41": null,
+        "42": null,
+        "43": [],
+        "44": "RAD65894^XC UGI AIR CONTRAST WITH KUB^^^XC UGI AIR C"
+      },
+      {
+        "0": "NTE",
+        "1": "1",
+        "2": null,
+        "3": [
+          "Reason for Exam:->test"
+        ],
+        "4": null
+      },
+      {
+        "0": "NTE",
+        "1": "2",
+        "2": null,
+        "3": [
+          "Have related studies been done elsewhere?->No"
+        ],
+        "4": null
+      }
+    ],
+    []
+  ],
+  "structurizedResult": [
+    {
+      "MSH": {
+        "0": "MSH",
+        "1": "|",
+        "2": "^~\\&",
+        "3": null,
+        "4": null,
+        "5": {
+          "0": "^",
+          "1": "IMG_PROC_CHANGE_NEW"
+        },
+        "6": null,
+        "7": "2017-08-07T11:07:33.000Z",
+        "8": "2478",
+        "9": {
+          "0": "^",
+          "1": "ORM",
+          "2": "O01"
+        },
+        "10": "9985",
+        "11": {
+          "0": "^",
+          "1": "P"
+        },
+        "12": "2.3",
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": null,
+        "19": null,
+        "20": null,
+        "21": null,
+        "22": null
+      },
+      "PATIENT": {
+        "PID": {
+          "0": "PID",
+          "1": "1",
+          "2": null,
+          "3": [
+            {
+              "0": "^",
+              "1": "2154876421",
+              "2": null,
+              "3": null,
+              "4": "VITAEHRMRN",
+              "5": null
+            }
+          ],
+          "4": null,
+          "5": {
+            "0": "^",
+            "1": "RAD007C",
+            "2": "ROUNDONE"
+          },
+          "6": null,
+          "7": "1978-06-03T00:00:00.000Z",
+          "8": "M",
+          "9": [],
+          "10": "WHITE",
+          "11": [
+            {
+              "0": "^",
+              "1": "987 KIWI ST",
+              "2": null,
+              "3": "FLATWOODS",
+              "4": "TN",
+              "5": "37096",
+              "6": "US",
+              "7": null
+            }
+          ],
+          "12": null,
+          "13": [
+            {
+              "0": "^",
+              "1": "(545)158-8980",
+              "2": null,
+              "3": "H"
+            }
+          ],
+          "14": [],
+          "15": null,
+          "16": [
+            "Single"
+          ],
+          "17": null,
+          "18": {
+            "0": "^",
+            "1": "45784511"
+          },
+          "19": "144-99-4458",
+          "20": null,
+          "21": null,
+          "22": null,
+          "23": null,
+          "24": null,
+          "25": null,
+          "26": null,
+          "27": null,
+          "28": null,
+          "29": null,
+          "30": null,
+          "31": null
+        },
+        "PATIENT_VISIT": {
+          "PV1": {
+            "0": "PV1",
+            "1": null,
+            "2": "2",
+            "3": {
+              "0": "^",
+              "1": "C DIAGNOSTIC",
+              "2": null,
+              "3": null,
+              "4": "505",
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": null,
+              "10": null,
+              "11": null
+            },
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": {
+              "0": "^",
+              "1": "545787",
+              "2": "JOSEPH",
+              "3": "SIMON",
+              "4": null,
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": "VITAEHRPHYSICIAN",
+              "10": null,
+              "11": null,
+              "12": null,
+              "13": null
+            },
+            "8": null,
+            "9": [],
+            "10": "IMAGING",
+            "11": null,
+            "12": null,
+            "13": null,
+            "14": null,
+            "15": null,
+            "16": null,
+            "17": null,
+            "18": null,
+            "19": {
+              "0": "^",
+              "1": "100472852"
+            },
+            "20": [],
+            "21": null,
+            "22": null,
+            "23": null,
+            "24": [],
+            "25": [],
+            "26": [],
+            "27": [],
+            "28": null,
+            "29": null,
+            "30": null,
+            "31": null,
+            "32": null,
+            "33": null,
+            "34": null,
+            "35": null,
+            "36": null,
+            "37": null,
+            "38": null,
+            "39": null,
+            "40": null,
+            "41": null,
+            "42": null,
+            "43": null,
+            "44": "2017-08-06T15:02:16.000Z",
+            "45": null,
+            "46": null,
+            "47": null,
+            "48": null,
+            "49": null,
+            "50": null,
+            "51": "V"
+          }
+        }
+      },
+      "ORDER": [
+        {
+          "ORC": {
+            "0": "ORC",
+            "1": "NW",
+            "2": [
+              {
+                "0": "^",
+                "1": "125307696",
+                "2": "VIT"
+              }
+            ],
+            "3": {
+              "0": "^",
+              "1": "4907631",
+              "2": "VIT"
+            },
+            "4": null,
+            "5": "IP",
+            "6": null,
+            "7": {
+              "0": "^",
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": "2017-08-07T11:45:27.000Z",
+              "5": null,
+              "6": "Routine"
+            },
+            "8": null,
+            "9": "2017-08-07T11:07:33.000Z",
+            "10": {
+              "0": "^",
+              "1": "JACKHL6",
+              "2": "JACKSON",
+              "3": "HANNAH",
+              "4": "L.",
+              "5": null
+            },
+            "11": null,
+            "12": [
+              {
+                "0": "^",
+                "1": "545787",
+                "2": "JOSEPH",
+                "3": "SIMON",
+                "4": null,
+                "5": null,
+                "6": null,
+                "7": null,
+                "8": null,
+                "9": "VITAEHRPHYSICIAN",
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": null
+              },
+              {
+                "0": "^",
+                "1": "54890",
+                "2": "JOSEPH",
+                "3": "SIMON",
+                "4": null,
+                "5": null,
+                "6": null,
+                "7": null,
+                "8": null,
+                "9": "MIRRAEHRPHYSICIAN",
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": null
+              },
+              {
+                "0": "^",
+                "1": "940B",
+                "2": "JOSEPH",
+                "3": "SIMON",
+                "4": null,
+                "5": null,
+                "6": null,
+                "7": null,
+                "8": null,
+                "9": "VERAEHRPHYSICIAN",
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": null
+              },
+              {
+                "0": "^",
+                "1": "J796",
+                "2": "JOSEPH",
+                "3": "SIMON",
+                "4": null,
+                "5": null,
+                "6": null,
+                "7": null,
+                "8": null,
+                "9": "VERAEHRPHYSICIAN",
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": null
+              },
+              {
+                "0": "^",
+                "1": "4608",
+                "2": "JOSEPH",
+                "3": "SIMON",
+                "4": null,
+                "5": null,
+                "6": null,
+                "7": null,
+                "8": null,
+                "9": "GOLDENGATEPHYSICIAN",
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": null
+              },
+              {
+                "0": "^",
+                "1": "5547",
+                "2": "JOSEPH",
+                "3": "SIMON",
+                "4": null,
+                "5": null,
+                "6": null,
+                "7": null,
+                "8": null,
+                "9": "MEGAPHYSICIAN",
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": null
+              },
+              {
+                "0": "^",
+                "1": "9804",
+                "2": "JOSEPH",
+                "3": "SIMON",
+                "4": null,
+                "5": null,
+                "6": null,
+                "7": null,
+                "8": null,
+                "9": "VERAEHRPHYSICIAN",
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": null
+              }
+            ],
+            "13": {
+              "0": "^",
+              "1": "C DIAGNOSTIC",
+              "2": null,
+              "3": null,
+              "4": "505",
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": null
+            },
+            "14": [
+              "(505)145-7896"
+            ],
+            "15": null,
+            "16": null,
+            "17": {
+              "0": "^",
+              "1": "5489464"
+            },
+            "18": null,
+            "19": null,
+            "20": null,
+            "21": null,
+            "22": null,
+            "23": null,
+            "24": null,
+            "25": null,
+            "26": null,
+            "27": null,
+            "28": null,
+            "29": "I"
+          },
+          "ORDER_DETAIL": {
+            "CHOICE": {
+              "OBR": {
+                "0": "OBR",
+                "1": "1",
+                "2": [
+                  {
+                    "0": "^",
+                    "1": "125307696",
+                    "2": "VIT"
+                  }
+                ],
+                "3": {
+                  "0": "^",
+                  "1": "4907631",
+                  "2": "VIT"
+                },
+                "4": {
+                  "0": "^",
+                  "1": "RAD65894",
+                  "2": "XC UGI AIR CONTRAST WITH KUB",
+                  "3": null,
+                  "4": null,
+                  "5": "XC UGI AIR C"
+                },
+                "5": "Routine",
+                "6": "2017-08-07T12:14:54.000Z",
+                "7": null,
+                "8": null,
+                "9": null,
+                "10": [],
+                "11": "Norm",
+                "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": [
+                  {
+                    "0": "^",
+                    "1": "545787",
+                    "2": "JOSEPH",
+                    "3": "SIMON",
+                    "4": null,
+                    "5": null,
+                    "6": null,
+                    "7": null,
+                    "8": null,
+                    "9": "VITAEHRPHYSICIAN",
+                    "10": null,
+                    "11": null,
+                    "12": null,
+                    "13": null
+                  },
+                  {
+                    "0": "^",
+                    "1": "54890",
+                    "2": "JOSEPH",
+                    "3": "SIMON",
+                    "4": null,
+                    "5": null,
+                    "6": null,
+                    "7": null,
+                    "8": null,
+                    "9": "MIRRAEHRPHYSICIAN",
+                    "10": null,
+                    "11": null,
+                    "12": null,
+                    "13": null
+                  },
+                  {
+                    "0": "^",
+                    "1": "940B",
+                    "2": "JOSEPH",
+                    "3": "SIMON",
+                    "4": null,
+                    "5": null,
+                    "6": null,
+                    "7": null,
+                    "8": null,
+                    "9": "VERAEHRPHYSICIAN",
+                    "10": null,
+                    "11": null,
+                    "12": null,
+                    "13": null
+                  },
+                  {
+                    "0": "^",
+                    "1": "J796",
+                    "2": "JOSEPH",
+                    "3": "SIMON",
+                    "4": null,
+                    "5": null,
+                    "6": null,
+                    "7": null,
+                    "8": null,
+                    "9": "VERAEHRPHYSICIAN",
+                    "10": null,
+                    "11": null,
+                    "12": null,
+                    "13": null
+                  },
+                  {
+                    "0": "^",
+                    "1": "4608",
+                    "2": "JOSEPH",
+                    "3": "SIMON",
+                    "4": null,
+                    "5": null,
+                    "6": null,
+                    "7": null,
+                    "8": null,
+                    "9": "GOLDENGATEPHYSICIAN",
+                    "10": null,
+                    "11": null,
+                    "12": null,
+                    "13": null
+                  },
+                  {
+                    "0": "^",
+                    "1": "5547",
+                    "2": "JOSEPH",
+                    "3": "SIMON",
+                    "4": null,
+                    "5": null,
+                    "6": null,
+                    "7": null,
+                    "8": null,
+                    "9": "MEGAPHYSICIAN",
+                    "10": null,
+                    "11": null,
+                    "12": null,
+                    "13": null
+                  },
+                  {
+                    "0": "^",
+                    "1": "9804",
+                    "2": "JOSEPH",
+                    "3": "SIMON",
+                    "4": null,
+                    "5": null,
+                    "6": null,
+                    "7": null,
+                    "8": null,
+                    "9": "VERAEHRPHYSICIAN",
+                    "10": null,
+                    "11": null,
+                    "12": null,
+                    "13": null
+                  }
+                ],
+                "17": [
+                  {
+                    "0": "^",
+                    "1": "(505)145-7896"
+                  }
+                ],
+                "18": null,
+                "19": "C DIAGNOSTIC",
+                "20": null,
+                "21": null,
+                "22": null,
+                "23": null,
+                "24": "CR",
+                "25": "IP",
+                "26": null,
+                "27": {
+                  "0": "^",
+                  "1": null,
+                  "2": null,
+                  "3": null,
+                  "4": "2017-08-07T11:45:27.000Z",
+                  "5": null,
+                  "6": "Routine"
+                },
+                "28": [],
+                "29": null,
+                "30": null,
+                "31": [
+                  {
+                    "0": "^",
+                    "1": null,
+                    "2": "test"
+                  }
+                ],
+                "32": null,
+                "33": [],
+                "34": [],
+                "35": [],
+                "36": "2017-08-07T11:45:27.000Z",
+                "37": null,
+                "38": [],
+                "39": [],
+                "40": null,
+                "41": null,
+                "42": null,
+                "43": [],
+                "44": "RAD65894^XC UGI AIR CONTRAST WITH KUB^^^XC UGI AIR C"
+              }
+            },
+            "NTE": [
+              {
+                "0": "NTE",
+                "1": "1",
+                "2": null,
+                "3": [
+                  "Reason for Exam:->test"
+                ],
+                "4": null
+              },
+              {
+                "0": "NTE",
+                "1": "2",
+                "2": null,
+                "3": [
+                  "Have related studies been done elsewhere?->No"
+                ],
+                "4": null
+              }
+            ]
+          }
+        }
+      ],
+      "IGNORED": {}
+    },
+    []
+  ]
+}

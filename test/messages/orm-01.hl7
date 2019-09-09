@@ -1,0 +1,23 @@
+MSH|^~\&|RADIANT|EPIC|IMG_UNLINK|PHS IMG|20170726010022|CADENCEBATCHOB|ORM^O01|15837|T|2.3|||||||||||
+PID|1|20000025896^^^ORCA MRN^ORCA MRN|E810^^^^EPI~20000025896^^^ORCA MRN^ORCA MRN||PETERS^LEAH||19760601|F||WHT|487 LEMON AVE.^^PORTLAND^OR^97212^USA^P^^MULTNOMAH|MULTNOMAH|(503)215-3456^P^H|||SL||50000151236|235-12-1234|||||||||||||
+PD1|||OPH PROVIDENCE PORTLAND MEDICAL CENTER^^405141|1122346^PCP^PROV^INACTIVE^^^^^PROVPID^^^^PPID||||||||||||||
+PV1||O|CHC MRI^^^CHC^^^^^^^||||||||||||||||50000151236||||||||||||||||||||||||||||||||V
+ORC|XO|309132^EPC|6004456PRV^EPC||CA||^^^20170717000000^^R||20170726010022|P323126^NGUYEN^THOA^^||18859^KIRKLAND^MARIA^^^^^^OR STAR SER^^^^OR STAR SER~1066687^KIRKLAND^MARIA^^^^^^PROVPID^^^^PPID|CHC MRI^^^501101^^^^^CHC MRI|(503)418-9700|||||||||||||||O|
+OBR|1|309132^EPC|6004456PRV^EPC|IMG1431^MRI ABDOMEN W CONTRAST MRCP^RADIANT EAP^^MRI|R|20170717|||||Imaging|||||18859^KIRKLAND^MARIA^^^^^^OR STAR SER^^^^OR STAR SER~1066687^KIRKLAND^MARIA^^^^^^PROVPID^^^^PPID|(503)418-9700|CHC-DI-SC-MR^CHC SC MRI 01^PHS IMG RES||||||MR|X||^^^20170717000000^^R||||^swelling of stomach|||||20170720083000|||||||||
+DG1|1|ICD-10-CM|R19.00^Intra-abdominal and pelvic swelling, mass and lump, unspecified site^ICD-10-CM|Intra-abdominal and pelvic swelling, mass and lump, unspecified site||^180;ORD
+OBX|1|ST|IMG.90052034^Reason for exam:||swelling of stomach|||||||||
+OBX|2|ST|IMG.12220611^What is the preferred imaging location?||CA Holy Cross Medical Center (Prov Mission Hills)|||||||||
+OBX|3|ST|IMG.120982^Is patient pregnant?||No|||||||||
+OBX|4|ST|IMG.10015901^Does the patient have an implanted cardiac device?||No|||||||||
+OBX|5|ST|IMG.12017400^Does the patient have a pacemaker / defibrillator?||No|||||||||
+OBX|6|ST|IMG.12227546^Does the patient have any programable shunts, aneurysm clips, implanted electronic devices, or any attached electronic devices? ||No|||||||||
+OBX|7|ST|IMG.1222765^Does patient have any allergies or sensitivities to MRI contrast (gadolinium)?||No|||||||||
+OBX|8|ST|IMG.12227559^Does patient have any hx renal disease (including only having 1 kidney), renal transplant, renal tumor or is on dialysis?||No|||||||||
+OBX|9|ST|IMG.1222761^Has patient ever had metal in his/her eyes?||No|||||||||
+OBX|10|ST|IMG.1222756^Is the patient claustrophobic?||No|||||||||
+OBX|11|ST|IMG.12219890^Has the patient had surgery in scan area?||No|||||||||
+OBX|12|ST|IMG.12227242^Will an interpreter be needed for the exam?||No|||||||||
+OBX|13|ST|IMG.1201042^If the patient needs an interpreter, enter language:||English|||||||||
+OBX|14|ST|IMG.1222689^What is the patients height \T\ weight?||Ht:1.651 m (5' 5") Wt:|||||||||
+OBX|15|ST|IMG.12227221^Do you have any special mobility requirements?||No|||||||||
+OBX|16|ST|IMG.1222686^Does the patient have relevant prior films?||No|||||||||

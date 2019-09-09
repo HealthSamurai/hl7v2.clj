@@ -1,0 +1,587 @@
+WVI:
+  components:
+  - {type: NM, name: WVI.1, key: channel_number, desc: Channel Number}
+  - {type: ST, name: WVI.2, key: channel_name, desc: Channel Name}
+NDL:
+  components:
+  - {type: CNN, name: NDL.1, key: name, desc: Name}
+  - {type: TS, name: NDL.2, key: start_date_time, desc: Start Date/time}
+  - {type: TS, name: NDL.3, key: end_date_time, desc: End Date/time}
+  - {type: IS, name: NDL.4, key: point_of_care, desc: Point of Care}
+  - {type: IS, name: NDL.5, key: room, desc: Room}
+  - {type: IS, name: NDL.6, key: bed, desc: Bed}
+  - {type: HD, name: NDL.7, key: facility, desc: Facility}
+  - {type: IS, name: NDL.8, key: location_status, desc: Location Status}
+  - {type: IS, name: NDL.9, key: patient_location_type, desc: Patient Location Type}
+  - {type: IS, name: NDL.10, key: building, desc: Building}
+  - {type: IS, name: NDL.11, key: floor, desc: Floor}
+PT:
+  components:
+  - {type: ID, name: PT.1, key: processing_id, desc: Processing ID}
+  - {type: ID, name: PT.2, key: processing_mode, desc: Processing Mode}
+DLD:
+  components:
+  - {type: IS, name: DLD.1, key: discharge_location, desc: Discharge Location}
+  - {type: TS, name: DLD.2, key: effective_date, desc: Effective Date}
+LA1:
+  components:
+  - {type: IS, name: LA1.1, key: point_of_care, desc: Point of Care}
+  - {type: IS, name: LA1.2, key: room, desc: Room}
+  - {type: IS, name: LA1.3, key: bed, desc: Bed}
+  - {type: HD, name: LA1.4, key: facility, desc: Facility}
+  - {type: IS, name: LA1.5, key: location_status, desc: Location Status}
+  - {type: IS, name: LA1.6, key: patient_location_type, desc: Patient Location Type}
+  - {type: IS, name: LA1.7, key: building, desc: Building}
+  - {type: IS, name: LA1.8, key: floor, desc: Floor}
+  - {type: AD, name: LA1.9, key: address, desc: Address}
+DR:
+  components:
+  - {type: TS, name: DR.1, key: range_start_date_time, desc: Range Start Date/Time}
+  - {type: TS, name: DR.2, key: range_end_date_time, desc: Range End Date/Time}
+TQ:
+  components:
+  - {type: CQ, name: TQ.1, key: quantity, desc: Quantity}
+  - {type: RI, name: TQ.2, key: interval, desc: Interval}
+  - {type: ST, name: TQ.3, key: duration, desc: Duration}
+  - {type: TS, name: TQ.4, key: start_date_time, desc: Start Date/Time}
+  - {type: TS, name: TQ.5, key: end_date_time, desc: End Date/Time}
+  - {type: ST, name: TQ.6, key: priority, desc: Priority}
+  - {type: ST, name: TQ.7, key: condition, desc: Condition}
+  - {type: TX, name: TQ.8, key: text, desc: Text}
+  - {type: ID, name: TQ.9, key: conjunction, desc: Conjunction}
+  - {type: OSD, name: TQ.10, key: order_sequencing, desc: Order Sequencing}
+  - {type: CE, name: TQ.11, key: occurrence_duration, desc: Occurrence Duration}
+  - {type: NM, name: TQ.12, key: total_occurrences, desc: Total Occurrences}
+QSC:
+  components:
+  - {type: ST, name: QSC.1, key: segment_field_name, desc: Segment Field Name}
+  - {type: ID, name: QSC.2, key: relational_operator, desc: Relational Operator}
+  - {type: ST, name: QSC.3, key: value, desc: Value}
+  - {type: ID, name: QSC.4, key: relational_conjunction, desc: Relational Conjunction}
+ERL:
+  components:
+  - {type: ST, name: ERL.1, key: segment_id, desc: Segment ID}
+  - {type: NM, name: ERL.2, key: segment_sequence, desc: Segment Sequence}
+  - {type: NM, name: ERL.3, key: field_position, desc: Field Position}
+  - {type: NM, name: ERL.4, key: field_repetition, desc: Field Repetition}
+  - {type: NM, name: ERL.5, key: component_number, desc: Component Number}
+  - {type: NM, name: ERL.6, key: sub_component_number, desc: Sub-Component Number}
+AUI:
+  components:
+  - {type: ST, name: AUI.1, key: authorization_number, desc: Authorization Number}
+  - {type: DT, name: AUI.2, key: date, desc: Date}
+  - {type: ST, name: AUI.3, key: source, desc: Source}
+MSG:
+  components:
+  - {type: ID, name: MSG.1, key: message_code, desc: Message Code}
+  - {type: ID, name: MSG.2, key: trigger_event, desc: Trigger Event}
+  - {type: ID, name: MSG.3, key: message_structure, desc: Message Structure}
+XTN:
+  components:
+  - {type: ST, name: XTN.1, key: telephone_number, desc: Telephone Number}
+  - {type: ID, name: XTN.2, key: telecommunication_use_code, desc: Telecommunication Use Code}
+  - {type: ID, name: XTN.3, key: telecommunication_equipment_type, desc: Telecommunication Equipment Type}
+  - {type: ST, name: XTN.4, key: email_address, desc: Email Address}
+  - {type: NM, name: XTN.5, key: country_code, desc: Country Code}
+  - {type: NM, name: XTN.6, key: area_city_code, desc: Area/City Code}
+  - {type: NM, name: XTN.7, key: local_number, desc: Local Number}
+  - {type: NM, name: XTN.8, key: extension, desc: Extension}
+  - {type: ST, name: XTN.9, key: any_text, desc: Any Text}
+  - {type: ST, name: XTN.10, key: extension_prefix, desc: Extension Prefix}
+  - {type: ST, name: XTN.11, key: speed_dial_code, desc: Speed Dial Code}
+  - {type: ST, name: XTN.12, key: unformatted_telephone_number, desc: Unformatted Telephone number}
+DDI:
+  components:
+  - {type: NM, name: DDI.1, key: delay_days, desc: Delay Days}
+  - {type: MO, name: DDI.2, key: monetary_amount, desc: Monetary Amount}
+  - {type: NM, name: DDI.3, key: number_of_days, desc: Number of Days}
+SCV:
+  components:
+  - {type: CWE, name: SCV.1, key: parameter_class, desc: Parameter Class}
+  - {type: ST, name: SCV.2, key: parameter_value, desc: Parameter Value}
+SPD:
+  components:
+  - {type: ST, name: SPD.1, key: specialty_name, desc: Specialty Name}
+  - {type: ST, name: SPD.2, key: governing_board, desc: Governing Board}
+  - {type: ID, name: SPD.3, key: eligible_or_certified, desc: Eligible or Certified}
+  - {type: DT, name: SPD.4, key: date_of_certification, desc: Date of Certification}
+PRL:
+  components:
+  - {type: CE, name: PRL.1, key: parent_observation_identifier, desc: Parent Observation Identifier}
+  - {type: ST, name: PRL.2, key: parent_observation_sub_identifier, desc: Parent Observation Sub-identifier}
+  - {type: TX, name: PRL.3, key: parent_observation_value_descriptor, desc: Parent Observation Value Descriptor}
+EIP:
+  components:
+  - {type: EI, name: EIP.1, key: placer_assigned_identifier, desc: Placer Assigned Identifier}
+  - {type: EI, name: EIP.2, key: filler_assigned_identifier, desc: Filler Assigned Identifier}
+PPN:
+  components:
+  - {type: ST, name: PPN.1, key: id_number, desc: ID Number}
+  - {type: FN, name: PPN.2, key: family_name, desc: Family Name}
+  - {type: ST, name: PPN.3, key: given_name, desc: Given Name}
+  - {type: ST, name: PPN.4, key: second_and_further_given_names_or_initials_thereof, desc: Second and Further Given Names or Initials Thereof}
+  - {type: ST, name: PPN.5, key: suffix_, desc: 'Suffix (e.g., JR or III)'}
+  - {type: ST, name: PPN.6, key: prefix_, desc: 'Prefix (e.g., DR)'}
+  - {type: IS, name: PPN.7, key: degree_, desc: 'Degree (e.g., MD)'}
+  - {type: IS, name: PPN.8, key: source_table, desc: Source Table}
+  - {type: HD, name: PPN.9, key: assigning_authority, desc: Assigning Authority}
+  - {type: ID, name: PPN.10, key: name_type_code, desc: Name Type Code}
+  - {type: ST, name: PPN.11, key: identifier_check_digit, desc: Identifier Check Digit}
+  - {type: ID, name: PPN.12, key: check_digit_scheme, desc: Check Digit Scheme}
+  - {type: ID, name: PPN.13, key: identifier_type_code, desc: Identifier Type Code}
+  - {type: HD, name: PPN.14, key: assigning_facility, desc: Assigning Facility}
+  - {type: TS, name: PPN.15, key: date_time_action_performed, desc: Date/Time Action Performed}
+  - {type: ID, name: PPN.16, key: name_representation_code, desc: Name Representation Code}
+  - {type: CE, name: PPN.17, key: name_context, desc: Name Context}
+  - {type: DR, name: PPN.18, key: name_validity_range, desc: Name Validity Range}
+  - {type: ID, name: PPN.19, key: name_assembly_order, desc: Name Assembly Order}
+  - {type: TS, name: PPN.20, key: effective_date, desc: Effective Date}
+  - {type: TS, name: PPN.21, key: expiration_date, desc: Expiration Date}
+  - {type: ST, name: PPN.22, key: professional_suffix, desc: Professional Suffix}
+  - {type: CWE, name: PPN.23, key: assigning_jurisdiction, desc: Assigning Jurisdiction}
+  - {type: CWE, name: PPN.24, key: assigning_agency_or_department, desc: Assigning Agency or Department}
+MOC:
+  components:
+  - {type: MO, name: MOC.1, key: monetary_amount, desc: Monetary Amount}
+  - {type: CE, name: MOC.2, key: charge_code, desc: Charge Code}
+ELD:
+  components:
+  - {type: ST, name: ELD.1, key: segment_id, desc: Segment ID}
+  - {type: NM, name: ELD.2, key: segment_sequence, desc: Segment Sequence}
+  - {type: NM, name: ELD.3, key: field_position, desc: Field Position}
+  - {type: CE, name: ELD.4, key: code_identifying_error, desc: Code Identifying Error}
+CX:
+  components:
+  - {type: ST, name: CX.1, key: id_number, desc: ID Number}
+  - {type: ST, name: CX.2, key: check_digit, desc: Check Digit}
+  - {type: ID, name: CX.3, key: check_digit_scheme, desc: Check Digit Scheme}
+  - {type: HD, name: CX.4, key: assigning_authority, desc: Assigning Authority}
+  - {type: ID, name: CX.5, key: identifier_type_code, desc: Identifier Type Code}
+  - {type: HD, name: CX.6, key: assigning_facility, desc: Assigning Facility}
+  - {type: DT, name: CX.7, key: effective_date, desc: Effective Date}
+  - {type: DT, name: CX.8, key: expiration_date, desc: Expiration Date}
+  - {type: CWE, name: CX.9, key: assigning_jurisdiction, desc: Assigning Jurisdiction}
+  - {type: CWE, name: CX.10, key: assigning_agency_or_department, desc: Assigning Agency or Department}
+SRT:
+  components:
+  - {type: ST, name: SRT.1, key: sort_by_field, desc: Sort-by Field}
+  - {type: ID, name: SRT.2, key: sequencing, desc: Sequencing}
+RP:
+  components:
+  - {type: ST, name: RP.1, key: pointer, desc: Pointer}
+  - {type: HD, name: RP.2, key: application_id, desc: Application ID}
+  - {type: ID, name: RP.3, key: type_of_data, desc: Type of Data}
+  - {type: ID, name: RP.4, key: subtype, desc: Subtype}
+DLN:
+  components:
+  - {type: ST, name: DLN.1, key: license_number, desc: License Number}
+  - {type: IS, name: DLN.2, key: issuing_state_province_country, desc: 'Issuing State, Province, Country'}
+  - {type: DT, name: DLN.3, key: expiration_date, desc: Expiration Date}
+EI:
+  components:
+  - {type: ST, name: EI.1, key: entity_identifier, desc: Entity Identifier}
+  - {type: IS, name: EI.2, key: namespace_id, desc: Namespace ID}
+  - {type: ST, name: EI.3, key: universal_id, desc: Universal ID}
+  - {type: ID, name: EI.4, key: universal_id_type, desc: Universal ID Type}
+PLN:
+  components:
+  - {type: ST, name: PLN.1, key: id_number, desc: ID Number}
+  - {type: IS, name: PLN.2, key: type_of_id_number, desc: Type of ID Number}
+  - {type: ST, name: PLN.3, key: state_other_qualifying_information, desc: State/other Qualifying Information}
+  - {type: DT, name: PLN.4, key: expiration_date, desc: Expiration Date}
+PTA:
+  components:
+  - {type: IS, name: PTA.1, key: policy_type, desc: Policy Type}
+  - {type: IS, name: PTA.2, key: amount_class, desc: Amount Class}
+  - {type: NM, name: PTA.3, key: money_or_percentage_quantity, desc: Money or Percentage Quantity}
+  - {type: MOP, name: PTA.4, key: money_or_percentage, desc: Money or Percentage}
+CQ:
+  components:
+  - {type: NM, name: CQ.1, key: quantity, desc: Quantity}
+  - {type: CE, name: CQ.2, key: units, desc: Units}
+OCD:
+  components:
+  - {type: CNE, name: OCD.1, key: occurrence_code, desc: Occurrence Code}
+  - {type: DT, name: OCD.2, key: occurrence_date, desc: Occurrence Date}
+VID:
+  components:
+  - {type: ID, name: VID.1, key: version_id, desc: Version ID}
+  - {type: CE, name: VID.2, key: internationalization_code, desc: Internationalization Code}
+  - {type: CE, name: VID.3, key: international_version_id, desc: International Version ID}
+OSP:
+  components:
+  - {type: CNE, name: OSP.1, key: occurrence_span_code, desc: Occurrence Span Code}
+  - {type: DT, name: OSP.2, key: occurrence_span_start_date, desc: Occurrence Span Start Date}
+  - {type: DT, name: OSP.3, key: occurrence_span_stop_date, desc: Occurrence Span Stop Date}
+TS:
+  components:
+  - {type: DTM, name: TS.1, key: time, desc: Time}
+  - {type: ID, name: TS.2, key: degree_of_precision, desc: Degree of Precision}
+MA:
+  components:
+  - {type: NM, name: MA.1, key: sample_1_from_channel_1, desc: Sample 1 From Channel 1}
+  - {type: NM, name: MA.2, key: sample_1_from_channel_2, desc: Sample 1 From Channel 2}
+  - {type: NM, name: MA.3, key: sample_1_from_channel_n, desc: Sample 1 From Channel N}
+  - {type: NM, name: MA.4, key: sample_2_from_channel_1, desc: Sample 2 From Channel 1}
+  - {type: NM, name: MA.5, key: sample_2_from_channel_n, desc: Sample 2 From Channel N}
+  - {type: NM, name: MA.6, key: sample_n_from_channel_n, desc: Sample N From Channel N}
+HD:
+  components:
+  - {type: IS, name: HD.1, key: namespace_id, desc: Namespace ID}
+  - {type: ST, name: HD.2, key: universal_id, desc: Universal ID}
+  - {type: ID, name: HD.3, key: universal_id_type, desc: Universal ID Type}
+XPN:
+  components:
+  - {type: FN, name: XPN.1, key: family, desc: Family Name}
+  - {type: ST, name: XPN.2, key: given, desc: Given Name}
+  - {type: ST, name: XPN.3, key: second_and_further_given_names_or_initials_thereof, desc: Second and Further Given Names or Initials Thereof}
+  - {type: ST, name: XPN.4, key: suffix, desc: 'Suffix (e.g., JR or III)'}
+  - {type: ST, name: XPN.5, key: prefix, desc: 'Prefix (e.g., DR)'}
+  - {type: IS, name: XPN.6, key: degree, desc: 'Degree (e.g., MD)'}
+  - {type: ID, name: XPN.7, key: type, desc: Name Type Code}
+  - {type: ID, name: XPN.8, key: name_representation_code, desc: Name Representation Code}
+  - {type: CE, name: XPN.9, key: context, desc: Name Context}
+  - {type: DR, name: XPN.10, key: validity_range, desc: Name Validity Range}
+  - {type: ID, name: XPN.11, key: assembly_order, desc: Name Assembly Order}
+  - {type: TS, name: XPN.12, key: effective_date, desc: Effective Date}
+  - {type: TS, name: XPN.13, key: expiration_date, desc: Expiration Date}
+  - {type: ST, name: XPN.14, key: professional_suffix, desc: Professional Suffix}
+CE:
+  components:
+  - {type: ST, name: CE.1, key: identifier, desc: Identifier}
+  - {type: ST, name: CE.2, key: text, desc: Text}
+  - {type: ID, name: CE.3, key: name_of_coding_system, desc: Name of Coding System}
+  - {type: ST, name: CE.4, key: alternate_identifier, desc: Alternate Identifier}
+  - {type: ST, name: CE.5, key: alternate_text, desc: Alternate Text}
+  - {type: ID, name: CE.6, key: name_of_alternate_coding_system, desc: Name of Alternate Coding System}
+XAD:
+  components:
+  - {type: SAD, name: XAD.1, key: street_address, desc: Street Address}
+  - {type: ST, name: XAD.2, key: other_designation, desc: Other Designation}
+  - {type: ST, name: XAD.3, key: city, desc: City}
+  - {type: ST, name: XAD.4, key: state_or_province, desc: State or Province}
+  - {type: ST, name: XAD.5, key: zip_or_postal_code, desc: Zip or Postal Code}
+  - {type: ID, name: XAD.6, key: country, desc: Country}
+  - {type: ID, name: XAD.7, key: address_type, desc: Address Type}
+  - {type: ST, name: XAD.8, key: other_geographic_designation, desc: Other Geographic Designation}
+  - {type: IS, name: XAD.9, key: county_parish_code, desc: County/Parish Code}
+  - {type: IS, name: XAD.10, key: census_tract, desc: Census Tract}
+  - {type: ID, name: XAD.11, key: address_representation_code, desc: Address Representation Code}
+  - {type: DR, name: XAD.12, key: address_validity_range, desc: Address Validity Range}
+  - {type: TS, name: XAD.13, key: effective_date, desc: Effective Date}
+  - {type: TS, name: XAD.14, key: expiration_date, desc: Expiration Date}
+AD:
+  components:
+  - {type: ST, name: AD.1, key: street_address, desc: Street Address}
+  - {type: ST, name: AD.2, key: other_designation, desc: Other Designation}
+  - {type: ST, name: AD.3, key: city, desc: City}
+  - {type: ST, name: AD.4, key: state_or_province, desc: State or Province}
+  - {type: ST, name: AD.5, key: zip_or_postal_code, desc: Zip or Postal Code}
+  - {type: ID, name: AD.6, key: country, desc: Country}
+  - {type: ID, name: AD.7, key: address_type, desc: Address Type}
+  - {type: ST, name: AD.8, key: other_geographic_designation, desc: Other Geographic Designation}
+MO:
+  components:
+  - {type: NM, name: MO.1, key: quantity, desc: Quantity}
+  - {type: ID, name: MO.2, key: denomination, desc: Denomination}
+CF:
+  components:
+  - {type: ST, name: CF.1, key: identifier, desc: Identifier}
+  - {type: FT, name: CF.2, key: formatted_text, desc: Formatted Text}
+  - {type: ID, name: CF.3, key: name_of_coding_system, desc: Name of Coding System}
+  - {type: ST, name: CF.4, key: alternate_identifier, desc: Alternate Identifier}
+  - {type: FT, name: CF.5, key: alternate_formatted_text, desc: Alternate Formatted Text}
+  - {type: ID, name: CF.6, key: name_of_alternate_coding_system, desc: Name of Alternate Coding System}
+NR:
+  components:
+  - {type: NM, name: NR.1, key: low_value, desc: Low Value}
+  - {type: NM, name: NR.2, key: high_value, desc: High Value}
+SAD:
+  components:
+  - {type: ST, name: SAD.1, key: street_or_mailing_address, desc: Street or Mailing Address}
+  - {type: ST, name: SAD.2, key: street_name, desc: Street Name}
+  - {type: ST, name: SAD.3, key: dwelling_number, desc: Dwelling Number}
+CP:
+  components:
+  - {type: MO, name: CP.1, key: price, desc: Price}
+  - {type: ID, name: CP.2, key: price_type, desc: Price Type}
+  - {type: NM, name: CP.3, key: from_value, desc: From Value}
+  - {type: NM, name: CP.4, key: to_value, desc: To Value}
+  - {type: CE, name: CP.5, key: range_units, desc: Range Units}
+  - {type: ID, name: CP.6, key: range_type, desc: Range Type}
+OSD:
+  components:
+  - {type: ID, name: OSD.1, key: sequence_results_flag, desc: Sequence/Results Flag}
+  - {type: ST, name: OSD.2, key: placer_order_number_entity_identifier, desc: 'Placer Order Number: Entity Identifier'}
+  - {type: IS, name: OSD.3, key: placer_order_number_namespace_id, desc: 'Placer Order Number: Namespace ID'}
+  - {type: ST, name: OSD.4, key: filler_order_number_entity_identifier, desc: 'Filler Order Number: Entity Identifier'}
+  - {type: IS, name: OSD.5, key: filler_order_number_namespace_id, desc: 'Filler Order Number: Namespace ID'}
+  - {type: ST, name: OSD.6, key: sequence_condition_value, desc: Sequence Condition Value}
+  - {type: NM, name: OSD.7, key: maximum_number_of_repeats, desc: Maximum Number of Repeats}
+  - {type: ST, name: OSD.8, key: placer_order_number_universal_id, desc: 'Placer Order Number: Universal ID'}
+  - {type: ID, name: OSD.9, key: placer_order_number_universal_id_type, desc: 'Placer Order Number: Universal ID Type'}
+  - {type: ST, name: OSD.10, key: filler_order_number_universal_id, desc: 'Filler Order Number: Universal ID'}
+  - {type: ID, name: OSD.11, key: filler_order_number_universal_id_type, desc: 'Filler Order Number: Universal ID Type'}
+CCP:
+  components:
+  - {type: NM, name: CCP.1, key: channel_calibration_sensitivity_correction_factor, desc: Channel Calibration Sensitivity Correction Factor}
+  - {type: NM, name: CCP.2, key: channel_calibration_baseline, desc: Channel Calibration Baseline}
+  - {type: NM, name: CCP.3, key: channel_calibration_time_skew, desc: Channel Calibration Time Skew}
+RMC:
+  components:
+  - {type: IS, name: RMC.1, key: room_type, desc: Room Type}
+  - {type: IS, name: RMC.2, key: amount_type, desc: Amount Type}
+  - {type: NM, name: RMC.3, key: coverage_amount, desc: Coverage Amount}
+  - {type: MOP, name: RMC.4, key: money_or_percentage, desc: Money or Percentage}
+PIP:
+  components:
+  - {type: CE, name: PIP.1, key: privilege, desc: Privilege}
+  - {type: CE, name: PIP.2, key: privilege_class, desc: Privilege Class}
+  - {type: DT, name: PIP.3, key: expiration_date, desc: Expiration Date}
+  - {type: DT, name: PIP.4, key: activation_date, desc: Activation Date}
+  - {type: EI, name: PIP.5, key: facility, desc: Facility}
+SN:
+  components:
+  - {type: ST, name: SN.1, key: comparator, desc: Comparator}
+  - {type: NM, name: SN.2, key: num1, desc: Num1}
+  - {type: ST, name: SN.3, key: separator_suffix, desc: Separator/Suffix}
+  - {type: NM, name: SN.4, key: num2, desc: Num2}
+FN:
+  components:
+  - {type: ST, name: FN.1, key: surname, desc: Surname}
+  - {type: ST, name: FN.2, key: own_surname_prefix, desc: Own Surname Prefix}
+  - {type: ST, name: FN.3, key: own_surname, desc: Own Surname}
+  - {type: ST, name: FN.4, key: surname_prefix_from_partner_spouse, desc: Surname Prefix From Partner/Spouse}
+  - {type: ST, name: FN.5, key: surname_from_partner_spouse, desc: Surname From Partner/Spouse}
+RFR:
+  components:
+  - {type: NR, name: RFR.1, key: numeric_range, desc: Numeric Range}
+  - {type: IS, name: RFR.2, key: administrative_sex, desc: Administrative Sex}
+  - {type: NR, name: RFR.3, key: age_range, desc: Age Range}
+  - {type: NR, name: RFR.4, key: gestational_age_range, desc: Gestational Age Range}
+  - {type: ST, name: RFR.5, key: species, desc: Species}
+  - {type: ST, name: RFR.6, key: race_subspecies, desc: Race/subspecies}
+  - {type: TX, name: RFR.7, key: conditions, desc: Conditions}
+DIN:
+  components:
+  - {type: TS, name: DIN.1, key: date, desc: Date}
+  - {type: CE, name: DIN.2, key: institution_name, desc: Institution Name}
+WVS:
+  components:
+  - {type: ST, name: WVS.1, key: source_one_name, desc: Source One Name}
+  - {type: ST, name: WVS.2, key: source_two_name, desc: Source Two Name}
+CSU:
+  components:
+  - {type: NM, name: CSU.1, key: channel_sensitivity, desc: Channel Sensitivity}
+  - {type: ST, name: CSU.2, key: unit_of_measure_identifier, desc: Unit of Measure Identifier}
+  - {type: ST, name: CSU.3, key: unit_of_measure_description, desc: Unit of Measure Description}
+  - {type: ID, name: CSU.4, key: unit_of_measure_coding_system, desc: Unit of Measure Coding System}
+  - {type: ST, name: CSU.5, key: alternate_unit_of_measure_identifier, desc: Alternate Unit of Measure Identifier}
+  - {type: ST, name: CSU.6, key: alternate_unit_of_measure_description, desc: Alternate Unit of Measure Description}
+  - {type: ID, name: CSU.7, key: alternate_unit_of_measure_coding_system, desc: Alternate Unit of Measure Coding System}
+CNN:
+  components:
+  - {type: ST, name: CNN.1, key: id_number, desc: ID Number}
+  - {type: ST, name: CNN.2, key: family_name, desc: Family Name}
+  - {type: ST, name: CNN.3, key: given_name, desc: Given Name}
+  - {type: ST, name: CNN.4, key: second_and_further_given_names_or_initials_thereof, desc: Second and Further Given Names or Initials Thereof}
+  - {type: ST, name: CNN.5, key: suffix_, desc: 'Suffix (e.g., JR or III)'}
+  - {type: ST, name: CNN.6, key: prefix_, desc: 'Prefix (e.g., DR)'}
+  - {type: IS, name: CNN.7, key: degree_e_g_md, desc: 'Degree (e.g., MD'}
+  - {type: IS, name: CNN.8, key: source_table, desc: Source Table}
+  - {type: IS, name: CNN.9, key: assigning_authority_namespace_id, desc: Assigning Authority   - Namespace ID}
+  - {type: ST, name: CNN.10, key: assigning_authority_universal_id, desc: Assigning Authority  - Universal ID}
+  - {type: ID, name: CNN.11, key: assigning_authority_universal_id_type, desc: Assigning Authority  - Universal ID Type}
+UVC:
+  components:
+  - {type: CNE, name: UVC.1, key: value_code, desc: Value Code}
+  - {type: MO, name: UVC.2, key: value_amount, desc: Value Amount}
+QIP:
+  components:
+  - {type: ST, name: QIP.1, key: segment_field_name, desc: Segment Field Name}
+  - {type: ST, name: QIP.2, key: values, desc: Values}
+RPT:
+  components:
+  - {type: CWE, name: RPT.1, key: repeat_pattern_code, desc: Repeat Pattern Code}
+  - {type: ID, name: RPT.2, key: calendar_alignment, desc: Calendar Alignment}
+  - {type: NM, name: RPT.3, key: phase_range_begin_value, desc: Phase Range Begin Value}
+  - {type: NM, name: RPT.4, key: phase_range_end_value, desc: Phase Range End Value}
+  - {type: NM, name: RPT.5, key: period_quantity, desc: Period Quantity}
+  - {type: IS, name: RPT.6, key: period_units, desc: Period Units}
+  - {type: ID, name: RPT.7, key: institution_specified_time, desc: Institution Specified Time}
+  - {type: ID, name: RPT.8, key: event, desc: Event}
+  - {type: NM, name: RPT.9, key: event_offset_quantity, desc: Event Offset Quantity}
+  - {type: IS, name: RPT.10, key: event_offset_units, desc: Event Offset Units}
+  - {type: GTS, name: RPT.11, key: general_timing_specification, desc: General Timing Specification}
+CWE:
+  components:
+  - {type: ST, name: CWE.1, key: identifier, desc: Identifier}
+  - {type: ST, name: CWE.2, key: text, desc: Text}
+  - {type: ID, name: CWE.3, key: name_of_coding_system, desc: Name of Coding System}
+  - {type: ST, name: CWE.4, key: alternate_identifier, desc: Alternate Identifier}
+  - {type: ST, name: CWE.5, key: alternate_text, desc: Alternate Text}
+  - {type: ID, name: CWE.6, key: name_of_alternate_coding_system, desc: Name of Alternate Coding System}
+  - {type: ST, name: CWE.7, key: coding_system_version_id, desc: Coding System Version ID}
+  - {type: ST, name: CWE.8, key: alternate_coding_system_version_id, desc: Alternate Coding System Version ID}
+  - {type: ST, name: CWE.9, key: original_text, desc: Original Text}
+VH:
+  components:
+  - {type: ID, name: VH.1, key: start_day_range, desc: Start Day Range}
+  - {type: ID, name: VH.2, key: end_day_range, desc: End Day Range}
+  - {type: TM, name: VH.3, key: start_hour_range, desc: Start Hour Range}
+  - {type: TM, name: VH.4, key: end_hour_range, desc: End Hour Range}
+LA2:
+  components:
+  - {type: IS, name: LA2.1, key: point_of_care, desc: Point of Care}
+  - {type: IS, name: LA2.2, key: room, desc: Room}
+  - {type: IS, name: LA2.3, key: bed, desc: Bed}
+  - {type: HD, name: LA2.4, key: facility, desc: Facility}
+  - {type: IS, name: LA2.5, key: location_status, desc: Location Status}
+  - {type: IS, name: LA2.6, key: patient_location_type, desc: Patient Location Type}
+  - {type: IS, name: LA2.7, key: building, desc: Building}
+  - {type: IS, name: LA2.8, key: floor, desc: Floor}
+  - {type: ST, name: LA2.9, key: street_address, desc: Street Address}
+  - {type: ST, name: LA2.10, key: other_designation, desc: Other Designation}
+  - {type: ST, name: LA2.11, key: city, desc: City}
+  - {type: ST, name: LA2.12, key: state_or_province, desc: State or Province}
+  - {type: ST, name: LA2.13, key: zip_or_postal_code, desc: Zip or Postal Code}
+  - {type: ID, name: LA2.14, key: country, desc: Country}
+  - {type: ID, name: LA2.15, key: address_type, desc: Address Type}
+  - {type: ST, name: LA2.16, key: other_geographic_designation, desc: Other Geographic Designation}
+CCD:
+  components:
+  - {type: ID, name: CCD.1, key: invocation_event, desc: Invocation Event}
+  - {type: TS, name: CCD.2, key: date_time, desc: Date/time}
+PL:
+  components:
+  - {type: IS, name: PL.1, key: point_of_care, desc: Point of Care}
+  - {type: IS, name: PL.2, key: room, desc: Room}
+  - {type: IS, name: PL.3, key: bed, desc: Bed}
+  - {type: HD, name: PL.4, key: facility, desc: Facility}
+  - {type: IS, name: PL.5, key: location_status, desc: Location Status}
+  - {type: IS, name: PL.6, key: person_location_type, desc: Person Location Type}
+  - {type: IS, name: PL.7, key: building, desc: Building}
+  - {type: IS, name: PL.8, key: floor, desc: Floor}
+  - {type: ST, name: PL.9, key: location_description, desc: Location Description}
+  - {type: EI, name: PL.10, key: comprehensive_location_identifier, desc: Comprehensive Location Identifier}
+  - {type: HD, name: PL.11, key: assigning_authority_for_location, desc: Assigning Authority for Location}
+XON:
+  components:
+  - {type: ST, name: XON.1, key: organization_name, desc: Organization Name}
+  - {type: IS, name: XON.2, key: organization_name_type_code, desc: Organization Name Type Code}
+  - {type: NM, name: XON.3, key: id_number, desc: ID Number}
+  - {type: NM, name: XON.4, key: check_digit, desc: Check Digit}
+  - {type: ID, name: XON.5, key: check_digit_scheme, desc: Check Digit Scheme}
+  - {type: HD, name: XON.6, key: assigning_authority, desc: Assigning Authority}
+  - {type: ID, name: XON.7, key: identifier_type_code, desc: Identifier Type Code}
+  - {type: HD, name: XON.8, key: assigning_facility, desc: Assigning Facility}
+  - {type: ID, name: XON.9, key: name_representation_code, desc: Name Representation Code}
+  - {type: ST, name: XON.10, key: organization_identifier, desc: Organization Identifier}
+MOP:
+  components:
+  - {type: ID, name: MOP.1, key: money_or_percentage_indicator, desc: Money or Percentage Indicator}
+  - {type: NM, name: MOP.2, key: money_or_percentage_quantity, desc: Money or Percentage Quantity}
+  - {type: ID, name: MOP.3, key: currency_denomination, desc: Currency Denomination}
+RI:
+  components:
+  - {type: IS, name: RI.1, key: repeat_pattern, desc: Repeat Pattern}
+  - {type: ST, name: RI.2, key: explicit_time_interval, desc: Explicit Time Interval}
+SPS:
+  components:
+  - {type: CWE, name: SPS.1, key: specimen_source_name_or_code, desc: Specimen Source Name or Code}
+  - {type: CWE, name: SPS.2, key: additives, desc: Additives}
+  - {type: TX, name: SPS.3, key: specimen_collection_method, desc: Specimen Collection Method}
+  - {type: CWE, name: SPS.4, key: body_site, desc: Body Site}
+  - {type: CWE, name: SPS.5, key: site_modifier, desc: Site Modifier}
+  - {type: CWE, name: SPS.6, key: collection_method_modifier_code, desc: Collection Method Modifier Code}
+  - {type: CWE, name: SPS.7, key: specimen_role, desc: Specimen Role}
+JCC:
+  components:
+  - {type: IS, name: JCC.1, key: job_code, desc: Job Code}
+  - {type: IS, name: JCC.2, key: job_class, desc: Job Class}
+  - {type: TX, name: JCC.3, key: job_description_text, desc: Job Description Text}
+ICD:
+  components:
+  - {type: IS, name: ICD.1, key: certification_patient_type, desc: Certification Patient Type}
+  - {type: ID, name: ICD.2, key: certification_required, desc: Certification Required}
+  - {type: TS, name: ICD.3, key: date_time_certification_required, desc: Date/Time Certification Required}
+DTN:
+  components:
+  - {type: IS, name: DTN.1, key: day_type, desc: Day Type}
+  - {type: NM, name: DTN.2, key: number_of_days, desc: Number of Days}
+CNE:
+  components:
+  - {type: ST, name: CNE.1, key: identifier, desc: Identifier}
+  - {type: ST, name: CNE.2, key: text, desc: Text}
+  - {type: ID, name: CNE.3, key: name_of_coding_system, desc: Name of Coding System}
+  - {type: ST, name: CNE.4, key: alternate_identifier, desc: Alternate Identifier}
+  - {type: ST, name: CNE.5, key: alternate_text, desc: Alternate Text}
+  - {type: ID, name: CNE.6, key: name_of_alternate_coding_system, desc: Name of Alternate Coding System}
+  - {type: ST, name: CNE.7, key: coding_system_version_id, desc: Coding System Version ID}
+  - {type: ST, name: CNE.8, key: alternate_coding_system_version_id, desc: Alternate Coding System Version ID}
+  - {type: ST, name: CNE.9, key: original_text, desc: Original Text}
+VR:
+  components:
+  - {type: ST, name: VR.1, key: first_data_code_value, desc: First Data Code Value}
+  - {type: ST, name: VR.2, key: last_data_code_value, desc: Last Data Code Value}
+NA:
+  components:
+  - {type: NM, name: NA.1, key: value1, desc: Value1}
+  - {type: NM, name: NA.2, key: value2, desc: Value2}
+  - {type: NM, name: NA.3, key: value3, desc: Value3}
+  - {type: NM, name: NA.4, key: value4, desc: Value4}
+FC:
+  components:
+  - {type: IS, name: FC.1, key: financial_class_code, desc: Financial Class Code}
+  - {type: TS, name: FC.2, key: effective_date, desc: Effective Date}
+RCD:
+  components:
+  - {type: ST, name: RCD.1, key: segment_field_name, desc: Segment Field Name}
+  - {type: ID, name: RCD.2, key: hl7_data_type, desc: HL7 Data Type}
+  - {type: NM, name: RCD.3, key: maximum_column_width, desc: Maximum Column Width}
+XCN:
+  components:
+  - {type: ST, name: XCN.1, key: id_number, desc: ID Number}
+  - {type: FN, name: XCN.2, key: family_name, desc: Family Name}
+  - {type: ST, name: XCN.3, key: given_name, desc: Given Name}
+  - {type: ST, name: XCN.4, key: second_and_further_given_names_or_initials_thereof, desc: Second and Further Given Names or Initials Thereof}
+  - {type: ST, name: XCN.5, key: suffix_, desc: 'Suffix (e.g., JR or III)'}
+  - {type: ST, name: XCN.6, key: prefix_, desc: 'Prefix (e.g., DR)'}
+  - {type: IS, name: XCN.7, key: degree_, desc: 'Degree (e.g., MD)'}
+  - {type: IS, name: XCN.8, key: source_table, desc: Source Table}
+  - {type: HD, name: XCN.9, key: assigning_authority, desc: Assigning Authority}
+  - {type: ID, name: XCN.10, key: name_type_code, desc: Name Type Code}
+  - {type: ST, name: XCN.11, key: identifier_check_digit, desc: Identifier Check Digit}
+  - {type: ID, name: XCN.12, key: check_digit_scheme, desc: Check Digit Scheme}
+  - {type: ID, name: XCN.13, key: identifier_type_code, desc: Identifier Type Code}
+  - {type: HD, name: XCN.14, key: assigning_facility, desc: Assigning Facility}
+  - {type: ID, name: XCN.15, key: name_representation_code, desc: Name Representation Code}
+  - {type: CE, name: XCN.16, key: name_context, desc: Name Context}
+  - {type: DR, name: XCN.17, key: name_validity_range, desc: Name Validity Range}
+  - {type: ID, name: XCN.18, key: name_assembly_order, desc: Name Assembly Order}
+  - {type: TS, name: XCN.19, key: effective_date, desc: Effective Date}
+  - {type: TS, name: XCN.20, key: expiration_date, desc: Expiration Date}
+  - {type: ST, name: XCN.21, key: professional_suffix, desc: Professional Suffix}
+  - {type: CWE, name: XCN.22, key: assigning_jurisdiction, desc: Assigning Jurisdiction}
+  - {type: CWE, name: XCN.23, key: assigning_agency_or_department, desc: Assigning Agency or Department}
+ED:
+  components:
+  - {type: HD, name: ED.1, key: source_application, desc: Source Application}
+  - {type: ID, name: ED.2, key: type_of_data, desc: Type of Data}
+  - {type: ID, name: ED.3, key: data_subtype, desc: Data Subtype}
+  - {type: ID, name: ED.4, key: encoding, desc: Encoding}
+  - {type: TX, name: ED.5, key: data, desc: Data}
+DLT:
+  components:
+  - {type: NR, name: DLT.1, key: normal_range, desc: Normal Range}
+  - {type: NM, name: DLT.2, key: numeric_threshold, desc: Numeric Threshold}
+  - {type: ID, name: DLT.3, key: change_computation, desc: Change Computation}
+  - {type: NM, name: DLT.4, key: days_retained, desc: Days Retained}
+CD:
+  components:
+  - {type: WVI, name: CD.1, key: channel_identifier, desc: Channel Identifier}
+  - {type: WVS, name: CD.2, key: waveform_source, desc: Waveform Source}
+  - {type: CSU, name: CD.3, key: channel_sensitivity_units, desc: Channel Sensitivity/Units}
+  - {type: CCP, name: CD.4, key: channel_calibration_parameters, desc: Channel Calibration Parameters}
+  - {type: NM, name: CD.5, key: channel_sampling_frequency, desc: Channel Sampling Frequency}
+  - {type: NR, name: CD.6, key: minimum_maximum_data_values, desc: Minimum/Maximum Data Values}

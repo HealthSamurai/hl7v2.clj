@@ -1,0 +1,61 @@
+MSH|^~\&|RISOC|001|MS4OC|001|20111115200643||ORU^R01|30004|T|2.3||||||PRELIM
+PID|1||160922^^^^^VHH||SENGUL^ISO^^^^||19201214|M||C^CAUCASIAN NON-HISPANIC|3347 RETA ST^^LACRESCENTA^CA^91214^||(818)249-7031^PRN||ARM^ARMENIAN|||16732000|605-50-6261|||||||||||N
+PV1|1|I|^5SOUT518A^^^^^^^5 South||||80231^GANDHI^DEVINDER^^^^MD^^NPI&1467492371|||||||| |||||||||||||||||||||||||||||20111113170200
+OBR|1|00045|1000718|4550422^CT ANGIO NECK W WO CON^^AGNKCOM|||20111115160900||||||SYNCOPE ELEVATED D DIMER CHEST PAIN|||20222^PEREYRA^ROBERT^W^^^MD^^NPI&1841336138||||||20111115200600||CT^Computed Tomography|P||^^30^20111115094822^^9|||AMB^Ambulatory||34831^PATEL^SAMEER^A^^^MD^^NPI&1508081530|~|ylee^LEE^YUNGCHIANG^^^^|^WALKER^CHERYL^^^^Sched/Transcription|20111115081000
+OBX|2|FT|AGNKCOM&GDT||EXAMINATION||||||P
+OBX|3|FT|AGNKCOM&GDT|| ||||||P
+OBX|4|FT|AGNKCOM&GDT||CT ANGIO NECK W WO CON||||||P
+OBX|5|FT|AGNKCOM&GDT|| ||||||P
+OBX|6|FT|AGNKCOM&GDT|| ||||||P
+OBX|7|FT|AGNKCOM&GDT||CLINICAL HISTORY NODULE SIZE: 3 ||||||P
+OBX|8|FT|AGNKCOM&GDT||Chest pain, syncope and dizziness.  Rule out carotid stenosis.||||||P
+OBX|9|FT|AGNKCOM&GDT|| ||||||P
+OBX|10|FT|AGNKCOM&GDT|| ||||||P
+OBX|11|FT|AGNKCOM&GDT||COMPARISON||||||P
+OBX|12|FT|AGNKCOM&GDT||No comparison available.||||||P
+OBX|13|FT|AGNKCOM&GDT|| ||||||P
+OBX|14|FT|AGNKCOM&GDT|| ||||||P
+OBX|15|FT|AGNKCOM&GDT||TECHNIQUE||||||P
+OBX|16|FT|AGNKCOM&GDT||CT angiography of the neck was performed and supplemented with ||||||P
+OBX|17|FT|AGNKCOM&GDT||coronal, sagittal, MIP, surface rendered and 3D rotating ||||||P
+OBX|18|FT|AGNKCOM&GDT||reconstructions.||||||P
+OBX|19|FT|AGNKCOM&GDT|| ||||||P
+OBX|20|FT|AGNKCOM&GDT||Contrast Agent ISOVUE 370 100 milliliter 11/15/2011 INTRAVENOUS||||||P
+OBX|21|FT|AGNKCOM&GDT|| ||||||P
+OBX|22|FT|AGNKCOM&GDT|| ||||||P
+OBX|23|FT|AGNKCOM&GDT||FINDINGS||||||P
+OBX|24|FT|AGNKCOM&GDT||Incidentally noted is a bovine arch variant. There is mild tortuosity ||||||P
+OBX|25|FT|AGNKCOM&GDT||and kinking of the proximal great vessels without significant ostial ||||||P
+OBX|26|FT|AGNKCOM&GDT||stenosis.||||||P
+OBX|27|FT|AGNKCOM&GDT|| ||||||P
+OBX|28|FT|AGNKCOM&GDT||RIGHT CAROTID ARTERY:  The right common and internal carotid arteries ||||||P
+OBX|29|FT|AGNKCOM&GDT||are normal in course and caliber without aneurysmal dilatation or ||||||P
+OBX|30|FT|AGNKCOM&GDT||dissection.  The carotid bifurcation is widely patent. There is very ||||||P
+OBX|31|FT|AGNKCOM&GDT||mild focal short-segment narrowing of the proximal internal carotid ||||||P
+OBX|32|FT|AGNKCOM&GDT||artery with less than 10% stenosis.  The external carotid artery is ||||||P
+OBX|33|FT|AGNKCOM&GDT||widely patent and well-opacified as well.||||||P
+OBX|34|FT|AGNKCOM&GDT|| ||||||P
+OBX|35|FT|AGNKCOM&GDT||LEFT CAROTID ARTERY:  The left common carotid artery is normal in ||||||P
+OBX|36|FT|AGNKCOM&GDT||course and caliber without aneurysmal dilatation or dissection.  The ||||||P
+OBX|37|FT|AGNKCOM&GDT||carotid bifurcation is patent.  There is a moderate-length high-grade ||||||P
+OBX|38|FT|AGNKCOM&GDT||stenosis of the proximal left internal carotid artery with ||||||P
+OBX|39|FT|AGNKCOM&GDT||circumferential mural thrombus noted best on axial and sagittal ||||||P
+OBX|40|FT|AGNKCOM&GDT||imaging.  This results in approximately 75% narrowing over a 2 cm ||||||P
+OBX|41|FT|AGNKCOM&GDT||length segment. The distal internal carotid artery is unremarkable.  ||||||P
+OBX|42|FT|AGNKCOM&GDT||The origin of the external carotid artery is widely patent without ||||||P
+OBX|43|FT|AGNKCOM&GDT||abnormality.||||||P
+OBX|44|FT|AGNKCOM&GDT|| ||||||P
+OBX|45|FT|AGNKCOM&GDT||VERTEBROBASILAR SYSTEM: The origin of both vertebral arteries are ||||||P
+OBX|46|FT|AGNKCOM&GDT||patent.  Incidentally noted is a dominant left vertebral artery with ||||||P
+OBX|47|FT|AGNKCOM&GDT||diffuse attenuation of the right vertebral artery.  The vertebral ||||||P
+OBX|48|FT|AGNKCOM&GDT||confluence and proximal basilar artery are unremarkable.||||||P
+OBX|49|FT|AGNKCOM&GDT|| ||||||P
+OBX|50|FT|AGNKCOM&GDT|| ||||||P
+OBX|51|FT|AGNKCOM&GDT||IMPRESSION||||||P
+OBX|52|FT|AGNKCOM&GDT||1. LEFT INTERNAL CAROTID ARTERY:  Long-segment high-grade stenosis of ||||||P
+OBX|53|FT|AGNKCOM&GDT||the proximal ICA with approximately 75% narrowing.  Correlation with ||||||P
+OBX|54|FT|AGNKCOM&GDT||carotid ultrasound is needed.||||||P
+OBX|55|FT|AGNKCOM&GDT|| ||||||P
+OBX|56|FT|AGNKCOM&GDT||2. RIGHT INTERNAL CAROTID ARTERY: No significant stenosis. ||||||P
+DG1|1||784.3^APHASIA^I9C||200750816|A
+DG1|2||535.61^DUODENITIS W/HEMORRHAGE^I9C||200750816|F

@@ -1,0 +1,36 @@
+MSH|^~\&|RISOC|001|MS4OC|001|20111115200643||ORU^R01|30004|T|2.3||||||PRELIM
+PID|1|010107111^^^MS4^PN^|160922^^^MS4^MR^001|160933^^^MS4^MR^001|BARRETT^JEAN^SANDY^^||19440823|F||C|STRAWBERRY AVE^FOUR OAKS LODGE^ALBUKERKA^CA^98765^USA^^||(111)222-3333||ENG|W|CHR|111^^^MS4001^AN^001|123-22-121212||||OKLAHOMA|||||||N
+PV1|1|I|^5SOUT518A^^^^^^^5 South||||80231^GANDHI^DEVINDER^^^^MD^^NPI&1467492371|||||||| |||||||||||||||||||||||||||||20111113170200
+OBR|1|00045|1000718|4550422^CT ANGIO NECK W WO CON^^AGNKCOM|||20111115160900||||||SYNCOPE ELEVATED D DIMER CHEST PAIN|||20222^PEREYRA^ROBERT^W^^^MD^^NPI&1841336138||||||20111115200600||CT^Computed Tomography|P||^^30^20111115094822^^9|||AMB^Ambulatory||34831^PATEL^SAMEER^A^^^MD^^NPI&1508081530|~|ylee^LEE^YUNGCHIANG^^^^|^WALKER^CHERYL^^^^Sched/Transcription|20111115081000
+OBX||FT|AGNKCOM&GDT||SCREENING LUNG||||||P
+OBX||FT|AGNKCOM&GDT||From : Alphonsus Regional Center||||||P
+OBX||FT|AGNKCOM&GDT||2, Saint Alphonsus Gem State||||||P
+OBX||FT|AGNKCOM&GDT||Medical Center Radiolgy||||||P
+OBX||FT|AGNKCOM&GDT||BAKER CHTY||||||P
+OBX||FT|AGNKCOM&GDT||Patient: - DOB: - EMPI: - visitiAcct: sassassam. 3 Site:||||||P
+OBX||FT|AGNKCOM&GDT||PTIMOD: - MiFN:||||||P
+OBX||FT|AGNKCOM&GDT||3 Ref. Prov: Exam: - Room/Bed: CTB Add. Providers:||||||P
+OBX||FT|AGNKCOM&GDT||SCREENING LUNG "||||||P
+OBX||FT|AGNKCOM&GDT||ΕΧΑΜΙ DΑΤΕ: 6/16/2015 13:45 Contrast/Isotope: None||||||P
+OBX||FT|AGNKCOM&GDT||PROCEDURE: CT LUNG LOW DOSE CA SCREENING||||||P
+OBX||FT|AGNKCOM&GDT||COMPARISON: None.||||||P
+OBX||FT|AGNKCOM&GDT||INDICATIONS: 64 year old former smoker with 50 pack year history of smoking. Quit April 2015.||||||P
+OBX||FT|AGNKCOM&GDT||PQRS QUALITY INFORMATION:||||||P
+OBX||FT|AGNKCOM&GDT||EXAM COUNT: 0 CT exams and 0 NM Myocardial Perfusion exams in past 12 months.||||||P
+OBX||FT|AGNKCOM&GDT||DATA AVAILABILITY: Dicom format image data is available to non-affiliated external entities on secure, media free, reciprocally searchable basis for 12||||||P
+OBX||FT|AGNKCOM&GDT||month period of time after the study.||||||P
+OBX||FT|AGNKCOM&GDT||DATA SEARCH. A search was conducted for prior patient CT exams performed at an external facility within 12 months prior to the imaging study being||||||P
+OBX||FT|AGNKCOM&GDT||performed, and is available through a secure, authorized, media free, shared archive.||||||P
+OBX||FT|AGNKCOM&GDT||CT DOSE REGISTRY: CT study data has been reported to a CT Radiation Dose Index Registry containing all minimum necessary data elements.||||||P
+OBX||FT|AGNKCOM&GDT||Total Dose Length Product (DLP in mGy-cm): 38.50||||||P
+OBX||FT|AGNKCOM&GDT||TECHNIQUE: CT images of the lungs were obtained without intravenous contrast and utilizing a very low dose technique.||||||P
+OBX||FT|AGNKCOM&GDT||LUNG FINDINGS:||||||P
+OBX||FT|AGNKCOM&GDT||NODULES: Noncalcified linear focus in the lateral basilar right lower lobe seen on series 9||||||P
+OBX||FT|AGNKCOM&GDT||image 185 measures 0.3 x 0.2 cm. Punctate calcified nodule in the lingula seen on series 9 image 175. Calcified nodule noted in the apical posterior segment left upper lobe, series 9 image 79.||||||P
+OBX||FT|AGNKCOM&GDT||LUNG PARENCHYMA: Within normal limits.||||||P
+OBX||FT|AGNKCOM&GDT||OTHER FINDINGS:||||||P
+OBX||FT|AGNKCOM&GDT||HEART: Within normal limits. MEDIASTINUM/HILA: Within normal limits. VASCULATURE: Within normal limits. PLEURAL SPACE: Within normal limits.||||||P
+OBX||FT|AGNKCOM&GDT||CHEST WALL/AXILLA: Within normal limits. LTD, UPPER ABDOMEN: Within normal limits. MUSCULOSKELETAL: Normal for age. ADIOT"L COMMENTS: None.||||||P
+OBX||FT|AGNKCOM&GDT||CONCLUSION: Solitary linear noncalcified right lower lobe pulmonary nodule measures less than 4 mm||||||P
+OBX||FT|AGNKCOM&GDT||average diameter and demonstrates benign pattern morphology.||||||P
+OBX||FT|AGNKCOM&GDT||RECOMMENDATION: LungPADS 1 - follow up low dose chest CT in 1 year.||||||P

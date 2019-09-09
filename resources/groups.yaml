@@ -1,0 +1,61 @@
+ORU_R01:
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+    enter:
+      seg: {PV1: 0}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: NK1, coll: true}
+    - {idx: 4, grp: VISIT}
+    enter:
+      seg: {PID: 0}
+  TIMING_QTY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+    enter:
+      seg: {TQ1: 0}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    enter:
+      seg: {OBX: 0}
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+    enter:
+      seg: {SPM: 0}
+  ORDER_OBSERVATION:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, seg: OBR, req: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: TIMING_QTY, coll: true}
+    - {idx: 4, seg: CTD}
+    - {idx: 5, grp: OBSERVATION, coll: true}
+    - {idx: 6, seg: FT1, coll: true}
+    - {idx: 7, seg: CTI, coll: true}
+    - {idx: 8, grp: SPECIMEN, coll: true}
+    enter:
+      seg: {ORC: 0, OBR: 1}
+  PATIENT_RESULT:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER_OBSERVATION, req: true, coll: true}
+    enter:
+      grp: {PATIENT: 0, ORDER_OBSERVATION: 1}
+  ORU_R01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, grp: PATIENT_RESULT, req: true, coll: true}
+    - {idx: 3, seg: DSC}
+    enter:
+      seg: {MSH: 0}

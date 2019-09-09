@@ -1,0 +1,1121 @@
+{
+  "parsedResult": [
+    [
+      {
+        "0": "MSH",
+        "1": "|",
+        "2": "^~\\&",
+        "3": {
+          "0": "^",
+          "1": "VITARAD"
+        },
+        "4": {
+          "0": "^",
+          "1": "VITAEHR"
+        },
+        "5": {
+          "0": "^",
+          "1": "IMG_ORDERED"
+        },
+        "6": {
+          "0": "^",
+          "1": "VITAPHS"
+        },
+        "7": "2017-08-07T10:30:45.000Z",
+        "8": "T834594",
+        "9": {
+          "0": "^",
+          "1": "ORM",
+          "2": "O01"
+        },
+        "10": "94675",
+        "11": {
+          "0": "^",
+          "1": "T"
+        },
+        "12": "2.3",
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": null,
+        "19": null,
+        "20": null,
+        "21": null,
+        "22": null,
+        "23": null
+      },
+      {
+        "0": "PID",
+        "1": "1",
+        "2": {
+          "0": "^",
+          "1": "45120080724",
+          "2": null,
+          "3": null,
+          "4": "VITALAB MRN",
+          "5": "VITALAB MRN"
+        },
+        "3": [
+          {
+            "0": "^",
+            "1": "R574",
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": "VIT"
+          },
+          {
+            "0": "^",
+            "1": "VI34572834",
+            "2": null,
+            "3": null,
+            "4": "N VITA MRN",
+            "5": "N VITA MRN"
+          },
+          {
+            "0": "^",
+            "1": "45120080724",
+            "2": null,
+            "3": null,
+            "4": "VITALAB MRN",
+            "5": "VITALAB MRN"
+          }
+        ],
+        "4": null,
+        "5": {
+          "0": "^",
+          "1": "BURNETT",
+          "2": "MARGARET"
+        },
+        "6": null,
+        "7": "1973-06-16T00:00:00.000Z",
+        "8": "F",
+        "9": [],
+        "10": null,
+        "11": [
+          {
+            "0": "^",
+            "1": "999 HIGH ST",
+            "2": null,
+            "3": "CLARKSVILLE",
+            "4": "TN",
+            "5": "37054",
+            "6": "USA",
+            "7": "P",
+            "8": null,
+            "9": "CLARKSVILLE"
+          }
+        ],
+        "12": "CLARKSVILLE",
+        "13": [
+          {
+            "0": "^",
+            "1": "(562)555-5656",
+            "2": "P",
+            "3": "H"
+          }
+        ],
+        "14": [],
+        "15": null,
+        "16": [],
+        "17": null,
+        "18": {
+          "0": "^",
+          "1": "48324732444"
+        },
+        "19": null,
+        "20": null,
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": null,
+        "25": null,
+        "26": null,
+        "27": null,
+        "28": null,
+        "29": null,
+        "30": null,
+        "31": null,
+        "32": null
+      },
+      {
+        "0": "PD1",
+        "1": null,
+        "2": null,
+        "3": [
+          {
+            "0": "^",
+            "1": "MSP FORESIGHT SAINT NICOLE",
+            "2": null,
+            "3": "456545"
+          }
+        ],
+        "4": [
+          {
+            "0": "^",
+            "1": "7898456546",
+            "2": "FISCHER",
+            "3": "FRANKLIN",
+            "4": "J",
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VITAEHR",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": "PNPI"
+          },
+          {
+            "0": "^",
+            "1": "32859",
+            "2": "FISCHER",
+            "3": "FRANKLIN",
+            "4": "J",
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "BEST MEDICAL AND REHABILITATION CENTER",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": "BEST MEDICAL AND REHABILITATION CENTER"
+          },
+          {
+            "0": "^",
+            "1": "9574564",
+            "2": "FISCHER",
+            "3": "FRANKLIN",
+            "4": "J",
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VITAPID",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": "PPID"
+          }
+        ],
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": null,
+        "10": [],
+        "11": null,
+        "12": null,
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": null
+      },
+      {
+        "0": "PV1",
+        "1": null,
+        "2": "O",
+        "3": {
+          "0": "^",
+          "1": "PMG EWA HOC",
+          "2": null,
+          "3": null,
+          "4": "TN058",
+          "5": null,
+          "6": null,
+          "7": null,
+          "8": null,
+          "9": null,
+          "10": null,
+          "11": null
+        },
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": [],
+        "10": null,
+        "11": null,
+        "12": null,
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": null,
+        "19": {
+          "0": "^",
+          "1": "48324732444"
+        },
+        "20": [],
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": [],
+        "25": [],
+        "26": [],
+        "27": [],
+        "28": null,
+        "29": null,
+        "30": null,
+        "31": null,
+        "32": null,
+        "33": null,
+        "34": null,
+        "35": null,
+        "36": null,
+        "37": null,
+        "38": null,
+        "39": null,
+        "40": null,
+        "41": null,
+        "42": null,
+        "43": null,
+        "44": null,
+        "45": null,
+        "46": null,
+        "47": null,
+        "48": null,
+        "49": null,
+        "50": null,
+        "51": "V"
+      },
+      {
+        "0": "ORC",
+        "1": "NW",
+        "2": [
+          {
+            "0": "^",
+            "1": "88946",
+            "2": "VIT"
+          }
+        ],
+        "3": {
+          "0": "^",
+          "1": "2134659PHS",
+          "2": "VIT"
+        },
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": {
+          "0": "^",
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": "2017-08-05T16:45:34.000Z",
+          "5": null,
+          "6": "R"
+        },
+        "8": null,
+        "9": "2017-08-07T10:30:45.000Z",
+        "10": {
+          "0": "^",
+          "1": "T834594",
+          "2": "RAMAIRE",
+          "3": "JAMES",
+          "4": "R",
+          "5": null
+        },
+        "11": null,
+        "12": [
+          {
+            "0": "^",
+            "1": "3453453455",
+            "2": "ACCURSIO",
+            "3": "JARVIS",
+            "4": "STEPHEN",
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VITAEHR",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": "PNPI"
+          },
+          {
+            "0": "^",
+            "1": "3432212",
+            "2": "ACCURSIO",
+            "3": "JARVIS",
+            "4": "STEPHEN",
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VITAPID",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": "PPID"
+          }
+        ],
+        "13": {
+          "0": "^",
+          "1": "HOUSE OF CHARITY CLINIC",
+          "2": null,
+          "3": null,
+          "4": "765673",
+          "5": null,
+          "6": null,
+          "7": null,
+          "8": null,
+          "9": "HOUSE OF CHARITY CLINIC"
+        },
+        "14": [
+          "(768)123-5477"
+        ],
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": null,
+        "19": null,
+        "20": null,
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": null,
+        "25": null,
+        "26": null,
+        "27": null,
+        "28": null,
+        "29": "O",
+        "30": "VERBAL WITH"
+      },
+      {
+        "0": "OBR",
+        "1": "1",
+        "2": [
+          {
+            "0": "^",
+            "1": "88946",
+            "2": "VIT"
+          }
+        ],
+        "3": {
+          "0": "^",
+          "1": "2134659PHS",
+          "2": "VIT"
+        },
+        "4": {
+          "0": "^",
+          "1": "IMG34",
+          "2": "XR CHEST PA OR AP",
+          "3": "VITARAD EAP",
+          "4": null,
+          "5": "XR"
+        },
+        "5": "R",
+        "6": "2017-08-06T00:00:00.000Z",
+        "7": null,
+        "8": null,
+        "9": null,
+        "10": [],
+        "11": "Imaging",
+        "12": null,
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": [
+          {
+            "0": "^",
+            "1": "3453453455",
+            "2": "ACCURSIO",
+            "3": "JARVIS",
+            "4": "STEPHEN",
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VITAEHR",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": "PNPI"
+          },
+          {
+            "0": "^",
+            "1": "3432212",
+            "2": "ACCURSIO",
+            "3": "JARVIS",
+            "4": "STEPHEN",
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "VITAPID",
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": "PPID"
+          }
+        ],
+        "17": [
+          {
+            "0": "^",
+            "1": "(768)123-5477"
+          }
+        ],
+        "18": null,
+        "19": null,
+        "20": null,
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": null,
+        "25": null,
+        "26": null,
+        "27": {
+          "0": "^",
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": "2017-08-05T16:45:34.000Z",
+          "5": null,
+          "6": "R"
+        },
+        "28": [],
+        "29": null,
+        "30": null,
+        "31": [
+          {
+            "0": "^",
+            "1": null,
+            "2": "HACKATHON"
+          }
+        ],
+        "32": null,
+        "33": [],
+        "34": [],
+        "35": [],
+        "36": "2017-08-05T16:45:34.000Z",
+        "37": null,
+        "38": [],
+        "39": [],
+        "40": null,
+        "41": null,
+        "42": null,
+        "43": [],
+        "44": null,
+        "45": null
+      },
+      {
+        "0": "DG1",
+        "1": "1",
+        "2": "ICD-10-CM",
+        "3": {
+          "0": "^",
+          "1": "J84.89",
+          "2": "Other specified interstitial pulmonary diseases (HCC)",
+          "3": "ICD-10-CM"
+        },
+        "4": "Other specified interstitial pulmonary diseases (HCC)",
+        "5": null,
+        "6": "^147;ORD"
+      },
+      {
+        "0": "OBX",
+        "1": "1",
+        "2": "ST",
+        "3": {
+          "0": "^",
+          "1": "ITS.REAS",
+          "2": "Reason for exam:"
+        },
+        "4": null,
+        "5": [
+          "HACKATHON"
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": null,
+        "12": null,
+        "13": null,
+        "14": null
+      }
+    ],
+    [
+      "Missing value for required field OBX_11"
+    ]
+  ],
+  "structurizedResult": [
+    {
+      "MSH": {
+        "0": "MSH",
+        "1": "|",
+        "2": "^~\\&",
+        "3": {
+          "0": "^",
+          "1": "VITARAD"
+        },
+        "4": {
+          "0": "^",
+          "1": "VITAEHR"
+        },
+        "5": {
+          "0": "^",
+          "1": "IMG_ORDERED"
+        },
+        "6": {
+          "0": "^",
+          "1": "VITAPHS"
+        },
+        "7": "2017-08-07T10:30:45.000Z",
+        "8": "T834594",
+        "9": {
+          "0": "^",
+          "1": "ORM",
+          "2": "O01"
+        },
+        "10": "94675",
+        "11": {
+          "0": "^",
+          "1": "T"
+        },
+        "12": "2.3",
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": null,
+        "19": null,
+        "20": null,
+        "21": null,
+        "22": null,
+        "23": null
+      },
+      "PATIENT": {
+        "PID": {
+          "0": "PID",
+          "1": "1",
+          "2": {
+            "0": "^",
+            "1": "45120080724",
+            "2": null,
+            "3": null,
+            "4": "VITALAB MRN",
+            "5": "VITALAB MRN"
+          },
+          "3": [
+            {
+              "0": "^",
+              "1": "R574",
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": "VIT"
+            },
+            {
+              "0": "^",
+              "1": "VI34572834",
+              "2": null,
+              "3": null,
+              "4": "N VITA MRN",
+              "5": "N VITA MRN"
+            },
+            {
+              "0": "^",
+              "1": "45120080724",
+              "2": null,
+              "3": null,
+              "4": "VITALAB MRN",
+              "5": "VITALAB MRN"
+            }
+          ],
+          "4": null,
+          "5": {
+            "0": "^",
+            "1": "BURNETT",
+            "2": "MARGARET"
+          },
+          "6": null,
+          "7": "1973-06-16T00:00:00.000Z",
+          "8": "F",
+          "9": [],
+          "10": null,
+          "11": [
+            {
+              "0": "^",
+              "1": "999 HIGH ST",
+              "2": null,
+              "3": "CLARKSVILLE",
+              "4": "TN",
+              "5": "37054",
+              "6": "USA",
+              "7": "P",
+              "8": null,
+              "9": "CLARKSVILLE"
+            }
+          ],
+          "12": "CLARKSVILLE",
+          "13": [
+            {
+              "0": "^",
+              "1": "(562)555-5656",
+              "2": "P",
+              "3": "H"
+            }
+          ],
+          "14": [],
+          "15": null,
+          "16": [],
+          "17": null,
+          "18": {
+            "0": "^",
+            "1": "48324732444"
+          },
+          "19": null,
+          "20": null,
+          "21": null,
+          "22": null,
+          "23": null,
+          "24": null,
+          "25": null,
+          "26": null,
+          "27": null,
+          "28": null,
+          "29": null,
+          "30": null,
+          "31": null,
+          "32": null
+        },
+        "PD1": {
+          "0": "PD1",
+          "1": null,
+          "2": null,
+          "3": [
+            {
+              "0": "^",
+              "1": "MSP FORESIGHT SAINT NICOLE",
+              "2": null,
+              "3": "456545"
+            }
+          ],
+          "4": [
+            {
+              "0": "^",
+              "1": "7898456546",
+              "2": "FISCHER",
+              "3": "FRANKLIN",
+              "4": "J",
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": "VITAEHR",
+              "10": null,
+              "11": null,
+              "12": null,
+              "13": "PNPI"
+            },
+            {
+              "0": "^",
+              "1": "32859",
+              "2": "FISCHER",
+              "3": "FRANKLIN",
+              "4": "J",
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": "BEST MEDICAL AND REHABILITATION CENTER",
+              "10": null,
+              "11": null,
+              "12": null,
+              "13": "BEST MEDICAL AND REHABILITATION CENTER"
+            },
+            {
+              "0": "^",
+              "1": "9574564",
+              "2": "FISCHER",
+              "3": "FRANKLIN",
+              "4": "J",
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": "VITAPID",
+              "10": null,
+              "11": null,
+              "12": null,
+              "13": "PPID"
+            }
+          ],
+          "5": null,
+          "6": null,
+          "7": null,
+          "8": null,
+          "9": null,
+          "10": [],
+          "11": null,
+          "12": null,
+          "13": null,
+          "14": null,
+          "15": null,
+          "16": null,
+          "17": null,
+          "18": null
+        },
+        "PATIENT_VISIT": {
+          "PV1": {
+            "0": "PV1",
+            "1": null,
+            "2": "O",
+            "3": {
+              "0": "^",
+              "1": "PMG EWA HOC",
+              "2": null,
+              "3": null,
+              "4": "TN058",
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": null,
+              "10": null,
+              "11": null
+            },
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": [],
+            "10": null,
+            "11": null,
+            "12": null,
+            "13": null,
+            "14": null,
+            "15": null,
+            "16": null,
+            "17": null,
+            "18": null,
+            "19": {
+              "0": "^",
+              "1": "48324732444"
+            },
+            "20": [],
+            "21": null,
+            "22": null,
+            "23": null,
+            "24": [],
+            "25": [],
+            "26": [],
+            "27": [],
+            "28": null,
+            "29": null,
+            "30": null,
+            "31": null,
+            "32": null,
+            "33": null,
+            "34": null,
+            "35": null,
+            "36": null,
+            "37": null,
+            "38": null,
+            "39": null,
+            "40": null,
+            "41": null,
+            "42": null,
+            "43": null,
+            "44": null,
+            "45": null,
+            "46": null,
+            "47": null,
+            "48": null,
+            "49": null,
+            "50": null,
+            "51": "V"
+          }
+        }
+      },
+      "ORDER": [
+        {
+          "ORC": {
+            "0": "ORC",
+            "1": "NW",
+            "2": [
+              {
+                "0": "^",
+                "1": "88946",
+                "2": "VIT"
+              }
+            ],
+            "3": {
+              "0": "^",
+              "1": "2134659PHS",
+              "2": "VIT"
+            },
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": {
+              "0": "^",
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": "2017-08-05T16:45:34.000Z",
+              "5": null,
+              "6": "R"
+            },
+            "8": null,
+            "9": "2017-08-07T10:30:45.000Z",
+            "10": {
+              "0": "^",
+              "1": "T834594",
+              "2": "RAMAIRE",
+              "3": "JAMES",
+              "4": "R",
+              "5": null
+            },
+            "11": null,
+            "12": [
+              {
+                "0": "^",
+                "1": "3453453455",
+                "2": "ACCURSIO",
+                "3": "JARVIS",
+                "4": "STEPHEN",
+                "5": null,
+                "6": null,
+                "7": null,
+                "8": null,
+                "9": "VITAEHR",
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": "PNPI"
+              },
+              {
+                "0": "^",
+                "1": "3432212",
+                "2": "ACCURSIO",
+                "3": "JARVIS",
+                "4": "STEPHEN",
+                "5": null,
+                "6": null,
+                "7": null,
+                "8": null,
+                "9": "VITAPID",
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": "PPID"
+              }
+            ],
+            "13": {
+              "0": "^",
+              "1": "HOUSE OF CHARITY CLINIC",
+              "2": null,
+              "3": null,
+              "4": "765673",
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": "HOUSE OF CHARITY CLINIC"
+            },
+            "14": [
+              "(768)123-5477"
+            ],
+            "15": null,
+            "16": null,
+            "17": null,
+            "18": null,
+            "19": null,
+            "20": null,
+            "21": null,
+            "22": null,
+            "23": null,
+            "24": null,
+            "25": null,
+            "26": null,
+            "27": null,
+            "28": null,
+            "29": "O",
+            "30": "VERBAL WITH"
+          },
+          "ORDER_DETAIL": {
+            "CHOICE": {
+              "OBR": {
+                "0": "OBR",
+                "1": "1",
+                "2": [
+                  {
+                    "0": "^",
+                    "1": "88946",
+                    "2": "VIT"
+                  }
+                ],
+                "3": {
+                  "0": "^",
+                  "1": "2134659PHS",
+                  "2": "VIT"
+                },
+                "4": {
+                  "0": "^",
+                  "1": "IMG34",
+                  "2": "XR CHEST PA OR AP",
+                  "3": "VITARAD EAP",
+                  "4": null,
+                  "5": "XR"
+                },
+                "5": "R",
+                "6": "2017-08-06T00:00:00.000Z",
+                "7": null,
+                "8": null,
+                "9": null,
+                "10": [],
+                "11": "Imaging",
+                "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": [
+                  {
+                    "0": "^",
+                    "1": "3453453455",
+                    "2": "ACCURSIO",
+                    "3": "JARVIS",
+                    "4": "STEPHEN",
+                    "5": null,
+                    "6": null,
+                    "7": null,
+                    "8": null,
+                    "9": "VITAEHR",
+                    "10": null,
+                    "11": null,
+                    "12": null,
+                    "13": "PNPI"
+                  },
+                  {
+                    "0": "^",
+                    "1": "3432212",
+                    "2": "ACCURSIO",
+                    "3": "JARVIS",
+                    "4": "STEPHEN",
+                    "5": null,
+                    "6": null,
+                    "7": null,
+                    "8": null,
+                    "9": "VITAPID",
+                    "10": null,
+                    "11": null,
+                    "12": null,
+                    "13": "PPID"
+                  }
+                ],
+                "17": [
+                  {
+                    "0": "^",
+                    "1": "(768)123-5477"
+                  }
+                ],
+                "18": null,
+                "19": null,
+                "20": null,
+                "21": null,
+                "22": null,
+                "23": null,
+                "24": null,
+                "25": null,
+                "26": null,
+                "27": {
+                  "0": "^",
+                  "1": null,
+                  "2": null,
+                  "3": null,
+                  "4": "2017-08-05T16:45:34.000Z",
+                  "5": null,
+                  "6": "R"
+                },
+                "28": [],
+                "29": null,
+                "30": null,
+                "31": [
+                  {
+                    "0": "^",
+                    "1": null,
+                    "2": "HACKATHON"
+                  }
+                ],
+                "32": null,
+                "33": [],
+                "34": [],
+                "35": [],
+                "36": "2017-08-05T16:45:34.000Z",
+                "37": null,
+                "38": [],
+                "39": [],
+                "40": null,
+                "41": null,
+                "42": null,
+                "43": [],
+                "44": null,
+                "45": null
+              }
+            },
+            "DG1": [
+              {
+                "0": "DG1",
+                "1": "1",
+                "2": "ICD-10-CM",
+                "3": {
+                  "0": "^",
+                  "1": "J84.89",
+                  "2": "Other specified interstitial pulmonary diseases (HCC)",
+                  "3": "ICD-10-CM"
+                },
+                "4": "Other specified interstitial pulmonary diseases (HCC)",
+                "5": null,
+                "6": "^147;ORD"
+              }
+            ],
+            "OBSERVATION": [
+              {
+                "OBX": {
+                  "0": "OBX",
+                  "1": "1",
+                  "2": "ST",
+                  "3": {
+                    "0": "^",
+                    "1": "ITS.REAS",
+                    "2": "Reason for exam:"
+                  },
+                  "4": null,
+                  "5": [
+                    "HACKATHON"
+                  ],
+                  "6": null,
+                  "7": null,
+                  "8": [],
+                  "9": null,
+                  "10": null,
+                  "11": null,
+                  "12": null,
+                  "13": null,
+                  "14": null
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "IGNORED": {}
+    },
+    []
+  ]
+}

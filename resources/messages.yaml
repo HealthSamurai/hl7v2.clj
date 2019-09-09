@@ -1,0 +1,5517 @@
+MFR_M05:
+  MF_QUERY:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: LOC, req: true}
+    - {idx: 2, seg: LCH, coll: true}
+    - {idx: 3, seg: LRL, coll: true}
+    - {idx: 4, seg: LDP, req: true, coll: true}
+    - {idx: 5, seg: LCH, coll: true}
+    - {idx: 6, seg: LCC, coll: true}
+  MFR_M05:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: QAK}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, seg: QRF}
+    - {idx: 7, seg: MFI, req: true}
+    - {idx: 8, grp: MF_QUERY, req: true, coll: true}
+    - {idx: 9, seg: DSC}
+QBP_Q11:
+  QBP_Q11:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QPD, req: true}
+    - {idx: 3, seg: RCP, req: true}
+    - {idx: 4, seg: DSC}
+DFT_P11:
+  DFT_P11:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: ROL, coll: true}
+    - {idx: 6, seg: PV1}
+    - {idx: 7, seg: PV2}
+    - {idx: 8, seg: ROL, coll: true}
+    - {idx: 9, seg: DB1, coll: true}
+    - {idx: 10, grp: COMMON_ORDER, coll: true}
+    - {idx: 11, seg: DG1, coll: true}
+    - {idx: 12, seg: DRG}
+    - {idx: 13, seg: GT1, coll: true}
+    - {idx: 14, grp: INSURANCE, coll: true}
+    - {idx: 15, seg: ACC}
+    - {idx: 16, grp: FINANCIAL, req: true, coll: true}
+  COMMON_ORDER:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, grp: TIMING_QUANTITY, coll: true}
+    - {idx: 2, grp: ORDER}
+    - {idx: 3, grp: OBSERVATION, coll: true}
+  FINANCIAL_COMMON_ORDER:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, grp: FINANCIAL_TIMING_QUANTITY, coll: true}
+    - {idx: 2, grp: FINANCIAL_ORDER}
+    - {idx: 3, grp: FINANCIAL_OBSERVATION, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3, coll: true}
+    - {idx: 3, seg: ROL, coll: true}
+  TIMING_QUANTITY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  FINANCIAL_ORDER:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  FINANCIAL_INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3, coll: true}
+    - {idx: 3, seg: ROL, coll: true}
+  FINANCIAL_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  FINANCIAL_PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, seg: ROL, coll: true}
+  FINANCIAL:
+    els:
+    - {idx: 0, seg: FT1, req: true}
+    - {idx: 1, grp: FINANCIAL_PROCEDURE, coll: true}
+    - {idx: 2, grp: FINANCIAL_COMMON_ORDER, coll: true}
+    - {idx: 3, seg: DG1, coll: true}
+    - {idx: 4, seg: DRG}
+    - {idx: 5, seg: GT1, coll: true}
+    - {idx: 6, grp: FINANCIAL_INSURANCE, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  FINANCIAL_TIMING_QUANTITY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+OUL_R24:
+  PIDPD1NTE_SUPPGRP:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+  PV1PV2_SUPPGRP:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  TQ1TQ2_SUPPGRP:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  CONTAINER:
+    els:
+    - {idx: 0, seg: SAC, req: true}
+    - {idx: 1, seg: INV}
+  SPMOBXSACINV_SUPPGRP:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+    - {idx: 2, grp: CONTAINER, coll: true}
+  OBXTCDSIDNTE_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: TCD}
+    - {idx: 2, seg: SID, coll: true}
+    - {idx: 3, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: ORC}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: TQ1TQ2_SUPPGRP, coll: true}
+    - {idx: 4, grp: SPMOBXSACINV_SUPPGRP, coll: true}
+    - {idx: 5, grp: OBXTCDSIDNTE_SUPPGRP, coll: true}
+    - {idx: 6, seg: CTI, coll: true}
+  OUL_R24:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE}
+    - {idx: 3, grp: PIDPD1NTE_SUPPGRP}
+    - {idx: 4, grp: PV1PV2_SUPPGRP}
+    - {idx: 5, grp: ORDER, req: true, coll: true}
+    - {idx: 6, seg: DSC}
+NMD_N02:
+  CLOCK:
+    els:
+    - {idx: 0, seg: NCK, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  APP_STATS:
+    els:
+    - {idx: 0, seg: NST, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  APP_STATUS:
+    els:
+    - {idx: 0, seg: NSC, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  CLOCK_AND_STATS_WITH_NOTES:
+    els:
+    - {idx: 0, grp: CLOCK}
+    - {idx: 1, grp: APP_STATS}
+    - {idx: 2, grp: APP_STATUS}
+  NMD_N02:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, grp: CLOCK_AND_STATS_WITH_NOTES, req: true, coll: true}
+BAR_P10:
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, seg: GP2}
+  BAR_P10:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PV1, req: true}
+    - {idx: 5, seg: DG1, coll: true}
+    - {idx: 6, seg: GP1, req: true}
+    - {idx: 7, grp: PROCEDURE, coll: true}
+RAR_RAR:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ENCODING:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, seg: RXR, req: true, coll: true}
+    - {idx: 2, seg: RXC, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: ENCODING}
+    - {idx: 2, seg: RXA, req: true, coll: true}
+    - {idx: 3, seg: RXR, req: true}
+  DEFINITION:
+    els:
+    - {idx: 0, seg: QRD, req: true}
+    - {idx: 1, seg: QRF}
+    - {idx: 2, grp: PATIENT}
+    - {idx: 3, grp: ORDER, req: true, coll: true}
+  RAR_RAR:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, grp: DEFINITION, req: true, coll: true}
+    - {idx: 5, seg: DSC}
+RSP_K11:
+  ROW_DEFINITION:
+    els:
+    - {idx: 0, seg: RDF, req: true}
+    - {idx: 1, seg: RDT, coll: true}
+  RSP_K11:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, grp: ROW_DEFINITION}
+    - {idx: 7, seg: DSC}
+DFT_P03:
+  DFT_P03:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: ROL, coll: true}
+    - {idx: 6, seg: PV1}
+    - {idx: 7, seg: PV2}
+    - {idx: 8, seg: ROL, coll: true}
+    - {idx: 9, seg: DB1, coll: true}
+    - {idx: 10, grp: COMMON_ORDER, coll: true}
+    - {idx: 11, grp: FINANCIAL, req: true, coll: true}
+    - {idx: 12, seg: DG1, coll: true}
+    - {idx: 13, seg: DRG}
+    - {idx: 14, seg: GT1, coll: true}
+    - {idx: 15, grp: INSURANCE, coll: true}
+    - {idx: 16, seg: ACC}
+  COMMON_ORDER:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, grp: TIMING_QUANTITY, coll: true}
+    - {idx: 2, grp: ORDER}
+    - {idx: 3, grp: OBSERVATION, coll: true}
+  FINANCIAL_COMMON_ORDER:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, grp: FINANCIAL_TIMING_QUANTITY, coll: true}
+    - {idx: 2, grp: FINANCIAL_ORDER}
+    - {idx: 3, grp: FINANCIAL_OBSERVATION, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3, coll: true}
+    - {idx: 3, seg: ROL, coll: true}
+  TIMING_QUANTITY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  FINANCIAL_ORDER:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  FINANCIAL_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  FINANCIAL_PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, seg: ROL, coll: true}
+  FINANCIAL:
+    els:
+    - {idx: 0, seg: FT1, req: true}
+    - {idx: 1, seg: NTE}
+    - {idx: 2, grp: FINANCIAL_PROCEDURE, coll: true}
+    - {idx: 3, grp: FINANCIAL_COMMON_ORDER, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  FINANCIAL_TIMING_QUANTITY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+MFN_M04:
+  MF_CDM:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: CDM, req: true}
+    - {idx: 2, seg: PRC, coll: true}
+  MFN_M04:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_CDM, req: true, coll: true}
+RPI_I04:
+  PROVIDER:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  GUARANTOR_INSURANCE:
+    els:
+    - {idx: 0, seg: GT1, coll: true}
+    - {idx: 1, grp: INSURANCE, req: true, coll: true}
+  RPI_I04:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, grp: PROVIDER, req: true, coll: true}
+    - {idx: 4, seg: PID, req: true}
+    - {idx: 5, seg: NK1, coll: true}
+    - {idx: 6, grp: GUARANTOR_INSURANCE}
+    - {idx: 7, seg: NTE, coll: true}
+VXU_V04:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: RXA, req: true}
+    - {idx: 3, seg: RXR}
+    - {idx: 4, grp: OBSERVATION, coll: true}
+  VXU_V04:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: PID, req: true}
+    - {idx: 3, seg: PD1}
+    - {idx: 4, seg: NK1, coll: true}
+    - {idx: 5, grp: PATIENT}
+    - {idx: 6, seg: GT1, coll: true}
+    - {idx: 7, grp: INSURANCE, coll: true}
+    - {idx: 8, grp: ORDER, coll: true}
+BPS_O29:
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  PRODUCT:
+    els:
+    - {idx: 0, seg: BPX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: BPO, req: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, grp: PRODUCT, coll: true}
+  BPS_O29:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+ORL_O22:
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: SAC, coll: true}
+  OBSERVATION_REQUEST:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, grp: SPECIMEN, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: OBSERVATION_REQUEST}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, grp: ORDER, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+  ORL_O22:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+NMR_N01:
+  CLOCK_AND_STATS_WITH_NOTES_ALT:
+    els:
+    - {idx: 0, seg: NCK}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: NST}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, seg: NSC}
+    - {idx: 5, seg: NTE, coll: true}
+  NMR_N01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: QRD}
+    - {idx: 5, grp: CLOCK_AND_STATS_WITH_NOTES_ALT, req: true, coll: true}
+OMI_O23:
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+    - {idx: 4, grp: INSURANCE, coll: true}
+    - {idx: 5, seg: GT1}
+    - {idx: 6, seg: AL1, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: OBR, req: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, seg: CTD}
+    - {idx: 5, seg: DG1, coll: true}
+    - {idx: 6, grp: OBSERVATION, coll: true}
+    - {idx: 7, seg: IPC, req: true, coll: true}
+  OMI_O23:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+PPP_PCB:
+  PROBLEM:
+    els:
+    - {idx: 0, seg: PRB, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: PROBLEM_ROLE, coll: true}
+    - {idx: 4, grp: PROBLEM_OBSERVATION, coll: true}
+    - {idx: 5, grp: GOAL, coll: true}
+    - {idx: 6, grp: ORDER, coll: true}
+  PPP_PCB:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: PID, req: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+    - {idx: 4, grp: PATHWAY, req: true, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, grp: OBR_SUPPGRP, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: ORDER_OBSERVATION, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: ORDER_DETAIL}
+  GOAL:
+    els:
+    - {idx: 0, seg: GOL, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: GOAL_ROLE, coll: true}
+    - {idx: 4, grp: GOAL_OBSERVATION, coll: true}
+  ORDER_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+  GOAL_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  OBR_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBR}
+  PROBLEM_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PATHWAY_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PATHWAY:
+    els:
+    - {idx: 0, seg: PTH, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: PATHWAY_ROLE, coll: true}
+    - {idx: 4, grp: PROBLEM, coll: true}
+  PROBLEM_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  GOAL_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+ORF_R04:
+  PIDNTE_SUPPGRP:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  TQ1TQ2_SUPPGRP:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBXNTE_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBX}
+    - {idx: 1, seg: NTE, coll: true}
+  ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, seg: OBR, req: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: TQ1TQ2_SUPPGRP, coll: true}
+    - {idx: 4, seg: CTD}
+    - {idx: 5, grp: OBXNTE_SUPPGRP, req: true, coll: true}
+    - {idx: 6, seg: CTI, coll: true}
+  PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP:
+    els:
+    - {idx: 0, grp: PIDNTE_SUPPGRP}
+    - {idx: 1, grp: ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP, req: true, coll: true}
+  ORF_R04:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: QRD, req: true}
+    - {idx: 4, seg: QRF}
+    - {idx: 5, grp: PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP, req: true, coll: true}
+    - {idx: 6, seg: ERR, coll: true}
+    - {idx: 7, seg: QAK}
+    - {idx: 8, seg: DSC}
+QBP_Q21:
+  QBP_Q21:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QPD, req: true}
+    - {idx: 3, seg: RCP, req: true}
+    - {idx: 4, seg: DSC}
+ADT_A06:
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, seg: ROL, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3, coll: true}
+    - {idx: 3, seg: ROL, coll: true}
+  ADT_A06:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: ROL, coll: true}
+    - {idx: 6, seg: MRG}
+    - {idx: 7, seg: NK1, coll: true}
+    - {idx: 8, seg: PV1, req: true}
+    - {idx: 9, seg: PV2}
+    - {idx: 10, seg: ROL, coll: true}
+    - {idx: 11, seg: DB1, coll: true}
+    - {idx: 12, seg: OBX, coll: true}
+    - {idx: 13, seg: AL1, coll: true}
+    - {idx: 14, seg: DG1, coll: true}
+    - {idx: 15, seg: DRG}
+    - {idx: 16, grp: PROCEDURE, coll: true}
+    - {idx: 17, seg: GT1, coll: true}
+    - {idx: 18, grp: INSURANCE, coll: true}
+    - {idx: 19, seg: ACC}
+    - {idx: 20, seg: UB1}
+    - {idx: 21, seg: UB2}
+QRY_R02:
+  QRY_R02:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QRD, req: true}
+    - {idx: 3, seg: QRF, req: true}
+EQQ_Q04:
+  EQQ_Q04:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EQL, req: true}
+    - {idx: 3, seg: DSC}
+ADT_A03:
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, seg: ROL, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3, coll: true}
+    - {idx: 3, seg: ROL, coll: true}
+  ADT_A03:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: ROL, coll: true}
+    - {idx: 6, seg: NK1, coll: true}
+    - {idx: 7, seg: PV1, req: true}
+    - {idx: 8, seg: PV2}
+    - {idx: 9, seg: ROL, coll: true}
+    - {idx: 10, seg: DB1, coll: true}
+    - {idx: 11, seg: AL1, coll: true}
+    - {idx: 12, seg: DG1, coll: true}
+    - {idx: 13, seg: DRG}
+    - {idx: 14, grp: PROCEDURE, coll: true}
+    - {idx: 15, seg: OBX, coll: true}
+    - {idx: 16, seg: GT1, coll: true}
+    - {idx: 17, grp: INSURANCE, coll: true}
+    - {idx: 18, seg: ACC}
+    - {idx: 19, seg: PDA}
+INR_U06:
+  INR_U06:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EQU, req: true}
+    - {idx: 3, seg: INV, req: true, coll: true}
+    - {idx: 4, seg: ROL}
+MFN_Znn:
+  MF_SITE_DEFINED:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, req: true}
+  MFN_Znn:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_SITE_DEFINED, req: true, coll: true}
+RQI_I01:
+  PROVIDER:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  GUARANTOR_INSURANCE:
+    els:
+    - {idx: 0, seg: GT1, coll: true}
+    - {idx: 1, grp: INSURANCE, req: true, coll: true}
+  RQI_I01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, grp: PROVIDER, req: true, coll: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: NK1, coll: true}
+    - {idx: 5, grp: GUARANTOR_INSURANCE}
+    - {idx: 6, seg: NTE, coll: true}
+RDY_K15:
+  RDY_K15:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, seg: DSP, coll: true}
+    - {idx: 7, seg: DSC}
+PPG_PCG:
+  PROBLEM:
+    els:
+    - {idx: 0, seg: PRB, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: PROBLEM_ROLE, coll: true}
+    - {idx: 4, grp: PROBLEM_OBSERVATION, coll: true}
+  PPG_PCG:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: PID, req: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+    - {idx: 4, grp: PATHWAY, req: true, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, grp: OBR_SUPPGRP, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: ORDER_OBSERVATION, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: ORDER_DETAIL}
+  GOAL:
+    els:
+    - {idx: 0, seg: GOL, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: GOAL_ROLE, coll: true}
+    - {idx: 4, grp: GOAL_OBSERVATION, coll: true}
+    - {idx: 5, grp: PROBLEM, coll: true}
+    - {idx: 6, grp: ORDER, coll: true}
+  ORDER_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+  GOAL_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  OBR_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBR}
+  PROBLEM_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PATHWAY_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PATHWAY:
+    els:
+    - {idx: 0, seg: PTH, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: PATHWAY_ROLE, coll: true}
+    - {idx: 4, grp: GOAL, coll: true}
+  PROBLEM_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  GOAL_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+RRG_O16:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  TIMING_GIVE:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  GIVE:
+    els:
+    - {idx: 0, seg: RXG, req: true}
+    - {idx: 1, grp: TIMING_GIVE, req: true, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, seg: RXC, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: GIVE}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  RRG_O16:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+ORP_O10:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  COMPONENT:
+    els:
+    - {idx: 0, seg: RXC, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, seg: RXO, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, grp: COMPONENT, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: ORDER_DETAIL}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  ORP_O10:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+RAS_O17:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: AL1, coll: true}
+    - {idx: 4, grp: PATIENT_VISIT}
+  RAS_O17:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, seg: RXO, req: true}
+    - {idx: 1, grp: ORDER_DETAIL_SUPPLEMENT}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: ORDER_DETAIL}
+    - {idx: 3, grp: ENCODING}
+    - {idx: 4, grp: ADMINISTRATION, req: true, coll: true}
+    - {idx: 5, seg: CTI, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ORDER_DETAIL_SUPPLEMENT:
+    els:
+    - {idx: 0, seg: NTE, req: true, coll: true}
+    - {idx: 1, seg: RXR, req: true, coll: true}
+    - {idx: 2, grp: COMPONENTS, coll: true}
+  TIMING_ENCODED:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  COMPONENTS:
+    els:
+    - {idx: 0, seg: RXC, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ADMINISTRATION:
+    els:
+    - {idx: 0, seg: RXA, req: true, coll: true}
+    - {idx: 1, seg: RXR, req: true}
+    - {idx: 2, grp: OBSERVATION, coll: true}
+  ENCODING:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, grp: TIMING_ENCODED, req: true, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, seg: RXC, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+RSP_Q11:
+  MF_LOC_DEPT:
+    els:
+    - {idx: 0, seg: LDP, req: true}
+    - {idx: 1, seg: LCH, coll: true}
+    - {idx: 2, seg: LCC, coll: true}
+  QUERY_RESULT_CLUSTER:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: LOC, req: true}
+    - {idx: 2, seg: LCH, coll: true}
+    - {idx: 3, seg: LRL, coll: true}
+    - {idx: 4, grp: MF_LOC_DEPT, req: true, coll: true}
+  RSP_Q11:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, grp: QUERY_RESULT_CLUSTER}
+    - {idx: 7, seg: DSC}
+RPR_I03:
+  PROVIDER:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  RPR_I03:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, grp: PROVIDER, req: true, coll: true}
+    - {idx: 4, seg: PID, coll: true}
+    - {idx: 5, seg: NTE, coll: true}
+MDM_T02:
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  COMMON_ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: OBR, req: true}
+    - {idx: 3, seg: NTE, coll: true}
+  OBXNTE_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  MDM_T02:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PV1, req: true}
+    - {idx: 5, grp: COMMON_ORDER, coll: true}
+    - {idx: 6, seg: TXA, req: true}
+    - {idx: 7, grp: OBXNTE_SUPPGRP, req: true, coll: true}
+VQQ_Q07:
+  VQQ_Q07:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: VTQ, req: true}
+    - {idx: 3, seg: RDF}
+    - {idx: 4, seg: DSC}
+INU_U05:
+  INU_U05:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EQU, req: true}
+    - {idx: 3, seg: INV, req: true, coll: true}
+    - {idx: 4, seg: ROL}
+MFN_M15:
+  MF_INV_ITEM:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: IIM, req: true}
+  MFN_M15:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_INV_ITEM, req: true, coll: true}
+RTB_Z74:
+  ROW_DEFINITION:
+    els:
+    - {idx: 0, seg: RDF, req: true}
+    - {idx: 1, seg: RDT, coll: true}
+  RTB_Z74:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, grp: ROW_DEFINITION}
+    - {idx: 7, seg: DSC}
+QRY_PC4:
+  QRY_PC4:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QRD, req: true}
+    - {idx: 3, seg: QRF}
+ADT_A43:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: MRG, req: true}
+  ADT_A43:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, grp: PATIENT, req: true, coll: true}
+QBP_Q13:
+  QBP_Q13:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QPD, req: true}
+    - {idx: 3, seg: RDF}
+    - {idx: 4, seg: RCP, req: true}
+    - {idx: 5, seg: DSC}
+CSU_C09:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: VISIT}
+    - {idx: 4, seg: CSR, req: true}
+    - {idx: 5, grp: STUDY_PHASE, req: true, coll: true}
+  STUDY_SCHEDULE:
+    els:
+    - {idx: 0, seg: CSS}
+    - {idx: 1, grp: STUDY_OBSERVATION, req: true, coll: true}
+    - {idx: 2, grp: ORCRXARXR_SUPPGRP, req: true, coll: true}
+  CSU_C09:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, grp: PATIENT, req: true, coll: true}
+  ORCRXARXR_SUPPGRP:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, grp: RXARXR_SUPPGRP, req: true, coll: true}
+  STUDY_PHASE:
+    els:
+    - {idx: 0, seg: CSP}
+    - {idx: 1, grp: STUDY_SCHEDULE, req: true, coll: true}
+  RXARXR_SUPPGRP:
+    els:
+    - {idx: 0, seg: RXA, req: true}
+    - {idx: 1, seg: RXR, req: true}
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  TIMING_QTY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  STUDY_OBSERVATION:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, seg: OBR, req: true}
+    - {idx: 2, grp: TIMING_QTY, coll: true}
+    - {idx: 3, seg: OBX, req: true, coll: true}
+MFN_M09:
+  MF_TEST_CAT_DETAIL:
+    els:
+    - {idx: 0, seg: OM3, req: true}
+    - {idx: 1, seg: OM4, coll: true}
+  MF_TEST_CATEGORICAL:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: OM1, req: true}
+    - {idx: 2, grp: MF_TEST_CAT_DETAIL}
+  MFN_M09:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_TEST_CATEGORICAL, req: true, coll: true}
+ADT_A24:
+  ADT_A24:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: PV1}
+    - {idx: 6, seg: DB1, coll: true}
+    - {idx: 7, seg: PID, req: true}
+    - {idx: 8, seg: PD1}
+    - {idx: 9, seg: PV1}
+    - {idx: 10, seg: DB1, coll: true}
+RSP_Z82:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: VISIT}
+  COMMON_ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: ORDER_DETAIL}
+    - {idx: 3, grp: ENCODED_ORDER}
+    - {idx: 4, seg: RXD, req: true}
+    - {idx: 5, seg: RXR, req: true, coll: true}
+    - {idx: 6, seg: RXC, coll: true}
+    - {idx: 7, grp: OBSERVATION, req: true, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, seg: RXO, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, grp: TREATMENT}
+  RSP_Z82:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, seg: RCP, req: true}
+    - {idx: 7, grp: QUERY_RESPONSE, req: true, coll: true}
+    - {idx: 8, seg: DSC}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ENCODED_ORDER:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, grp: TIMING_ENCODED, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, seg: RXC, coll: true}
+  TIMING_ENCODED:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  QUERY_RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: COMMON_ORDER, req: true, coll: true}
+  TREATMENT:
+    els:
+    - {idx: 0, seg: RXC, req: true, coll: true}
+    - {idx: 1, seg: NTE, coll: true}
+  VISIT:
+    els:
+    - {idx: 0, seg: AL1, req: true, coll: true}
+    - {idx: 1, seg: PV1, req: true}
+    - {idx: 2, seg: PV2}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX}
+    - {idx: 1, seg: NTE, coll: true}
+SQR_S25:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PV1}
+    - {idx: 2, seg: PV2}
+    - {idx: 3, seg: DG1}
+  SERVICE:
+    els:
+    - {idx: 0, seg: AIS, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  GENERAL_RESOURCE:
+    els:
+    - {idx: 0, seg: AIG, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  PERSONNEL_RESOURCE:
+    els:
+    - {idx: 0, seg: AIP, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  LOCATION_RESOURCE:
+    els:
+    - {idx: 0, seg: AIL, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  RESOURCES:
+    els:
+    - {idx: 0, seg: RGS, req: true}
+    - {idx: 1, grp: SERVICE, coll: true}
+    - {idx: 2, grp: GENERAL_RESOURCE, coll: true}
+    - {idx: 3, grp: PERSONNEL_RESOURCE, coll: true}
+    - {idx: 4, grp: LOCATION_RESOURCE, coll: true}
+  SCHEDULE:
+    els:
+    - {idx: 0, seg: SCH, req: true}
+    - {idx: 1, seg: TQ1, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: RESOURCES, req: true, coll: true}
+  SQR_S25:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: QAK, req: true}
+    - {idx: 4, grp: SCHEDULE, coll: true}
+    - {idx: 5, seg: DSC}
+ORU_R01:
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: NK1, coll: true}
+    - {idx: 4, grp: VISIT}
+  TIMING_QTY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+  ORDER_OBSERVATION:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, seg: OBR, req: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: TIMING_QTY, coll: true}
+    - {idx: 4, seg: CTD}
+    - {idx: 5, grp: OBSERVATION, coll: true}
+    - {idx: 6, seg: FT1, coll: true}
+    - {idx: 7, seg: CTI, coll: true}
+    - {idx: 8, grp: SPECIMEN, coll: true}
+  PATIENT_RESULT:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER_OBSERVATION, req: true, coll: true}
+  ORU_R01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, grp: PATIENT_RESULT, req: true, coll: true}
+    - {idx: 3, seg: DSC}
+OUL_R21:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  CONTAINER:
+    els:
+    - {idx: 0, seg: SAC, req: true}
+    - {idx: 1, seg: SID}
+  TIMING_QTY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX}
+    - {idx: 1, seg: TCD}
+    - {idx: 2, seg: SID, coll: true}
+    - {idx: 3, seg: NTE, coll: true}
+  ORDER_OBSERVATION:
+    els:
+    - {idx: 0, grp: CONTAINER}
+    - {idx: 1, seg: ORC}
+    - {idx: 2, seg: OBR, req: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, grp: TIMING_QTY, coll: true}
+    - {idx: 5, grp: OBSERVATION, req: true, coll: true}
+    - {idx: 6, seg: CTI, coll: true}
+  OUL_R21:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: VISIT}
+    - {idx: 5, grp: ORDER_OBSERVATION, req: true, coll: true}
+    - {idx: 6, seg: DSC}
+RTB_Knn:
+  RTB_Knn:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6}
+    - {idx: 7}
+    - {idx: 8, seg: DSC}
+QCN_J01:
+  QCN_J01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QID, req: true}
+UDM_Q05:
+  UDM_Q05:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: URD, req: true}
+    - {idx: 3, seg: URS}
+    - {idx: 4, seg: DSP, req: true, coll: true}
+    - {idx: 5, seg: DSC}
+ADT_A18:
+  ADT_A18:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: MRG, req: true}
+    - {idx: 6, seg: PV1, req: true}
+ADT_A01:
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, seg: ROL, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3, coll: true}
+    - {idx: 3, seg: ROL, coll: true}
+  ADT_A01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: ROL, coll: true}
+    - {idx: 6, seg: NK1, coll: true}
+    - {idx: 7, seg: PV1, req: true}
+    - {idx: 8, seg: PV2}
+    - {idx: 9, seg: ROL, coll: true}
+    - {idx: 10, seg: DB1, coll: true}
+    - {idx: 11, seg: OBX, coll: true}
+    - {idx: 12, seg: AL1, coll: true}
+    - {idx: 13, seg: DG1, coll: true}
+    - {idx: 14, seg: DRG}
+    - {idx: 15, grp: PROCEDURE, coll: true}
+    - {idx: 16, seg: GT1, coll: true}
+    - {idx: 17, grp: INSURANCE, coll: true}
+    - {idx: 18, seg: ACC}
+    - {idx: 19, seg: UB1}
+    - {idx: 20, seg: UB2}
+    - {idx: 21, seg: PDA}
+BAR_P01:
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, seg: ROL, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3, coll: true}
+    - {idx: 3, seg: ROL, coll: true}
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1}
+    - {idx: 1, seg: PV2}
+    - {idx: 2, seg: ROL, coll: true}
+    - {idx: 3, seg: DB1, coll: true}
+    - {idx: 4, seg: OBX, coll: true}
+    - {idx: 5, seg: AL1, coll: true}
+    - {idx: 6, seg: DG1, coll: true}
+    - {idx: 7, seg: DRG}
+    - {idx: 8, grp: PROCEDURE, coll: true}
+    - {idx: 9, seg: GT1, coll: true}
+    - {idx: 10, seg: NK1, coll: true}
+    - {idx: 11, grp: INSURANCE, coll: true}
+    - {idx: 12, seg: ACC}
+    - {idx: 13, seg: UB1}
+    - {idx: 14, seg: UB2}
+  BAR_P01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: ROL, coll: true}
+    - {idx: 6, grp: VISIT, req: true, coll: true}
+RSP_K23:
+  QUERY_RESPONSE:
+    els:
+    - {idx: 0, seg: PID, req: true}
+  RSP_K23:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, grp: QUERY_RESPONSE}
+    - {idx: 7, seg: DSC}
+MFN_M08:
+  MF_TEST_NUMERIC:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: OM1, req: true}
+    - {idx: 2, seg: OM2}
+    - {idx: 3, seg: OM3}
+    - {idx: 4, seg: OM4}
+  MFN_M08:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_TEST_NUMERIC, req: true, coll: true}
+RSP_Z86:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: AL1, coll: true}
+  DISPENSE:
+    els:
+    - {idx: 0, seg: RXD, req: true}
+    - {idx: 1, seg: RXR, req: true, coll: true}
+    - {idx: 2, seg: RXC, coll: true}
+  COMMON_ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: ORDER_DETAIL}
+    - {idx: 3, grp: ENCODED_ORDER}
+    - {idx: 4, grp: DISPENSE}
+    - {idx: 5, grp: GIVE}
+    - {idx: 6, grp: ADMINISTRATION}
+    - {idx: 7, grp: OBSERVATION, req: true, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, seg: RXO, req: true}
+    - {idx: 1, seg: RXR, req: true, coll: true}
+    - {idx: 2, seg: RXC, coll: true}
+  GIVE:
+    els:
+    - {idx: 0, seg: RXG, req: true}
+    - {idx: 1, seg: RXR, req: true, coll: true}
+    - {idx: 2, seg: RXC, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  RSP_Z86:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, grp: QUERY_RESPONSE, req: true, coll: true}
+    - {idx: 7, seg: DSC}
+  ENCODED_ORDER:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, grp: TIMING_ENCODED, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, seg: RXC, coll: true}
+  TIMING_ENCODED:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  QUERY_RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: COMMON_ORDER, req: true, coll: true}
+  ADMINISTRATION:
+    els:
+    - {idx: 0, seg: RXA, req: true}
+    - {idx: 1, seg: RXR, req: true, coll: true}
+    - {idx: 2, seg: RXC, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX}
+    - {idx: 1, seg: NTE, coll: true}
+VXX_V02:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NK1, coll: true}
+  VXX_V02:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: SFT, coll: true}
+    - {idx: 3, seg: QRD, req: true}
+    - {idx: 4, seg: QRF}
+    - {idx: 5, grp: PATIENT, req: true, coll: true}
+ADT_A21:
+  ADT_A21:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: PV1, req: true}
+    - {idx: 6, seg: PV2}
+    - {idx: 7, seg: DB1, coll: true}
+    - {idx: 8, seg: OBX, coll: true}
+ADT_A39:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: MRG, req: true}
+    - {idx: 3, seg: PV1}
+  ADT_A39:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, grp: PATIENT, req: true, coll: true}
+SRR_S01:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PV1}
+    - {idx: 2, seg: PV2}
+    - {idx: 3, seg: DG1, coll: true}
+  SERVICE:
+    els:
+    - {idx: 0, seg: AIS, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  GENERAL_RESOURCE:
+    els:
+    - {idx: 0, seg: AIG, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  LOCATION_RESOURCE:
+    els:
+    - {idx: 0, seg: AIL, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  PERSONNEL_RESOURCE:
+    els:
+    - {idx: 0, seg: AIP, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  RESOURCES:
+    els:
+    - {idx: 0, seg: RGS, req: true}
+    - {idx: 1, grp: SERVICE, coll: true}
+    - {idx: 2, grp: GENERAL_RESOURCE, coll: true}
+    - {idx: 3, grp: LOCATION_RESOURCE, coll: true}
+    - {idx: 4, grp: PERSONNEL_RESOURCE, coll: true}
+  SCHEDULE:
+    els:
+    - {idx: 0, seg: SCH, req: true}
+    - {idx: 1, seg: TQ1, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT, coll: true}
+    - {idx: 4, grp: RESOURCES, req: true, coll: true}
+  SRR_S01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, grp: SCHEDULE}
+RRE_O12:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  TIMING_ENCODED:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ENCODING:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, grp: TIMING_ENCODED, req: true, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, seg: RXC, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: ENCODING}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  RRE_O12:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+SUR_P09:
+  PSHPDC_SUPPGRP:
+    els:
+    - {idx: 0, seg: PSH, req: true}
+    - {idx: 1, seg: PDC, req: true}
+  FACPDCNTE_SUPPGRP:
+    els:
+    - {idx: 0, seg: FAC, req: true}
+    - {idx: 1, seg: PDC, req: true}
+    - {idx: 2, seg: NTE, req: true}
+  FACPSHPDCPSHFACPDCNTEED_SUPPGRP:
+    els:
+    - {idx: 0, seg: FAC, req: true}
+    - {idx: 1, grp: PSHPDC_SUPPGRP, req: true, coll: true}
+    - {idx: 2, seg: PSH, req: true}
+    - {idx: 3, grp: FACPDCNTE_SUPPGRP, req: true, coll: true}
+    - {idx: 4, req: true}
+  SUR_P09:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, grp: FACPSHPDCPSHFACPDCNTEED_SUPPGRP, req: true, coll: true}
+RSP_K21:
+  QUERY_RESPONSE:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NK1, coll: true}
+    - {idx: 3, seg: QRI, req: true}
+  RSP_K21:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, grp: QUERY_RESPONSE}
+    - {idx: 7, seg: DSC}
+OUL_R23:
+  PIDPD1NTE_SUPPGRP:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+  PV1PV2_SUPPGRP:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  TQ1TQ2_SUPPGRP:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBXTCDSIDNTE_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: TCD}
+    - {idx: 2, seg: SID, coll: true}
+    - {idx: 3, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: ORC}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: TQ1TQ2_SUPPGRP, coll: true}
+    - {idx: 4, grp: OBXTCDSIDNTE_SUPPGRP, coll: true}
+    - {idx: 5, seg: CTI, coll: true}
+  CONTAINER:
+    els:
+    - {idx: 0, seg: SAC, req: true}
+    - {idx: 1, seg: INV}
+    - {idx: 2, grp: ORDER, req: true, coll: true}
+  SPMOBXSACINVOBRORCNTETQ1TQ2OBXTCDSIDNTECTI_SUPPGRP:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+    - {idx: 2, grp: CONTAINER, req: true, coll: true}
+  OUL_R23:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE}
+    - {idx: 3, grp: PIDPD1NTE_SUPPGRP}
+    - {idx: 4, grp: PV1PV2_SUPPGRP}
+    - {idx: 5, grp: SPMOBXSACINVOBRORCNTETQ1TQ2OBXTCDSIDNTECTI_SUPPGRP, req: true, coll: true}
+    - {idx: 6, seg: DSC}
+DSR_Q03:
+  DSR_Q03:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, seg: QRF}
+    - {idx: 7, seg: DSP, req: true, coll: true}
+    - {idx: 8, seg: DSC}
+TCU_U10:
+  TEST_CONFIGURATION:
+    els:
+    - {idx: 0, seg: SPM}
+    - {idx: 1, seg: TCC, req: true, coll: true}
+  TCU_U10:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EQU, req: true}
+    - {idx: 3, grp: TEST_CONFIGURATION, req: true, coll: true}
+    - {idx: 4, seg: ROL}
+VXQ_V01:
+  VXQ_V01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QRD, req: true}
+    - {idx: 3, seg: QRF}
+ORD_O04:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  TIMING_DIET:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ORDER_DIET:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING_DIET, coll: true}
+    - {idx: 2, seg: ODS, coll: true}
+    - {idx: 3, seg: NTE, coll: true}
+  TIMING_TRAY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ORDER_TRAY:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING_TRAY, coll: true}
+    - {idx: 2, seg: ODT, coll: true}
+    - {idx: 3, seg: NTE, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER_DIET, req: true, coll: true}
+    - {idx: 2, grp: ORDER_TRAY, coll: true}
+  ORD_O04:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+ADT_A38:
+  ADT_A38:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: PV1, req: true}
+    - {idx: 6, seg: PV2}
+    - {idx: 7, seg: DB1, coll: true}
+    - {idx: 8, seg: OBX, coll: true}
+    - {idx: 9, seg: DG1, coll: true}
+    - {idx: 10, seg: DRG}
+ADT_A17:
+  ADT_A17:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: PV1, req: true}
+    - {idx: 6, seg: PV2}
+    - {idx: 7, seg: DB1, coll: true}
+    - {idx: 8, seg: OBX, coll: true}
+    - {idx: 9, seg: PID, req: true}
+    - {idx: 10, seg: PD1}
+    - {idx: 11, seg: PV1, req: true}
+    - {idx: 12, seg: PV2}
+    - {idx: 13, seg: DB1, coll: true}
+    - {idx: 14, seg: OBX, coll: true}
+SIU_S12:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: PV1}
+    - {idx: 3, seg: PV2}
+    - {idx: 4, seg: OBX, coll: true}
+    - {idx: 5, seg: DG1, coll: true}
+  SERVICE:
+    els:
+    - {idx: 0, seg: AIS, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  GENERAL_RESOURCE:
+    els:
+    - {idx: 0, seg: AIG, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  LOCATION_RESOURCE:
+    els:
+    - {idx: 0, seg: AIL, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  PERSONNEL_RESOURCE:
+    els:
+    - {idx: 0, seg: AIP, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  RESOURCES:
+    els:
+    - {idx: 0, seg: RGS, req: true}
+    - {idx: 1, grp: SERVICE, coll: true}
+    - {idx: 2, grp: GENERAL_RESOURCE, coll: true}
+    - {idx: 3, grp: LOCATION_RESOURCE, coll: true}
+    - {idx: 4, grp: PERSONNEL_RESOURCE, coll: true}
+  SIU_S12:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SCH, req: true}
+    - {idx: 2, seg: TQ1, coll: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, grp: PATIENT, coll: true}
+    - {idx: 5, grp: RESOURCES, req: true, coll: true}
+VXR_V03:
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: RXA, req: true}
+    - {idx: 3, seg: RXR}
+    - {idx: 4, grp: OBSERVATION, coll: true}
+  VXR_V03:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: SFT, coll: true}
+    - {idx: 3, seg: QRD, req: true}
+    - {idx: 4, seg: QRF}
+    - {idx: 5, seg: PID, req: true}
+    - {idx: 6, seg: PD1}
+    - {idx: 7, seg: NK1, coll: true}
+    - {idx: 8, grp: PATIENT_VISIT}
+    - {idx: 9, seg: GT1, coll: true}
+    - {idx: 10, grp: INSURANCE, coll: true}
+    - {idx: 11, grp: ORDER, coll: true}
+QSB_Q16:
+  QSB_Q16:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QPD, req: true}
+    - {idx: 3, seg: RCP, req: true}
+    - {idx: 4, seg: DSC}
+ADT_A12:
+  ADT_A12:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: PV1, req: true}
+    - {idx: 6, seg: PV2}
+    - {idx: 7, seg: DB1, coll: true}
+    - {idx: 8, seg: OBX, coll: true}
+    - {idx: 9, seg: DG1}
+REF_I12:
+  PROVIDER_CONTACT:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  REF_I12:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: RF1}
+    - {idx: 3, grp: AUTHORIZATION_CONTACT}
+    - {idx: 4, grp: PROVIDER_CONTACT, req: true, coll: true}
+    - {idx: 5, seg: PID, req: true}
+    - {idx: 6, seg: NK1, coll: true}
+    - {idx: 7, seg: GT1, coll: true}
+    - {idx: 8, grp: INSURANCE, coll: true}
+    - {idx: 9, seg: ACC}
+    - {idx: 10, seg: DG1, coll: true}
+    - {idx: 11, seg: DRG, coll: true}
+    - {idx: 12, seg: AL1, coll: true}
+    - {idx: 13, grp: PROCEDURE, coll: true}
+    - {idx: 14, grp: OBSERVATION, coll: true}
+    - {idx: 15, grp: PATIENT_VISIT}
+    - {idx: 16, seg: NTE, coll: true}
+  AUTHORIZATION_CONTACT:
+    els:
+    - {idx: 0, seg: AUT, req: true}
+    - {idx: 1, seg: CTD}
+  AUTCTD_SUPPGRP2:
+    els:
+    - {idx: 0, seg: AUT, req: true}
+    - {idx: 1, seg: CTD}
+  RESULTS_NOTES:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, grp: RESULTS_NOTES, coll: true}
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, grp: AUTCTD_SUPPGRP2}
+DOC_T12:
+  EVNPIDPV1TXAOBX_SUPPGRP:
+    els:
+    - {idx: 0, seg: EVN}
+    - {idx: 1, seg: PID, req: true}
+    - {idx: 2, seg: PV1, req: true}
+    - {idx: 3, seg: TXA, req: true}
+    - {idx: 4, seg: OBX, coll: true}
+  DOC_T12:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR}
+    - {idx: 3, seg: QAK}
+    - {idx: 4, seg: QRD, req: true}
+    - {idx: 5, grp: EVNPIDPV1TXAOBX_SUPPGRP, req: true, coll: true}
+    - {idx: 6, seg: DSC}
+EDR_R07:
+  EDR_R07:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: DSP, req: true, coll: true}
+    - {idx: 6, seg: DSC}
+RQA_I08:
+  AUTHORIZATION:
+    els:
+    - {idx: 0, seg: AUT, req: true}
+    - {idx: 1, seg: CTD}
+  GUARANTOR_INSURANCE:
+    els:
+    - {idx: 0, seg: GT1, coll: true}
+    - {idx: 1, grp: INSURANCE, req: true, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  RQA_I08:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: RF1}
+    - {idx: 3, grp: AUTHORIZATION}
+    - {idx: 4, grp: PROVIDER, req: true, coll: true}
+    - {idx: 5, seg: PID, req: true}
+    - {idx: 6, seg: NK1, coll: true}
+    - {idx: 7, grp: GUARANTOR_INSURANCE}
+    - {idx: 8, seg: ACC}
+    - {idx: 9, seg: DG1, coll: true}
+    - {idx: 10, seg: DRG, coll: true}
+    - {idx: 11, seg: AL1, coll: true}
+    - {idx: 12, grp: PROCEDURE, coll: true}
+    - {idx: 13, grp: OBSERVATION, coll: true}
+    - {idx: 14, grp: VISIT}
+    - {idx: 15, seg: NTE, coll: true}
+  AUTCTD_SUPPGRP2:
+    els:
+    - {idx: 0, seg: AUT, req: true}
+    - {idx: 1, seg: CTD}
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  PROVIDER:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  RESULTS:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, grp: RESULTS, coll: true}
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, grp: AUTCTD_SUPPGRP2}
+ADT_A09:
+  ADT_A09:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: PV1, req: true}
+    - {idx: 6, seg: PV2}
+    - {idx: 7, seg: DB1, coll: true}
+    - {idx: 8, seg: OBX, coll: true}
+    - {idx: 9, seg: DG1, coll: true}
+MFN_M02:
+  MF_STAFF:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: STF, req: true}
+    - {idx: 2, seg: PRA, coll: true}
+    - {idx: 3, seg: ORG, coll: true}
+    - {idx: 4, seg: AFF, coll: true}
+    - {idx: 5, seg: LAN, coll: true}
+    - {idx: 6, seg: EDU, coll: true}
+    - {idx: 7, seg: CER, coll: true}
+    - {idx: 8, seg: NTE, coll: true}
+  MFN_M02:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_STAFF, req: true, coll: true}
+SSU_U03:
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+  SPECIMEN_CONTAINER:
+    els:
+    - {idx: 0, seg: SAC, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+    - {idx: 2, grp: SPECIMEN, coll: true}
+  SSU_U03:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EQU, req: true}
+    - {idx: 3, grp: SPECIMEN_CONTAINER, req: true, coll: true}
+    - {idx: 4, seg: ROL}
+PMU_B01:
+  PMU_B01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: STF, req: true}
+    - {idx: 4, seg: PRA, coll: true}
+    - {idx: 5, seg: ORG, coll: true}
+    - {idx: 6, seg: AFF, coll: true}
+    - {idx: 7, seg: LAN, coll: true}
+    - {idx: 8, seg: EDU, coll: true}
+    - {idx: 9, seg: CER, coll: true}
+ORR_O02:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  OBRRQDRQ1RXOODSODT_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBR}
+    - {idx: 1, seg: RQD}
+    - {idx: 2, seg: RQ1}
+    - {idx: 3, seg: RXO}
+    - {idx: 4, seg: ODS}
+    - {idx: 5, seg: ODT}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: OBRRQDRQ1RXOODSODT_SUPPGRP, req: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: CTI, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  ORR_O02:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, grp: RESPONSE}
+OML_O33:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: NK1, coll: true}
+    - {idx: 4, grp: PATIENT_VISIT}
+    - {idx: 5, grp: INSURANCE, coll: true}
+    - {idx: 6, seg: GT1}
+    - {idx: 7, seg: AL1, coll: true}
+  ORDER_PRIOR:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, seg: OBR, req: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: TIMING_PRIOR, coll: true}
+    - {idx: 4, grp: OBSERVATION_PRIOR, req: true, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: OBSERVATION_REQUEST}
+    - {idx: 3, seg: FT1, coll: true}
+    - {idx: 4, seg: CTI, coll: true}
+    - {idx: 5, seg: BLG}
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+    - {idx: 2, seg: SAC, coll: true}
+    - {idx: 3, grp: ORDER, req: true, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  PRIOR_RESULT:
+    els:
+    - {idx: 0, grp: PATIENT_PRIOR}
+    - {idx: 1, grp: PATIENT_VISIT_PRIOR}
+    - {idx: 2, seg: AL1, coll: true}
+    - {idx: 3, grp: ORDER_PRIOR, req: true, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  OBSERVATION_PRIOR:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  OBSERVATION_REQUEST:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: TCD}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: DG1, coll: true}
+    - {idx: 4, grp: OBSERVATION, coll: true}
+    - {idx: 5, grp: PRIOR_RESULT, coll: true}
+  OML_O33:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: SPECIMEN, req: true, coll: true}
+  PATIENT_PRIOR:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: TCD}
+    - {idx: 2, seg: NTE, coll: true}
+  PATIENT_VISIT_PRIOR:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  TIMING_PRIOR:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+PMU_B04:
+  PMU_B04:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: STF, req: true}
+    - {idx: 4, seg: PRA, coll: true}
+    - {idx: 5, seg: ORG, coll: true}
+CRM_C01:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PV1}
+    - {idx: 2, seg: CSR, req: true}
+    - {idx: 3, seg: CSP, coll: true}
+  CRM_C01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, grp: PATIENT, req: true, coll: true}
+ROR_ROR:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, seg: RXO, req: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, seg: RXC, coll: true}
+  DEFINITION:
+    els:
+    - {idx: 0, seg: QRD, req: true}
+    - {idx: 1, seg: QRF}
+    - {idx: 2, grp: PATIENT}
+    - {idx: 3, grp: ORDER, req: true, coll: true}
+  ROR_ROR:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, grp: DEFINITION, req: true, coll: true}
+    - {idx: 5, seg: DSC}
+SPQ_Q08:
+  SPQ_Q08:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: SPR, req: true}
+    - {idx: 3, seg: RDF}
+    - {idx: 4, seg: DSC}
+ESU_U01:
+  ESU_U01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EQU, req: true}
+    - {idx: 3, seg: ISD, coll: true}
+    - {idx: 4, seg: ROL}
+PRR_PC5:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, grp: PATIENT_VISIT}
+    - {idx: 2, grp: PROBLEM, req: true, coll: true}
+  PROBLEM:
+    els:
+    - {idx: 0, seg: PRB, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: PROBLEM_ROLE, coll: true}
+    - {idx: 4, grp: PROBLEM_PATHWAY, coll: true}
+    - {idx: 5, grp: PROBLEM_OBSERVATION, coll: true}
+    - {idx: 6, grp: GOAL, coll: true}
+    - {idx: 7, grp: ORDER, coll: true}
+  PROBLEM_PATHWAY:
+    els:
+    - {idx: 0, seg: PTH, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, grp: OBRanyHL7Segment_SUPPGRP, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: ORDER_OBSERVATION, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: ORDER_DETAIL}
+  GOAL:
+    els:
+    - {idx: 0, seg: GOL, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: GOAL_ROLE, coll: true}
+    - {idx: 4, grp: GOAL_OBSERVATION, coll: true}
+  OBRanyHL7Segment_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBR}
+    - {idx: 1}
+  ORDER_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+  PRR_PC5:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: QAK}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, grp: PATIENT, req: true, coll: true}
+  GOAL_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PROBLEM_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PROBLEM_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  GOAL_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+ADT_A52:
+  ADT_A52:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: PV1, req: true}
+    - {idx: 6, seg: PV2}
+MFN_M05:
+  MF_LOC_DEPT:
+    els:
+    - {idx: 0, seg: LDP, req: true}
+    - {idx: 1, seg: LCH, coll: true}
+    - {idx: 2, seg: LCC, coll: true}
+  MF_LOCATION:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: LOC, req: true}
+    - {idx: 2, seg: LCH, coll: true}
+    - {idx: 3, seg: LRL, coll: true}
+    - {idx: 4, grp: MF_LOC_DEPT, req: true, coll: true}
+  MFN_M05:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_LOCATION, req: true, coll: true}
+MFN_M07:
+  MF_CLIN_STUDY_SCHED:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: CM0, req: true}
+    - {idx: 2, seg: CM2, coll: true}
+  MFN_M07:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_CLIN_STUDY_SCHED, req: true, coll: true}
+MFR_M06:
+  MF_QUERY:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: CM0, req: true}
+    - {idx: 2, seg: CM1, coll: true}
+    - {idx: 3, seg: CM2, coll: true}
+  MFR_M06:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: QAK}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, seg: QRF}
+    - {idx: 7, seg: MFI, req: true}
+    - {idx: 8, grp: MF_QUERY, req: true, coll: true}
+    - {idx: 9, seg: DSC}
+ADT_A50:
+  ADT_A50:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: MRG, req: true}
+    - {idx: 6, seg: PV1, req: true}
+ADT_A15:
+  ADT_A15:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: ROL, coll: true}
+    - {idx: 6, seg: PV1, req: true}
+    - {idx: 7, seg: PV2}
+    - {idx: 8, seg: ROL, coll: true}
+    - {idx: 9, seg: DB1, coll: true}
+    - {idx: 10, seg: OBX, coll: true}
+    - {idx: 11, seg: DG1, coll: true}
+MFR_M07:
+  MF_QUERY:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: CM0, req: true}
+    - {idx: 2, seg: CM2, coll: true}
+  MFR_M07:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: QAK}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, seg: QRF}
+    - {idx: 7, seg: MFI, req: true}
+    - {idx: 8, grp: MF_QUERY, req: true, coll: true}
+    - {idx: 9, seg: DSC}
+MFN_M16:
+  MATERIAL_ITEM_RECORD:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: ITM, req: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: STERILIZATION, coll: true}
+    - {idx: 4, grp: PURCHASING_VENDOR, coll: true}
+    - {idx: 5, grp: MATERIAL_LOCATION, coll: true}
+  STERILIZATION:
+    els:
+    - {idx: 0, seg: STZ, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  PURCHASING_VENDOR:
+    els:
+    - {idx: 0, seg: VND, req: true}
+    - {idx: 1, grp: PACKAGING, coll: true}
+  PACKAGING:
+    els:
+    - {idx: 0, seg: PKG, req: true}
+    - {idx: 1, seg: PCE, coll: true}
+  MATERIAL_LOCATION:
+    els:
+    - {idx: 0, seg: IVT, req: true}
+    - {idx: 1, seg: ILT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+  MFN_M16:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MFI, req: true}
+    - {idx: 2, grp: MATERIAL_ITEM_RECORD, req: true, coll: true}
+OSQ_Q06:
+  OSQ_Q06:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QRD, req: true}
+    - {idx: 3, seg: QRF}
+    - {idx: 4, seg: DSC}
+RPA_I08:
+  AUTHORIZATION:
+    els:
+    - {idx: 0, seg: AUT, req: true}
+    - {idx: 1, seg: CTD}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  RPA_I08:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: RF1}
+    - {idx: 4, grp: AUTHORIZATION}
+    - {idx: 5, grp: PROVIDER, req: true, coll: true}
+    - {idx: 6, seg: PID, req: true}
+    - {idx: 7, seg: NK1, coll: true}
+    - {idx: 8, seg: GT1, coll: true}
+    - {idx: 9, grp: INSURANCE, coll: true}
+    - {idx: 10, seg: ACC}
+    - {idx: 11, seg: DG1, coll: true}
+    - {idx: 12, seg: DRG, coll: true}
+    - {idx: 13, seg: AL1, coll: true}
+    - {idx: 14, grp: PROCEDURE, req: true, coll: true}
+    - {idx: 15, grp: OBSERVATION, coll: true}
+    - {idx: 16, grp: VISIT}
+    - {idx: 17, seg: NTE, coll: true}
+  AUTCTD_SUPPGRP2:
+    els:
+    - {idx: 0, seg: AUT, req: true}
+    - {idx: 1, seg: CTD}
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  PROVIDER:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  RESULTS:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, grp: RESULTS, coll: true}
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, grp: AUTCTD_SUPPGRP2}
+QBP_Z73:
+  QBP_Z73:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QPD, req: true}
+    - {idx: 3, seg: RCP, req: true}
+OMB_O27:
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+    - {idx: 4, grp: INSURANCE, coll: true}
+    - {idx: 5, seg: GT1}
+    - {idx: 6, seg: AL1, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: BPO, req: true}
+    - {idx: 3, seg: SPM}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, seg: DG1, coll: true}
+    - {idx: 6, grp: OBSERVATION, coll: true}
+    - {idx: 7, seg: FT1, coll: true}
+    - {idx: 8, seg: BLG}
+  OMB_O27:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+QCK_Q02:
+  QCK_Q02:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK}
+MDM_T01:
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  COMMON_ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: OBR, req: true}
+    - {idx: 3, seg: NTE, coll: true}
+  MDM_T01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PV1, req: true}
+    - {idx: 5, grp: COMMON_ORDER, coll: true}
+    - {idx: 6, seg: TXA, req: true}
+PTR_PCF:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, grp: PATIENT_VISIT}
+    - {idx: 2, grp: PATHWAY, req: true, coll: true}
+  PROBLEM:
+    els:
+    - {idx: 0, seg: PRB, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: PROBLEM_ROLE, coll: true}
+    - {idx: 4, grp: PROBLEM_OBSERVATION, coll: true}
+    - {idx: 5, grp: GOAL, coll: true}
+    - {idx: 6, grp: ORDER, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, grp: OBR_SUPPGRP, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: ORDER_OBSERVATION, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: ORDER_DETAIL}
+  GOAL:
+    els:
+    - {idx: 0, seg: GOL, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: GOAL_ROLE, coll: true}
+    - {idx: 4, grp: GOAL_OBSERVATION, coll: true}
+  ORDER_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+  PTR_PCF:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: QAK}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, grp: PATIENT, req: true, coll: true}
+  GOAL_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  OBR_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBR}
+  PROBLEM_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PATHWAY_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PATHWAY:
+    els:
+    - {idx: 0, seg: PTH, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: PATHWAY_ROLE, coll: true}
+    - {idx: 4, grp: PROBLEM, coll: true}
+  PROBLEM_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  GOAL_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+ORS_O06:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: RQD, req: true}
+    - {idx: 3, seg: RQ1}
+    - {idx: 4, seg: NTE, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  ORS_O06:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+RDS_O13:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: AL1, coll: true}
+    - {idx: 4, grp: PATIENT_VISIT}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, seg: RXO, req: true}
+    - {idx: 1, grp: ORDER_DETAIL_SUPPLEMENT}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: ORDER_DETAIL}
+    - {idx: 3, grp: ENCODING}
+    - {idx: 4, seg: RXD, req: true}
+    - {idx: 5, seg: NTE, coll: true}
+    - {idx: 6, seg: RXR, req: true, coll: true}
+    - {idx: 7, seg: RXC, coll: true}
+    - {idx: 8, grp: OBSERVATION, coll: true}
+    - {idx: 9, seg: FT1, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ORDER_DETAIL_SUPPLEMENT:
+    els:
+    - {idx: 0, seg: NTE, req: true, coll: true}
+    - {idx: 1, seg: RXR, req: true, coll: true}
+    - {idx: 2, grp: COMPONENT, coll: true}
+  TIMING_ENCODED:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  RDS_O13:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+  ENCODING:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, grp: TIMING_ENCODED, req: true, coll: true}
+    - {idx: 3, seg: RXR, req: true, coll: true}
+    - {idx: 4, seg: RXC, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  COMPONENT:
+    els:
+    - {idx: 0, seg: RXC, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+PMU_B07:
+  CERTIFICATE:
+    els:
+    - {idx: 0, seg: CER, req: true}
+    - {idx: 1, seg: ROL, coll: true}
+  PMU_B07:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: STF, req: true}
+    - {idx: 4, seg: PRA}
+    - {idx: 5, grp: CERTIFICATE, coll: true}
+RQP_I04:
+  PROVIDER:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  RQP_I04:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, grp: PROVIDER, req: true, coll: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: NK1, coll: true}
+    - {idx: 5, seg: GT1, coll: true}
+    - {idx: 6, seg: NTE, coll: true}
+OMS_O05:
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+    - {idx: 4, grp: INSURANCE, coll: true}
+    - {idx: 5, seg: GT1}
+    - {idx: 6, seg: AL1, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: RQD, req: true}
+    - {idx: 3, seg: RQ1}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: OBSERVATION, coll: true}
+    - {idx: 6, seg: BLG}
+  OMS_O05:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+ORG_O20:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: SAC, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: OBR}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, seg: CTI, coll: true}
+    - {idx: 5, grp: SPECIMEN, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  ORG_O20:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+RCI_I05:
+  PROVIDER:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  RESULTS:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, grp: RESULTS, coll: true}
+  RCI_I05:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: QRD, req: true}
+    - {idx: 4, seg: QRF}
+    - {idx: 5, grp: PROVIDER, req: true, coll: true}
+    - {idx: 6, seg: PID, req: true}
+    - {idx: 7, seg: DG1, coll: true}
+    - {idx: 8, seg: DRG, coll: true}
+    - {idx: 9, seg: AL1, coll: true}
+    - {idx: 10, grp: OBSERVATION, coll: true}
+    - {idx: 11, seg: NTE, coll: true}
+MFQ_M01:
+  MFQ_M01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QRD, req: true}
+    - {idx: 3, seg: QRF}
+    - {idx: 4, seg: DSC}
+BRP_O30:
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: BPO}
+    - {idx: 3, seg: BPX, coll: true}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, grp: ORDER, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+  BRP_O30:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+BAR_P02:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: PV1}
+    - {idx: 3, seg: DB1, coll: true}
+  BAR_P02:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, grp: PATIENT, req: true, coll: true}
+PMU_B03:
+  PMU_B03:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: STF, req: true}
+RQQ_Q09:
+  RQQ_Q09:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: ERQ, req: true}
+    - {idx: 3, seg: DSC}
+PPR_PC1:
+  PROBLEM:
+    els:
+    - {idx: 0, seg: PRB, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: PROBLEM_ROLE, coll: true}
+    - {idx: 4, grp: PATHWAY, coll: true}
+    - {idx: 5, grp: PROBLEM_OBSERVATION, coll: true}
+    - {idx: 6, grp: GOAL, coll: true}
+    - {idx: 7, grp: ORDER, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, grp: OBR_SUPPGRP, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: ORDER_OBSERVATION, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: ORDER_DETAIL}
+  GOAL:
+    els:
+    - {idx: 0, seg: GOL, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: GOAL_ROLE, coll: true}
+    - {idx: 4, grp: GOAL_OBSERVATION, coll: true}
+  ORDER_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+  GOAL_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PPR_PC1:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: PID, req: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+    - {idx: 4, grp: PROBLEM, req: true, coll: true}
+  OBR_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBR}
+  PROBLEM_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PATHWAY:
+    els:
+    - {idx: 0, seg: PTH, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PROBLEM_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  GOAL_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+MFR_M01:
+  MF_QUERY:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, req: true}
+  MFR_M01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: QAK}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, seg: QRF}
+    - {idx: 7, seg: MFI, req: true}
+    - {idx: 8, grp: MF_QUERY, req: true, coll: true}
+    - {idx: 9, seg: DSC}
+BAR_P12:
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, seg: ROL, coll: true}
+  BAR_P12:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PV1, req: true}
+    - {idx: 5, seg: DG1, coll: true}
+    - {idx: 6, seg: DRG}
+    - {idx: 7, grp: PROCEDURE, coll: true}
+LSU_U12:
+  LSU_U12:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EQU, req: true}
+    - {idx: 3, seg: EQP, req: true, coll: true}
+    - {idx: 4, seg: ROL}
+ORU_R30:
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  TIMING_QTY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORU_R30:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: PID, req: true}
+    - {idx: 3, seg: PD1}
+    - {idx: 4, grp: VISIT}
+    - {idx: 5, seg: ORC, req: true}
+    - {idx: 6, seg: OBR, req: true}
+    - {idx: 7, seg: NTE, coll: true}
+    - {idx: 8, grp: TIMING_QTY, coll: true}
+    - {idx: 9, grp: OBSERVATION, req: true, coll: true}
+BAR_P06:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PV1}
+  BAR_P06:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, grp: PATIENT, req: true, coll: true}
+RRA_O18:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ADMINISTRATION:
+    els:
+    - {idx: 0, seg: RXA, req: true, coll: true}
+    - {idx: 1, seg: RXR, req: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: ADMINISTRATION}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  RRA_O18:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+RDR_RDR:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ENCODING:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, seg: RXR, req: true, coll: true}
+    - {idx: 2, seg: RXC, coll: true}
+  DISPENSE:
+    els:
+    - {idx: 0, seg: RXD, req: true}
+    - {idx: 1, seg: RXR, req: true, coll: true}
+    - {idx: 2, seg: RXC, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: ENCODING}
+    - {idx: 2, grp: DISPENSE, req: true, coll: true}
+  DEFINITION:
+    els:
+    - {idx: 0, seg: QRD, req: true}
+    - {idx: 1, seg: QRF}
+    - {idx: 2, grp: PATIENT}
+    - {idx: 3, grp: ORDER, req: true, coll: true}
+  RDR_RDR:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, grp: DEFINITION, req: true, coll: true}
+    - {idx: 5, seg: DSC}
+MFN_M10:
+  MF_TEST_BATT_DETAIL:
+    els:
+    - {idx: 0, seg: OM5, req: true}
+    - {idx: 1, seg: OM4, coll: true}
+  MF_TEST_BATTERIES:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: OM1, req: true}
+    - {idx: 2, grp: MF_TEST_BATT_DETAIL}
+  MFN_M10:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_TEST_BATTERIES, req: true, coll: true}
+RRI_I12:
+  AUTHORIZATION_CONTACT:
+    els:
+    - {idx: 0, seg: AUT, req: true}
+    - {idx: 1, seg: CTD}
+  PROVIDER_CONTACT:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  AUTCTD_SUPPGRP2:
+    els:
+    - {idx: 0, seg: AUT, req: true}
+    - {idx: 1, seg: CTD}
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, grp: AUTCTD_SUPPGRP2}
+  RESULTS_NOTES:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, grp: RESULTS_NOTES, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  RRI_I12:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA}
+    - {idx: 3, seg: RF1}
+    - {idx: 4, grp: AUTHORIZATION_CONTACT}
+    - {idx: 5, grp: PROVIDER_CONTACT, req: true, coll: true}
+    - {idx: 6, seg: PID, req: true}
+    - {idx: 7, seg: ACC}
+    - {idx: 8, seg: DG1, coll: true}
+    - {idx: 9, seg: DRG, coll: true}
+    - {idx: 10, seg: AL1, coll: true}
+    - {idx: 11, grp: PROCEDURE, coll: true}
+    - {idx: 12, grp: OBSERVATION, coll: true}
+    - {idx: 13, grp: PATIENT_VISIT}
+    - {idx: 14, seg: NTE, coll: true}
+QBP_Q15:
+  QBP_Q15:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QPD, req: true}
+    - {idx: 3, seg: RCP, req: true}
+    - {idx: 4, seg: DSC}
+PPT_PCL:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, grp: PATIENT_VISIT}
+    - {idx: 2, grp: PATHWAY, req: true, coll: true}
+  PROBLEM:
+    els:
+    - {idx: 0, seg: PRB, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: PROBLEM_ROLE, coll: true}
+    - {idx: 4, grp: PROBLEM_OBSERVATION, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, grp: OBR_SUPPGRP, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: ORDER_OBSERVATION, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: ORDER_DETAIL}
+  GOAL:
+    els:
+    - {idx: 0, seg: GOL, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: GOAL_ROLE, coll: true}
+    - {idx: 4, grp: GOAL_OBSERVATION, coll: true}
+    - {idx: 5, grp: PROBLEM, coll: true}
+    - {idx: 6, grp: ORDER, coll: true}
+  ORDER_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+  GOAL_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  OBR_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBR}
+  PPT_PCL:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: QAK}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, grp: PATIENT, req: true, coll: true}
+  PROBLEM_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PATHWAY_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PATHWAY:
+    els:
+    - {idx: 0, seg: PTH, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: PATHWAY_ROLE, coll: true}
+    - {idx: 4, grp: GOAL, coll: true}
+  PROBLEM_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  GOAL_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+ORB_O28:
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: BPO}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, grp: ORDER, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+  ORB_O28:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+SQM_S25:
+  SERVICE:
+    els:
+    - {idx: 0, seg: AIS, req: true}
+    - {idx: 1, seg: APR}
+  GENERAL_RESOURCE:
+    els:
+    - {idx: 0, seg: AIG, req: true}
+    - {idx: 1, seg: APR}
+  PERSONNEL_RESOURCE:
+    els:
+    - {idx: 0, seg: AIP, req: true}
+    - {idx: 1, seg: APR}
+  LOCATION_RESOURCE:
+    els:
+    - {idx: 0, seg: AIL, req: true}
+    - {idx: 1, seg: APR}
+  RESOURCES:
+    els:
+    - {idx: 0, seg: RGS, req: true}
+    - {idx: 1, grp: SERVICE, coll: true}
+    - {idx: 2, grp: GENERAL_RESOURCE, coll: true}
+    - {idx: 3, grp: PERSONNEL_RESOURCE, coll: true}
+    - {idx: 4, grp: LOCATION_RESOURCE, coll: true}
+  REQUEST:
+    els:
+    - {idx: 0, seg: ARQ, req: true}
+    - {idx: 1, seg: APR}
+    - {idx: 2, seg: PID}
+    - {idx: 3, grp: RESOURCES, req: true, coll: true}
+  SQM_S25:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: QRD, req: true}
+    - {idx: 2, seg: QRF}
+    - {idx: 3, grp: REQUEST}
+    - {idx: 4, seg: DSC}
+RGR_RGR:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ENCODING:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, seg: RXR, req: true, coll: true}
+    - {idx: 2, seg: RXC, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: ENCODING}
+    - {idx: 2, seg: RXG, req: true, coll: true}
+    - {idx: 3, seg: RXR, req: true, coll: true}
+    - {idx: 4, seg: RXC, coll: true}
+  DEFINITION:
+    els:
+    - {idx: 0, seg: QRD, req: true}
+    - {idx: 1, seg: QRF}
+    - {idx: 2, grp: PATIENT}
+    - {idx: 3, grp: ORDER, req: true, coll: true}
+  RGR_RGR:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, grp: DEFINITION, req: true, coll: true}
+    - {idx: 5, seg: DSC}
+ORN_O08:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: RQD, req: true}
+    - {idx: 3, seg: RQ1}
+    - {idx: 4, seg: NTE, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  ORN_O08:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+QRY:
+  QRY:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: QRD, req: true}
+    - {idx: 2, seg: QRF}
+MFN_M01:
+  MF:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1}
+  MFN_M01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF, req: true, coll: true}
+PMU_B08:
+  PMU_B08:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: STF, req: true}
+    - {idx: 4, seg: PRA}
+    - {idx: 5, seg: CER, coll: true}
+BTS_O31:
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  PRODUCT_STATUS:
+    els:
+    - {idx: 0, seg: BTX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: BPO, req: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, grp: PRODUCT_STATUS, coll: true}
+  BTS_O31:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+ADT_A20:
+  ADT_A20:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: NPU, req: true}
+PEX_P07:
+  ASSOCIATED_RX_ADMIN:
+    els:
+    - {idx: 0, seg: RXA, req: true}
+    - {idx: 1, seg: RXR}
+  ASSOCIATED_RX_ORDER:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, grp: NK1_TIMING_QTY, req: true, coll: true}
+    - {idx: 2, seg: RXR, coll: true}
+  NK1_TIMING_QTY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  RX_ORDER:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, grp: TIMING_QTY, req: true, coll: true}
+    - {idx: 2, seg: RXR, coll: true}
+  EXPERIENCE:
+    els:
+    - {idx: 0, seg: PES, req: true}
+    - {idx: 1, grp: PEX_OBSERVATION, req: true, coll: true}
+  PEX_CAUSE:
+    els:
+    - {idx: 0, seg: PCR, req: true}
+    - {idx: 1, grp: RX_ORDER}
+    - {idx: 2, grp: RX_ADMINISTRATION, coll: true}
+    - {idx: 3, seg: PRB, coll: true}
+    - {idx: 4, seg: OBX, coll: true}
+    - {idx: 5, seg: NTE, coll: true}
+    - {idx: 6, grp: ASSOCIATED_PERSON}
+    - {idx: 7, grp: STUDY, coll: true}
+  STUDY:
+    els:
+    - {idx: 0, seg: CSR, req: true}
+    - {idx: 1, seg: CSP, coll: true}
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  PEX_P07:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: NTE, coll: true}
+    - {idx: 6, grp: VISIT}
+    - {idx: 7, grp: EXPERIENCE, req: true, coll: true}
+  PEX_OBSERVATION:
+    els:
+    - {idx: 0, seg: PEO, req: true}
+    - {idx: 1, grp: PEX_CAUSE, req: true, coll: true}
+  ASSOCIATED_PERSON:
+    els:
+    - {idx: 0, seg: NK1, req: true}
+    - {idx: 1, grp: ASSOCIATED_RX_ORDER}
+    - {idx: 2, grp: ASSOCIATED_RX_ADMIN, coll: true}
+    - {idx: 3, seg: PRB, coll: true}
+    - {idx: 4, seg: OBX, coll: true}
+  TIMING_QTY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  RX_ADMINISTRATION:
+    els:
+    - {idx: 0, seg: RXA, req: true}
+    - {idx: 1, seg: RXR}
+RCL_I06:
+  PROVIDER:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  RCL_I06:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: QRD, req: true}
+    - {idx: 4, seg: QRF}
+    - {idx: 5, grp: PROVIDER, req: true, coll: true}
+    - {idx: 6, seg: PID, req: true}
+    - {idx: 7, seg: DG1, coll: true}
+    - {idx: 8, seg: DRG, coll: true}
+    - {idx: 9, seg: AL1, coll: true}
+    - {idx: 10, seg: NTE, coll: true}
+    - {idx: 11, seg: DSP, coll: true}
+    - {idx: 12, seg: DSC}
+PPV_PCA:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, grp: PATIENT_VISIT}
+    - {idx: 2, grp: GOAL, req: true, coll: true}
+  PROBLEM:
+    els:
+    - {idx: 0, seg: PRB, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: PROBLEM_ROLE, coll: true}
+    - {idx: 4, grp: PROBLEM_OBSERVATION, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, grp: ORDER_CHOICE, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: ORDER_OBSERVATION, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: ORDER_DETAIL}
+  GOAL:
+    els:
+    - {idx: 0, seg: GOL, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: GOAL_ROLE, coll: true}
+    - {idx: 4, grp: GOAL_PATHWAY, coll: true}
+    - {idx: 5, grp: GOAL_OBSERVATION, coll: true}
+    - {idx: 6, grp: PROBLEM, coll: true}
+    - {idx: 7, grp: ORDER, coll: true}
+  GOAL_PATHWAY:
+    els:
+    - {idx: 0, seg: PTH, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  ORDER_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+  GOAL_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PROBLEM_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PPV_PCA:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: QAK}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, grp: PATIENT, req: true, coll: true}
+  ORDER_CHOICE:
+    els:
+    - {idx: 0, seg: OBR}
+    - {idx: 1}
+  PROBLEM_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  GOAL_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+MFN_M06:
+  MF_PHASE_SCHED_DETAIL:
+    els:
+    - {idx: 0, seg: CM1, req: true}
+    - {idx: 1, seg: CM2, coll: true}
+  MF_CLIN_STUDY:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: CM0, req: true}
+    - {idx: 2, grp: MF_PHASE_SCHED_DETAIL, coll: true}
+  MFN_M06:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_CLIN_STUDY, req: true, coll: true}
+EAN_U09:
+  NOTIFICATION:
+    els:
+    - {idx: 0, seg: NDS, req: true}
+    - {idx: 1, seg: NTE}
+  EAN_U09:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EQU, req: true}
+    - {idx: 3, grp: NOTIFICATION, req: true, coll: true}
+    - {idx: 4, seg: ROL}
+MFN_M13:
+  MFN_M13:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, seg: MFE, req: true, coll: true}
+ORI_O24:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: OBR, req: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, seg: IPC, req: true, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  ORI_O24:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+RPL_I02:
+  PROVIDER:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  RPL_I02:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, grp: PROVIDER, req: true, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, seg: DSP, coll: true}
+    - {idx: 6, seg: DSC}
+SRM_S01:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PV1}
+    - {idx: 2, seg: PV2}
+    - {idx: 3, seg: OBX, coll: true}
+    - {idx: 4, seg: DG1, coll: true}
+  SERVICE:
+    els:
+    - {idx: 0, seg: AIS, req: true}
+    - {idx: 1, seg: APR}
+    - {idx: 2, seg: NTE, coll: true}
+  GENERAL_RESOURCE:
+    els:
+    - {idx: 0, seg: AIG, req: true}
+    - {idx: 1, seg: APR}
+    - {idx: 2, seg: NTE, coll: true}
+  LOCATION_RESOURCE:
+    els:
+    - {idx: 0, seg: AIL, req: true}
+    - {idx: 1, seg: APR}
+    - {idx: 2, seg: NTE, coll: true}
+  PERSONNEL_RESOURCE:
+    els:
+    - {idx: 0, seg: AIP, req: true}
+    - {idx: 1, seg: APR}
+    - {idx: 2, seg: NTE, coll: true}
+  RESOURCES:
+    els:
+    - {idx: 0, seg: RGS, req: true}
+    - {idx: 1, grp: SERVICE, coll: true}
+    - {idx: 2, grp: GENERAL_RESOURCE, coll: true}
+    - {idx: 3, grp: LOCATION_RESOURCE, coll: true}
+    - {idx: 4, grp: PERSONNEL_RESOURCE, coll: true}
+  SRM_S01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: ARQ, req: true}
+    - {idx: 2, seg: APR}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, grp: PATIENT, coll: true}
+    - {idx: 5, grp: RESOURCES, req: true, coll: true}
+MFN_M12:
+  MF_OBS_ATTRIBUTES:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: OM1, req: true}
+    - {idx: 2, seg: OM7}
+  MFN_M12:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_OBS_ATTRIBUTES, req: true, coll: true}
+OML_O35:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: NK1, coll: true}
+    - {idx: 4, grp: PATIENT_VISIT}
+    - {idx: 5, grp: INSURANCE, coll: true}
+    - {idx: 6, seg: GT1}
+    - {idx: 7, seg: AL1, coll: true}
+  SPECIMEN_CONTAINER:
+    els:
+    - {idx: 0, seg: SAC, req: true}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  ORDER_PRIOR:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, seg: OBR, req: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: TIMING_PRIOR, coll: true}
+    - {idx: 4, grp: OBSERVATION_PRIOR, req: true, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: OBSERVATION_REQUEST}
+    - {idx: 3, seg: FT1, coll: true}
+    - {idx: 4, seg: CTI, coll: true}
+    - {idx: 5, seg: BLG}
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+    - {idx: 2, grp: SPECIMEN_CONTAINER, req: true, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  PRIOR_RESULT:
+    els:
+    - {idx: 0, grp: PATIENT_PRIOR}
+    - {idx: 1, grp: PATIENT_VISIT_PRIOR}
+    - {idx: 2, seg: AL1, coll: true}
+    - {idx: 3, grp: ORDER_PRIOR, req: true, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  OBSERVATION_PRIOR:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  OBSERVATION_REQUEST:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: TCD}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: DG1, coll: true}
+    - {idx: 4, grp: OBSERVATION, coll: true}
+    - {idx: 5, grp: PRIOR_RESULT, coll: true}
+  PATIENT_PRIOR:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+  OML_O35:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: SPECIMEN, req: true, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: TCD}
+    - {idx: 2, seg: NTE, coll: true}
+  PATIENT_VISIT_PRIOR:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  TIMING_PRIOR:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+ORM_O01:
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+    - {idx: 4, grp: INSURANCE, coll: true}
+    - {idx: 5, seg: GT1}
+    - {idx: 6, seg: AL1, coll: true}
+  OBRRQDRQ1RXOODSODT_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBR}
+    - {idx: 1, seg: RQD}
+    - {idx: 2, seg: RQ1}
+    - {idx: 3, seg: RXO}
+    - {idx: 4, seg: ODS}
+    - {idx: 5, seg: ODT}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, grp: OBRRQDRQ1RXOODSODT_SUPPGRP, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: CTD}
+    - {idx: 3, seg: DG1, coll: true}
+    - {idx: 4, grp: OBSERVATION, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: ORDER_DETAIL}
+    - {idx: 2, seg: FT1, coll: true}
+    - {idx: 3, seg: CTI, coll: true}
+    - {idx: 4, seg: BLG}
+  ORM_O01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, grp: PATIENT}
+    - {idx: 3, grp: ORDER, req: true, coll: true}
+NMQ_N01:
+  QRY_WITH_DETAIL:
+    els:
+    - {idx: 0, seg: QRD, req: true}
+    - {idx: 1, seg: QRF}
+  CLOCK_AND_STATISTICS:
+    els:
+    - {idx: 0, seg: NCK}
+    - {idx: 1, seg: NST}
+    - {idx: 2, seg: NSC}
+  NMQ_N01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, grp: QRY_WITH_DETAIL}
+    - {idx: 3, grp: CLOCK_AND_STATISTICS, req: true, coll: true}
+BAR_P05:
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, seg: ROL, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3, coll: true}
+    - {idx: 3, seg: ROL, coll: true}
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1}
+    - {idx: 1, seg: PV2}
+    - {idx: 2, seg: ROL, coll: true}
+    - {idx: 3, seg: DB1, coll: true}
+    - {idx: 4, seg: OBX, coll: true}
+    - {idx: 5, seg: AL1, coll: true}
+    - {idx: 6, seg: DG1, coll: true}
+    - {idx: 7, seg: DRG}
+    - {idx: 8, grp: PROCEDURE, coll: true}
+    - {idx: 9, seg: GT1, coll: true}
+    - {idx: 10, seg: NK1, coll: true}
+    - {idx: 11, grp: INSURANCE, coll: true}
+    - {idx: 12, seg: ACC}
+    - {idx: 13, seg: UB1}
+    - {idx: 14, seg: UB2}
+    - {idx: 15, seg: ABS}
+    - {idx: 16, seg: BLC, coll: true}
+    - {idx: 17, seg: RMI}
+  BAR_P05:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: ROL, coll: true}
+    - {idx: 6, grp: VISIT, req: true, coll: true}
+ADT_A61:
+  ADT_A61:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: PV1, req: true}
+    - {idx: 6, seg: ROL, coll: true}
+    - {idx: 7, seg: PV2}
+QVR_Q17:
+  QBP:
+    els:
+    - {idx: 0, req: true}
+  QVR_Q17:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QPD, req: true}
+    - {idx: 3, grp: QBP}
+    - {idx: 4, seg: RCP, req: true}
+    - {idx: 5, seg: DSC}
+OMN_O07:
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+    - {idx: 4, grp: INSURANCE, coll: true}
+    - {idx: 5, seg: GT1}
+    - {idx: 6, seg: AL1, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: RQD, req: true}
+    - {idx: 3, seg: RQ1}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: OBSERVATION, coll: true}
+    - {idx: 6, seg: BLG}
+  OMN_O07:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+RTB_K13:
+  ROW_DEFINITION:
+    els:
+    - {idx: 0, seg: RDF, req: true}
+    - {idx: 1, seg: RDT, coll: true}
+  RTB_K13:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, grp: ROW_DEFINITION}
+    - {idx: 7, seg: DSC}
+RSP_K25:
+  STAFF:
+    els:
+    - {idx: 0, seg: STF, req: true}
+    - {idx: 1, seg: PRA, coll: true}
+    - {idx: 2, seg: ORG, coll: true}
+    - {idx: 3, seg: AFF, coll: true}
+    - {idx: 4, seg: LAN, coll: true}
+    - {idx: 5, seg: EDU, coll: true}
+    - {idx: 6, seg: CER, coll: true}
+  RSP_K25:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, seg: RCP, req: true}
+    - {idx: 7, grp: STAFF, req: true, coll: true}
+    - {idx: 8, seg: DSC}
+ADT_A60:
+  ADT_A60:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PV1}
+    - {idx: 5, seg: PV2}
+    - {idx: 6, seg: IAM, coll: true}
+TBR_R08:
+  TBR_R08:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: RDF, req: true}
+    - {idx: 6, seg: RDT, req: true, coll: true}
+    - {idx: 7, seg: DSC}
+ADT_A30:
+  ADT_A30:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: MRG, req: true}
+ORL_O36:
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBSERVATION_REQUEST:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: OBSERVATION_REQUEST}
+  SPECIMEN_CONTAINER:
+    els:
+    - {idx: 0, seg: SAC, req: true}
+    - {idx: 1, grp: ORDER, coll: true}
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+    - {idx: 2, grp: SPECIMEN_CONTAINER, req: true, coll: true}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, grp: SPECIMEN, req: true, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+  ORL_O36:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+RSP_Z90:
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NK1, coll: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, grp: VISIT}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX}
+    - {idx: 1, seg: NTE, coll: true}
+  COMMON_ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: OBR, req: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, seg: CTD}
+    - {idx: 5, grp: OBSERVATION, req: true, coll: true}
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+  QUERY_RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: COMMON_ORDER, req: true, coll: true}
+    - {idx: 2, grp: SPECIMEN, coll: true}
+  RSP_Z90:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, seg: RCP, req: true}
+    - {idx: 7, grp: QUERY_RESPONSE, req: true, coll: true}
+    - {idx: 8, seg: DSC, req: true}
+RGV_O15:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: AL1, coll: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, seg: RXO, req: true}
+    - {idx: 1, grp: ORDER_DETAIL_SUPPLEMENT}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  GIVE:
+    els:
+    - {idx: 0, seg: RXG, req: true}
+    - {idx: 1, grp: TIMING_GIVE, req: true, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, seg: RXC, coll: true}
+    - {idx: 4, grp: OBSERVATION, req: true, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: ORDER_DETAIL}
+    - {idx: 3, grp: ENCODING}
+    - {idx: 4, grp: GIVE, req: true, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ORDER_DETAIL_SUPPLEMENT:
+    els:
+    - {idx: 0, seg: NTE, req: true, coll: true}
+    - {idx: 1, seg: RXR, req: true, coll: true}
+    - {idx: 2, grp: COMPONENTS, coll: true}
+  TIMING_ENCODED:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  COMPONENTS:
+    els:
+    - {idx: 0, seg: RXC, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ENCODING:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, grp: TIMING_ENCODED, req: true, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, seg: RXC, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX}
+    - {idx: 1, seg: NTE, coll: true}
+  RGV_O15:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+  TIMING_GIVE:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+OSR_Q06:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBRRQDRQ1RXOODSODT_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBR}
+    - {idx: 1, seg: RQD}
+    - {idx: 2, seg: RQ1}
+    - {idx: 3, seg: RXO}
+    - {idx: 4, seg: ODS}
+    - {idx: 5, seg: ODT}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: OBRRQDRQ1RXOODSODT_SUPPGRP, req: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, seg: CTI, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  OSR_Q06:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, seg: QRF}
+    - {idx: 7, grp: RESPONSE}
+    - {idx: 8, seg: DSC}
+OMG_O19:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: NK1, coll: true}
+    - {idx: 4, grp: PATIENT_VISIT}
+    - {idx: 5, grp: INSURANCE, coll: true}
+    - {idx: 6, seg: GT1}
+    - {idx: 7, seg: AL1, coll: true}
+  ORDER_PRIOR:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, seg: OBR, req: true}
+    - {idx: 2, grp: TIMING_PRIOR, coll: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, seg: CTD}
+    - {idx: 5, grp: OBSERVATION_PRIOR, req: true, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: OBR, req: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, seg: CTD}
+    - {idx: 5, seg: DG1, coll: true}
+    - {idx: 6, grp: OBSERVATION, coll: true}
+    - {idx: 7, grp: SPECIMEN, coll: true}
+    - {idx: 8, grp: PRIOR_RESULT, coll: true}
+    - {idx: 9, seg: FT1, coll: true}
+    - {idx: 10, seg: CTI, coll: true}
+    - {idx: 11, seg: BLG}
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+    - {idx: 2, grp: CONTAINER, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  PRIOR_RESULT:
+    els:
+    - {idx: 0, grp: PATIENT_PRIOR}
+    - {idx: 1, grp: PATIENT_VISIT_PRIOR}
+    - {idx: 2, seg: AL1, coll: true}
+    - {idx: 3, grp: ORDER_PRIOR, req: true, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  OBSERVATION_PRIOR:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  PATIENT_PRIOR:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+  CONTAINER:
+    els:
+    - {idx: 0, seg: SAC, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  OMG_O19:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+  PATIENT_VISIT_PRIOR:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  TIMING_PRIOR:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+ADT_A37:
+  ADT_A37:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: PV1}
+    - {idx: 6, seg: DB1, coll: true}
+    - {idx: 7, seg: PID, req: true}
+    - {idx: 8, seg: PD1}
+    - {idx: 9, seg: PV1}
+    - {idx: 10, seg: DB1, coll: true}
+QRY_A19:
+  QRY_A19:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QRD, req: true}
+    - {idx: 3, seg: QRF}
+ERP_R09:
+  ERP_R09:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: ERQ, req: true}
+    - {idx: 6, seg: DSC}
+RQC_I05:
+  PROVIDER:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  RQC_I05:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QRD, req: true}
+    - {idx: 3, seg: QRF}
+    - {idx: 4, grp: PROVIDER, req: true, coll: true}
+    - {idx: 5, seg: PID, req: true}
+    - {idx: 6, seg: NK1, coll: true}
+    - {idx: 7, seg: GT1, coll: true}
+    - {idx: 8, seg: NTE, coll: true}
+ADT_A54:
+  ADT_A54:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: ROL, coll: true}
+    - {idx: 6, seg: PV1, req: true}
+    - {idx: 7, seg: PV2}
+    - {idx: 8, seg: ROL, coll: true}
+EAC_U07:
+  SPECIMEN_CONTAINER:
+    els:
+    - {idx: 0, seg: SAC, req: true}
+    - {idx: 1, seg: SPM, coll: true}
+  COMMAND:
+    els:
+    - {idx: 0, seg: ECD, req: true}
+    - {idx: 1, seg: TQ1}
+    - {idx: 2, grp: SPECIMEN_CONTAINER}
+    - {idx: 3, seg: CNS}
+  EAC_U07:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EQU, req: true}
+    - {idx: 3, grp: COMMAND, req: true, coll: true}
+    - {idx: 4, seg: ROL}
+MFN_M03:
+  MF_TEST:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: OM1, req: true}
+    - {idx: 2, req: true}
+  MFN_M03:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_TEST, req: true, coll: true}
+RSP_K31:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: AL1, coll: true}
+    - {idx: 4, grp: PATIENT_VISIT}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, seg: RXO, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, grp: COMPONENTS, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: ORDER_DETAIL}
+    - {idx: 3, grp: ENCODING}
+    - {idx: 4, seg: RXD, req: true}
+    - {idx: 5, seg: RXR, req: true, coll: true}
+    - {idx: 6, seg: RXC, coll: true}
+    - {idx: 7, grp: OBSERVATION, req: true, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  TIMING_ENCODED:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  COMPONENTS:
+    els:
+    - {idx: 0, seg: RXC, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ENCODING:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, grp: TIMING_ENCODED, req: true, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, seg: RXC, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX}
+    - {idx: 1, seg: NTE, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  RSP_K31:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, seg: RCP, req: true}
+    - {idx: 7, grp: RESPONSE, req: true, coll: true}
+    - {idx: 8, seg: DSC}
+SSR_U04:
+  SPECIMEN_CONTAINER:
+    els:
+    - {idx: 0, seg: SAC, req: true}
+    - {idx: 1, seg: SPM, coll: true}
+  SSR_U04:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EQU, req: true}
+    - {idx: 3, grp: SPECIMEN_CONTAINER, req: true, coll: true}
+    - {idx: 4, seg: ROL}
+BRT_O32:
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: BPO}
+    - {idx: 3, seg: BTX, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, seg: PID}
+    - {idx: 1, grp: ORDER, coll: true}
+  BRT_O32:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+OML_O21:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: NK1, coll: true}
+    - {idx: 4, grp: PATIENT_VISIT}
+    - {idx: 5, grp: INSURANCE, coll: true}
+    - {idx: 6, seg: GT1}
+    - {idx: 7, seg: AL1, coll: true}
+  ORDER_PRIOR:
+    els:
+    - {idx: 0, seg: ORC}
+    - {idx: 1, seg: OBR, req: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: TIMING_PRIOR, coll: true}
+    - {idx: 4, grp: OBSERVATION_PRIOR, req: true, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: OBSERVATION_REQUEST}
+    - {idx: 3, seg: FT1, coll: true}
+    - {idx: 4, seg: CTI, coll: true}
+    - {idx: 5, seg: BLG}
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+    - {idx: 2, grp: CONTAINER, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  PRIOR_RESULT:
+    els:
+    - {idx: 0, grp: PATIENT_PRIOR}
+    - {idx: 1, grp: PATIENT_VISIT_PRIOR}
+    - {idx: 2, seg: AL1, coll: true}
+    - {idx: 3, grp: ORDER_PRIOR, req: true, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  OBSERVATION_PRIOR:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  OBSERVATION_REQUEST:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: TCD}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, seg: CTD}
+    - {idx: 4, seg: DG1, coll: true}
+    - {idx: 5, grp: OBSERVATION, coll: true}
+    - {idx: 6, grp: SPECIMEN, coll: true}
+    - {idx: 7, grp: PRIOR_RESULT, coll: true}
+  PATIENT_PRIOR:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+  CONTAINER:
+    els:
+    - {idx: 0, seg: SAC, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: TCD}
+    - {idx: 2, seg: NTE, coll: true}
+  PATIENT_VISIT_PRIOR:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  OML_O21:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+  TIMING_PRIOR:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+RRD_O14:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  DISPENSE:
+    els:
+    - {idx: 0, seg: RXD, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, seg: RXC, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: DISPENSE}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: ORDER, req: true, coll: true}
+  RRD_O14:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+DSR_Q01:
+  DSR_Q01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, seg: QRF}
+    - {idx: 7, seg: DSP, req: true, coll: true}
+    - {idx: 8, seg: DSC}
+OMP_O09:
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+    - {idx: 4, grp: INSURANCE, coll: true}
+    - {idx: 5, seg: GT1}
+    - {idx: 6, seg: AL1, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  COMPONENT:
+    els:
+    - {idx: 0, seg: RXC, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, seg: RXO, req: true}
+    - {idx: 3, seg: NTE, coll: true}
+    - {idx: 4, seg: RXR, req: true, coll: true}
+    - {idx: 5, grp: COMPONENT, coll: true}
+    - {idx: 6, grp: OBSERVATION, coll: true}
+    - {idx: 7, seg: FT1, coll: true}
+    - {idx: 8, seg: BLG}
+  OMP_O09:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+ADT_A02:
+  ADT_A02:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: ROL, coll: true}
+    - {idx: 6, seg: PV1, req: true}
+    - {idx: 7, seg: PV2}
+    - {idx: 8, seg: ROL, coll: true}
+    - {idx: 9, seg: DB1, coll: true}
+    - {idx: 10, seg: OBX, coll: true}
+    - {idx: 11, seg: PDA}
+ADT_A16:
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, seg: ROL, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3, coll: true}
+    - {idx: 3, seg: ROL, coll: true}
+  ADT_A16:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: ROL, coll: true}
+    - {idx: 6, seg: NK1, coll: true}
+    - {idx: 7, seg: PV1, req: true}
+    - {idx: 8, seg: PV2}
+    - {idx: 9, seg: ROL, coll: true}
+    - {idx: 10, seg: DB1, coll: true}
+    - {idx: 11, seg: OBX, coll: true}
+    - {idx: 12, seg: AL1, coll: true}
+    - {idx: 13, seg: DG1, coll: true}
+    - {idx: 14, seg: DRG}
+    - {idx: 15, grp: PROCEDURE, coll: true}
+    - {idx: 16, seg: GT1, coll: true}
+    - {idx: 17, grp: INSURANCE, coll: true}
+    - {idx: 18, seg: ACC}
+OUL_R22:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  CONTAINER:
+    els:
+    - {idx: 0, seg: SAC, req: true}
+    - {idx: 1, seg: INV}
+  TIMING_QTY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBXTCDSIDNTE_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: TCD}
+    - {idx: 2, seg: SID, coll: true}
+    - {idx: 3, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, seg: ORC}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: TIMING_QTY, coll: true}
+    - {idx: 4, grp: OBXTCDSIDNTE_SUPPGRP, coll: true}
+    - {idx: 5, seg: CTI, coll: true}
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+    - {idx: 2, grp: CONTAINER, coll: true}
+    - {idx: 3, grp: ORDER, req: true, coll: true}
+  OUL_R22:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: VISIT}
+    - {idx: 5, grp: SPECIMEN, req: true, coll: true}
+    - {idx: 6, seg: DSC}
+EAR_U08:
+  SPECIMEN_CONTAINER:
+    els:
+    - {idx: 0, seg: SAC, req: true}
+    - {idx: 1, seg: SPM, coll: true}
+  COMMAND_RESPONSE:
+    els:
+    - {idx: 0, seg: ECD, req: true}
+    - {idx: 1, grp: SPECIMEN_CONTAINER}
+    - {idx: 2, seg: ECR, req: true}
+  EAR_U08:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EQU, req: true}
+    - {idx: 3, grp: COMMAND_RESPONSE, req: true, coll: true}
+    - {idx: 4, seg: ROL}
+MFK_M01:
+  MFK_M01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: MFI, req: true}
+    - {idx: 5, seg: MFA, coll: true}
+MFN_M11:
+  MF_TEST_CALC_DETAIL:
+    els:
+    - {idx: 0, seg: OM6, req: true}
+    - {idx: 1, seg: OM2, req: true}
+  MF_TEST_CALCULATED:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: OM1, req: true}
+    - {idx: 2, grp: MF_TEST_CALC_DETAIL}
+  MFN_M11:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MFI, req: true}
+    - {idx: 3, grp: MF_TEST_CALCULATED, req: true, coll: true}
+ORL_O34:
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  SPMSAC_SUPPGRP2:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: SAC, coll: true}
+  OBSERVATION_REQUEST:
+    els:
+    - {idx: 0, seg: OBR, req: true}
+    - {idx: 1, grp: SPMSAC_SUPPGRP2, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: OBSERVATION_REQUEST}
+  SPECIMEN:
+    els:
+    - {idx: 0, seg: SPM, req: true}
+    - {idx: 1, seg: OBX, coll: true}
+    - {idx: 2, seg: SAC, coll: true}
+    - {idx: 3, grp: ORDER, coll: true}
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, grp: SPECIMEN, req: true, coll: true}
+  RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+  ORL_O34:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: RESPONSE}
+RDE_O11:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+    - {idx: 4, grp: INSURANCE, coll: true}
+    - {idx: 5, seg: GT1}
+    - {idx: 6, seg: AL1, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, seg: RXO, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, grp: COMPONENT, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: ORDER_DETAIL}
+    - {idx: 3, seg: RXE, req: true}
+    - {idx: 4, seg: NTE, coll: true}
+    - {idx: 5, grp: TIMING_ENCODED, req: true, coll: true}
+    - {idx: 6, seg: RXR, req: true, coll: true}
+    - {idx: 7, seg: RXC, coll: true}
+    - {idx: 8, grp: OBSERVATION, coll: true}
+    - {idx: 9, seg: FT1, coll: true}
+    - {idx: 10, seg: BLG}
+    - {idx: 11, seg: CTI, coll: true}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  TIMING_ENCODED:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  COMPONENT:
+    els:
+    - {idx: 0, seg: RXC, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  RDE_O11:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER, req: true, coll: true}
+RPI_I01:
+  PROVIDER:
+    els:
+    - {idx: 0, seg: PRD, req: true}
+    - {idx: 1, seg: CTD, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  GUARANTOR_INSURANCE:
+    els:
+    - {idx: 0, seg: GT1, coll: true}
+    - {idx: 1, grp: INSURANCE, req: true, coll: true}
+  RPI_I01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, grp: PROVIDER, req: true, coll: true}
+    - {idx: 4, seg: PID, req: true}
+    - {idx: 5, seg: NK1, coll: true}
+    - {idx: 6, grp: GUARANTOR_INSURANCE}
+    - {idx: 7, seg: NTE, coll: true}
+PGL_PC6:
+  PROBLEM:
+    els:
+    - {idx: 0, seg: PRB, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: PROBLEM_ROLE, coll: true}
+    - {idx: 4, grp: PROBLEM_OBSERVATION, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, grp: OBR_SUPPGRP, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: ORDER_OBSERVATION, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: ORDER_DETAIL}
+  GOAL:
+    els:
+    - {idx: 0, seg: GOL, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+    - {idx: 3, grp: GOAL_ROLE, coll: true}
+    - {idx: 4, grp: PATHWAY, coll: true}
+    - {idx: 5, grp: OBSERVATION, coll: true}
+    - {idx: 6, grp: PROBLEM, coll: true}
+    - {idx: 7, grp: ORDER, coll: true}
+  ORDER_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: VAR, coll: true}
+  GOAL_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  OBR_SUPPGRP:
+    els:
+    - {idx: 0, seg: OBR}
+  PROBLEM_ROLE:
+    els:
+    - {idx: 0, seg: ROL, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  PATHWAY:
+    els:
+    - {idx: 0, seg: PTH, req: true}
+    - {idx: 1, seg: VAR, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  PROBLEM_OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  PGL_PC6:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: PID, req: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+    - {idx: 4, grp: GOAL, req: true, coll: true}
+ACK:
+  ACK:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+ADT_A05:
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, seg: ROL, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3, coll: true}
+    - {idx: 3, seg: ROL, coll: true}
+  ADT_A05:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, seg: ROL, coll: true}
+    - {idx: 6, seg: NK1, coll: true}
+    - {idx: 7, seg: PV1, req: true}
+    - {idx: 8, seg: PV2}
+    - {idx: 9, seg: ROL, coll: true}
+    - {idx: 10, seg: DB1, coll: true}
+    - {idx: 11, seg: OBX, coll: true}
+    - {idx: 12, seg: AL1, coll: true}
+    - {idx: 13, seg: DG1, coll: true}
+    - {idx: 14, seg: DRG}
+    - {idx: 15, grp: PROCEDURE, coll: true}
+    - {idx: 16, seg: GT1, coll: true}
+    - {idx: 17, grp: INSURANCE, coll: true}
+    - {idx: 18, seg: ACC}
+    - {idx: 19, seg: UB1}
+    - {idx: 20, seg: UB2}
+RSP_Z88:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: ALLERGY}
+  COMMON_ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING, coll: true}
+    - {idx: 2, grp: ORDER_DETAIL}
+    - {idx: 3, grp: ORDER_ENCODED}
+    - {idx: 4, seg: RXD, req: true}
+    - {idx: 5, seg: RXR, req: true, coll: true}
+    - {idx: 6, seg: RXC, coll: true}
+    - {idx: 7, grp: OBSERVATION, req: true, coll: true}
+  ORDER_DETAIL:
+    els:
+    - {idx: 0, seg: RXO, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, grp: COMPONENT}
+  ALLERGY:
+    els:
+    - {idx: 0, seg: AL1, req: true, coll: true}
+    - {idx: 1, grp: VISIT}
+  TIMING:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  TIMING_ENCODED:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  QUERY_RESPONSE:
+    els:
+    - {idx: 0, grp: PATIENT}
+    - {idx: 1, grp: COMMON_ORDER, req: true, coll: true}
+  VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX}
+    - {idx: 1, seg: NTE, coll: true}
+  COMPONENT:
+    els:
+    - {idx: 0, seg: RXC, req: true, coll: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER_ENCODED:
+    els:
+    - {idx: 0, seg: RXE, req: true}
+    - {idx: 1, grp: TIMING_ENCODED, coll: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, seg: RXC, coll: true}
+  RSP_Z88:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK, req: true}
+    - {idx: 5, seg: QPD, req: true}
+    - {idx: 6, seg: RCP, req: true}
+    - {idx: 7, grp: QUERY_RESPONSE, req: true, coll: true}
+    - {idx: 8, seg: DSC, req: true}
+QBP_Qnn:
+  QBP_Qnn:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QPD, req: true}
+    - {idx: 3, seg: RDF}
+    - {idx: 4, seg: RCP, req: true}
+    - {idx: 5, seg: DSC}
+MFR_M04:
+  MF_QUERY:
+    els:
+    - {idx: 0, seg: MFE, req: true}
+    - {idx: 1, seg: CDM, req: true}
+    - {idx: 2, seg: PRC, coll: true}
+  MFR_M04:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR, coll: true}
+    - {idx: 4, seg: QAK}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, seg: QRF}
+    - {idx: 7, seg: MFI, req: true}
+    - {idx: 8, grp: MF_QUERY, req: true, coll: true}
+    - {idx: 9, seg: DSC}
+ADT_A45:
+  MERGE_INFO:
+    els:
+    - {idx: 0, seg: MRG, req: true}
+    - {idx: 1, seg: PV1, req: true}
+  ADT_A45:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EVN, req: true}
+    - {idx: 3, seg: PID, req: true}
+    - {idx: 4, seg: PD1}
+    - {idx: 5, grp: MERGE_INFO, req: true, coll: true}
+RER_RER:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  ORDER:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, seg: RXE, req: true}
+    - {idx: 2, seg: RXR, req: true, coll: true}
+    - {idx: 3, seg: RXC, coll: true}
+  DEFINITION:
+    els:
+    - {idx: 0, seg: QRD, req: true}
+    - {idx: 1, seg: QRF}
+    - {idx: 2, grp: PATIENT}
+    - {idx: 3, grp: ORDER, req: true, coll: true}
+  RER_RER:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: MSA, req: true}
+    - {idx: 2, seg: ERR, coll: true}
+    - {idx: 3, seg: SFT, coll: true}
+    - {idx: 4, grp: DEFINITION, req: true, coll: true}
+    - {idx: 5, seg: DSC}
+OMD_O03:
+  PATIENT:
+    els:
+    - {idx: 0, seg: PID, req: true}
+    - {idx: 1, seg: PD1}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT_VISIT}
+    - {idx: 4, grp: INSURANCE, coll: true}
+    - {idx: 5, seg: GT1}
+    - {idx: 6, seg: AL1, coll: true}
+  DIET:
+    els:
+    - {idx: 0, seg: ODS, req: true, coll: true}
+    - {idx: 1, seg: NTE, coll: true}
+    - {idx: 2, grp: OBSERVATION, coll: true}
+  TIMING_DIET:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  PATIENT_VISIT:
+    els:
+    - {idx: 0, seg: PV1, req: true}
+    - {idx: 1, seg: PV2}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3}
+  ORDER_DIET:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING_DIET, coll: true}
+    - {idx: 2, grp: DIET}
+  TIMING_TRAY:
+    els:
+    - {idx: 0, seg: TQ1, req: true}
+    - {idx: 1, seg: TQ2, coll: true}
+  ORDER_TRAY:
+    els:
+    - {idx: 0, seg: ORC, req: true}
+    - {idx: 1, grp: TIMING_TRAY, coll: true}
+    - {idx: 2, seg: ODT, req: true, coll: true}
+    - {idx: 3, seg: NTE, coll: true}
+  OBSERVATION:
+    els:
+    - {idx: 0, seg: OBX, req: true}
+    - {idx: 1, seg: NTE, coll: true}
+  OMD_O03:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: NTE, coll: true}
+    - {idx: 3, grp: PATIENT}
+    - {idx: 4, grp: ORDER_DIET, req: true, coll: true}
+    - {idx: 5, grp: ORDER_TRAY, coll: true}
+ESR_U02:
+  ESR_U02:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: EQU, req: true}
+    - {idx: 3, seg: ROL}
+ADR_A19:
+  PROCEDURE:
+    els:
+    - {idx: 0, seg: PR1, req: true}
+    - {idx: 1, seg: ROL, coll: true}
+  INSURANCE:
+    els:
+    - {idx: 0, seg: IN1, req: true}
+    - {idx: 1, seg: IN2}
+    - {idx: 2, seg: IN3, coll: true}
+    - {idx: 3, seg: ROL, coll: true}
+  QUERY_RESPONSE:
+    els:
+    - {idx: 0, seg: EVN}
+    - {idx: 1, seg: PID, req: true}
+    - {idx: 2, seg: PD1}
+    - {idx: 3, seg: ROL, coll: true}
+    - {idx: 4, seg: NK1, coll: true}
+    - {idx: 5, seg: PV1, req: true}
+    - {idx: 6, seg: PV2}
+    - {idx: 7, seg: ROL, coll: true}
+    - {idx: 8, seg: DB1, coll: true}
+    - {idx: 9, seg: OBX, coll: true}
+    - {idx: 10, seg: AL1, coll: true}
+    - {idx: 11, seg: DG1, coll: true}
+    - {idx: 12, seg: DRG}
+    - {idx: 13, grp: PROCEDURE, coll: true}
+    - {idx: 14, seg: GT1, coll: true}
+    - {idx: 15, grp: INSURANCE, coll: true}
+    - {idx: 16, seg: ACC}
+    - {idx: 17, seg: UB1}
+    - {idx: 18, seg: UB2}
+  ADR_A19:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: MSA, req: true}
+    - {idx: 3, seg: ERR}
+    - {idx: 4, seg: QAK}
+    - {idx: 5, seg: QRD, req: true}
+    - {idx: 6, seg: QRF}
+    - {idx: 7, grp: QUERY_RESPONSE, req: true, coll: true}
+    - {idx: 8, seg: DSC}
+QRY_Q01:
+  QRY_Q01:
+    els:
+    - {idx: 0, seg: MSH, req: true}
+    - {idx: 1, seg: SFT, coll: true}
+    - {idx: 2, seg: QRD, req: true}
+    - {idx: 3, seg: QRF}
+    - {idx: 4, seg: DSC}

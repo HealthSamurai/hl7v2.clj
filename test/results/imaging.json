@@ -1,0 +1,2841 @@
+{
+  "parsedResult": [
+    [
+      {
+        "0": "MSH",
+        "1": "|",
+        "2": "^~\\&",
+        "3": {
+          "0": "^",
+          "1": "RISOC"
+        },
+        "4": {
+          "0": "^",
+          "1": "001"
+        },
+        "5": {
+          "0": "^",
+          "1": "MS4OC"
+        },
+        "6": {
+          "0": "^",
+          "1": "001"
+        },
+        "7": "2011-11-15T20:06:43.000Z",
+        "8": null,
+        "9": {
+          "0": "^",
+          "1": "ORU",
+          "2": "R01"
+        },
+        "10": "30004",
+        "11": {
+          "0": "^",
+          "1": "T"
+        },
+        "12": "2.3",
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": "PRELIM"
+      },
+      {
+        "0": "PID",
+        "1": "1",
+        "2": null,
+        "3": [
+          {
+            "0": "^",
+            "1": "160922",
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": "VHH"
+          }
+        ],
+        "4": null,
+        "5": {
+          "0": "^",
+          "1": "SENGUL",
+          "2": "ISO",
+          "3": null,
+          "4": null,
+          "5": null,
+          "6": null
+        },
+        "6": null,
+        "7": "1920-12-14T00:00:00.000Z",
+        "8": "M",
+        "9": [],
+        "10": "C^CAUCASIAN NON-HISPANIC",
+        "11": [
+          {
+            "0": "^",
+            "1": "3347 RETA ST",
+            "2": null,
+            "3": "LACRESCENTA",
+            "4": "CA",
+            "5": "91214",
+            "6": null
+          }
+        ],
+        "12": null,
+        "13": [
+          {
+            "0": "^",
+            "1": "(818)249-7031",
+            "2": "PRN"
+          }
+        ],
+        "14": [],
+        "15": {
+          "0": "^",
+          "1": "ARM",
+          "2": "ARMENIAN"
+        },
+        "16": [],
+        "17": null,
+        "18": {
+          "0": "^",
+          "1": "16732000"
+        },
+        "19": "605-50-6261",
+        "20": null,
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": null,
+        "25": null,
+        "26": null,
+        "27": null,
+        "28": null,
+        "29": null,
+        "30": "N"
+      },
+      {
+        "0": "PV1",
+        "1": "1",
+        "2": "I",
+        "3": {
+          "0": "^",
+          "1": null,
+          "2": "5SOUT518A",
+          "3": null,
+          "4": null,
+          "5": null,
+          "6": null,
+          "7": null,
+          "8": null,
+          "9": "5 South"
+        },
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": {
+          "0": "^",
+          "1": "80231",
+          "2": "GANDHI",
+          "3": "DEVINDER",
+          "4": null,
+          "5": null,
+          "6": null,
+          "7": "MD",
+          "8": null,
+          "9": "NPI&1467492371"
+        },
+        "8": null,
+        "9": [],
+        "10": null,
+        "11": null,
+        "12": null,
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": null,
+        "19": null,
+        "20": [],
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": [],
+        "25": [],
+        "26": [],
+        "27": [],
+        "28": null,
+        "29": null,
+        "30": null,
+        "31": null,
+        "32": null,
+        "33": null,
+        "34": null,
+        "35": null,
+        "36": null,
+        "37": null,
+        "38": null,
+        "39": null,
+        "40": null,
+        "41": null,
+        "42": null,
+        "43": null,
+        "44": "2011-11-13T17:02:00.000Z"
+      },
+      {
+        "0": "OBR",
+        "1": "1",
+        "2": [
+          {
+            "0": "^",
+            "1": "00045"
+          }
+        ],
+        "3": {
+          "0": "^",
+          "1": "1000718"
+        },
+        "4": {
+          "0": "^",
+          "1": "4550422",
+          "2": "CT ANGIO NECK W WO CON",
+          "3": null,
+          "4": "AGNKCOM"
+        },
+        "5": null,
+        "6": null,
+        "7": "2011-11-15T16:09:00.000Z",
+        "8": null,
+        "9": null,
+        "10": [],
+        "11": null,
+        "12": null,
+        "13": "SYNCOPE ELEVATED D DIMER CHEST PAIN",
+        "14": null,
+        "15": null,
+        "16": [
+          {
+            "0": "^",
+            "1": "20222",
+            "2": "PEREYRA",
+            "3": "ROBERT",
+            "4": "W",
+            "5": null,
+            "6": null,
+            "7": "MD",
+            "8": null,
+            "9": "NPI&1841336138"
+          }
+        ],
+        "17": [],
+        "18": null,
+        "19": null,
+        "20": null,
+        "21": null,
+        "22": "2011-11-15T20:06:00.000Z",
+        "23": null,
+        "24": "CT^Computed Tomography",
+        "25": "P",
+        "26": null,
+        "27": {
+          "0": "^",
+          "1": null,
+          "2": null,
+          "3": "30",
+          "4": "2011-11-15T09:48:22.000Z",
+          "5": null,
+          "6": "9"
+        },
+        "28": [],
+        "29": null,
+        "30": "AMB^Ambulatory",
+        "31": [],
+        "32": {
+          "0": "^",
+          "1": "34831",
+          "2": "PATEL",
+          "3": "SAMEER",
+          "4": "A",
+          "5": null,
+          "6": null,
+          "7": "MD",
+          "8": null,
+          "9": "NPI&1508081530"
+        },
+        "33": [
+          null,
+          null
+        ],
+        "34": [
+          {
+            "0": "^",
+            "1": "ylee",
+            "2": "LEE",
+            "3": "YUNGCHIANG",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null
+          }
+        ],
+        "35": [
+          {
+            "0": "^",
+            "1": null,
+            "2": "WALKER",
+            "3": "CHERYL",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": "Sched/Transcription"
+          }
+        ],
+        "36": "2011-11-15T08:10:00.000Z"
+      },
+      {
+        "0": "OBX",
+        "1": "2",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "EXAMINATION"
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "3",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "4",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "CT ANGIO NECK W WO CON"
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "5",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "6",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "7",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "CLINICAL HISTORY NODULE SIZE: 3 "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "8",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "Chest pain, syncope and dizziness.  Rule out carotid stenosis."
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "9",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "10",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "11",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "COMPARISON"
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "12",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "No comparison available."
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "13",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "14",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "15",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "TECHNIQUE"
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "16",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "CT angiography of the neck was performed and supplemented with "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "17",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "coronal, sagittal, MIP, surface rendered and 3D rotating "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "18",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "reconstructions."
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "19",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "20",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "Contrast Agent ISOVUE 370 100 milliliter 11/15/2011 INTRAVENOUS"
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "21",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "22",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "23",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "FINDINGS"
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "24",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "Incidentally noted is a bovine arch variant. There is mild tortuosity "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "25",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "and kinking of the proximal great vessels without significant ostial "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "26",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "stenosis."
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "27",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "28",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "RIGHT CAROTID ARTERY:  The right common and internal carotid arteries "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "29",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "are normal in course and caliber without aneurysmal dilatation or "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "30",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "dissection.  The carotid bifurcation is widely patent. There is very "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "31",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "mild focal short-segment narrowing of the proximal internal carotid "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "32",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "artery with less than 10% stenosis.  The external carotid artery is "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "33",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "widely patent and well-opacified as well."
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "34",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "35",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "LEFT CAROTID ARTERY:  The left common carotid artery is normal in "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "36",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "course and caliber without aneurysmal dilatation or dissection.  The "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "37",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "carotid bifurcation is patent.  There is a moderate-length high-grade "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "38",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "stenosis of the proximal left internal carotid artery with "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "39",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "circumferential mural thrombus noted best on axial and sagittal "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "40",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "imaging.  This results in approximately 75% narrowing over a 2 cm "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "41",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "length segment. The distal internal carotid artery is unremarkable.  "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "42",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "The origin of the external carotid artery is widely patent without "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "43",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "abnormality."
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "44",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "45",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "VERTEBROBASILAR SYSTEM: The origin of both vertebral arteries are "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "46",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "patent.  Incidentally noted is a dominant left vertebral artery with "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "47",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "diffuse attenuation of the right vertebral artery.  The vertebral "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "48",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "confluence and proximal basilar artery are unremarkable."
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "49",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "50",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "51",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "IMPRESSION"
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "52",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "1. LEFT INTERNAL CAROTID ARTERY:  Long-segment high-grade stenosis of "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "53",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "the proximal ICA with approximately 75% narrowing.  Correlation with "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "54",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "carotid ultrasound is needed."
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "55",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          null
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "OBX",
+        "1": "56",
+        "2": "FT",
+        "3": {
+          "0": "^",
+          "1": "AGNKCOM&GDT"
+        },
+        "4": null,
+        "5": [
+          "2. RIGHT INTERNAL CAROTID ARTERY: No significant stenosis. "
+        ],
+        "6": null,
+        "7": null,
+        "8": [],
+        "9": null,
+        "10": null,
+        "11": "P"
+      },
+      {
+        "0": "DG1",
+        "1": "1",
+        "2": null,
+        "3": {
+          "0": "^",
+          "1": "784.3",
+          "2": "APHASIA",
+          "3": "I9C"
+        },
+        "4": null,
+        "5": "2011-04-22T06:00:00.000Z",
+        "6": "A"
+      },
+      {
+        "0": "DG1",
+        "1": "2",
+        "2": null,
+        "3": {
+          "0": "^",
+          "1": "535.61",
+          "2": "DUODENITIS W/HEMORRHAGE",
+          "3": "I9C"
+        },
+        "4": null,
+        "5": "2011-04-22T06:00:00.000Z",
+        "6": "F"
+      }
+    ],
+    []
+  ],
+  "structurizedResult": [
+    {
+      "MSH": {
+        "0": "MSH",
+        "1": "|",
+        "2": "^~\\&",
+        "3": {
+          "0": "^",
+          "1": "RISOC"
+        },
+        "4": {
+          "0": "^",
+          "1": "001"
+        },
+        "5": {
+          "0": "^",
+          "1": "MS4OC"
+        },
+        "6": {
+          "0": "^",
+          "1": "001"
+        },
+        "7": "2011-11-15T20:06:43.000Z",
+        "8": null,
+        "9": {
+          "0": "^",
+          "1": "ORU",
+          "2": "R01"
+        },
+        "10": "30004",
+        "11": {
+          "0": "^",
+          "1": "T"
+        },
+        "12": "2.3",
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": "PRELIM"
+      },
+      "RESPONSE": [
+        {
+          "PATIENT": {
+            "PID": {
+              "0": "PID",
+              "1": "1",
+              "2": null,
+              "3": [
+                {
+                  "0": "^",
+                  "1": "160922",
+                  "2": null,
+                  "3": null,
+                  "4": null,
+                  "5": null,
+                  "6": "VHH"
+                }
+              ],
+              "4": null,
+              "5": {
+                "0": "^",
+                "1": "SENGUL",
+                "2": "ISO",
+                "3": null,
+                "4": null,
+                "5": null,
+                "6": null
+              },
+              "6": null,
+              "7": "1920-12-14T00:00:00.000Z",
+              "8": "M",
+              "9": [],
+              "10": "C^CAUCASIAN NON-HISPANIC",
+              "11": [
+                {
+                  "0": "^",
+                  "1": "3347 RETA ST",
+                  "2": null,
+                  "3": "LACRESCENTA",
+                  "4": "CA",
+                  "5": "91214",
+                  "6": null
+                }
+              ],
+              "12": null,
+              "13": [
+                {
+                  "0": "^",
+                  "1": "(818)249-7031",
+                  "2": "PRN"
+                }
+              ],
+              "14": [],
+              "15": {
+                "0": "^",
+                "1": "ARM",
+                "2": "ARMENIAN"
+              },
+              "16": [],
+              "17": null,
+              "18": {
+                "0": "^",
+                "1": "16732000"
+              },
+              "19": "605-50-6261",
+              "20": null,
+              "21": null,
+              "22": null,
+              "23": null,
+              "24": null,
+              "25": null,
+              "26": null,
+              "27": null,
+              "28": null,
+              "29": null,
+              "30": "N"
+            },
+            "VISIT": {
+              "PV1": {
+                "0": "PV1",
+                "1": "1",
+                "2": "I",
+                "3": {
+                  "0": "^",
+                  "1": null,
+                  "2": "5SOUT518A",
+                  "3": null,
+                  "4": null,
+                  "5": null,
+                  "6": null,
+                  "7": null,
+                  "8": null,
+                  "9": "5 South"
+                },
+                "4": null,
+                "5": null,
+                "6": null,
+                "7": {
+                  "0": "^",
+                  "1": "80231",
+                  "2": "GANDHI",
+                  "3": "DEVINDER",
+                  "4": null,
+                  "5": null,
+                  "6": null,
+                  "7": "MD",
+                  "8": null,
+                  "9": "NPI&1467492371"
+                },
+                "8": null,
+                "9": [],
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null,
+                "20": [],
+                "21": null,
+                "22": null,
+                "23": null,
+                "24": [],
+                "25": [],
+                "26": [],
+                "27": [],
+                "28": null,
+                "29": null,
+                "30": null,
+                "31": null,
+                "32": null,
+                "33": null,
+                "34": null,
+                "35": null,
+                "36": null,
+                "37": null,
+                "38": null,
+                "39": null,
+                "40": null,
+                "41": null,
+                "42": null,
+                "43": null,
+                "44": "2011-11-13T17:02:00.000Z"
+              }
+            }
+          },
+          "ORDER_OBSERVATION": [
+            {
+              "OBR": {
+                "0": "OBR",
+                "1": "1",
+                "2": [
+                  {
+                    "0": "^",
+                    "1": "00045"
+                  }
+                ],
+                "3": {
+                  "0": "^",
+                  "1": "1000718"
+                },
+                "4": {
+                  "0": "^",
+                  "1": "4550422",
+                  "2": "CT ANGIO NECK W WO CON",
+                  "3": null,
+                  "4": "AGNKCOM"
+                },
+                "5": null,
+                "6": null,
+                "7": "2011-11-15T16:09:00.000Z",
+                "8": null,
+                "9": null,
+                "10": [],
+                "11": null,
+                "12": null,
+                "13": "SYNCOPE ELEVATED D DIMER CHEST PAIN",
+                "14": null,
+                "15": null,
+                "16": [
+                  {
+                    "0": "^",
+                    "1": "20222",
+                    "2": "PEREYRA",
+                    "3": "ROBERT",
+                    "4": "W",
+                    "5": null,
+                    "6": null,
+                    "7": "MD",
+                    "8": null,
+                    "9": "NPI&1841336138"
+                  }
+                ],
+                "17": [],
+                "18": null,
+                "19": null,
+                "20": null,
+                "21": null,
+                "22": "2011-11-15T20:06:00.000Z",
+                "23": null,
+                "24": "CT^Computed Tomography",
+                "25": "P",
+                "26": null,
+                "27": {
+                  "0": "^",
+                  "1": null,
+                  "2": null,
+                  "3": "30",
+                  "4": "2011-11-15T09:48:22.000Z",
+                  "5": null,
+                  "6": "9"
+                },
+                "28": [],
+                "29": null,
+                "30": "AMB^Ambulatory",
+                "31": [],
+                "32": {
+                  "0": "^",
+                  "1": "34831",
+                  "2": "PATEL",
+                  "3": "SAMEER",
+                  "4": "A",
+                  "5": null,
+                  "6": null,
+                  "7": "MD",
+                  "8": null,
+                  "9": "NPI&1508081530"
+                },
+                "33": [
+                  null,
+                  null
+                ],
+                "34": [
+                  {
+                    "0": "^",
+                    "1": "ylee",
+                    "2": "LEE",
+                    "3": "YUNGCHIANG",
+                    "4": null,
+                    "5": null,
+                    "6": null,
+                    "7": null
+                  }
+                ],
+                "35": [
+                  {
+                    "0": "^",
+                    "1": null,
+                    "2": "WALKER",
+                    "3": "CHERYL",
+                    "4": null,
+                    "5": null,
+                    "6": null,
+                    "7": "Sched/Transcription"
+                  }
+                ],
+                "36": "2011-11-15T08:10:00.000Z"
+              },
+              "OBSERVATION": [
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "2",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "EXAMINATION"
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "3",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "4",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "CT ANGIO NECK W WO CON"
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "5",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "6",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "7",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "CLINICAL HISTORY NODULE SIZE: 3 "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "8",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "Chest pain, syncope and dizziness.  Rule out carotid stenosis."
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "9",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "10",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "11",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "COMPARISON"
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "12",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "No comparison available."
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "13",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "14",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "15",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "TECHNIQUE"
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "16",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "CT angiography of the neck was performed and supplemented with "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "17",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "coronal, sagittal, MIP, surface rendered and 3D rotating "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "18",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "reconstructions."
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "19",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "20",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "Contrast Agent ISOVUE 370 100 milliliter 11/15/2011 INTRAVENOUS"
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "21",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "22",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "23",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "FINDINGS"
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "24",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "Incidentally noted is a bovine arch variant. There is mild tortuosity "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "25",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "and kinking of the proximal great vessels without significant ostial "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "26",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "stenosis."
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "27",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "28",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "RIGHT CAROTID ARTERY:  The right common and internal carotid arteries "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "29",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "are normal in course and caliber without aneurysmal dilatation or "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "30",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "dissection.  The carotid bifurcation is widely patent. There is very "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "31",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "mild focal short-segment narrowing of the proximal internal carotid "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "32",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "artery with less than 10% stenosis.  The external carotid artery is "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "33",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "widely patent and well-opacified as well."
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "34",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "35",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "LEFT CAROTID ARTERY:  The left common carotid artery is normal in "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "36",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "course and caliber without aneurysmal dilatation or dissection.  The "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "37",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "carotid bifurcation is patent.  There is a moderate-length high-grade "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "38",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "stenosis of the proximal left internal carotid artery with "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "39",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "circumferential mural thrombus noted best on axial and sagittal "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "40",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "imaging.  This results in approximately 75% narrowing over a 2 cm "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "41",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "length segment. The distal internal carotid artery is unremarkable.  "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "42",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "The origin of the external carotid artery is widely patent without "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "43",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "abnormality."
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "44",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "45",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "VERTEBROBASILAR SYSTEM: The origin of both vertebral arteries are "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "46",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "patent.  Incidentally noted is a dominant left vertebral artery with "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "47",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "diffuse attenuation of the right vertebral artery.  The vertebral "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "48",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "confluence and proximal basilar artery are unremarkable."
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "49",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "50",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "51",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "IMPRESSION"
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "52",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "1. LEFT INTERNAL CAROTID ARTERY:  Long-segment high-grade stenosis of "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "53",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "the proximal ICA with approximately 75% narrowing.  Correlation with "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "54",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "carotid ultrasound is needed."
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "55",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      null
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                },
+                {
+                  "OBX": {
+                    "0": "OBX",
+                    "1": "56",
+                    "2": "FT",
+                    "3": {
+                      "0": "^",
+                      "1": "AGNKCOM&GDT"
+                    },
+                    "4": null,
+                    "5": [
+                      "2. RIGHT INTERNAL CAROTID ARTERY: No significant stenosis. "
+                    ],
+                    "6": null,
+                    "7": null,
+                    "8": [],
+                    "9": null,
+                    "10": null,
+                    "11": "P"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "IGNORED": {}
+    },
+    []
+  ]
+}
