@@ -28,8 +28,9 @@
 (defn do-parse [grammar rule inp]
   (loop [[stm & stms :as sstms] (get grammar rule)
          inp inp
-         out {}]
-    (println rule inp stm)
+         out {}
+         repeat true]
+    (println rule stm (cur inp))
     (if (nil? stm)
       [inp out]
       (if-let [c (cur inp)]
@@ -38,19 +39,23 @@
           (cond
             (= tp :seg) (if (= nm c)
                           (if (contains? #{:+ :*} q )
-                            (recur sstms (inext inp) (update out c (fn [x] (conj (or x []) (:pos inp)))))
-                            (recur stms (inext inp)  (assoc out c (:pos inp))))
-                          (if (contains? #{:? :*} q)
-                            (recur sstms (inext inp) out)
-                            [inp [:error (pr-str "Expected " nm "got " c)]]))
+                            (recur sstms (inext inp) (update out c (fn [x] (conj (or x []) (:pos inp)))) true)
+                            (recur stms (inext inp)  (assoc out c (:pos inp)) false))
+                          (cond
+                            (or (= q :*) (and repeat (= q :+)))
+                            (recur stms inp out true)
+                            (= q :?)
+                            (recur stms inp out false)
+                            :else
+                            [inp [:error (str "Rule " rule " [" (str/join " " (get grammar rule)) "] at " stm  " expected  [" (name nm) "] got [" (name c) "] segment position " (:pos inp))]]))
 
             (= tp :grp) (let [[inp' res] (do-parse grammar nm inp)]
                           (if-not (= :error (first res))
                             (if (contains? #{:+ :*} q)
-                              (recur sstms inp' (update out nm (fn [x] (conj (or x []) res))))
-                              (recur stms inp' (assoc out nm res)))
+                              (recur sstms inp' (update out nm (fn [x] (conj (or x []) res))) true)
+                              (recur stms inp' (assoc out nm res) false))
                             (if (contains? #{:? :*} q)
-                              (recur stms inp out)
+                              (recur stms inp out false)
                               [inp res])))))
         [inp out]))))
 
