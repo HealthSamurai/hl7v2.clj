@@ -39,14 +39,14 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
       ctx "MSH|^~\\&|AccMgr|1|||20151015200643||ADT^A01|599102|P|2.3|foo||")
      ["MSH"
       {:type {:code "ADT", :event "A01"},
-       :control_id "599102",
+       :id "599102",
        :encoding "^~\\&",
-       :sequence_number "foo",
-       :version_id {:version_id "2.3"},
-       :processing_id {:processing_id "P"},
+       :seqnum "foo",
+       :version {:id "2.3"},
+       :proc_id {:proc_id "P"},
        :datetime {:time "20151015200643"},
-       :sending_facility {:ns "1"},
-       :sending_application {:ns "AccMgr"}
+       :facility {:ns "1"},
+       :app {:ns "AccMgr"}
        :separator "|"
        }])
 

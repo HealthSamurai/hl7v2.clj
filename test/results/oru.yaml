@@ -1,18 +1,18 @@
 MSH:
-  control_id: 87226A1476977481
   encoding: ^~\&
-  sequence_number: '2010022217399'
-  version_id: {version_id: '2.4'}
-  application_acknowledgment_type: NE
+  facility: {ns: Lab}
+  proc_id: {proc_id: P}
+  seqnum: '2010022217399'
+  receiving_app: {ns: Lab}
+  ack_type: AL
   type: {code: ORU, event: R30}
-  processing_id: {processing_id: P}
+  app_ack_type: NE
+  id: 87226A1476977481
+  app: {ns: LAb}
   datetime: {time: '20100222024516'}
-  sending_facility: {ns: Lab}
   receiving_facility: {ns: Lab}
+  version: {id: '2.4'}
   separator: '|'
-  accept_acknowledgment_type: AL
-  sending_application: {ns: LAb}
-  receiving_application: {ns: Lab}
 PID:
   patient_id:
     id: '312626'

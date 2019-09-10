@@ -343,25 +343,25 @@ BPO:
 MSH:
 - {name: MSH.1, type: ST, key: separator, desc: Field Separator, req: true}
 - {name: MSH.2, type: ST, key: encoding, desc: Encoding Characters, req: true}
-- {name: MSH.3, type: HD, key: sending_application, desc: Sending Application, table: HL70361}
-- {name: MSH.4, type: HD, key: sending_facility, desc: Sending Facility, table: HL70362}
-- {name: MSH.5, type: HD, key: receiving_application, desc: Receiving Application, table: HL70361}
+- {name: MSH.3, type: HD, key: app, desc: Sending Application, table: HL70361}
+- {name: MSH.4, type: HD, key: facility, desc: Sending Facility, table: HL70362}
+- {name: MSH.5, type: HD, key: receiving_app, desc: Receiving Application, table: HL70361}
 - {name: MSH.6, type: HD, key: receiving_facility, desc: Receiving Facility, table: HL70362}
 - {name: MSH.7, type: TS, key: datetime, desc: Date/Time Of Message, req: true}
 - {name: MSH.8, type: ST, key: security, desc: Security}
 - {name: MSH.9, type: MSG, key: type, desc: Message Type, req: true}
-- {name: MSH.10, type: ST, key: control_id, desc: Message Control ID, req: true}
-- {name: MSH.11, type: PT, key: processing_id, desc: Processing ID, req: true}
-- {name: MSH.12, type: VID, key: version_id, desc: Version ID, req: true}
-- {name: MSH.13, type: NM, key: sequence_number, desc: Sequence Number}
+- {name: MSH.10, type: ST, key: id, desc: Message Control ID, req: true}
+- {name: MSH.11, type: PT, key: proc_id, desc: Processing ID, req: true}
+- {name: MSH.12, type: VID, key: version, desc: Version ID, req: true}
+- {name: MSH.13, type: NM, key: seqnum, desc: Sequence Number}
 - {name: MSH.14, type: ST, key: continuation_pointer, desc: Continuation Pointer}
-- {name: MSH.15, type: ID, key: accept_acknowledgment_type, desc: Accept Acknowledgment Type, table: HL70155}
-- {name: MSH.16, type: ID, key: application_acknowledgment_type, desc: Application Acknowledgment Type, table: HL70155}
-- {name: MSH.17, type: ID, key: country_code, desc: Country Code, table: HL70399}
-- {name: MSH.18, type: ID, key: character_set, desc: Character Set, table: HL70211, coll: true}
-- {name: MSH.19, type: CE, key: principal_language, desc: Principal Language Of Message}
-- {name: MSH.20, type: ID, key: alternate_character_set_handling_scheme, desc: Alternate Character Set Handling Scheme, table: HL70356}
-- {name: MSH.21, type: EI, key: profile_identifier, desc: Message Profile Identifier, coll: true}
+- {name: MSH.15, type: ID, key: ack_type, desc: Accept Acknowledgment Type, table: HL70155}
+- {name: MSH.16, type: ID, key: app_ack_type, desc: Application Acknowledgment Type, table: HL70155}
+- {name: MSH.17, type: ID, key: country, desc: Country Code, table: HL70399}
+- {name: MSH.18, type: ID, key: charset, desc: Character Set, table: HL70211, coll: true}
+- {name: MSH.19, type: CE, key: language, desc: Principal Language Of Message}
+- {name: MSH.20, type: ID, key: alt_charset, desc: Alternate Character Set Handling Scheme, table: HL70356}
+- {name: MSH.21, type: EI, key: profile, desc: Message Profile Identifier, coll: true}
 ISD:
 - {name: ISD.1, type: NM, key: reference_interaction_number_, desc: Reference Interaction Number (unique identifier), req: true}
 - {name: ISD.2, type: CE, key: interaction_type_identifier, desc: Interaction Type Identifier, table: HL70368}

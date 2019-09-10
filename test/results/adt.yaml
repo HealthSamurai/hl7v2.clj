@@ -1,14 +1,14 @@
 MSH:
-  control_id: '599102'
   encoding: ^~\&
-  sequence_number: foo
-  version_id: {version_id: '2.3'}
+  facility: {ns: '1'}
+  proc_id: {proc_id: P}
+  seqnum: foo
   type: {code: ADT, event: A01}
-  processing_id: {processing_id: P}
+  id: '599102'
+  app: {ns: AccMgr}
   datetime: {time: '20151015200643'}
-  sending_facility: {ns: '1'}
+  version: {id: '2.3'}
   separator: '|'
-  sending_application: {ns: AccMgr}
 EVN:
   event_type_code: A01
   recorded_datetime: {time: '20151010045502'}
@@ -146,7 +146,7 @@ insurance:
     insured_date_of_birth: {time: 2820 SYCAMORE AVE, precision: TWELVE OAKS LODGE, null: USA}
     insurance_company_name:
     - {}
-    authorization_information: {authorization_number: MCR}
+    authorization_information: {number: MCR}
     coordination_of_benefits: '1'
     insured_relationship_to_patient: {code: '19301013'}
     company_plan_code: 354221840A
