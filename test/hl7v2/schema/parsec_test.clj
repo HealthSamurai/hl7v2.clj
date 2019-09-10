@@ -9,6 +9,15 @@
 
 (deftest test-parser 
 
+
+  (is (= (sut/name-quant "ab?") [:ab :?]))
+
+  (is (= (sut/name-quant "ab") [:ab nil]))
+
+  (is (= (sut/name-quant "ab*") [:ab :*]))
+
+  (is (= (sut/name-quant "ab+") [:ab :+]))
+
   (parsed-as
    {:msg ["A" "B*" "C"]}
    [:A :B :B :C]
@@ -35,6 +44,12 @@
    {:msg ["A" "B+"]}
    [:A :B :B]
    {:A 0, :B [1 2]})
+
+
+  (parsed-as
+   {:msg ["A" "B+"]}
+   [:A :B :B :D]
+   [:error "Extra input [D] pos: 3"])
 
 
   (parsed-as

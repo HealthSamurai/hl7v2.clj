@@ -17,20 +17,13 @@
     [(keyword nm) (keyword q)]
     [(keyword x) nil]))
 
-(name-quant "xxxssss?")
-
-(name-quant "xxxssss")
-
-(name-quant "xxxssss*")
-
-(name-quant "xxxssss+")
 
 (defn do-parse [grammar rule inp]
   (loop [[stm & stms :as sstms] (get grammar rule)
          inp inp
          out {}
          repeat true]
-    (println rule stm (cur inp))
+    ;; (println rule stm (cur inp))
     (if (nil? stm)
       [inp out]
       (if-let [c (cur inp)]
@@ -44,8 +37,10 @@
                           (cond
                             (or (= q :*) (and repeat (= q :+)))
                             (recur stms inp out false)
+
                             (= q :?)
                             (recur stms inp out false)
+
                             :else
                             [inp [:error (str "Rule " rule " [" (str/join " " (get grammar rule)) "] at " stm  " expected  [" (name nm) "] got [" (name c) "] segment position " (:pos inp))]]))
 
@@ -60,6 +55,7 @@
 
                               (= q :?)
                               (recur stms inp out false)
+
                               :else
                               [inp res])))))
         [inp out]))))
@@ -70,5 +66,5 @@
       res
       (if (= (:pos inp) (count (:msg inp)))
         res
-        [:error (str "Extra input " inp)]))))
+        [:error (str "Extra input [" (name (cur inp)) "] pos: " (:pos inp))]))))
 
