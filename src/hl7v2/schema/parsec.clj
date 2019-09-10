@@ -18,7 +18,7 @@
     [(keyword x) nil]))
 
 
-(defn do-parse [grammar rule inp]
+(defn do-parse [grammar get-value rule inp]
   (loop [[stm & stms :as sstms] (get grammar rule)
          inp inp
          out {}
@@ -32,8 +32,8 @@
           (cond
             (= tp :seg) (if (= nm c)
                           (if (contains? #{:+ :*} q )
-                            (recur sstms (inext inp) (update out c (fn [x] (conj (or x []) (:pos inp)))) true)
-                            (recur stms (inext inp)  (assoc out c (:pos inp)) false))
+                            (recur sstms (inext inp) (update out c (fn [x] (conj (or x []) (get-value (:pos inp))))) true)
+                            (recur stms (inext inp)  (assoc out c (get-value (:pos inp))) false))
                           (cond
                             (or (= q :*) (and repeat (= q :+)))
                             (recur stms inp out false)
@@ -44,7 +44,7 @@
                             :else
                             [inp [:error (str "Rule " rule " [" (str/join " " (get grammar rule)) "] at " stm  " expected  [" (name nm) "] got [" (name c) "] segment position " (:pos inp))]]))
 
-            (= tp :grp) (let [[inp' res] (do-parse grammar nm inp)]
+            (= tp :grp) (let [[inp' res] (do-parse grammar get-value nm inp)]
                           (if-not (= :error (first res))
                             (if (contains? #{:+ :*} q)
                               (recur sstms inp' (update out nm (fn [x] (conj (or x []) res))) true)
@@ -60,8 +60,8 @@
                               [inp res])))))
         [inp out]))))
 
-(defn parse [grammar msg]
-  (let [[inp res] (do-parse grammar :msg {:msg msg :pos 0})]
+(defn parse [grammar msg & [get-value]]
+  (let [[inp res] (do-parse grammar (or get-value identity) :msg {:msg msg :pos 0})]
     (if (= :error (first res))
       res
       (if (= (:pos inp) (count (:msg inp)))

@@ -73,9 +73,9 @@ AUI:
   - {type: ST, name: AUI.3, key: source, desc: Source}
 MSG:
   components:
-  - {type: ID, name: MSG.1, key: message_code, desc: Message Code}
-  - {type: ID, name: MSG.2, key: trigger_event, desc: Trigger Event}
-  - {type: ID, name: MSG.3, key: message_structure, desc: Message Structure}
+  - {type: ID, name: MSG.1, key: code, desc: Message Code}
+  - {type: ID, name: MSG.2, key: event, desc: Trigger Event}
+  - {type: ID, name: MSG.3, key: structure, desc: Message Structure}
 XTN:
   components:
   - {type: ST, name: XTN.1, key: telephone_number, desc: Telephone Number}
@@ -117,12 +117,12 @@ EIP:
 PPN:
   components:
   - {type: ST, name: PPN.1, key: id_number, desc: ID Number}
-  - {type: FN, name: PPN.2, key: family_name, desc: Family Name}
-  - {type: ST, name: PPN.3, key: given_name, desc: Given Name}
-  - {type: ST, name: PPN.4, key: second_and_further_given_names_or_initials_thereof, desc: Second and Further Given Names or Initials Thereof}
-  - {type: ST, name: PPN.5, key: suffix_, desc: 'Suffix (e.g., JR or III)'}
-  - {type: ST, name: PPN.6, key: prefix_, desc: 'Prefix (e.g., DR)'}
-  - {type: IS, name: PPN.7, key: degree_, desc: 'Degree (e.g., MD)'}
+  - {type: FN, name: PPN.2, key: family, desc: Family Name}
+  - {type: ST, name: PPN.3, key: given, desc: Given Name}
+  - {type: ST, name: PPN.4, key: initials, desc: Second and Further Given Names or Initials Thereof}
+  - {type: ST, name: PPN.5, key: suffix, desc: 'Suffix (e.g., JR or III)'}
+  - {type: ST, name: PPN.6, key: prefix, desc: 'Prefix (e.g., DR)'}
+  - {type: IS, name: PPN.7, key: degree, desc: 'Degree (e.g., MD)'}
   - {type: IS, name: PPN.8, key: source_table, desc: Source Table}
   - {type: HD, name: PPN.9, key: assigning_authority, desc: Assigning Authority}
   - {type: ID, name: PPN.10, key: name_type_code, desc: Name Type Code}
@@ -216,7 +216,7 @@ OSP:
 TS:
   components:
   - {type: DTM, name: TS.1, key: time, desc: Time}
-  - {type: ID, name: TS.2, key: degree_of_precision, desc: Degree of Precision}
+  - {type: ID,  name: TS.2,  key: precision, desc: Degree of Precision}
 MA:
   components:
   - {type: NM, name: MA.1, key: sample_1_from_channel_1, desc: Sample 1 From Channel 1}
@@ -232,12 +232,12 @@ HD:
   - {type: ID, name: HD.3, key: universal_id_type, desc: Universal ID Type}
 XPN:
   components:
-  - {type: FN, name: XPN.1, key: family_name, desc: Family Name}
-  - {type: ST, name: XPN.2, key: given_name, desc: Given Name}
-  - {type: ST, name: XPN.3, key: second_and_further_given_names_or_initials_thereof, desc: Second and Further Given Names or Initials Thereof}
-  - {type: ST, name: XPN.4, key: suffix_, desc: 'Suffix (e.g., JR or III)'}
-  - {type: ST, name: XPN.5, key: prefix_, desc: 'Prefix (e.g., DR)'}
-  - {type: IS, name: XPN.6, key: degree_, desc: 'Degree (e.g., MD)'}
+  - {type: FN, name: XPN.1, key: family, desc: Family Name}
+  - {type: ST, name: XPN.2, key: given, desc: Given Name}
+  - {type: ST, name: XPN.3, key: initials, desc: Second and Further Given Names or Initials Thereof}
+  - {type: ST, name: XPN.4, key: suffix, desc: 'Suffix (e.g., JR or III)'}
+  - {type: ST, name: XPN.5, key: prefix, desc: 'Prefix (e.g., DR)'}
+  - {type: IS, name: XPN.6, key: degree, desc: 'Degree (e.g., MD)'}
   - {type: ID, name: XPN.7, key: name_type_code, desc: Name Type Code}
   - {type: ID, name: XPN.8, key: name_representation_code, desc: Name Representation Code}
   - {type: CE, name: XPN.9, key: name_context, desc: Name Context}
@@ -250,20 +250,20 @@ CE:
   components:
   - {type: ST, name: CE.1, key: identifier, desc: Identifier}
   - {type: ST, name: CE.2, key: text, desc: Text}
-  - {type: ID, name: CE.3, key: name_of_coding_system, desc: Name of Coding System}
+  - {type: ID, name: CE.3, key: system, desc: Name of Coding System}
   - {type: ST, name: CE.4, key: alternate_identifier, desc: Alternate Identifier}
   - {type: ST, name: CE.5, key: alternate_text, desc: Alternate Text}
-  - {type: ID, name: CE.6, key: name_of_alternate_coding_system, desc: Name of Alternate Coding System}
+  - {type: ID, name: CE.6, key: alternate_system, desc: Name of Alternate Coding System}
 XAD:
   components:
-  - {type: SAD, name: XAD.1, key: street_address, desc: Street Address}
-  - {type: ST, name: XAD.2, key: other_designation, desc: Other Designation}
+  - {type: SAD, name: XAD.1, key: street, desc: Street Address}
+  - {type: ST, name: XAD.2, key: text, desc: Other Designation}
   - {type: ST, name: XAD.3, key: city, desc: City}
-  - {type: ST, name: XAD.4, key: state_or_province, desc: State or Province}
-  - {type: ST, name: XAD.5, key: zip_or_postal_code, desc: Zip or Postal Code}
+  - {type: ST, name: XAD.4, key: state, desc: State or Province}
+  - {type: ST, name: XAD.5, key: postal_code, desc: Zip or Postal Code}
   - {type: ID, name: XAD.6, key: country, desc: Country}
-  - {type: ID, name: XAD.7, key: address_type, desc: Address Type}
-  - {type: ST, name: XAD.8, key: other_geographic_designation, desc: Other Geographic Designation}
+  - {type: ID, name: XAD.7, key: type, desc: Address Type}
+  - {type: ST, name: XAD.8, key: geographic_designation, desc: Other Geographic Designation}
   - {type: IS, name: XAD.9, key: county_parish_code, desc: County/Parish Code}
   - {type: IS, name: XAD.10, key: census_tract, desc: Census Tract}
   - {type: ID, name: XAD.11, key: address_representation_code, desc: Address Representation Code}
@@ -287,11 +287,11 @@ MO:
 CF:
   components:
   - {type: ST, name: CF.1, key: identifier, desc: Identifier}
-  - {type: FT, name: CF.2, key: formatted_text, desc: Formatted Text}
-  - {type: ID, name: CF.3, key: name_of_coding_system, desc: Name of Coding System}
+  - {type: FT, name: CF.2, key: text, desc: Formatted Text}
+  - {type: ID, name: CF.3, key: system, desc: Name of Coding System}
   - {type: ST, name: CF.4, key: alternate_identifier, desc: Alternate Identifier}
-  - {type: FT, name: CF.5, key: alternate_formatted_text, desc: Alternate Formatted Text}
-  - {type: ID, name: CF.6, key: name_of_alternate_coding_system, desc: Name of Alternate Coding System}
+  - {type: FT, name: CF.5, key: alternate_text, desc: Alternate Formatted Text}
+  - {type: ID, name: CF.6, key: alternate_system, desc: Name of Alternate Coding System}
 NR:
   components:
   - {type: NM, name: NR.1, key: low_value, desc: Low Value}
@@ -375,19 +375,19 @@ CSU:
   - {type: NM, name: CSU.1, key: channel_sensitivity, desc: Channel Sensitivity}
   - {type: ST, name: CSU.2, key: unit_of_measure_identifier, desc: Unit of Measure Identifier}
   - {type: ST, name: CSU.3, key: unit_of_measure_description, desc: Unit of Measure Description}
-  - {type: ID, name: CSU.4, key: unit_of_measure_coding_system, desc: Unit of Measure Coding System}
+  - {type: ID, name: CSU.4, key: unit_of_measure_system, desc: Unit of Measure Coding System}
   - {type: ST, name: CSU.5, key: alternate_unit_of_measure_identifier, desc: Alternate Unit of Measure Identifier}
   - {type: ST, name: CSU.6, key: alternate_unit_of_measure_description, desc: Alternate Unit of Measure Description}
-  - {type: ID, name: CSU.7, key: alternate_unit_of_measure_coding_system, desc: Alternate Unit of Measure Coding System}
+  - {type: ID, name: CSU.7, key: alternate_unit_of_measure_system, desc: Alternate Unit of Measure Coding System}
 CNN:
   components:
   - {type: ST, name: CNN.1, key: id_number, desc: ID Number}
-  - {type: ST, name: CNN.2, key: family_name, desc: Family Name}
-  - {type: ST, name: CNN.3, key: given_name, desc: Given Name}
+  - {type: ST, name: CNN.2, key: family, desc: Family Name}
+  - {type: ST, name: CNN.3, key: given, desc: Given Name}
   - {type: ST, name: CNN.4, key: second_and_further_given_names_or_initials_thereof, desc: Second and Further Given Names or Initials Thereof}
-  - {type: ST, name: CNN.5, key: suffix_, desc: 'Suffix (e.g., JR or III)'}
-  - {type: ST, name: CNN.6, key: prefix_, desc: 'Prefix (e.g., DR)'}
-  - {type: IS, name: CNN.7, key: degree_e_g_md, desc: 'Degree (e.g., MD'}
+  - {type: ST, name: CNN.5, key: suffix, desc: 'Suffix (e.g., JR or III)'}
+  - {type: ST, name: CNN.6, key: prefix, desc: 'Prefix (e.g., DR)'}
+  - {type: IS, name: CNN.7, key: degree, desc: 'Degree (e.g., MD'}
   - {type: IS, name: CNN.8, key: source_table, desc: Source Table}
   - {type: IS, name: CNN.9, key: assigning_authority_namespace_id, desc: Assigning Authority   - Namespace ID}
   - {type: ST, name: CNN.10, key: assigning_authority_universal_id, desc: Assigning Authority  - Universal ID}
@@ -417,12 +417,12 @@ CWE:
   components:
   - {type: ST, name: CWE.1, key: identifier, desc: Identifier}
   - {type: ST, name: CWE.2, key: text, desc: Text}
-  - {type: ID, name: CWE.3, key: name_of_coding_system, desc: Name of Coding System}
+  - {type: ID, name: CWE.3, key: system, desc: Name of Coding System}
   - {type: ST, name: CWE.4, key: alternate_identifier, desc: Alternate Identifier}
   - {type: ST, name: CWE.5, key: alternate_text, desc: Alternate Text}
-  - {type: ID, name: CWE.6, key: name_of_alternate_coding_system, desc: Name of Alternate Coding System}
-  - {type: ST, name: CWE.7, key: coding_system_version_id, desc: Coding System Version ID}
-  - {type: ST, name: CWE.8, key: alternate_coding_system_version_id, desc: Alternate Coding System Version ID}
+  - {type: ID, name: CWE.6, key: alternate_system, desc: Name of Alternate Coding System}
+  - {type: ST, name: CWE.7, key: system_version_id, desc: Coding System Version ID}
+  - {type: ST, name: CWE.8, key: alternate_system_version_id, desc: Alternate Coding System Version ID}
   - {type: ST, name: CWE.9, key: original_text, desc: Original Text}
 VH:
   components:
@@ -513,12 +513,12 @@ CNE:
   components:
   - {type: ST, name: CNE.1, key: identifier, desc: Identifier}
   - {type: ST, name: CNE.2, key: text, desc: Text}
-  - {type: ID, name: CNE.3, key: name_of_coding_system, desc: Name of Coding System}
+  - {type: ID, name: CNE.3, key: system, desc: Name of Coding System}
   - {type: ST, name: CNE.4, key: alternate_identifier, desc: Alternate Identifier}
   - {type: ST, name: CNE.5, key: alternate_text, desc: Alternate Text}
-  - {type: ID, name: CNE.6, key: name_of_alternate_coding_system, desc: Name of Alternate Coding System}
-  - {type: ST, name: CNE.7, key: coding_system_version_id, desc: Coding System Version ID}
-  - {type: ST, name: CNE.8, key: alternate_coding_system_version_id, desc: Alternate Coding System Version ID}
+  - {type: ID, name: CNE.6, key: alternate_system, desc: Name of Alternate Coding System}
+  - {type: ST, name: CNE.7, key: system_version_id, desc: Coding System Version ID}
+  - {type: ST, name: CNE.8, key: alternate_system_version_id, desc: Alternate Coding System Version ID}
   - {type: ST, name: CNE.9, key: original_text, desc: Original Text}
 VR:
   components:
@@ -542,12 +542,12 @@ RCD:
 XCN:
   components:
   - {type: ST, name: XCN.1, key: id_number, desc: ID Number}
-  - {type: FN, name: XCN.2, key: family_name, desc: Family Name}
-  - {type: ST, name: XCN.3, key: given_name, desc: Given Name}
-  - {type: ST, name: XCN.4, key: second_and_further_given_names_or_initials_thereof, desc: Second and Further Given Names or Initials Thereof}
-  - {type: ST, name: XCN.5, key: suffix_, desc: 'Suffix (e.g., JR or III)'}
-  - {type: ST, name: XCN.6, key: prefix_, desc: 'Prefix (e.g., DR)'}
-  - {type: IS, name: XCN.7, key: degree_, desc: 'Degree (e.g., MD)'}
+  - {type: FN, name: XCN.2, key: family, desc: Family Name}
+  - {type: ST, name: XCN.3, key: given, desc: Given Name}
+  - {type: ST, name: XCN.4, key: initials, desc: Second and Further Given Names or Initials Thereof}
+  - {type: ST, name: XCN.5, key: suffix, desc: 'Suffix (e.g., JR or III)'}
+  - {type: ST, name: XCN.6, key: prefix, desc: 'Prefix (e.g., DR)'}
+  - {type: IS, name: XCN.7, key: degree, desc: 'Degree (e.g., MD)'}
   - {type: IS, name: XCN.8, key: source_table, desc: Source Table}
   - {type: HD, name: XCN.9, key: assigning_authority, desc: Assigning Authority}
   - {type: ID, name: XCN.10, key: name_type_code, desc: Name Type Code}

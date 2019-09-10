@@ -4,15 +4,20 @@
 
 
 (def *schema (atom nil))
+
 (defn load-yaml [nm]
-  (clj-yaml.core/parse-string (slurp (.getPath (io/resource nm))) {:keywords true}))
+  (if-let [f (io/resource nm)] 
+    (clj-yaml.core/parse-string (slurp (.getPath f)) :keywords true)
+    (throw (Exception. (str nm " not found")))))
 
 (defn schema []
-  (if-let [sch  @schema]
+  (if-let [sch  @*schema]
     sch
-    {:types (load-yaml "types.yaml")
-     :segments (load-yaml "segments.yaml")
-     :messages (load-yaml "messages.yam")}))
+    (reset!
+     *schema
+     {:types    (load-yaml "types.yaml")
+      :segments (load-yaml "segments.yaml")
+      :messages (load-yaml "messages.yaml")})))
 
 (comment
 

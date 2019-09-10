@@ -1,6 +1,7 @@
 (ns hl7v2.core
   (:require [clojure.string :as str]
-            [hl7v2.schema])
+            [hl7v2.schema.core :as schema]
+            [hl7v2.schema.parsec :as parsec])
   (:import [java.util.regex Pattern]))
 
 
@@ -37,7 +38,7 @@
       (loop [[c & cs] cmps
              [s & ss] (:components tp)
              res {}]
-        (let [res (if-not (str/blank? c) (assoc res (:name s) c) res)]
+        (let [res (if-not (str/blank? c) (assoc res (keyword (:key s)) c) res)]
           (if (empty? cs)
             res
             (recur cs ss res)))))
@@ -53,31 +54,37 @@
 
 (defn parse-segment [{sch :schema seps :separators :as ctx} seg]
   (let [fields (split-by seg (:field seps))
-        seg-name (nth fields 0)
-        fields (rest fields)
+        [seg-name & fields] fields
+        fields (if (= "MSH" seg-name)
+                 (into ["|"] fields)
+                 fields)
+
         seg-sch (get-in sch [:segments (keyword seg-name)])]
-    {seg-name 
+    [seg-name
      (loop [[f & fs] fields
             [s & ss] seg-sch
             acc {}]
        (let [s (merge s (get-in sch [:fields (keyword (:field s))]))]
          (if (str/blank? f)
            (recur fs ss acc)
-           (let [acc  (assoc acc (:name s) (parse-component ctx (assoc (or s {}) :value f)))]
+           (let [acc  (assoc acc (keyword (:key s)) (parse-component ctx (assoc (or s {}) :value f)))]
              (if (empty? fs)
                acc
-               (recur fs ss acc))))))}))
+               (recur fs ss acc))))))]))
 
 (defn parse [msg opts]
   (let [errs (pre-condigion msg)]
     (when-not (empty? errs)
       (throw (Exception. (str/join "; " errs))))
-    (let [sch (hl7v2.schema/schema)
+    (let [sch (schema/schema)
           seps (separators msg)
           ctx {:separators seps
                :schema sch}
           segments (->> (split-by msg (:segment seps))
                         (mapv str/trim)
                         (filter #(> (.length %) 0))
-                        (mapv #(parse-segment ctx %)))]
-      segments)))
+                        (mapv #(parse-segment ctx %)))
+          {c :code e :event} (get-in segments [0 1 :type])
+          grammar (get-in sch [:messages (keyword (str c "_" e))])]
+      (println "GR"  (keyword (str c "_" e)) grammar)
+      (parsec/parse grammar (mapv #(keyword (first %)) segments) (fn [idx] (get-in segments [idx 1]))))))
