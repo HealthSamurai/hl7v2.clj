@@ -89,19 +89,21 @@
                acc
                (recur fs ss acc))))))]))
 
-(defn parse [msg opts]
-  (let [errs (pre-condigion msg)]
-    (when-not (empty? errs)
-      (throw (Exception. (str/join "; " errs))))
-    (let [sch (schema/schema)
-          seps (separators msg)
-          ctx {:separators seps
-               :schema sch}
-          segments (->> (split-by msg (:segment seps))
-                        (mapv str/trim)
-                        (filter #(> (.length %) 0))
-                        (mapv #(parse-segment ctx %)))
-          {c :code e :event} (get-in segments [0 1 :type])
-          grammar (get-in sch [:messages (keyword (str c "_" e))])]
-      (println "GR"  (keyword (str c "_" e)) grammar)
-      (parsec/parse grammar (mapv #(keyword (first %)) segments) (fn [idx] (get-in segments [idx 1]))))))
+(defn parse
+  ([msg] (parse msg {}))
+  ([msg opts]
+   (let [errs (pre-condigion msg)]
+     (when-not (empty? errs)
+       (throw (Exception. (str/join "; " errs))))
+     (let [sch (schema/schema)
+           seps (separators msg)
+           ctx {:separators seps
+                :schema sch}
+           segments (->> (split-by msg (:segment seps))
+                         (mapv str/trim)
+                         (filter #(> (.length %) 0))
+                         (mapv #(parse-segment ctx %)))
+           {c :code e :event} (get-in segments [0 1 :type])
+           grammar (get-in sch [:messages (keyword (str c "_" e))])]
+       (println "GR"  (keyword (str c "_" e)) grammar)
+       (parsec/parse grammar (mapv #(keyword (first %)) segments) (fn [idx] (get-in segments [idx 1])))))))
