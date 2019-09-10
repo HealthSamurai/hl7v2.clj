@@ -232,17 +232,17 @@ HD:
   - {type: ID, name: HD.3, key: universal_id_type, desc: Universal ID Type}
 XPN:
   components:
-  - {type: FN, name: XPN.1, key: family, desc: Family Name}
-  - {type: ST, name: XPN.2, key: given, desc: Given Name}
+  - {type: FN, name: XPN.1, key: family_name, desc: Family Name}
+  - {type: ST, name: XPN.2, key: given_name, desc: Given Name}
   - {type: ST, name: XPN.3, key: second_and_further_given_names_or_initials_thereof, desc: Second and Further Given Names or Initials Thereof}
-  - {type: ST, name: XPN.4, key: suffix, desc: 'Suffix (e.g., JR or III)'}
-  - {type: ST, name: XPN.5, key: prefix, desc: 'Prefix (e.g., DR)'}
-  - {type: IS, name: XPN.6, key: degree, desc: 'Degree (e.g., MD)'}
-  - {type: ID, name: XPN.7, key: type, desc: Name Type Code}
+  - {type: ST, name: XPN.4, key: suffix_, desc: 'Suffix (e.g., JR or III)'}
+  - {type: ST, name: XPN.5, key: prefix_, desc: 'Prefix (e.g., DR)'}
+  - {type: IS, name: XPN.6, key: degree_, desc: 'Degree (e.g., MD)'}
+  - {type: ID, name: XPN.7, key: name_type_code, desc: Name Type Code}
   - {type: ID, name: XPN.8, key: name_representation_code, desc: Name Representation Code}
-  - {type: CE, name: XPN.9, key: context, desc: Name Context}
-  - {type: DR, name: XPN.10, key: validity_range, desc: Name Validity Range}
-  - {type: ID, name: XPN.11, key: assembly_order, desc: Name Assembly Order}
+  - {type: CE, name: XPN.9, key: name_context, desc: Name Context}
+  - {type: DR, name: XPN.10, key: name_validity_range, desc: Name Validity Range}
+  - {type: ID, name: XPN.11, key: name_assembly_order, desc: Name Assembly Order}
   - {type: TS, name: XPN.12, key: effective_date, desc: Effective Date}
   - {type: TS, name: XPN.13, key: expiration_date, desc: Expiration Date}
   - {type: ST, name: XPN.14, key: professional_suffix, desc: Professional Suffix}

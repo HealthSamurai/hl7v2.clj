@@ -2,8 +2,7 @@
   (:require [clojure.java.io :as io]
             [cheshire.core]
             [clj-yaml.core]
-            [clojure.string :as str]
-            [hl7v2.schema.parser :as parser]))
+            [clojure.string :as str]))
 
 
 (defn reduce-map [f m]
@@ -98,26 +97,44 @@
           (fn [k seg]
             (gen-segment fields seg))))))
 
+#_(->> msg
+       (reduce-map
+        (fn [k' v]
+          {:els (->> (:elements v)
+                     (map-indexed (fn [i el] (normalize-el {:idx i} el))))})))
+
 (defn gen-messages []
   (->> (load-dir "hl7messages")
        (reduce-map
         (fn [k msg]
-          (->> msg
-               (reduce-map
-                (fn [k' v]
-                  {:els (->> (:elements v)
-                             (map-indexed (fn [i el] (normalize-el {:idx i} el))))})))))))
+          (reduce
+           (fn [acc [k' {els :elements}]]
+             (let [stms (->> els
+                             (mapv (fn [e]
+                                     (let [el (normalize-el {} e)
+                                           nm (if (:grp el)
+                                                (str/lower-case (:grp el))
+                                                (:seg el))
+                                           q (cond (and (:coll el) (:req el)) "+"
+                                                   (:coll el) "*"
+                                                   (:req el)  ""
+                                                   :else "?")]
+                                       (str nm q)))))]
+               (assoc acc (if (= k k') :msg (keyword (str/lower-case (name k')))) stms)))
+           {} msg)))))
 
 (defn generate []
   (spit "resources/types.yaml" (clj-yaml.core/generate-string (gen-types)))
   (spit "resources/segments.yaml" (clj-yaml.core/generate-string (gen-segments)))
-  (spit "resources/messages.yaml" (clj-yaml.core/generate-string (gen-messages))))
+  (spit "resources/messages.yaml" (clj-yaml.core/generate-string (gen-messages)))
 
-(comment (generate))
+  )
 
-(defonce msg (:ORU_R01 (gen-messages)))
-(spit "resources/groups.yaml"
-      (clj-yaml.core/generate-string (parser/gen-groups {:ORU_R01 msg})))
+(generate)
+
+(comment )
+
+
 
 
 
