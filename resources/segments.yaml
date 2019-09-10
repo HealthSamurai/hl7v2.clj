@@ -131,8 +131,8 @@ RCP:
 - {name: RCP.7, type: ID,  key: segment_group_inclusion, desc: Segment group inclusion, coll: true}
 OBX:
 - {name: OBX.1, type: SI,   key: set_id, desc: Set ID - OBX}
-- {name: OBX.2, type: ID,   key: type, desc: Value Type, table: HL70125}
-- {name: OBX.3, type: CE,   key: identifier, desc: Observation Identifier, req: true}
+- {name: OBX.2, type: ID,   key: value_type, desc: Value Type, table: HL70125}
+- {name: OBX.3, type: CE,   key: type, desc: Observation Identifier, req: true}
 - {name: OBX.4, type: ST,   key: sub_id, desc: Observation Sub-ID}
 - {name: OBX.5, type: varies, key: value, desc: Observation Value, coll: true}
 - {name: OBX.6, type: CE,   key: units, desc: Units}

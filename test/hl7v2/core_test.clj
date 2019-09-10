@@ -54,7 +54,7 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
      (sut/parse-segment
       ctx "PID|1|010107111^^^MS4^PN^|1609220^^^MS4^MR^001|1609220^^^MS4^MR^001|BARRETT^JEAN^SANDY^^||19440823|F||C|STRAWBERRY AVE^FOUR OAKS LODGE^ALBUKERKA^CA^98765^USA^^||(111)222-3333||ENG|W|CHR|111155555550^^^MS4001^AN^001|123-22-1111||||OKLAHOMA|||||||N")
      ["PID"
-      {:religion {:identifier "CHR"},
+      {:religion {:code "CHR"},
        :patient_id {:id_number "010107111",
                     :assigning_authority "MS4",
                     :identifier_type_code "PN"},
@@ -66,10 +66,10 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
                         :assigning_authority "MS4001",
                         :identifier_type_code "AN",
                         :assigning_facility "001"},
-       :race [{:identifier "C"}],
+       :race [{:code "C"}],
        :administrative_sex "F",
        :datetime_of_birth {:time "19440823"},
-       :primary_language  {:identifier "ENG"},
+       :primary_language  {:code "ENG"},
        :phone_number_home [{:telephone_number "(111)222-3333"}],
        :ssn_number "123-22-1111",
        :birth_place "OKLAHOMA",
@@ -87,7 +87,7 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
                       :assigning_authority "MS4",
                       :identifier_type_code "MR",
                       :assigning_facility "001"}],
-       :marital_status {:identifier "W"},
+       :marital_status {:code "W"},
        :death_indicator "N"}])
 
     )

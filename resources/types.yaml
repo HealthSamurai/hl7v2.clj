@@ -248,10 +248,10 @@ XPN:
   - {type: ST, name: XPN.14, key: professional_suffix, desc: Professional Suffix}
 CE:
   components:
-  - {type: ST, name: CE.1, key: identifier, desc: Identifier}
+  - {type: ST, name: CE.1, key: code, desc: Identifier}
   - {type: ST, name: CE.2, key: text, desc: Text}
   - {type: ID, name: CE.3, key: system, desc: Name of Coding System}
-  - {type: ST, name: CE.4, key: alternate_identifier, desc: Alternate Identifier}
+  - {type: ST, name: CE.4, key: alternate_code, desc: Alternate Identifier}
   - {type: ST, name: CE.5, key: alternate_text, desc: Alternate Text}
   - {type: ID, name: CE.6, key: alternate_system, desc: Name of Alternate Coding System}
 XAD:
@@ -286,10 +286,10 @@ MO:
   - {type: ID, name: MO.2, key: denomination, desc: Denomination}
 CF:
   components:
-  - {type: ST, name: CF.1, key: identifier, desc: Identifier}
+  - {type: ST, name: CF.1, key: value, desc: Identifier}
   - {type: FT, name: CF.2, key: text, desc: Formatted Text}
   - {type: ID, name: CF.3, key: system, desc: Name of Coding System}
-  - {type: ST, name: CF.4, key: alternate_identifier, desc: Alternate Identifier}
+  - {type: ST, name: CF.4, key: alternate_value, desc: Alternate Identifier}
   - {type: FT, name: CF.5, key: alternate_text, desc: Alternate Formatted Text}
   - {type: ID, name: CF.6, key: alternate_system, desc: Name of Alternate Coding System}
 NR:
@@ -415,10 +415,10 @@ RPT:
   - {type: GTS, name: RPT.11, key: general_timing_specification, desc: General Timing Specification}
 CWE:
   components:
-  - {type: ST, name: CWE.1, key: identifier, desc: Identifier}
+  - {type: ST, name: CWE.1, key: value, desc: Identifier}
   - {type: ST, name: CWE.2, key: text, desc: Text}
   - {type: ID, name: CWE.3, key: system, desc: Name of Coding System}
-  - {type: ST, name: CWE.4, key: alternate_identifier, desc: Alternate Identifier}
+  - {type: ST, name: CWE.4, key: alternate_value, desc: Alternate Identifier}
   - {type: ST, name: CWE.5, key: alternate_text, desc: Alternate Text}
   - {type: ID, name: CWE.6, key: alternate_system, desc: Name of Alternate Coding System}
   - {type: ST, name: CWE.7, key: system_version_id, desc: Coding System Version ID}
@@ -511,10 +511,10 @@ DTN:
   - {type: NM, name: DTN.2, key: number_of_days, desc: Number of Days}
 CNE:
   components:
-  - {type: ST, name: CNE.1, key: identifier, desc: Identifier}
+  - {type: ST, name: CNE.1, key: value, desc: Identifier}
   - {type: ST, name: CNE.2, key: text, desc: Text}
   - {type: ID, name: CNE.3, key: system, desc: Name of Coding System}
-  - {type: ST, name: CNE.4, key: alternate_identifier, desc: Alternate Identifier}
+  - {type: ST, name: CNE.4, key: alternate_value, desc: Alternate Identifier}
   - {type: ST, name: CNE.5, key: alternate_text, desc: Alternate Text}
   - {type: ID, name: CNE.6, key: alternate_system, desc: Name of Alternate Coding System}
   - {type: ST, name: CNE.7, key: system_version_id, desc: Coding System Version ID}
