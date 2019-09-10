@@ -78,18 +78,18 @@ MSG:
   - {type: ID, name: MSG.3, key: structure, desc: Message Structure}
 XTN:
   components:
-  - {type: ST, name: XTN.1, key: telephone_number, desc: Telephone Number}
-  - {type: ID, name: XTN.2, key: telecommunication_use_code, desc: Telecommunication Use Code}
-  - {type: ID, name: XTN.3, key: telecommunication_equipment_type, desc: Telecommunication Equipment Type}
-  - {type: ST, name: XTN.4, key: email_address, desc: Email Address}
-  - {type: NM, name: XTN.5, key: country_code, desc: Country Code}
-  - {type: NM, name: XTN.6, key: area_city_code, desc: Area/City Code}
+  - {type: ST, name: XTN.1, key: phone, desc: Telephone Number}
+  - {type: ID, name: XTN.2, key: use, desc: Telecommunication Use Code}
+  - {type: ID, name: XTN.3, key: type, desc: Telecommunication Equipment Type}
+  - {type: ST, name: XTN.4, key: email, desc: Email Address}
+  - {type: NM, name: XTN.5, key: country, desc: Country Code}
+  - {type: NM, name: XTN.6, key: area_city, desc: Area/City Code}
   - {type: NM, name: XTN.7, key: local_number, desc: Local Number}
   - {type: NM, name: XTN.8, key: extension, desc: Extension}
-  - {type: ST, name: XTN.9, key: any_text, desc: Any Text}
+  - {type: ST, name: XTN.9, key: text, desc: Any Text}
   - {type: ST, name: XTN.10, key: extension_prefix, desc: Extension Prefix}
-  - {type: ST, name: XTN.11, key: speed_dial_code, desc: Speed Dial Code}
-  - {type: ST, name: XTN.12, key: unformatted_telephone_number, desc: Unformatted Telephone number}
+  - {type: ST, name: XTN.11, key: speed_dial, desc: Speed Dial Code}
+  - {type: ST, name: XTN.12, key: p_hone_text, desc: Unformatted Telephone number}
 DDI:
   components:
   - {type: NM, name: DDI.1, key: delay_days, desc: Delay Days}
@@ -115,31 +115,32 @@ EIP:
   - {type: EI, name: EIP.1, key: placer_assigned_identifier, desc: Placer Assigned Identifier}
   - {type: EI, name: EIP.2, key: filler_assigned_identifier, desc: Filler Assigned Identifier}
 PPN:
+  desc: Performing Person Time Stamp
   components:
-  - {type: ST, name: PPN.1, key: id_number, desc: ID Number}
+  - {type: ST, name: PPN.1, key: id, desc: ID Number}
   - {type: FN, name: PPN.2, key: family, desc: Family Name}
   - {type: ST, name: PPN.3, key: given, desc: Given Name}
   - {type: ST, name: PPN.4, key: initials, desc: Second and Further Given Names or Initials Thereof}
   - {type: ST, name: PPN.5, key: suffix, desc: 'Suffix (e.g., JR or III)'}
   - {type: ST, name: PPN.6, key: prefix, desc: 'Prefix (e.g., DR)'}
   - {type: IS, name: PPN.7, key: degree, desc: 'Degree (e.g., MD)'}
-  - {type: IS, name: PPN.8, key: source_table, desc: Source Table}
-  - {type: HD, name: PPN.9, key: assigning_authority, desc: Assigning Authority}
-  - {type: ID, name: PPN.10, key: name_type_code, desc: Name Type Code}
-  - {type: ST, name: PPN.11, key: identifier_check_digit, desc: Identifier Check Digit}
-  - {type: ID, name: PPN.12, key: check_digit_scheme, desc: Check Digit Scheme}
-  - {type: ID, name: PPN.13, key: identifier_type_code, desc: Identifier Type Code}
-  - {type: HD, name: PPN.14, key: assigning_facility, desc: Assigning Facility}
-  - {type: TS, name: PPN.15, key: date_time_action_performed, desc: Date/Time Action Performed}
-  - {type: ID, name: PPN.16, key: name_representation_code, desc: Name Representation Code}
-  - {type: CE, name: PPN.17, key: name_context, desc: Name Context}
-  - {type: DR, name: PPN.18, key: name_validity_range, desc: Name Validity Range}
-  - {type: ID, name: PPN.19, key: name_assembly_order, desc: Name Assembly Order}
+  - {type: IS, name: PPN.8, key: source, desc: Source Table}
+  - {type: HD, name: PPN.9, key: authority, desc: Assigning Authority}
+  - {type: ID, name: PPN.10, key: type, desc: Name Type Code}
+  - {type: ST, name: PPN.11, key: check_digit, desc: Identifier Check Digit}
+  - {type: ID, name: PPN.12, key: check_scheme, desc: Check Digit Scheme}
+  - {type: ID, name: PPN.13, key: id_type, desc: Identifier Type Code}
+  - {type: HD, name: PPN.14, key: facility, desc: Assigning Facility}
+  - {type: TS, name: PPN.15, key: action_performed, desc: Date/Time Action Performed}
+  - {type: ID, name: PPN.16, key: representation, desc: Name Representation Code}
+  - {type: CE, name: PPN.17, key: context, desc: Name Context}
+  - {type: DR, name: PPN.18, key: validity_range, desc: Name Validity Range}
+  - {type: ID, name: PPN.19, key: assembly_order, desc: Name Assembly Order}
   - {type: TS, name: PPN.20, key: effective_date, desc: Effective Date}
   - {type: TS, name: PPN.21, key: expiration_date, desc: Expiration Date}
   - {type: ST, name: PPN.22, key: professional_suffix, desc: Professional Suffix}
-  - {type: CWE, name: PPN.23, key: assigning_jurisdiction, desc: Assigning Jurisdiction}
-  - {type: CWE, name: PPN.24, key: assigning_agency_or_department, desc: Assigning Agency or Department}
+  - {type: CWE, name: PPN.23, key: jurisdiction, desc: Assigning Jurisdiction}
+  - {type: CWE, name: PPN.24, key: agency, desc: Assigning Agency or Department}
 MOC:
   components:
   - {type: MO, name: MOC.1, key: monetary_amount, desc: Monetary Amount}
@@ -151,13 +152,14 @@ ELD:
   - {type: NM, name: ELD.3, key: field_position, desc: Field Position}
   - {type: CE, name: ELD.4, key: code_identifying_error, desc: Code Identifying Error}
 CX:
+  desc: Extended Composite ID with Check Digit
   components:
-  - {type: ST, name: CX.1, key: id_number, desc: ID Number}
+  - {type: ST, name: CX.1, key: id, desc: ID Number}
   - {type: ST, name: CX.2, key: check_digit, desc: Check Digit}
-  - {type: ID, name: CX.3, key: check_digit_scheme, desc: Check Digit Scheme}
-  - {type: HD, name: CX.4, key: assigning_authority, desc: Assigning Authority}
-  - {type: ID, name: CX.5, key: identifier_type_code, desc: Identifier Type Code}
-  - {type: HD, name: CX.6, key: assigning_facility, desc: Assigning Facility}
+  - {type: ID, name: CX.3, key: check_scheme, desc: Check Digit Scheme}
+  - {type: HD, name: CX.4, key: authority, desc: Assigning Authority}
+  - {type: ID, name: CX.5, key: type, desc: Identifier Type Code}
+  - {type: HD, name: CX.6, key: facility, desc: Assigning Facility}
   - {type: DT, name: CX.7, key: effective_date, desc: Effective Date}
   - {type: DT, name: CX.8, key: expiration_date, desc: Expiration Date}
   - {type: CWE, name: CX.9, key: assigning_jurisdiction, desc: Assigning Jurisdiction}
@@ -179,15 +181,16 @@ DLN:
   - {type: DT, name: DLN.3, key: expiration_date, desc: Expiration Date}
 EI:
   components:
-  - {type: ST, name: EI.1, key: entity_identifier, desc: Entity Identifier}
-  - {type: IS, name: EI.2, key: namespace_id, desc: Namespace ID}
-  - {type: ST, name: EI.3, key: universal_id, desc: Universal ID}
-  - {type: ID, name: EI.4, key: universal_id_type, desc: Universal ID Type}
+  - {type: ST, name: EI.1, key: identifier, desc: Entity Identifier}
+  - {type: IS, name: EI.2, key: ns, desc: Namespace ID}
+  - {type: ST, name: EI.3, key: uid, desc: Universal ID}
+  - {type: ID, name: EI.4, key: type, desc: Universal ID Type}
 PLN:
+  desc: practitioner license or other Id number
   components:
-  - {type: ST, name: PLN.1, key: id_number, desc: ID Number}
-  - {type: IS, name: PLN.2, key: type_of_id_number, desc: Type of ID Number}
-  - {type: ST, name: PLN.3, key: state_other_qualifying_information, desc: State/other Qualifying Information}
+  - {type: ST, name: PLN.1, key: id, desc: ID Number}
+  - {type: IS, name: PLN.2, key: type, desc: Type of ID Number}
+  - {type: ST, name: PLN.3, key: state, desc: State/other Qualifying Information}
   - {type: DT, name: PLN.4, key: expiration_date, desc: Expiration Date}
 PTA:
   components:
@@ -227,9 +230,9 @@ MA:
   - {type: NM, name: MA.6, key: sample_n_from_channel_n, desc: Sample N From Channel N}
 HD:
   components:
-  - {type: IS, name: HD.1, key: namespace_id, desc: Namespace ID}
-  - {type: ST, name: HD.2, key: universal_id, desc: Universal ID}
-  - {type: ID, name: HD.3, key: universal_id_type, desc: Universal ID Type}
+  - {type: IS, name: HD.1, key: ns, desc: Namespace ID}
+  - {type: ST, name: HD.2, key: uid, desc: Universal ID}
+  - {type: ID, name: HD.3, key: type, desc: Universal ID Type}
 XPN:
   components:
   - {type: FN, name: XPN.1, key: family, desc: Family Name}
@@ -238,11 +241,11 @@ XPN:
   - {type: ST, name: XPN.4, key: suffix, desc: 'Suffix (e.g., JR or III)'}
   - {type: ST, name: XPN.5, key: prefix, desc: 'Prefix (e.g., DR)'}
   - {type: IS, name: XPN.6, key: degree, desc: 'Degree (e.g., MD)'}
-  - {type: ID, name: XPN.7, key: name_type_code, desc: Name Type Code}
-  - {type: ID, name: XPN.8, key: name_representation_code, desc: Name Representation Code}
-  - {type: CE, name: XPN.9, key: name_context, desc: Name Context}
-  - {type: DR, name: XPN.10, key: name_validity_range, desc: Name Validity Range}
-  - {type: ID, name: XPN.11, key: name_assembly_order, desc: Name Assembly Order}
+  - {type: ID, name: XPN.7, key: type, desc: Name Type Code}
+  - {type: ID, name: XPN.8, key: representation, desc: Name Representation Code}
+  - {type: CE, name: XPN.9, key: context, desc: Name Context}
+  - {type: DR, name: XPN.10, key: validity_range, desc: Name Validity Range}
+  - {type: ID, name: XPN.11, key: assembly_order, desc: Name Assembly Order}
   - {type: TS, name: XPN.12, key: effective_date, desc: Effective Date}
   - {type: TS, name: XPN.13, key: expiration_date, desc: Expiration Date}
   - {type: ST, name: XPN.14, key: professional_suffix, desc: Professional Suffix}
@@ -298,13 +301,13 @@ NR:
   - {type: NM, name: NR.2, key: high_value, desc: High Value}
 SAD:
   components:
-  - {type: ST, name: SAD.1, key: street_or_mailing_address, desc: Street or Mailing Address}
-  - {type: ST, name: SAD.2, key: street_name, desc: Street Name}
-  - {type: ST, name: SAD.3, key: dwelling_number, desc: Dwelling Number}
+  - {type: ST, name: SAD.1, key: text, desc: Street or Mailing Address}
+  - {type: ST, name: SAD.2, key: name, desc: Street Name}
+  - {type: ST, name: SAD.3, key: number, desc: Dwelling Number}
 CP:
   components:
   - {type: MO, name: CP.1, key: price, desc: Price}
-  - {type: ID, name: CP.2, key: price_type, desc: Price Type}
+  - {type: ID, name: CP.2, key: type, desc: Price Type}
   - {type: NM, name: CP.3, key: from_value, desc: From Value}
   - {type: NM, name: CP.4, key: to_value, desc: To Value}
   - {type: CE, name: CP.5, key: range_units, desc: Range Units}
@@ -381,7 +384,7 @@ CSU:
   - {type: ID, name: CSU.7, key: alternate_unit_of_measure_system, desc: Alternate Unit of Measure Coding System}
 CNN:
   components:
-  - {type: ST, name: CNN.1, key: id_number, desc: ID Number}
+  - {type: ST, name: CNN.1, key: id, desc: ID Number}
   - {type: ST, name: CNN.2, key: family, desc: Family Name}
   - {type: ST, name: CNN.3, key: given, desc: Given Name}
   - {type: ST, name: CNN.4, key: second_and_further_given_names_or_initials_thereof, desc: Second and Further Given Names or Initials Thereof}
@@ -414,6 +417,7 @@ RPT:
   - {type: IS, name: RPT.10, key: event_offset_units, desc: Event Offset Units}
   - {type: GTS, name: RPT.11, key: general_timing_specification, desc: General Timing Specification}
 CWE:
+  desc: Coded with Exceptions
   components:
   - {type: ST, name: CWE.1, key: value, desc: Identifier}
   - {type: ST, name: CWE.2, key: text, desc: Text}
@@ -421,8 +425,8 @@ CWE:
   - {type: ST, name: CWE.4, key: alternate_value, desc: Alternate Identifier}
   - {type: ST, name: CWE.5, key: alternate_text, desc: Alternate Text}
   - {type: ID, name: CWE.6, key: alternate_system, desc: Name of Alternate Coding System}
-  - {type: ST, name: CWE.7, key: system_version_id, desc: Coding System Version ID}
-  - {type: ST, name: CWE.8, key: alternate_system_version_id, desc: Alternate Coding System Version ID}
+  - {type: ST, name: CWE.7, key: version, desc: Coding System Version ID}
+  - {type: ST, name: CWE.8, key: alternate_version, desc: Alternate Coding System Version ID}
   - {type: ST, name: CWE.9, key: original_text, desc: Original Text}
 VH:
   components:
@@ -466,17 +470,18 @@ PL:
   - {type: EI, name: PL.10, key: comprehensive_location_identifier, desc: Comprehensive Location Identifier}
   - {type: HD, name: PL.11, key: assigning_authority_for_location, desc: Assigning Authority for Location}
 XON:
+  desc: Extended Composite Name and Identification Number for Organizations
   components:
-  - {type: ST, name: XON.1, key: organization_name, desc: Organization Name}
-  - {type: IS, name: XON.2, key: organization_name_type_code, desc: Organization Name Type Code}
-  - {type: NM, name: XON.3, key: id_number, desc: ID Number}
+  - {type: ST, name: XON.1, key: name, desc: Organization Name}
+  - {type: IS, name: XON.2, key: name_type, desc: Organization Name Type Code}
+  - {type: NM, name: XON.3, key: id, desc: ID Number}
   - {type: NM, name: XON.4, key: check_digit, desc: Check Digit}
-  - {type: ID, name: XON.5, key: check_digit_scheme, desc: Check Digit Scheme}
-  - {type: HD, name: XON.6, key: assigning_authority, desc: Assigning Authority}
-  - {type: ID, name: XON.7, key: identifier_type_code, desc: Identifier Type Code}
-  - {type: HD, name: XON.8, key: assigning_facility, desc: Assigning Facility}
-  - {type: ID, name: XON.9, key: name_representation_code, desc: Name Representation Code}
-  - {type: ST, name: XON.10, key: organization_identifier, desc: Organization Identifier}
+  - {type: ID, name: XON.5, key: check_scheme, desc: Check Digit Scheme}
+  - {type: HD, name: XON.6, key: authority, desc: Assigning Authority}
+  - {type: ID, name: XON.7, key: type, desc: Identifier Type Code}
+  - {type: HD, name: XON.8, key: facility, desc: Assigning Facility}
+  - {type: ID, name: XON.9, key: representation, desc: Name Representation Code}
+  - {type: ST, name: XON.10, key: identifier, desc: Organization Identifier}
 MOP:
   components:
   - {type: ID, name: MOP.1, key: money_or_percentage_indicator, desc: Money or Percentage Indicator}
@@ -510,6 +515,7 @@ DTN:
   - {type: IS, name: DTN.1, key: day_type, desc: Day Type}
   - {type: NM, name: DTN.2, key: number_of_days, desc: Number of Days}
 CNE:
+  desc: Coded with No Exceptions
   components:
   - {type: ST, name: CNE.1, key: value, desc: Identifier}
   - {type: ST, name: CNE.2, key: text, desc: Text}
@@ -517,8 +523,8 @@ CNE:
   - {type: ST, name: CNE.4, key: alternate_value, desc: Alternate Identifier}
   - {type: ST, name: CNE.5, key: alternate_text, desc: Alternate Text}
   - {type: ID, name: CNE.6, key: alternate_system, desc: Name of Alternate Coding System}
-  - {type: ST, name: CNE.7, key: system_version_id, desc: Coding System Version ID}
-  - {type: ST, name: CNE.8, key: alternate_system_version_id, desc: Alternate Coding System Version ID}
+  - {type: ST, name: CNE.7, key: version, desc: Coding System Version ID}
+  - {type: ST, name: CNE.8, key: alternate_version, desc: Alternate Coding System Version ID}
   - {type: ST, name: CNE.9, key: original_text, desc: Original Text}
 VR:
   components:
@@ -540,30 +546,31 @@ RCD:
   - {type: ID, name: RCD.2, key: hl7_data_type, desc: HL7 Data Type}
   - {type: NM, name: RCD.3, key: maximum_column_width, desc: Maximum Column Width}
 XCN:
+  desc: Extended Composite ID Number And Name For Persons
   components:
-  - {type: ST, name: XCN.1, key: id_number, desc: ID Number}
+  - {type: ST, name: XCN.1, key: id, desc: ID Number}
   - {type: FN, name: XCN.2, key: family, desc: Family Name}
   - {type: ST, name: XCN.3, key: given, desc: Given Name}
   - {type: ST, name: XCN.4, key: initials, desc: Second and Further Given Names or Initials Thereof}
   - {type: ST, name: XCN.5, key: suffix, desc: 'Suffix (e.g., JR or III)'}
   - {type: ST, name: XCN.6, key: prefix, desc: 'Prefix (e.g., DR)'}
   - {type: IS, name: XCN.7, key: degree, desc: 'Degree (e.g., MD)'}
-  - {type: IS, name: XCN.8, key: source_table, desc: Source Table}
-  - {type: HD, name: XCN.9, key: assigning_authority, desc: Assigning Authority}
-  - {type: ID, name: XCN.10, key: name_type_code, desc: Name Type Code}
-  - {type: ST, name: XCN.11, key: identifier_check_digit, desc: Identifier Check Digit}
-  - {type: ID, name: XCN.12, key: check_digit_scheme, desc: Check Digit Scheme}
-  - {type: ID, name: XCN.13, key: identifier_type_code, desc: Identifier Type Code}
-  - {type: HD, name: XCN.14, key: assigning_facility, desc: Assigning Facility}
-  - {type: ID, name: XCN.15, key: name_representation_code, desc: Name Representation Code}
-  - {type: CE, name: XCN.16, key: name_context, desc: Name Context}
-  - {type: DR, name: XCN.17, key: name_validity_range, desc: Name Validity Range}
-  - {type: ID, name: XCN.18, key: name_assembly_order, desc: Name Assembly Order}
+  - {type: IS, name: XCN.8, key: source, desc: Source Table}
+  - {type: HD, name: XCN.9, key: authority, desc: Assigning Authority}
+  - {type: ID, name: XCN.10, key: name_type, desc: Name Type Code}
+  - {type: ST, name: XCN.11, key: check_digit, desc: Identifier Check Digit}
+  - {type: ID, name: XCN.12, key: check_scheme, desc: Check Digit Scheme}
+  - {type: ID, name: XCN.13, key: id_type, desc: Identifier Type Code}
+  - {type: HD, name: XCN.14, key: facility, desc: Assigning Facility}
+  - {type: ID, name: XCN.15, key: representation, desc: Name Representation Code}
+  - {type: CE, name: XCN.16, key: context, desc: Name Context}
+  - {type: DR, name: XCN.17, key: validity_range, desc: Name Validity Range}
+  - {type: ID, name: XCN.18, key: assembly_order, desc: Name Assembly Order}
   - {type: TS, name: XCN.19, key: effective_date, desc: Effective Date}
   - {type: TS, name: XCN.20, key: expiration_date, desc: Expiration Date}
   - {type: ST, name: XCN.21, key: professional_suffix, desc: Professional Suffix}
-  - {type: CWE, name: XCN.22, key: assigning_jurisdiction, desc: Assigning Jurisdiction}
-  - {type: CWE, name: XCN.23, key: assigning_agency_or_department, desc: Assigning Agency or Department}
+  - {type: CWE, name: XCN.22, key: jurisdiction, desc: Assigning Jurisdiction}
+  - {type: CWE, name: XCN.23, key: agency, desc: Assigning Agency or Department}
 ED:
   components:
   - {type: HD, name: ED.1, key: source_application, desc: Source Application}

@@ -3,6 +3,22 @@
             [clojure.java.io :as io]))
 
 
+(def primitives
+  {:DT true
+   :DTM true
+   :FT true
+   :GTS true
+   :ID true
+   :IS true
+   :NM true
+   :NUL true
+   :SI true
+   :ST true
+   :TM true
+   :TX true
+   :escapeType true
+   :varies true})
+
 (def *schema (atom nil))
 
 (defn load-yaml [nm]

@@ -382,13 +382,13 @@ PID:
 - {name: PID.4, type: CX,   key: alternate_id, desc: Alternate Patient ID - PID, coll: true}
 - {name: PID.5, type: XPN,  key: name, desc: Patient Name, req: true, coll: true}
 - {name: PID.6, type: XPN,  key: mother_maiden_name, desc: Mother's Maiden Name, coll: true}
-- {name: PID.7, type: TS,   key: datetime_of_birth, desc: Date/Time of Birth}
-- {name: PID.8, type: IS,   key: administrative_sex, desc: Administrative Sex, table: HL70001}
+- {name: PID.7, type: TS,   key: birth_date, desc: Date/Time of Birth}
+- {name: PID.8, type: IS,   key: gender, desc: Administrative Sex, table: HL70001}
 - {name: PID.9, type: XPN,  key: alias, desc: Patient Alias, coll: true}
 - {name: PID.10, type: CE,  key: race, desc: Race, table: HL70005, coll: true}
 - {name: PID.11, type: XAD, key: address, desc: Patient Address, coll: true}
 - {name: PID.12, type: IS,  key: county_code, desc: County Code, table: HL70289}
-- {name: PID.13, type: XTN, key: phone_number_home, desc: Phone Number - Home, coll: true}
+- {name: PID.13, type: XTN, key: home_phone, desc: Phone Number - Home, coll: true}
 - {name: PID.14, type: XTN, key: phone_number_business, desc: Phone Number - Business, coll: true}
 - {name: PID.15, type: CE,  key: primary_language, desc: Primary Language, table: HL70296}
 - {name: PID.16, type: CE,  key: marital_status, desc: Marital Status, table: HL70002}
@@ -741,8 +741,8 @@ NK1:
 - {name: NK1.12, type: CX, key: next_of_kin_associated_parties_employee_number, desc: Next of Kin / Associated Parties Employee Number}
 - {name: NK1.13, type: XON, key: organization_name_nk1, desc: Organization Name - NK1, coll: true}
 - {name: NK1.14, type: CE, key: marital_status, desc: Marital Status, table: HL70002}
-- {name: NK1.15, type: IS, key: administrative_sex, desc: Administrative Sex, table: HL70001}
-- {name: NK1.16, type: TS, key: datetime_of_birth, desc: Date/Time of Birth}
+- {name: NK1.15, type: IS, key: gender, desc: Administrative Sex, table: HL70001}
+- {name: NK1.16, type: TS, key: birth_date, desc: Date/Time of Birth}
 - {name: NK1.17, type: IS, key: living_dependency, desc: Living Dependency, table: HL70223, coll: true}
 - {name: NK1.18, type: IS, key: ambulatory_status, desc: Ambulatory Status, table: HL70009, coll: true}
 - {name: NK1.19, type: CE, key: citizenship, desc: Citizenship, table: HL70171, coll: true}
@@ -1217,9 +1217,9 @@ PV2:
 - {name: PV2.49, type: IS, key: notify_clergy_code, desc: Notify Clergy Code, table: HL70534, coll: true}
 NTE:
 - {name: NTE.1, type: SI, key: set_id, desc: Set ID - NTE}
-- {name: NTE.2, type: ID, key: source_of_comment, desc: Source of Comment, table: HL70105}
+- {name: NTE.2, type: ID, key: source, desc: Source of Comment, table: HL70105}
 - {name: NTE.3, type: FT, key: comment, desc: Comment, coll: true}
-- {name: NTE.4, type: CE, key: comment_type, desc: Comment Type, table: HL70364}
+- {name: NTE.4, type: CE, key: type, desc: Comment Type, table: HL70364}
 ODT:
 - {name: ODT.1, type: CE, key: tray_type, desc: Tray Type, table: HL70160, req: true}
 - {name: ODT.2, type: CE, key: service_period, desc: Service Period, coll: true}
@@ -1358,7 +1358,7 @@ IN1:
 - {name: IN1.40, type: CP, key: room_rate_semi_private, desc: Room Rate - Semi-Private}
 - {name: IN1.41, type: CP, key: room_rate_private, desc: Room Rate - Private}
 - {name: IN1.42, type: CE, key: insured_employment_status, desc: Insured's Employment Status, table: HL70066}
-- {name: IN1.43, type: IS, key: insured_administrative_sex, desc: Insured's Administrative Sex, table: HL70001}
+- {name: IN1.43, type: IS, key: insured_gender, desc: Insured's Administrative Sex, table: HL70001}
 - {name: IN1.44, type: XAD, key: insured_employer_address, desc: Insured's Employer's Address, coll: true}
 - {name: IN1.45, type: ST, key: verification_status, desc: Verification Status}
 - {name: IN1.46, type: IS, key: prior_insurance_plan_id, desc: Prior Insurance Plan ID, table: HL70072}
@@ -1502,8 +1502,8 @@ GT1:
 - {name: GT1.5, type: XAD, key: guarantor_address, desc: Guarantor Address, coll: true}
 - {name: GT1.6, type: XTN, key: guarantor_ph_num_home, desc: Guarantor Ph Num - Home, coll: true}
 - {name: GT1.7, type: XTN, key: guarantor_ph_num_business, desc: Guarantor Ph Num - Business, coll: true}
-- {name: GT1.8, type: TS, key: guarantor_datetime_of_birth, desc: Guarantor Date/Time Of Birth}
-- {name: GT1.9, type: IS, key: guarantor_administrative_sex, desc: Guarantor Administrative Sex, table: HL70001}
+- {name: GT1.8, type: TS, key: guarantor_birth_date, desc: Guarantor Date/Time Of Birth}
+- {name: GT1.9, type: IS, key: guarantor_gender, desc: Guarantor Administrative Sex, table: HL70001}
 - {name: GT1.10, type: IS, key: guarantor_type, desc: Guarantor Type, table: HL70068}
 - {name: GT1.11, type: CE, key: guarantor_relationship, desc: Guarantor Relationship, table: HL70063}
 - {name: GT1.12, type: ST, key: guarantor_ssn, desc: Guarantor SSN}
@@ -1844,8 +1844,8 @@ STF:
 - {name: STF.2, type: CX, key: staff_identifier_list, desc: Staff Identifier List, coll: true}
 - {name: STF.3, type: XPN, key: staff_name, desc: Staff Name, coll: true}
 - {name: STF.4, type: IS, key: staff_type, desc: Staff Type, table: HL70182, coll: true}
-- {name: STF.5, type: IS, key: administrative_sex, desc: Administrative Sex, table: HL70001}
-- {name: STF.6, type: TS, key: datetime_of_birth, desc: Date/Time of Birth}
+- {name: STF.5, type: IS, key: gender, desc: Administrative Sex, table: HL70001}
+- {name: STF.6, type: TS, key: birth_date, desc: Date/Time of Birth}
 - {name: STF.7, type: ID, key: active_inactive_flag, desc: Active/Inactive Flag, table: HL70183}
 - {name: STF.8, type: CE, key: department, desc: Department, table: HL70184, coll: true}
 - {name: STF.9, type: CE, key: hospital_service_stf, desc: Hospital Service - STF, table: HL70069, coll: true}
@@ -1953,7 +1953,7 @@ IN2:
 - {name: IN2.60, type: IS, key: policy_source, desc: Policy Source, table: HL70313}
 - {name: IN2.61, type: CX, key: patient_member_number, desc: Patient Member Number}
 - {name: IN2.62, type: CE, key: guarantor_relationship_to_insured, desc: Guarantor's Relationship to Insured, table: HL70063}
-- {name: IN2.63, type: XTN, key: insured_phone_number_home, desc: Insured's Phone Number - Home, coll: true}
+- {name: IN2.63, type: XTN, key: insured_home_phone, desc: Insured's Phone Number - Home, coll: true}
 - {name: IN2.64, type: XTN, key: insured_employer_phone_number, desc: Insured's Employer Phone Number, coll: true}
 - {name: IN2.65, type: CE, key: military_handicapped_program, desc: Military Handicapped Program, table: HL70343}
 - {name: IN2.66, type: ID, key: suspend_flag, desc: Suspend Flag, table: HL70136}

@@ -32,24 +32,41 @@
              (if (nil? x) acc (assoc acc idx x))
              (inc idx)))))
 
-(defn parse-value [ctx tp v]
+(defn parse-value [{sch :schema sep :separators :as ctx} tp v]
+  (if (get schema/primitives (keyword (:type tp)))
+    v
+    (if-let [sub-tp (get-in sch [:types (keyword (:type tp))])]
+      (let [sub-cmps (split-by v (:subcomponet sep))
+            sub-types (:components sub-tp)]
+        (loop [[c & cs] sub-cmps
+               [s & ss] sub-types
+               res {}]
+          (let [res (if-not (str/blank? c) (assoc res (keyword (:key s)) (parse-value ctx s c)) res)]
+            (if (empty? cs)
+              res
+              (recur cs ss res)))))
+      (do 
+        (println "WARN:" (pr-str (merge {} tp) v))
+        v))))
+
+(defn parse-component [ctx tp v]
   (if (:components tp)
     (let [cmps (split-by v (get-in ctx [:separators :component]))]
       (loop [[c & cs] cmps
              [s & ss] (:components tp)
              res {}]
-        (let [res (if-not (str/blank? c) (assoc res (keyword (:key s)) c) res)]
+        (let [res (if-not (str/blank? c) (assoc res (keyword (:key s)) (parse-value ctx s c)) res)]
           (if (empty? cs)
             res
             (recur cs ss res)))))
     v))
 
-(defn parse-component [{sch :schema seps :separators :as ctx} {tpn :type c? :coll v :value :as f}]
+(defn parse-field [{sch :schema seps :separators :as ctx} {tpn :type c? :coll v :value :as f}]
   (let [tp (get-in sch [:types (keyword tpn)])
         vv (if c?
              (->> (split-by v (:repetition seps))
-                  (mapv #(parse-value ctx tp %)))
-             (parse-value ctx tp v))]
+                  (mapv #(parse-component ctx tp %)))
+             (parse-component ctx tp v))]
     vv))
 
 (defn parse-segment [{sch :schema seps :separators :as ctx} seg]
@@ -67,7 +84,7 @@
        (let [s (merge s (get-in sch [:fields (keyword (:field s))]))]
          (if (str/blank? f)
            (recur fs ss acc)
-           (let [acc  (assoc acc (keyword (:key s)) (parse-component ctx (assoc (or s {}) :value f)))]
+           (let [acc  (assoc acc (keyword (:key s)) (parse-field ctx (assoc (or s {}) :value f)))]
              (if (empty? fs)
                acc
                (recur fs ss acc))))))]))

@@ -45,8 +45,8 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
        :version_id {:version_id "2.3"},
        :processing_id {:processing_id "P"},
        :datetime {:time "20151015200643"},
-       :sending_facility {:namespace_id "1"},
-       :sending_application {:namespace_id "AccMgr"}
+       :sending_facility {:ns "1"},
+       :sending_application {:ns "AccMgr"}
        :separator "|"
        }])
 
@@ -55,46 +55,56 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
       ctx "PID|1|010107111^^^MS4^PN^|1609220^^^MS4^MR^001|1609220^^^MS4^MR^001|BARRETT^JEAN^SANDY^^||19440823|F||C|STRAWBERRY AVE^FOUR OAKS LODGE^ALBUKERKA^CA^98765^USA^^||(111)222-3333||ENG|W|CHR|111155555550^^^MS4001^AN^001|123-22-1111||||OKLAHOMA|||||||N")
      ["PID"
       {:religion {:code "CHR"},
-       :patient_id {:id_number "010107111",
-                    :assigning_authority "MS4",
-                    :identifier_type_code "PN"},
-       :alternate_id [{:id_number "1609220",
-                       :assigning_authority "MS4",
-                       :identifier_type_code "MR",
-                       :assigning_facility "001"}],
-       :account_number {:id_number "111155555550",
-                        :assigning_authority "MS4001",
-                        :identifier_type_code "AN",
-                        :assigning_facility "001"},
+       :patient_id  {:id "010107111",
+                    :authority {:ns "MS4"},
+                    :type "PN"},
+       :alternate_id [{:id "1609220",
+                       :authority {:ns "MS4"},
+                       :type "MR",
+                       :facility {:ns "001"}}],
+       :account_number {:id "111155555550",
+                        :authority {:ns "MS4001"},
+                        :type "AN",
+                        :facility {:ns "001"}},
        :race [{:code "C"}],
-       :administrative_sex "F",
-       :datetime_of_birth {:time "19440823"},
+       :gender "F",
+       :birth_date {:time "19440823"},
        :primary_language  {:code "ENG"},
-       :phone_number_home [{:telephone_number "(111)222-3333"}],
+       :home_phone [{:phone "(111)222-3333"}],
        :ssn_number "123-22-1111",
        :birth_place "OKLAHOMA",
-       :address [{:street "STRAWBERRY AVE",
+       :address [{:street {:text "STRAWBERRY AVE"}
                   :text "FOUR OAKS LODGE",
                   :city "ALBUKERKA",
                   :state "CA",
                   :postal_code "98765",
                   :country "USA"}],
        :set_id "1",
-       :name [{:family "BARRETT",
+       :name [{:family {:surname "BARRETT"},
                :given "JEAN",
                :initials "SANDY"}],
-       :identifiers [{:id_number "1609220",
-                      :assigning_authority "MS4",
-                      :identifier_type_code "MR",
-                      :assigning_facility "001"}],
+       :identifiers [{:id "1609220",
+                      :authority {:ns "MS4"},
+                      :type "MR",
+                      :facility {:ns "001"}}],
        :marital_status {:code "W"},
        :death_indicator "N"}])
+
+
+    (match 
+     (sut/parse-segment
+      ctx "PID|1|312626^^^^^Main Lab&05D0557149&CLIA|0362855^^^^^Main Lab&05D0557149&CLIA|^^^^^Main Lab&05D0557149&CLIA|LOPEZ^ADALBERTO||19450409|M|||8753 APPERSON ST^^SUNLAND^CA^91040||(818)429-5631|||||000016715153|572458313")
+
+     ["PID" {:identifiers [{:id "0362855",
+                            :facility {:ns "Main Lab", :uid "05D0557149", :type "CLIA"}}]}]
+
+     )
 
     )
 
   (pr-str msg)
 
-  (spit "/tmp/adt.yaml" (clj-yaml.core/generate-string (sut/parse msg {})))
+  (spit "test/results/adt.yaml" (clj-yaml.core/generate-string (sut/parse msg {})))
 
 
   (def oru "MSH|^~\\&|LAb|Lab|Lab|Lab|20100222024516||ORU^R30|87226A1476977481|P|2.4|2010022217399||AL|NE
@@ -111,7 +121,7 @@ NTE|1||DSN=314237||20110529130917-04:00
 NTE|2||HCT=LOW||20110529130917-04:00
 ")
 
-  (spit "/tmp/oru.yaml" (clj-yaml.core/generate-string (sut/parse oru {})))
+  (spit "test/results/oru.yaml" (clj-yaml.core/generate-string (sut/parse oru {})))
 
   )
 
