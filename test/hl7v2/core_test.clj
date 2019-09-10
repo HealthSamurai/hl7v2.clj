@@ -3,12 +3,16 @@
             [clj-yaml.core]
             [hl7v2.schema.core :as schema]
             [matcho.core :refer [match]]
-            [clojure.test :refer :all]))
+            [zprint.core :as zp]
+            [clojure.edn :as edn]
+            [clojure.java.io :as io]
+            [clojure.test :refer :all])
+  (:import [java.io File]))
 
 (def msg
   "MSH|^~\\&|AccMgr|1|||20151015200643||ADT^A01|599102|P|2.3|foo||
 EVN|A01|20151010045502|||||
-PID|1|010107111^^^MS4^PN^|1609220^^^MS4^MR^001|1609220^^^MS4^MR^001|BARRETT^JEAN^SANDY^^||19440823|F||C|STRAWBERRY AVE^FOUR OAKS LODGE^ALBUKERKA^CA^98765^USA^^||(111)222-3333||ENG|W|CHR|111155555550^^^MS4001^AN^001|123-22-1111||||OKLAHOMA|||||||N
+PID|1|010107111^^^MS4^PN^|1609220^^^MS4^MR^001|1609220^^^MS4^MR^001|BARRETT^JEAN^SANDY^^||19440823|F||C|STRAWBERRY AVE^FOUR OAKS LODGE^ALBUKERKA^CA^98765^USA^^||(111)222-3333||ENG|W|CHR|111155555550^^^MS4001^AN^001|123-22-1111||||OKLAHOM
 PV1|1|I|PREOP^101^1^1^^^S|3|||37^REID^TIMOTHY^Q^^^^^^AccMgr^^^^CI|||01||||1|||37^REID^TIMOTHY^Q^^^^^^AccMgr^^^^CI|2|40007716^^^AccMgr^VN|4|||||||||||||||||||1||G|||20050110045253||||||
 GT1|1|010107127^^^MS4^PN^|BARRETT^JEAN^S^^|BARRETT^LAWRENCE^E^^|2820 SYCAMORE AVE^TWELVE OAKS LODGE^MONTROSE^CA^91214^USA^|(818)111-3361||19301013|F||A|354-22-1840||||RETIRED|^^^^00000^|||||||20130711|||||0000007496|W||||||||Y|||CHR||||||||RETIRED||||||C
 IN1|1|0423|MEDICARE IP|^^^^     |||||||19951001|||MCR|BARRETT^JEAN^S^^|A|19301013|2820 SYCAMORE AVE^TWELVE OAKS LODGE^MONTROSE^CA^91214^USA^^^|||1||||||||||||||354221840A|||||||F|^^^^00000^|N||||010107127
@@ -90,7 +94,6 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
        :marital_status {:code "W"},
        :death_indicator "N"}])
 
-
     (match 
      (sut/parse-segment
       ctx "PID|1|312626^^^^^Main Lab&05D0557149&CLIA|0362855^^^^^Main Lab&05D0557149&CLIA|^^^^^Main Lab&05D0557149&CLIA|LOPEZ^ADALBERTO||19450409|M|||8753 APPERSON ST^^SUNLAND^CA^91040||(818)429-5631|||||000016715153|572458313")
@@ -100,9 +103,36 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
 
      )
 
-    )
+    ))
 
-  (pr-str msg)
+
+(defn expectation-file [^File f]
+  (let [name (.getName f)
+        parent (-> f .getParentFile .getParentFile .getAbsoluteFile)]
+    (str parent "/edns/" name ".edn")))
+
+(defn match-file [fname content]
+  (match (-> fname slurp edn/read-string)
+         content))
+
+(defmacro foreach-hl7 [[input expected] & body]
+  `(for [^File input-file# (->> "messages" io/resource io/file file-seq (filter #(.isFile %)))]
+     (let [~input (slurp input-file#)
+           ~expected (expectation-file input-file#)]
+       ~@body)))
+
+(deftest test-parse-examples
+  (foreach-hl7 [input expected]
+               (testing (str "with " expected)
+                 (match-file expected (sut/parse input)))))
+
+
+(comment
+
+  ;; overrride all files
+  (foreach-hl7 [input expected]
+               (spit expected (-> input sut/parse zp/zprint-str)))
+
 
   (spit "test/results/adt.yaml" (clj-yaml.core/generate-string (sut/parse msg {})))
 
