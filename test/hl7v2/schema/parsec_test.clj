@@ -4,7 +4,7 @@
 
 (defmacro parsed-as [g a b]
   `(let [res# (sut/parse ~g ~a)]
-     (is (= res# ~b))
+     (is (= ~b res#))
      res#))
 
 (deftest test-parser 
@@ -58,7 +58,7 @@
   (def oru  {:msg ["MSH" "patient" "order+"]
              :patient ["PID" "PD1?" "visit?"]
              :visit ["PV1" "PV2?"]
-             :order ["ORC?" "OBR" "result"]
+             :order ["ORC?" "OBR" "result+"]
              :result ["OBX" "NTE*"]})
 
   (parsed-as
@@ -69,6 +69,22 @@
   (parsed-as
    oru
    [:MSH :PID :PV1 :OBR :OBX :OBX :NTE]
-   1)
+   {:MSH 0, :patient {:PID 1, :visit {:PV1 2}}, :order [{:OBR 3, :result [{:OBX 4} {:OBX 5 :NTE [6]}]}]})
 
+  (parsed-as
+   oru
+   [:MSH
+    :PID
+      :PV1
+    :OBR
+      :OBX
+      :OBX :NTE
+    :ORC :OBR
+      :OBX :NTE :NTE
+      :OBX :NTE]
+   {:MSH 0,
+    :patient {:PID 1, :visit {:PV1 2}},
+    :order [{:OBR 3, :result [{:OBX 4} {:OBX 5, :NTE [6]}]}
+            {:ORC 7, :OBR 8, :result [{:OBX 9, :NTE [10 11]} {:OBX 12, :NTE [13]}]}]})
+  
   )

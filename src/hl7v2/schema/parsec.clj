@@ -43,7 +43,7 @@
                             (recur stms (inext inp)  (assoc out c (:pos inp)) false))
                           (cond
                             (or (= q :*) (and repeat (= q :+)))
-                            (recur stms inp out true)
+                            (recur stms inp out false)
                             (= q :?)
                             (recur stms inp out false)
                             :else
@@ -54,11 +54,21 @@
                             (if (contains? #{:+ :*} q)
                               (recur sstms inp' (update out nm (fn [x] (conj (or x []) res))) true)
                               (recur stms inp' (assoc out nm res) false))
-                            (if (contains? #{:? :*} q)
+                            (cond
+                              (or (= q :*) (and repeat (= q :+)))
                               (recur stms inp out false)
+
+                              (= q :?)
+                              (recur stms inp out false)
+                              :else
                               [inp res])))))
         [inp out]))))
 
 (defn parse [grammar msg]
-  (second (do-parse grammar :msg {:msg msg :pos 0})))
+  (let [[inp res] (do-parse grammar :msg {:msg msg :pos 0})]
+    (if (= :error (first res))
+      res
+      (if (= (:pos inp) (count (:msg inp)))
+        res
+        [:error (str "Extra input " inp)]))))
 
