@@ -1494,64 +1494,67 @@ ITM:
 - {name: ITM.27, type: CNE, key: procedure_code, desc: Procedure Code, table: HL70088}
 - {name: ITM.28, type: CNE, key: procedure_code_modifier, desc: Procedure Code Modifier, table: HL70340, coll: true}
 - {name: ITM.29, type: CWE, key: special_handling_code, desc: Special Handling Code, table: HL70376}
+# The GT1 segment contains guarantor (e.g., the person or the organization with financial responsibility
+# for payment of a patient account) data for patient and insurance billing applications.
+# TODO: here
 GT1:
-- {name: GT1.1, type: SI, key: set_id, desc: Set ID - GT1, req: true}
-- {name: GT1.2, type: CX, key: guarantor_number, desc: Guarantor Number, coll: true}
-- {name: GT1.3, type: XPN, key: guarantor_name, desc: Guarantor Name, req: true, coll: true}
-- {name: GT1.4, type: XPN, key: guarantor_spouse_name, desc: Guarantor Spouse Name, coll: true}
-- {name: GT1.5, type: XAD, key: guarantor_address, desc: Guarantor Address, coll: true}
-- {name: GT1.6, type: XTN, key: guarantor_ph_num_home, desc: Guarantor Ph Num - Home, coll: true}
-- {name: GT1.7, type: XTN, key: guarantor_ph_num_business, desc: Guarantor Ph Num - Business, coll: true}
-- {name: GT1.8, type: TS, key: guarantor_birth_date, desc: Guarantor Date/Time Of Birth}
-- {name: GT1.9, type: IS, key: guarantor_gender, desc: Guarantor Administrative Sex, table: HL70001}
-- {name: GT1.10, type: IS, key: guarantor_type, desc: Guarantor Type, table: HL70068}
-- {name: GT1.11, type: CE, key: guarantor_relationship, desc: Guarantor Relationship, table: HL70063}
-- {name: GT1.12, type: ST, key: guarantor_ssn, desc: Guarantor SSN}
-- {name: GT1.13, type: DT, key: guarantor_date_begin, desc: Guarantor Date - Begin}
-- {name: GT1.14, type: DT, key: guarantor_date_end, desc: Guarantor Date - End}
-- {name: GT1.15, type: NM, key: guarantor_priority, desc: Guarantor Priority}
+- {name: GT1.1, type: SI,   key: set_id, desc: Set ID - GT1, req: true}
+- {name: GT1.2, type: CX,   key: guarantor_number, desc: Guarantor Number, coll: true}
+- {name: GT1.3, type: XPN,  key: guarantor_name, desc: Guarantor Name, req: true, coll: true}
+- {name: GT1.4, type: XPN,  key: guarantor_spouse_name, desc: Guarantor Spouse Name, coll: true}
+- {name: GT1.5, type: XAD,  key: guarantor_address, desc: Guarantor Address, coll: true}
+- {name: GT1.6, type: XTN,  key: guarantor_home_phone, desc: Guarantor Ph Num - Home, coll: true}
+- {name: GT1.7, type: XTN,  key: guarantor_work_phone, desc: Guarantor Ph Num - Business, coll: true}
+- {name: GT1.8, type: TS,   key: guarantor_birth_date, desc: Guarantor Date/Time Of Birth}
+- {name: GT1.9, type: IS,   key: guarantor_gender, desc: Guarantor Administrative Sex, table: HL70001}
+- {name: GT1.10, type: IS,  key: guarantor_type, desc: Guarantor Type, table: HL70068}
+- {name: GT1.11, type: CE,  key: guarantor_relationship, desc: Guarantor Relationship, table: HL70063}
+- {name: GT1.12, type: ST,  key: guarantor_ssn, desc: Guarantor SSN}
+- {name: GT1.13, type: DT,  key: guarantor_date_begin, desc: Guarantor Date - Begin}
+- {name: GT1.14, type: DT,  key: guarantor_date_end, desc: Guarantor Date - End}
+- {name: GT1.15, type: NM,  key: guarantor_priority, desc: Guarantor Priority}
 - {name: GT1.16, type: XPN, key: guarantor_employer_name, desc: Guarantor Employer Name, coll: true}
 - {name: GT1.17, type: XAD, key: guarantor_employer_address, desc: Guarantor Employer Address, coll: true}
 - {name: GT1.18, type: XTN, key: guarantor_employer_phone_number, desc: Guarantor Employer Phone Number, coll: true}
-- {name: GT1.19, type: CX, key: guarantor_employee_id_number, desc: Guarantor Employee ID Number, coll: true}
-- {name: GT1.20, type: IS, key: guarantor_employment_status, desc: Guarantor Employment Status, table: HL70066}
+- {name: GT1.19, type: CX,  key: guarantor_employee_id_number, desc: Guarantor Employee ID Number, coll: true}
+- {name: GT1.20, type: IS,  key: guarantor_employment_status, desc: Guarantor Employment Status, table: HL70066}
 - {name: GT1.21, type: XON, key: guarantor_organization_name, desc: Guarantor Organization Name, coll: true}
-- {name: GT1.22, type: ID, key: guarantor_billing_hold_flag, desc: Guarantor Billing Hold Flag, table: HL70136}
-- {name: GT1.23, type: CE, key: guarantor_credit_rating_code, desc: Guarantor Credit Rating Code, table: HL70341}
-- {name: GT1.24, type: TS, key: guarantor_death_date_and_time, desc: Guarantor Death Date And Time}
-- {name: GT1.25, type: ID, key: guarantor_death_flag, desc: Guarantor Death Flag, table: HL70136}
-- {name: GT1.26, type: CE, key: guarantor_charge_adjustment_code, desc: Guarantor Charge Adjustment Code, table: HL70218}
-- {name: GT1.27, type: CP, key: guarantor_household_annual_income, desc: Guarantor Household Annual Income}
-- {name: GT1.28, type: NM, key: guarantor_household_size, desc: Guarantor Household Size}
-- {name: GT1.29, type: CX, key: guarantor_employer_id_number, desc: Guarantor Employer ID Number, coll: true}
-- {name: GT1.30, type: CE, key: guarantor_marital_status_code, desc: Guarantor Marital Status Code, table: HL70002}
-- {name: GT1.31, type: DT, key: guarantor_hire_effective_date, desc: Guarantor Hire Effective Date}
-- {name: GT1.32, type: DT, key: employment_stop_date, desc: Employment Stop Date}
-- {name: GT1.33, type: IS, key: living_dependency, desc: Living Dependency, table: HL70223}
-- {name: GT1.34, type: IS, key: ambulatory_status, desc: Ambulatory Status, table: HL70009, coll: true}
-- {name: GT1.35, type: CE, key: citizenship, desc: Citizenship, table: HL70171, coll: true}
-- {name: GT1.36, type: CE, key: primary_language, desc: Primary Language, table: HL70296}
-- {name: GT1.37, type: IS, key: living_arrangement, desc: Living Arrangement, table: HL70220}
-- {name: GT1.38, type: CE, key: publicity_code, desc: Publicity Code, table: HL70215}
-- {name: GT1.39, type: ID, key: protection_indicator, desc: Protection Indicator, table: HL70136}
-- {name: GT1.40, type: IS, key: student_indicator, desc: Student Indicator, table: HL70231}
-- {name: GT1.41, type: CE, key: religion, desc: Religion, table: HL70006}
+- {name: GT1.22, type: ID,  key: guarantor_billing_hold_flag, desc: Guarantor Billing Hold Flag, table: HL70136}
+- {name: GT1.23, type: CE,  key: guarantor_credit_rating_code, desc: Guarantor Credit Rating Code, table: HL70341}
+- {name: GT1.24, type: TS,  key: guarantor_death_date_and_time, desc: Guarantor Death Date And Time}
+- {name: GT1.25, type: ID,  key: guarantor_death_flag, desc: Guarantor Death Flag, table: HL70136}
+- {name: GT1.26, type: CE,  key: guarantor_charge_adjustment_code, desc: Guarantor Charge Adjustment Code, table: HL70218}
+- {name: GT1.27, type: CP,  key: guarantor_household_annual_income, desc: Guarantor Household Annual Income}
+- {name: GT1.28, type: NM,  key: guarantor_household_size, desc: Guarantor Household Size}
+- {name: GT1.29, type: CX,  key: guarantor_employer_id_number, desc: Guarantor Employer ID Number, coll: true}
+- {name: GT1.30, type: CE,  key: guarantor_marital_status_code, desc: Guarantor Marital Status Code, table: HL70002}
+- {name: GT1.31, type: DT,  key: guarantor_hire_effective_date, desc: Guarantor Hire Effective Date}
+- {name: GT1.32, type: DT,  key: employment_stop_date, desc: Employment Stop Date}
+- {name: GT1.33, type: IS,  key: living_dependency, desc: Living Dependency, table: HL70223}
+- {name: GT1.34, type: IS,  key: ambulatory_status, desc: Ambulatory Status, table: HL70009, coll: true}
+- {name: GT1.35, type: CE,  key: citizenship, desc: Citizenship, table: HL70171, coll: true}
+- {name: GT1.36, type: CE,  key: primary_language, desc: Primary Language, table: HL70296}
+- {name: GT1.37, type: IS,  key: living_arrangement, desc: Living Arrangement, table: HL70220}
+- {name: GT1.38, type: CE,  key: publicity_code, desc: Publicity Code, table: HL70215}
+- {name: GT1.39, type: ID,  key: protection_indicator, desc: Protection Indicator, table: HL70136}
+- {name: GT1.40, type: IS,  key: student_indicator, desc: Student Indicator, table: HL70231}
+- {name: GT1.41, type: CE,  key: religion, desc: Religion, table: HL70006}
 - {name: GT1.42, type: XPN, key: mother_maiden_name, desc: Mother's Maiden Name, coll: true}
-- {name: GT1.43, type: CE, key: nationality, desc: Nationality, table: HL70212}
-- {name: GT1.44, type: CE, key: ethnic_group, desc: Ethnic Group, table: HL70189, coll: true}
+- {name: GT1.43, type: CE,  key: nationality, desc: Nationality, table: HL70212}
+- {name: GT1.44, type: CE,  key: ethnic_group, desc: Ethnic Group, table: HL70189, coll: true}
 - {name: GT1.45, type: XPN, key: contact_person_name, desc: Contact Person's Name, coll: true}
 - {name: GT1.46, type: XTN, key: contact_person_telephone_number, desc: Contact Person's Telephone Number, coll: true}
-- {name: GT1.47, type: CE, key: contact_reason, desc: Contact Reason, table: HL70222}
-- {name: GT1.48, type: IS, key: contact_relationship, desc: Contact Relationship, table: HL70063}
-- {name: GT1.49, type: ST, key: job_title, desc: Job Title}
+- {name: GT1.47, type: CE,  key: contact_reason, desc: Contact Reason, table: HL70222}
+- {name: GT1.48, type: IS,  key: contact_relationship, desc: Contact Relationship, table: HL70063}
+- {name: GT1.49, type: ST,  key: job_title, desc: Job Title}
 - {name: GT1.50, type: JCC, key: job_code_class, desc: Job Code/Class}
 - {name: GT1.51, type: XON, key: guarantor_employer_organization_name, desc: Guarantor Employer's Organization Name, coll: true}
-- {name: GT1.52, type: IS, key: handicap, desc: Handicap, table: HL70295}
-- {name: GT1.53, type: IS, key: job_status, desc: Job Status, table: HL70311}
-- {name: GT1.54, type: FC, key: guarantor_financial_class, desc: Guarantor Financial Class}
-- {name: GT1.55, type: CE, key: guarantor_race, desc: Guarantor Race, table: HL70005, coll: true}
-- {name: GT1.56, type: ST, key: guarantor_birth_place, desc: Guarantor Birth Place}
-- {name: GT1.57, type: IS, key: vip_indicator, desc: VIP Indicator, table: HL70099}
+- {name: GT1.52, type: IS,  key: handicap, desc: Handicap, table: HL70295}
+- {name: GT1.53, type: IS,  key: job_status, desc: Job Status, table: HL70311}
+- {name: GT1.54, type: FC,  key: guarantor_financial_class, desc: Guarantor Financial Class}
+- {name: GT1.55, type: CE,  key: guarantor_race, desc: Guarantor Race, table: HL70005, coll: true}
+- {name: GT1.56, type: ST,  key: guarantor_birth_place, desc: Guarantor Birth Place}
+- {name: GT1.57, type: IS,  key: vip_indicator, desc: VIP Indicator, table: HL70099}
 AFF:
 - {name: AFF.1, type: SI, key: set_id, desc: Set ID - AFF, req: true}
 - {name: AFF.2, type: XON, key: professional_organization, desc: Professional Organization, req: true}

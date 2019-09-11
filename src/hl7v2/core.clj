@@ -12,7 +12,7 @@
     (< (.length msg) 8) (conj "Message is too short (MSH truncated)")))
 
 (defn separators [msg]
-  {:segment #"(\r|\n)"
+  {:segment #"(\r\n|\r|\n)"
    :field (get msg 3)
    :component (get msg 4)
    :subcomponet (get msg 7)
@@ -104,6 +104,9 @@
                          (filter #(> (.length %) 0))
                          (mapv #(parse-segment ctx %)))
            {c :code e :event} (get-in segments [0 1 :type])
-           grammar (get-in sch [:messages (keyword (str c "_" e))])]
-       (println "GR"  (keyword (str c "_" e)) grammar)
+           msg-key (get-in sch [:messages :idx (keyword c) (keyword e)])
+           grammar (get-in sch [:messages (when [msg-key] (keyword msg-key))])]
+       (when-not grammar
+         (throw (Exception. (str "Do not know how to parse: " c "|" e " " (first segments)) )))
+       #_(println "GR"  (keyword (str c "_" e)) grammar)
        (parsec/parse grammar (mapv #(keyword (first %)) segments) (fn [idx] (get-in segments [idx 1])))))))

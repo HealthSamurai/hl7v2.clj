@@ -104,33 +104,38 @@
                      (map-indexed (fn [i el] (normalize-el {:idx i} el))))})))
 
 (defn gen-messages []
-  (->> (load-dir "hl7messages")
-       (reduce-map
-        (fn [k msg]
-          (reduce
-           (fn [acc [k' {els :elements}]]
-             (let [stms (->> els
-                             (mapv (fn [e]
-                                     (let [el (normalize-el {} e)
-                                           nm (if (:grp el)
-                                                (str/lower-case (:grp el))
-                                                (:seg el))
-                                           q (cond (and (:coll el) (:req el)) "+"
-                                                   (:coll el) "*"
-                                                   (:req el)  ""
-                                                   :else "?")]
-                                       (str nm q)))))]
-               (assoc acc (if (= k k') :msg (keyword (str/lower-case (name k')))) stms)))
-           {} msg)))))
+  (-> 
+   (->> (load-dir "hl7messages")
+        (reduce-map
+         (fn [k msg]
+           (reduce
+            (fn [acc [k' {els :elements}]]
+              (let [stms (->> els
+                              (mapv (fn [e]
+                                      (let [el (normalize-el {} e)
+                                            nm (if (:grp el)
+                                                 (str/lower-case (:grp el))
+                                                 (:seg el))
+                                            q (cond (and (:coll el) (:req el)) "+"
+                                                    (:coll el) "*"
+                                                    (:req el)  ""
+                                                    :else "?")]
+                                        (str nm q)))))]
+                (assoc acc (if (= k k') :msg (keyword (str/lower-case (name k')))) stms)))
+            {} msg))))
+   (assoc :idx (cheshire.core/parse-string (slurp (.getPath (io/resource "structure/index.json"))) keyword))))
 
 (defn generate []
   (spit "resources/types.yaml" (clj-yaml.core/generate-string (gen-types)))
   (spit "resources/segments.yaml" (clj-yaml.core/generate-string (gen-segments)))
   (spit "resources/messages.yaml" (clj-yaml.core/generate-string (gen-messages)))
 
+
   )
 
 (comment
+
+  (cheshire.core/parse-string (slurp "schema/structure/index.json") keyword)
 
   (generate)
 
