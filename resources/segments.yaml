@@ -137,7 +137,7 @@ OBX:
 - {name: OBX.5, type: varies, key: value, desc: Observation Value, coll: true}
 - {name: OBX.6, type: CE,   key: units, desc: Units}
 - {name: OBX.7, type: ST,   key: refrange, desc: References Range}
-- {name: OBX.8, type: IS,   key: abnormal_flags, desc: Abnormal Flags, table: HL70078, coll: true}
+- {name: OBX.8, type: IS,   key: interpretation, desc: Abnormal Flags, table: HL70078, coll: true}
 - {name: OBX.9, type: NM,   key: probability, desc: Probability}
 - {name: OBX.10, type: ID,  key: nature_of_abnormal_test, desc: Nature of Abnormal Test, table: HL70080, coll: true}
 - {name: OBX.11, type: ID,  key: status, desc: Observation Result Status, table: HL70085, req: true}
@@ -381,7 +381,7 @@ PID:
 - {name: PID.3, type: CX,   key: identifiers, desc: Patient Identifier List, req: true, coll: true}
 - {name: PID.4, type: CX,   key: alternate_id, desc: Alternate Patient ID - PID, coll: true}
 - {name: PID.5, type: XPN,  key: name, desc: Patient Name, req: true, coll: true}
-- {name: PID.6, type: XPN,  key: mother_maiden_name, desc: Mother's Maiden Name, coll: true}
+- {name: PID.6, type: XPN,  key: mother_name, desc: Mother's Maiden Name, coll: true}
 - {name: PID.7, type: TS,   key: birth_date, desc: Date/Time of Birth}
 - {name: PID.8, type: IS,   key: gender, desc: Administrative Sex, table: HL70001}
 - {name: PID.9, type: XPN,  key: alias, desc: Patient Alias, coll: true}

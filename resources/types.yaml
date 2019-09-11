@@ -249,14 +249,51 @@ XPN:
   - {type: TS, name: XPN.12, key: effective_date, desc: Effective Date}
   - {type: TS, name: XPN.13, key: expiration_date, desc: Expiration Date}
   - {type: ST, name: XPN.14, key: prof_suffix, desc: Professional Suffix}
+# Codings
 CE:
+  desc:  Coded Element
   components:
   - {type: ST, name: CE.1, key: code, desc: Identifier}
-  - {type: ST, name: CE.2, key: text, desc: Text}
+  - {type: ST, name: CE.2, key: display, desc: Text}
   - {type: ID, name: CE.3, key: system, desc: Name of Coding System}
   - {type: ST, name: CE.4, key: alternate_code, desc: Alternate Identifier}
-  - {type: ST, name: CE.5, key: alternate_text, desc: Alternate Text}
+  - {type: ST, name: CE.5, key: alternate_display, desc: Alternate Text}
   - {type: ID, name: CE.6, key: alternate_system, desc: Name of Alternate Coding System}
+CF:
+  desc: Coded Element with Formatted Values
+  components:
+  - {type: ST, name: CF.1, key: code, desc: Identifier}
+  - {type: FT, name: CF.2, key: display, desc: Formatted Text}
+  - {type: ID, name: CF.3, key: system, desc: Name of Coding System}
+  - {type: ST, name: CF.4, key: alternate_code, desc: Alternate Identifier}
+  - {type: FT, name: CF.5, key: alternate_display, desc: Alternate Formatted Text}
+  - {type: ID, name: CF.6, key: alternate_system, desc: Name of Alternate Coding System}
+CWE:
+  desc: Coded with Exceptions
+  components:
+  - {type: ST, name: CWE.1, key: code, desc: Identifier}
+  - {type: ST, name: CWE.2, key: display, desc: Text}
+  - {type: ID, name: CWE.3, key: system, desc: Name of Coding System}
+  - {type: ST, name: CWE.4, key: alternate_code, desc: Alternate Identifier}
+  - {type: ST, name: CWE.5, key: alternate_display, desc: Alternate Text}
+  - {type: ID, name: CWE.6, key: alternate_system, desc: Name of Alternate Coding System}
+  - {type: ST, name: CWE.7, key: version, desc: Coding System Version ID}
+  - {type: ST, name: CWE.8, key: alternate_version, desc: Alternate Coding System Version ID}
+  - {type: ST, name: CWE.9, key: original_display, desc: Original Text}
+
+CNE:
+  desc: Coded with No Exceptions
+  components:
+  - {type: ST, name: CNE.1, key: code, desc: Identifier}
+  - {type: ST, name: CNE.2, key: display, desc: Text}
+  - {type: ID, name: CNE.3, key: system, desc: Name of Coding System}
+  - {type: ST, name: CNE.4, key: alternate_code, desc: Alternate Identifier}
+  - {type: ST, name: CNE.5, key: alternate_display, desc: Alternate Text}
+  - {type: ID, name: CNE.6, key: alternate_system, desc: Name of Alternate Coding System}
+  - {type: ST, name: CNE.7, key: version, desc: Coding System Version ID}
+  - {type: ST, name: CNE.8, key: alternate_version, desc: Alternate Coding System Version ID}
+  - {type: ST, name: CNE.9, key: original_display, desc: Original Text}
+
 XAD:
   components:
   - {type: SAD, name: XAD.1, key: street, desc: Street Address}
@@ -287,14 +324,6 @@ MO:
   components:
   - {type: NM, name: MO.1, key: quantity, desc: Quantity}
   - {type: ID, name: MO.2, key: denomination, desc: Denomination}
-CF:
-  components:
-  - {type: ST, name: CF.1, key: value, desc: Identifier}
-  - {type: FT, name: CF.2, key: text, desc: Formatted Text}
-  - {type: ID, name: CF.3, key: system, desc: Name of Coding System}
-  - {type: ST, name: CF.4, key: alternate_value, desc: Alternate Identifier}
-  - {type: FT, name: CF.5, key: alternate_text, desc: Alternate Formatted Text}
-  - {type: ID, name: CF.6, key: alternate_system, desc: Name of Alternate Coding System}
 NR:
   components:
   - {type: NM, name: NR.1, key: low, desc: Low Value}
@@ -390,15 +419,15 @@ CSU:
   - {type: ID, name: CSU.7, key: alt_system, desc: Alternate Unit of Measure Coding System}
 CNN:
   components:
-  - {type: ST, name: CNN.1, key: id, desc: ID Number}
-  - {type: ST, name: CNN.2, key: family, desc: Family Name}
-  - {type: ST, name: CNN.3, key: given, desc: Given Name}
-  - {type: ST, name: CNN.4, key: given_extra, desc: Second and Further Given Names or Initials Thereof}
-  - {type: ST, name: CNN.5, key: suffix, desc: 'Suffix (e.g., JR or III)'}
-  - {type: ST, name: CNN.6, key: prefix, desc: 'Prefix (e.g., DR)'}
-  - {type: IS, name: CNN.7, key: degree, desc: 'Degree (e.g., MD'}
-  - {type: IS, name: CNN.8, key: source_table, desc: Source Table}
-  - {type: IS, name: CNN.9, key: authority_ns, desc: Assigning Authority   - Namespace ID}
+  - {type: ST, name: CNN.1,  key: id, desc: ID Number}
+  - {type: ST, name: CNN.2,  key: family, desc: Family Name}
+  - {type: ST, name: CNN.3,  key: given, desc: Given Name}
+  - {type: ST, name: CNN.4,  key: given_extra, desc: Second and Further Given Names or Initials Thereof}
+  - {type: ST, name: CNN.5,  key: suffix, desc: 'Suffix (e.g., JR or III)'}
+  - {type: ST, name: CNN.6,  key: prefix, desc: 'Prefix (e.g., DR)'}
+  - {type: IS, name: CNN.7,  key: degree, desc: 'Degree (e.g., MD'}
+  - {type: IS, name: CNN.8,  key: source_table, desc: Source Table}
+  - {type: IS, name: CNN.9,  key: authority_ns, desc: Assigning Authority   - Namespace ID}
   - {type: ST, name: CNN.10, key: authority_uid, desc: Assigning Authority  - Universal ID}
   - {type: ID, name: CNN.11, key: authority_uid_type, desc: Assigning Authority  - Universal ID Type}
 UVC:
@@ -423,18 +452,6 @@ RPT:
   - {type: NM, name: RPT.9, key: event_offset_quantity, desc: Event Offset Quantity}
   - {type: IS, name: RPT.10, key: event_offset_units, desc: Event Offset Units}
   - {type: GTS, name: RPT.11, key: general_timing_specification, desc: General Timing Specification}
-CWE:
-  desc: Coded with Exceptions
-  components:
-  - {type: ST, name: CWE.1, key: value, desc: Identifier}
-  - {type: ST, name: CWE.2, key: text, desc: Text}
-  - {type: ID, name: CWE.3, key: system, desc: Name of Coding System}
-  - {type: ST, name: CWE.4, key: alternate_value, desc: Alternate Identifier}
-  - {type: ST, name: CWE.5, key: alternate_text, desc: Alternate Text}
-  - {type: ID, name: CWE.6, key: alternate_system, desc: Name of Alternate Coding System}
-  - {type: ST, name: CWE.7, key: version, desc: Coding System Version ID}
-  - {type: ST, name: CWE.8, key: alternate_version, desc: Alternate Coding System Version ID}
-  - {type: ST, name: CWE.9, key: original_text, desc: Original Text}
 VH:
   components:
   - {type: ID, name: VH.1, key: start_day_range, desc: Start Day Range}
@@ -521,18 +538,6 @@ DTN:
   components:
   - {type: IS, name: DTN.1, key: day_type, desc: Day Type}
   - {type: NM, name: DTN.2, key: number_of_days, desc: Number of Days}
-CNE:
-  desc: Coded with No Exceptions
-  components:
-  - {type: ST, name: CNE.1, key: value, desc: Identifier}
-  - {type: ST, name: CNE.2, key: text, desc: Text}
-  - {type: ID, name: CNE.3, key: system, desc: Name of Coding System}
-  - {type: ST, name: CNE.4, key: alternate_value, desc: Alternate Identifier}
-  - {type: ST, name: CNE.5, key: alternate_text, desc: Alternate Text}
-  - {type: ID, name: CNE.6, key: alternate_system, desc: Name of Alternate Coding System}
-  - {type: ST, name: CNE.7, key: version, desc: Coding System Version ID}
-  - {type: ST, name: CNE.8, key: alternate_version, desc: Alternate Coding System Version ID}
-  - {type: ST, name: CNE.9, key: original_text, desc: Original Text}
 VR:
   components:
   - {type: ST, name: VR.1, key: first_data_code_value, desc: First Data Code Value}
