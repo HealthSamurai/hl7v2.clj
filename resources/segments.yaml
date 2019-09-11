@@ -222,55 +222,55 @@ BLC:
 - {name: BLC.2, type: CQ, key: blood_amount, desc: Blood Amount}
 OBR:
 - {name: OBR.1, type: SI, key: set_id, desc: Set ID - OBR}
-- {name: OBR.2, type: EI, key: placer_order_number, desc: Placer Order Number}
-- {name: OBR.3, type: EI, key: filler_order_number, desc: Filler Order Number}
-- {name: OBR.4, type: CE, key: universal_service_identifier, desc: Universal Service Identifier, req: true}
-- {name: OBR.5, type: ID, key: priority_obr, desc: Priority - OBR}
+- {name: OBR.2, type: EI, key: placer_number, desc: Placer Order Number}
+- {name: OBR.3, type: EI, key: filler_number, desc: Filler Order Number}
+- {name: OBR.4, type: CE, key: uid, desc: Universal Service Identifier, req: true}
+- {name: OBR.5, type: ID, key: priority, desc: Priority - OBR}
 - {name: OBR.6, type: TS, key: requested_datetime, desc: Requested Date/Time}
-- {name: OBR.7, type: TS, key: observation_datetime, desc: Observation Date/Time}
-- {name: OBR.8, type: TS, key: observation_end_datetime, desc: Observation End Date/Time}
+- {name: OBR.7, type: TS, key: datetime, desc: Observation Date/Time}
+- {name: OBR.8, type: TS, key: end_datetime, desc: Observation End Date/Time}
 - {name: OBR.9, type: CQ, key: collection_volume, desc: Collection Volume}
 - {name: OBR.10, type: XCN, key: collector_identifier, desc: Collector Identifier, coll: true}
 - {name: OBR.11, type: ID, key: specimen_action_code, desc: Specimen Action Code, table: HL70065}
-- {name: OBR.12, type: CE, key: danger_code, desc: Danger Code}
-- {name: OBR.13, type: ST, key: relevant_clinical_information, desc: Relevant Clinical Information}
+- {name: OBR.12, type: CE, key: danger, desc: Danger Code}
+- {name: OBR.13, type: ST, key: clinical_info, desc: Relevant Clinical Information}
 - {name: OBR.14, type: TS, key: specimen_received_datetime, desc: Specimen Received Date/Time}
 - {name: OBR.15, type: SPS, key: specimen_source, desc: Specimen Source}
 - {name: OBR.16, type: XCN, key: ordering_provider, desc: Ordering Provider, coll: true}
-- {name: OBR.17, type: XTN, key: order_callback_phone_number, desc: Order Callback Phone Number, coll: true}
+- {name: OBR.17, type: XTN, key: callback_phone_number, desc: Order Callback Phone Number, coll: true}
 - {name: OBR.18, type: ST, key: placer_field_1, desc: Placer Field 1}
 - {name: OBR.19, type: ST, key: placer_field_2, desc: Placer Field 2}
 - {name: OBR.20, type: ST, key: filler_field_1, desc: Filler Field 1}
 - {name: OBR.21, type: ST, key: filler_field_2, desc: Filler Field 2}
-- {name: OBR.22, type: TS, key: results_rpt_status_chng_datetime, desc: Results Rpt/Status Chng - Date/Time}
+- {name: OBR.22, type: TS, key: result_status_change_datetime, desc: Results Rpt/Status Chng - Date/Time}
 - {name: OBR.23, type: MOC, key: charge_to_practice, desc: Charge to Practice}
-- {name: OBR.24, type: ID, key: diagnostic_serv_sect_id, desc: Diagnostic Serv Sect ID, table: HL70074}
-- {name: OBR.25, type: ID, key: result_status, desc: Result Status, table: HL70123}
+- {name: OBR.24, type: ID, key: diagnostic_service, desc: Diagnostic Serv Sect ID, table: HL70074}
+- {name: OBR.25, type: ID, key: status, desc: Result Status, table: HL70123}
 - {name: OBR.26, type: PRL, key: parent_result, desc: Parent Result}
 - {name: OBR.27, type: TQ, key: quantity_timing, desc: Quantity/Timing, coll: true}
-- {name: OBR.28, type: XCN, key: result_copies_to, desc: Result Copies To, coll: true}
+- {name: OBR.28, type: XCN, key: copies, desc: Result Copies To, coll: true}
 - {name: OBR.29, type: EIP, key: parent, desc: Parent}
-- {name: OBR.30, type: ID, key: transportation_mode, desc: Transportation Mode, table: HL70124}
-- {name: OBR.31, type: CE, key: reason_for_study, desc: Reason for Study, coll: true}
-- {name: OBR.32, type: NDL, key: principal_result_interpreter, desc: Principal Result Interpreter}
-- {name: OBR.33, type: NDL, key: assistant_result_interpreter, desc: Assistant Result Interpreter, coll: true}
+- {name: OBR.30, type: ID, key: transportation, desc: Transportation Mode, table: HL70124}
+- {name: OBR.31, type: CE, key: reason, desc: Reason for Study, coll: true}
+- {name: OBR.32, type: NDL, key: principal_interpreter, desc: Principal Result Interpreter}
+- {name: OBR.33, type: NDL, key: assistant_interpreter, desc: Assistant Result Interpreter, coll: true}
 - {name: OBR.34, type: NDL, key: technician, desc: Technician, coll: true}
 - {name: OBR.35, type: NDL, key: transcriptionist, desc: Transcriptionist, coll: true}
 - {name: OBR.36, type: TS, key: scheduled_datetime, desc: Scheduled Date/Time}
-- {name: OBR.37, type: NM, key: number_of_sample_containers_, desc: Number of Sample Containers *}
-- {name: OBR.38, type: CE, key: transport_logistics_of_collected_sample, desc: Transport Logistics of Collected Sample, coll: true}
-- {name: OBR.39, type: CE, key: collector_comment_, desc: Collector's Comment *, coll: true}
+- {name: OBR.37, type: NM, key: sample_number_of_containers, desc: Number of Sample Containers *}
+- {name: OBR.38, type: CE, key: sample_transport_logistics, desc: Transport Logistics of Collected Sample, coll: true}
+- {name: OBR.39, type: CE, key: collector_comment, desc: Collector's Comment *, coll: true}
 - {name: OBR.40, type: CE, key: transport_arrangement_responsibility, desc: Transport Arrangement Responsibility}
 - {name: OBR.41, type: ID, key: transport_arranged, desc: Transport Arranged, table: HL70224}
 - {name: OBR.42, type: ID, key: escort_required, desc: Escort Required, table: HL70225}
 - {name: OBR.43, type: CE, key: planned_patient_transport_comment, desc: Planned Patient Transport Comment, coll: true}
 - {name: OBR.44, type: CE, key: procedure_code, desc: Procedure Code, table: HL70088}
 - {name: OBR.45, type: CE, key: procedure_code_modifier, desc: Procedure Code Modifier, table: HL70340, coll: true}
-- {name: OBR.46, type: CE, key: placer_supplemental_service_information, desc: Placer Supplemental Service Information, table: HL70411, coll: true}
-- {name: OBR.47, type: CE, key: filler_supplemental_service_information, desc: Filler Supplemental Service Information, table: HL70411, coll: true}
-- {name: OBR.48, type: CWE, key: medically_necessary_duplicate_procedure_reason_, desc: Medically Necessary Duplicate Procedure Reason., table: HL70476}
+- {name: OBR.46, type: CE, key: placer_supplemental_service_info, desc: Placer Supplemental Service Information, table: HL70411, coll: true}
+- {name: OBR.47, type: CE, key: filler_supplemental_service_info, desc: Filler Supplemental Service Information, table: HL70411, coll: true}
+- {name: OBR.48, type: CWE, key: duplicate_procedure_reason, desc: Medically Necessary Duplicate Procedure Reason., table: HL70476}
 - {name: OBR.49, type: IS, key: result_handling, desc: Result Handling, table: HL70507}
-- {name: OBR.50, type: CWE, key: parent_universal_service_identifier, desc: Parent Universal Service Identifier}
+- {name: OBR.50, type: CWE, key: parent_uid, desc: Parent Universal Service Identifier}
 AIG:
 - {name: AIG.1, type: SI, key: set_id, desc: Set ID - AIG, req: true}
 - {name: AIG.2, type: ID, key: segment_action_code, desc: Segment Action Code, table: HL70206}
@@ -748,7 +748,7 @@ NK1:
 - {name: NK1.19, type: CE, key: citizenship, desc: Citizenship, table: HL70171, coll: true}
 - {name: NK1.20, type: CE, key: primary_language, desc: Primary Language, table: HL70296}
 - {name: NK1.21, type: IS, key: living_arrangement, desc: Living Arrangement, table: HL70220}
-- {name: NK1.22, type: CE, key: publicity_code, desc: Publicity Code, table: HL70215}
+- {name: NK1.22, type: CE, key: publicity, desc: Publicity Code, table: HL70215}
 - {name: NK1.23, type: ID, key: protection_indicator, desc: Protection Indicator, table: HL70136}
 - {name: NK1.24, type: IS, key: student_indicator, desc: Student Indicator, table: HL70231}
 - {name: NK1.25, type: CE, key: religion, desc: Religion, table: HL70006}
@@ -1186,7 +1186,7 @@ PV2:
 - {name: PV2.18, type: IS, key: special_program_code, desc: Special Program Code, table: HL70214}
 - {name: PV2.19, type: ID, key: retention_indicator, desc: Retention Indicator, table: HL70136}
 - {name: PV2.20, type: NM, key: expected_number_of_insurance_plans, desc: Expected Number of Insurance Plans}
-- {name: PV2.21, type: IS, key: visit_publicity_code, desc: Visit Publicity Code, table: HL70215}
+- {name: PV2.21, type: IS, key: visit_publicity, desc: Visit Publicity Code, table: HL70215}
 - {name: PV2.22, type: ID, key: visit_protection_indicator, desc: Visit Protection Indicator, table: HL70136}
 - {name: PV2.23, type: XON, key: clinic_organization_name, desc: Clinic Organization Name, coll: true}
 - {name: PV2.24, type: IS, key: patient_status_code, desc: Patient Status Code, table: HL70216}
@@ -1317,58 +1317,58 @@ CNS:
 - {name: CNS.6, type: CE, key: ending_notification_code, desc: Ending Notification Code}
 IN1:
 - {name: IN1.1, type: SI, key: set_id, desc: Set ID - IN1, req: true}
-- {name: IN1.2, type: CE, key: insurance_plan_id, desc: Insurance Plan ID, table: HL70072, req: true}
-- {name: IN1.3, type: CX, key: insurance_company_id, desc: Insurance Company ID, req: true, coll: true}
-- {name: IN1.4, type: XON, key: insurance_company_name, desc: Insurance Company Name, coll: true}
-- {name: IN1.5, type: XAD, key: insurance_company_address, desc: Insurance Company Address, coll: true}
-- {name: IN1.6, type: XPN, key: insurance_co_contact_person, desc: Insurance Co Contact Person, coll: true}
-- {name: IN1.7, type: XTN, key: insurance_co_phone_number, desc: Insurance Co Phone Number, coll: true}
+- {name: IN1.2, type: CE, key: plan_id, desc: Insurance Plan ID, table: HL70072, req: true}
+- {name: IN1.3, type: CX, key: company_id, desc: Insurance Company ID, req: true, coll: true}
+- {name: IN1.4, type: XON, key: company_name, desc: Insurance Company Name, coll: true}
+- {name: IN1.5, type: XAD, key: company_address, desc: Insurance Company Address, coll: true}
+- {name: IN1.6, type: XPN, key: contact_person, desc: Insurance Co Contact Person, coll: true}
+- {name: IN1.7, type: XTN, key: phone_number, desc: Insurance Co Phone Number, coll: true}
 - {name: IN1.8, type: ST, key: group_number, desc: Group Number}
 - {name: IN1.9, type: XON, key: group_name, desc: Group Name, coll: true}
-- {name: IN1.10, type: CX, key: insured_group_emp_id, desc: Insured's Group Emp ID, coll: true}
-- {name: IN1.11, type: XON, key: insured_group_emp_name, desc: Insured's Group Emp Name, coll: true}
+- {name: IN1.10, type: CX, key: group_emp_id, desc: Insured's Group Emp ID, coll: true}
+- {name: IN1.11, type: XON, key: group_emp_name, desc: Insured's Group Emp Name, coll: true}
 - {name: IN1.12, type: DT, key: plan_effective_date, desc: Plan Effective Date}
 - {name: IN1.13, type: DT, key: plan_expiration_date, desc: Plan Expiration Date}
-- {name: IN1.14, type: AUI, key: authorization_information, desc: Authorization Information}
+- {name: IN1.14, type: AUI, key: authorization_info, desc: Authorization Information}
 - {name: IN1.15, type: IS, key: plan_type, desc: Plan Type, table: HL70086}
-- {name: IN1.16, type: XPN, key: name_of_insured, desc: Name Of Insured, coll: true}
-- {name: IN1.17, type: CE, key: insured_relationship_to_patient, desc: Insured's Relationship To Patient, table: HL70063}
-- {name: IN1.18, type: TS, key: insured_date_of_birth, desc: Insured's Date Of Birth}
-- {name: IN1.19, type: XAD, key: insured_address, desc: Insured's Address, coll: true}
-- {name: IN1.20, type: IS, key: assignment_of_benefits, desc: Assignment Of Benefits, table: HL70135}
-- {name: IN1.21, type: IS, key: coordination_of_benefits, desc: Coordination Of Benefits, table: HL70173}
-- {name: IN1.22, type: ST, key: coord_of_ben_priority, desc: Coord Of Ben. Priority}
-- {name: IN1.23, type: ID, key: notice_of_admission_flag, desc: Notice Of Admission Flag, table: HL70136}
-- {name: IN1.24, type: DT, key: notice_of_admission_date, desc: Notice Of Admission Date}
-- {name: IN1.25, type: ID, key: report_of_eligibility_flag, desc: Report Of Eligibility Flag, table: HL70136}
-- {name: IN1.26, type: DT, key: report_of_eligibility_date, desc: Report Of Eligibility Date}
-- {name: IN1.27, type: IS, key: release_information_code, desc: Release Information Code, table: HL70093}
-- {name: IN1.28, type: ST, key: pre_admit_cert_, desc: Pre-Admit Cert (PAC)}
+- {name: IN1.16, type: XPN, key: name, desc: Name Of Insured, coll: true}
+- {name: IN1.17, type: CE, key: relationship_to_patient, desc: Insured's Relationship To Patient, table: HL70063}
+- {name: IN1.18, type: TS, key: birth_date, desc: Insured's Date Of Birth}
+- {name: IN1.19, type: XAD, key: address, desc: Insured's Address, coll: true}
+- {name: IN1.20, type: IS, key: benifits_assignment, desc: Assignment Of Benefits, table: HL70135}
+- {name: IN1.21, type: IS, key: benifits_coordination, desc: Coordination Of Benefits, table: HL70173}
+- {name: IN1.22, type: ST, key: benifits_coordination_priority, desc: Coord Of Ben. Priority}
+- {name: IN1.23, type: ID, key: admission_flag, desc: Notice Of Admission Flag, table: HL70136}
+- {name: IN1.24, type: DT, key: admission_date, desc: Notice Of Admission Date}
+- {name: IN1.25, type: ID, key: eligibility_flag, desc: Report Of Eligibility Flag, table: HL70136}
+- {name: IN1.26, type: DT, key: eligibility_date, desc: Report Of Eligibility Date}
+- {name: IN1.27, type: IS, key: release_info, desc: Release Information Code, table: HL70093}
+- {name: IN1.28, type: ST, key: pre_admit_cert, desc: Pre-Admit Cert (PAC)}
 - {name: IN1.29, type: TS, key: verification_datetime, desc: Verification Date/Time}
 - {name: IN1.30, type: XCN, key: verification_by, desc: Verification By, coll: true}
-- {name: IN1.31, type: IS, key: type_of_agreement_code, desc: Type Of Agreement Code, table: HL70098}
+- {name: IN1.31, type: IS, key: agreement_type, desc: Type Of Agreement Code, table: HL70098}
 - {name: IN1.32, type: IS, key: billing_status, desc: Billing Status, table: HL70022}
 - {name: IN1.33, type: NM, key: lifetime_reserve_days, desc: Lifetime Reserve Days}
-- {name: IN1.34, type: NM, key: delay_before_l_r_day, desc: Delay Before L.R. Day}
-- {name: IN1.35, type: IS, key: company_plan_code, desc: Company Plan Code, table: HL70042}
+- {name: IN1.34, type: NM, key: delay_before_lr_day, desc: Delay Before L.R. Day}
+- {name: IN1.35, type: IS, key: company_plan, desc: Company Plan Code, table: HL70042}
 - {name: IN1.36, type: ST, key: policy_number, desc: Policy Number}
 - {name: IN1.37, type: CP, key: policy_deductible, desc: Policy Deductible}
 - {name: IN1.38, type: CP, key: policy_limit_amount, desc: Policy Limit - Amount}
 - {name: IN1.39, type: NM, key: policy_limit_days, desc: Policy Limit - Days}
 - {name: IN1.40, type: CP, key: room_rate_semi_private, desc: Room Rate - Semi-Private}
 - {name: IN1.41, type: CP, key: room_rate_private, desc: Room Rate - Private}
-- {name: IN1.42, type: CE, key: insured_employment_status, desc: Insured's Employment Status, table: HL70066}
-- {name: IN1.43, type: IS, key: insured_gender, desc: Insured's Administrative Sex, table: HL70001}
-- {name: IN1.44, type: XAD, key: insured_employer_address, desc: Insured's Employer's Address, coll: true}
+- {name: IN1.42, type: CE, key: employment_status, desc: Insured's Employment Status, table: HL70066}
+- {name: IN1.43, type: IS, key: gender, desc: Insured's Administrative Sex, table: HL70001}
+- {name: IN1.44, type: XAD, key: employer_address, desc: Insured's Employer's Address, coll: true}
 - {name: IN1.45, type: ST, key: verification_status, desc: Verification Status}
-- {name: IN1.46, type: IS, key: prior_insurance_plan_id, desc: Prior Insurance Plan ID, table: HL70072}
-- {name: IN1.47, type: IS, key: coverage_type, desc: Coverage Type, table: HL70309}
+- {name: IN1.46, type: IS, key: prior_insurance_plan, desc: Prior Insurance Plan ID, table: HL70072}
+- {name: IN1.47, type: IS, key: coverage, desc: Coverage Type, table: HL70309}
 - {name: IN1.48, type: IS, key: handicap, desc: Handicap, table: HL70295}
 - {name: IN1.49, type: CX, key: insured_id_number, desc: Insured's ID Number, coll: true}
-- {name: IN1.50, type: IS, key: signature_code, desc: Signature Code, table: HL70535}
-- {name: IN1.51, type: DT, key: signature_code_date, desc: Signature Code Date}
-- {name: IN1.52, type: ST, key: insured_birth_place, desc: Insured's Birth Place}
-- {name: IN1.53, type: IS, key: vip_indicator, desc: VIP Indicator, table: HL70099}
+- {name: IN1.50, type: IS, key: signature, desc: Signature Code, table: HL70535}
+- {name: IN1.51, type: DT, key: signature_date, desc: Signature Code Date}
+- {name: IN1.52, type: ST, key: birth_place, desc: Insured's Birth Place}
+- {name: IN1.53, type: IS, key: vip, desc: VIP Indicator, table: HL70099}
 EVN:
 - {name: EVN.1, type: ID, key: event_type_code, desc: Event Type Code, table: HL70003}
 - {name: EVN.2, type: TS, key: recorded_datetime, desc: Recorded Date/Time, req: true}
@@ -1499,62 +1499,62 @@ ITM:
 # TODO: here
 GT1:
 - {name: GT1.1, type: SI,   key: set_id, desc: Set ID - GT1, req: true}
-- {name: GT1.2, type: CX,   key: guarantor_number, desc: Guarantor Number, coll: true}
-- {name: GT1.3, type: XPN,  key: guarantor_name, desc: Guarantor Name, req: true, coll: true}
-- {name: GT1.4, type: XPN,  key: guarantor_spouse_name, desc: Guarantor Spouse Name, coll: true}
-- {name: GT1.5, type: XAD,  key: guarantor_address, desc: Guarantor Address, coll: true}
-- {name: GT1.6, type: XTN,  key: guarantor_home_phone, desc: Guarantor Ph Num - Home, coll: true}
-- {name: GT1.7, type: XTN,  key: guarantor_work_phone, desc: Guarantor Ph Num - Business, coll: true}
-- {name: GT1.8, type: TS,   key: guarantor_birth_date, desc: Guarantor Date/Time Of Birth}
-- {name: GT1.9, type: IS,   key: guarantor_gender, desc: Guarantor Administrative Sex, table: HL70001}
-- {name: GT1.10, type: IS,  key: guarantor_type, desc: Guarantor Type, table: HL70068}
-- {name: GT1.11, type: CE,  key: guarantor_relationship, desc: Guarantor Relationship, table: HL70063}
-- {name: GT1.12, type: ST,  key: guarantor_ssn, desc: Guarantor SSN}
-- {name: GT1.13, type: DT,  key: guarantor_date_begin, desc: Guarantor Date - Begin}
-- {name: GT1.14, type: DT,  key: guarantor_date_end, desc: Guarantor Date - End}
-- {name: GT1.15, type: NM,  key: guarantor_priority, desc: Guarantor Priority}
-- {name: GT1.16, type: XPN, key: guarantor_employer_name, desc: Guarantor Employer Name, coll: true}
-- {name: GT1.17, type: XAD, key: guarantor_employer_address, desc: Guarantor Employer Address, coll: true}
-- {name: GT1.18, type: XTN, key: guarantor_employer_phone_number, desc: Guarantor Employer Phone Number, coll: true}
-- {name: GT1.19, type: CX,  key: guarantor_employee_id_number, desc: Guarantor Employee ID Number, coll: true}
-- {name: GT1.20, type: IS,  key: guarantor_employment_status, desc: Guarantor Employment Status, table: HL70066}
-- {name: GT1.21, type: XON, key: guarantor_organization_name, desc: Guarantor Organization Name, coll: true}
-- {name: GT1.22, type: ID,  key: guarantor_billing_hold_flag, desc: Guarantor Billing Hold Flag, table: HL70136}
-- {name: GT1.23, type: CE,  key: guarantor_credit_rating_code, desc: Guarantor Credit Rating Code, table: HL70341}
-- {name: GT1.24, type: TS,  key: guarantor_death_date_and_time, desc: Guarantor Death Date And Time}
-- {name: GT1.25, type: ID,  key: guarantor_death_flag, desc: Guarantor Death Flag, table: HL70136}
-- {name: GT1.26, type: CE,  key: guarantor_charge_adjustment_code, desc: Guarantor Charge Adjustment Code, table: HL70218}
-- {name: GT1.27, type: CP,  key: guarantor_household_annual_income, desc: Guarantor Household Annual Income}
-- {name: GT1.28, type: NM,  key: guarantor_household_size, desc: Guarantor Household Size}
-- {name: GT1.29, type: CX,  key: guarantor_employer_id_number, desc: Guarantor Employer ID Number, coll: true}
-- {name: GT1.30, type: CE,  key: guarantor_marital_status_code, desc: Guarantor Marital Status Code, table: HL70002}
-- {name: GT1.31, type: DT,  key: guarantor_hire_effective_date, desc: Guarantor Hire Effective Date}
+- {name: GT1.2, type: CX,   key: identifiers, desc: Guarantor Number, coll: true}
+- {name: GT1.3, type: XPN,  key: name, desc: Guarantor Name, req: true, coll: true}
+- {name: GT1.4, type: XPN,  key: spouse_name, desc: Guarantor Spouse Name, coll: true}
+- {name: GT1.5, type: XAD,  key: address, desc: Guarantor Address, coll: true}
+- {name: GT1.6, type: XTN,  key: home_phone, desc: Guarantor Ph Num - Home, coll: true}
+- {name: GT1.7, type: XTN,  key: work_phone, desc: Guarantor Ph Num - Business, coll: true}
+- {name: GT1.8, type: TS,   key: birth_date, desc: Guarantor Date/Time Of Birth}
+- {name: GT1.9, type: IS,   key: gender, desc: Guarantor Administrative Sex, table: HL70001}
+- {name: GT1.10, type: IS,  key: type, desc: Guarantor Type, table: HL70068}
+- {name: GT1.11, type: CE,  key: relationship, desc: Guarantor Relationship, table: HL70063}
+- {name: GT1.12, type: ST,  key: ssn, desc: Guarantor SSN}
+- {name: GT1.13, type: DT,  key: date_begin, desc: Guarantor Date - Begin}
+- {name: GT1.14, type: DT,  key: date_end, desc: Guarantor Date - End}
+- {name: GT1.15, type: NM,  key: priority, desc: Guarantor Priority}
+- {name: GT1.16, type: XPN, key: employer_name, desc: Guarantor Employer Name, coll: true}
+- {name: GT1.17, type: XAD, key: employer_address, desc: Guarantor Employer Address, coll: true}
+- {name: GT1.18, type: XTN, key: employer_phone_number, desc: Guarantor Employer Phone Number, coll: true}
+- {name: GT1.19, type: CX,  key: employee_id, desc: Guarantor Employee ID Number, coll: true}
+- {name: GT1.20, type: IS,  key: employment_status, desc: Guarantor Employment Status, table: HL70066}
+- {name: GT1.21, type: XON, key: organization_name, desc: Guarantor Organization Name, coll: true}
+- {name: GT1.22, type: ID,  key: billing_hold_flag, desc: Guarantor Billing Hold Flag, table: HL70136}
+- {name: GT1.23, type: CE,  key: credit_rating, desc: Guarantor Credit Rating Code, table: HL70341}
+- {name: GT1.24, type: TS,  key: death_datetime, desc: Guarantor Death Date And Time}
+- {name: GT1.25, type: ID,  key: death_flag, desc: Guarantor Death Flag, table: HL70136}
+- {name: GT1.26, type: CE,  key: charge_adjustment, desc: Guarantor Charge Adjustment Code, table: HL70218}
+- {name: GT1.27, type: CP,  key: household_annual_income, desc: Guarantor Household Annual Income}
+- {name: GT1.28, type: NM,  key: household_size, desc: Guarantor Household Size}
+- {name: GT1.29, type: CX,  key: employer_id, desc: Guarantor Employer ID Number, coll: true}
+- {name: GT1.30, type: CE,  key: marital_status, desc: Guarantor Marital Status Code, table: HL70002}
+- {name: GT1.31, type: DT,  key: hire_effective_date, desc: Guarantor Hire Effective Date}
 - {name: GT1.32, type: DT,  key: employment_stop_date, desc: Employment Stop Date}
 - {name: GT1.33, type: IS,  key: living_dependency, desc: Living Dependency, table: HL70223}
 - {name: GT1.34, type: IS,  key: ambulatory_status, desc: Ambulatory Status, table: HL70009, coll: true}
 - {name: GT1.35, type: CE,  key: citizenship, desc: Citizenship, table: HL70171, coll: true}
 - {name: GT1.36, type: CE,  key: primary_language, desc: Primary Language, table: HL70296}
 - {name: GT1.37, type: IS,  key: living_arrangement, desc: Living Arrangement, table: HL70220}
-- {name: GT1.38, type: CE,  key: publicity_code, desc: Publicity Code, table: HL70215}
+- {name: GT1.38, type: CE,  key: publicity, desc: Publicity Code, table: HL70215}
 - {name: GT1.39, type: ID,  key: protection_indicator, desc: Protection Indicator, table: HL70136}
 - {name: GT1.40, type: IS,  key: student_indicator, desc: Student Indicator, table: HL70231}
 - {name: GT1.41, type: CE,  key: religion, desc: Religion, table: HL70006}
-- {name: GT1.42, type: XPN, key: mother_maiden_name, desc: Mother's Maiden Name, coll: true}
+- {name: GT1.42, type: XPN, key: mother_name, desc: Mother's Maiden Name, coll: true}
 - {name: GT1.43, type: CE,  key: nationality, desc: Nationality, table: HL70212}
-- {name: GT1.44, type: CE,  key: ethnic_group, desc: Ethnic Group, table: HL70189, coll: true}
-- {name: GT1.45, type: XPN, key: contact_person_name, desc: Contact Person's Name, coll: true}
-- {name: GT1.46, type: XTN, key: contact_person_telephone_number, desc: Contact Person's Telephone Number, coll: true}
+- {name: GT1.44, type: CE,  key: ethnicity, desc: Ethnic Group, table: HL70189, coll: true}
+- {name: GT1.45, type: XPN, key: contact_name, desc: Contact Person's Name, coll: true}
+- {name: GT1.46, type: XTN, key: contact_phone, desc: Contact Person's Telephone Number, coll: true}
 - {name: GT1.47, type: CE,  key: contact_reason, desc: Contact Reason, table: HL70222}
 - {name: GT1.48, type: IS,  key: contact_relationship, desc: Contact Relationship, table: HL70063}
 - {name: GT1.49, type: ST,  key: job_title, desc: Job Title}
 - {name: GT1.50, type: JCC, key: job_code_class, desc: Job Code/Class}
-- {name: GT1.51, type: XON, key: guarantor_employer_organization_name, desc: Guarantor Employer's Organization Name, coll: true}
+- {name: GT1.51, type: XON, key: employer_organization, desc: Guarantor Employer's Organization Name, coll: true}
 - {name: GT1.52, type: IS,  key: handicap, desc: Handicap, table: HL70295}
 - {name: GT1.53, type: IS,  key: job_status, desc: Job Status, table: HL70311}
-- {name: GT1.54, type: FC,  key: guarantor_financial_class, desc: Guarantor Financial Class}
-- {name: GT1.55, type: CE,  key: guarantor_race, desc: Guarantor Race, table: HL70005, coll: true}
-- {name: GT1.56, type: ST,  key: guarantor_birth_place, desc: Guarantor Birth Place}
-- {name: GT1.57, type: IS,  key: vip_indicator, desc: VIP Indicator, table: HL70099}
+- {name: GT1.54, type: FC,  key: financial_class, desc: Guarantor Financial Class}
+- {name: GT1.55, type: CE,  key: race, desc: Guarantor Race, table: HL70005, coll: true}
+- {name: GT1.56, type: ST,  key: birth_place, desc: Guarantor Birth Place}
+- {name: GT1.57, type: IS,  key: vip, desc: VIP Indicator, table: HL70099}
 AFF:
 - {name: AFF.1, type: SI, key: set_id, desc: Set ID - AFF, req: true}
 - {name: AFF.2, type: XON, key: professional_organization, desc: Professional Organization, req: true}
@@ -1894,30 +1894,30 @@ LRL:
 - {name: LRL.5, type: XON, key: organizational_location_relationship_value, desc: Organizational Location Relationship Value, coll: true}
 - {name: LRL.6, type: PL, key: patient_location_relationship_value, desc: Patient Location Relationship Value}
 IN2:
-- {name: IN2.1, type: CX, key: insured_employee_id, desc: Insured's Employee ID, coll: true}
-- {name: IN2.2, type: ST, key: insured_social_security_number, desc: Insured's Social Security Number}
-- {name: IN2.3, type: XCN, key: insured_employer_name_and_id, desc: Insured's Employer's Name and ID, coll: true}
-- {name: IN2.4, type: IS, key: employer_information_data, desc: Employer Information Data, table: HL70139}
+- {name: IN2.1, type: CX, key: employee_id, desc: Insured's Employee ID, coll: true}
+- {name: IN2.2, type: ST, key: ssn, desc: Insured's Social Security Number}
+- {name: IN2.3, type: XCN, key: employer_name, desc: Insured's Employer's Name and ID, coll: true}
+- {name: IN2.4, type: IS, key: employer_info, desc: Employer Information Data, table: HL70139}
 - {name: IN2.5, type: IS, key: mail_claim_party, desc: Mail Claim Party, table: HL70137, coll: true}
-- {name: IN2.6, type: ST, key: medicare_health_ins_card_number, desc: Medicare Health Ins Card Number}
-- {name: IN2.7, type: XPN, key: medicaid_case_name, desc: Medicaid Case Name, coll: true}
-- {name: IN2.8, type: ST, key: medicaid_case_number, desc: Medicaid Case Number}
+- {name: IN2.6, type: ST, key: medicare_id, desc: Medicare Health Ins Card Number}
+- {name: IN2.7, type: XPN, key: medicaid_case, desc: Medicaid Case Name, coll: true}
+- {name: IN2.8, type: ST, key: medicaid_id, desc: Medicaid Case Number}
 - {name: IN2.9, type: XPN, key: military_sponsor_name, desc: Military Sponsor Name, coll: true}
-- {name: IN2.10, type: ST, key: military_id_number, desc: Military ID Number}
-- {name: IN2.11, type: CE, key: dependent_of_military_recipient, desc: Dependent Of Military Recipient, table: HL70342}
+- {name: IN2.10, type: ST, key: military_id, desc: Military ID Number}
+- {name: IN2.11, type: CE, key: military_recipient, desc: Dependent Of Military Recipient, table: HL70342}
 - {name: IN2.12, type: ST, key: military_organization, desc: Military Organization}
 - {name: IN2.13, type: ST, key: military_station, desc: Military Station}
 - {name: IN2.14, type: IS, key: military_service, desc: Military Service, table: HL70140}
 - {name: IN2.15, type: IS, key: military_rank_grade, desc: Military Rank/Grade, table: HL70141}
 - {name: IN2.16, type: IS, key: military_status, desc: Military Status, table: HL70142}
 - {name: IN2.17, type: DT, key: military_retire_date, desc: Military Retire Date}
-- {name: IN2.18, type: ID, key: military_non_avail_cert_on_file, desc: Military Non-Avail Cert On File, table: HL70136}
+- {name: IN2.18, type: ID, key: military_cert, desc: Military Non-Avail Cert On File, table: HL70136}
 - {name: IN2.19, type: ID, key: baby_coverage, desc: Baby Coverage, table: HL70136}
-- {name: IN2.20, type: ID, key: combine_baby_bill, desc: Combine Baby Bill, table: HL70136}
+- {name: IN2.20, type: ID, key: baby_bill, desc: Combine Baby Bill, table: HL70136}
 - {name: IN2.21, type: ST, key: blood_deductible, desc: Blood Deductible}
 - {name: IN2.22, type: XPN, key: special_coverage_approval_name, desc: Special Coverage Approval Name, coll: true}
 - {name: IN2.23, type: ST, key: special_coverage_approval_title, desc: Special Coverage Approval Title}
-- {name: IN2.24, type: IS, key: non_covered_insurance_code, desc: Non-Covered Insurance Code, table: HL70143, coll: true}
+- {name: IN2.24, type: IS, key: non_covered_insurance, desc: Non-Covered Insurance Code, table: HL70143, coll: true}
 - {name: IN2.25, type: CX, key: payor_id, desc: Payor ID, coll: true}
 - {name: IN2.26, type: CX, key: payor_subscriber_id, desc: Payor Subscriber ID, coll: true}
 - {name: IN2.27, type: IS, key: eligibility_source, desc: Eligibility Source, table: HL70144}
@@ -1929,43 +1929,43 @@ IN2:
 - {name: IN2.33, type: CE, key: citizenship, desc: Citizenship, table: HL70171, coll: true}
 - {name: IN2.34, type: CE, key: primary_language, desc: Primary Language, table: HL70296}
 - {name: IN2.35, type: IS, key: living_arrangement, desc: Living Arrangement, table: HL70220}
-- {name: IN2.36, type: CE, key: publicity_code, desc: Publicity Code, table: HL70215}
-- {name: IN2.37, type: ID, key: protection_indicator, desc: Protection Indicator, table: HL70136}
-- {name: IN2.38, type: IS, key: student_indicator, desc: Student Indicator, table: HL70231}
+- {name: IN2.36, type: CE, key: publicity, desc: Publicity Code, table: HL70215}
+- {name: IN2.37, type: ID, key: protection, desc: Protection Indicator, table: HL70136}
+- {name: IN2.38, type: IS, key: student, desc: Student Indicator, table: HL70231}
 - {name: IN2.39, type: CE, key: religion, desc: Religion, table: HL70006}
 - {name: IN2.40, type: XPN, key: mother_maiden_name, desc: Mother's Maiden Name, coll: true}
 - {name: IN2.41, type: CE, key: nationality, desc: Nationality, table: HL70212}
-- {name: IN2.42, type: CE, key: ethnic_group, desc: Ethnic Group, table: HL70189, coll: true}
+- {name: IN2.42, type: CE, key: ethnicity, desc: Ethnic Group, table: HL70189, coll: true}
 - {name: IN2.43, type: CE, key: marital_status, desc: Marital Status, table: HL70002, coll: true}
-- {name: IN2.44, type: DT, key: insured_employment_start_date, desc: Insured's Employment Start Date}
+- {name: IN2.44, type: DT, key: employment_start_date, desc: Insured's Employment Start Date}
 - {name: IN2.45, type: DT, key: employment_stop_date, desc: Employment Stop Date}
 - {name: IN2.46, type: ST, key: job_title, desc: Job Title}
-- {name: IN2.47, type: JCC, key: job_code_class, desc: Job Code/Class}
+- {name: IN2.47, type: JCC, key: job_class, desc: Job Code/Class}
 - {name: IN2.48, type: IS, key: job_status, desc: Job Status, table: HL70311}
 - {name: IN2.49, type: XPN, key: employer_contact_person_name, desc: Employer Contact Person Name, coll: true}
-- {name: IN2.50, type: XTN, key: employer_contact_person_phone_number, desc: Employer Contact Person Phone Number, coll: true}
+- {name: IN2.50, type: XTN, key: employer_contact_person_phone, desc: Employer Contact Person Phone Number, coll: true}
 - {name: IN2.51, type: IS, key: employer_contact_reason, desc: Employer Contact Reason, table: HL70222}
-- {name: IN2.52, type: XPN, key: insured_contact_person_name, desc: Insured's Contact Person's Name, coll: true}
-- {name: IN2.53, type: XTN, key: insured_contact_person_phone_number, desc: Insured's Contact Person Phone Number, coll: true}
-- {name: IN2.54, type: IS, key: insured_contact_person_reason, desc: Insured's Contact Person Reason, table: HL70222, coll: true}
-- {name: IN2.55, type: DT, key: relationship_to_the_patient_start_date, desc: Relationship to the Patient Start Date}
-- {name: IN2.56, type: DT, key: relationship_to_the_patient_stop_date, desc: Relationship to the Patient Stop Date, coll: true}
-- {name: IN2.57, type: IS, key: insurance_co_contact_reason, desc: Insurance Co. Contact Reason, table: HL70232}
-- {name: IN2.58, type: XTN, key: insurance_co_contact_phone_number, desc: Insurance Co Contact Phone Number}
+- {name: IN2.52, type: XPN, key: contact_name, desc: Insured's Contact Person's Name, coll: true}
+- {name: IN2.53, type: XTN, key: contact_phone, desc: Insured's Contact Person Phone Number, coll: true}
+- {name: IN2.54, type: IS, key: contact_reason, desc: Insured's Contact Person Reason, table: HL70222, coll: true}
+- {name: IN2.55, type: DT, key: relationship_start_date, desc: Relationship to the Patient Start Date}
+- {name: IN2.56, type: DT, key: relationship_stop_date, desc: Relationship to the Patient Stop Date, coll: true}
+- {name: IN2.57, type: IS, key: insurance_contact_reason, desc: Insurance Co. Contact Reason, table: HL70232}
+- {name: IN2.58, type: XTN, key: insurance_contact_phone, desc: Insurance Co Contact Phone Number}
 - {name: IN2.59, type: IS, key: policy_scope, desc: Policy Scope, table: HL70312}
 - {name: IN2.60, type: IS, key: policy_source, desc: Policy Source, table: HL70313}
 - {name: IN2.61, type: CX, key: patient_member_number, desc: Patient Member Number}
-- {name: IN2.62, type: CE, key: guarantor_relationship_to_insured, desc: Guarantor's Relationship to Insured, table: HL70063}
-- {name: IN2.63, type: XTN, key: insured_home_phone, desc: Insured's Phone Number - Home, coll: true}
-- {name: IN2.64, type: XTN, key: insured_employer_phone_number, desc: Insured's Employer Phone Number, coll: true}
-- {name: IN2.65, type: CE, key: military_handicapped_program, desc: Military Handicapped Program, table: HL70343}
-- {name: IN2.66, type: ID, key: suspend_flag, desc: Suspend Flag, table: HL70136}
-- {name: IN2.67, type: ID, key: copay_limit_flag, desc: Copay Limit Flag, table: HL70136}
-- {name: IN2.68, type: ID, key: stoploss_limit_flag, desc: Stoploss Limit Flag, table: HL70136}
-- {name: IN2.69, type: XON, key: insured_organization_name_and_id, desc: Insured Organization Name and ID, coll: true}
-- {name: IN2.70, type: XON, key: insured_employer_organization_name_and_id, desc: Insured Employer Organization Name and ID, coll: true}
+- {name: IN2.62, type: CE, key: guarantor_relationship, desc: Guarantor's Relationship to Insured, table: HL70063}
+- {name: IN2.63, type: XTN, key: home_phone, desc: Insured's Phone Number - Home, coll: true}
+- {name: IN2.64, type: XTN, key: employer_phone, desc: Insured's Employer Phone Number, coll: true}
+- {name: IN2.65, type: CE, key: military_handicap, desc: Military Handicapped Program, table: HL70343}
+- {name: IN2.66, type: ID, key: suspend, desc: Suspend Flag, table: HL70136}
+- {name: IN2.67, type: ID, key: copay_limit, desc: Copay Limit Flag, table: HL70136}
+- {name: IN2.68, type: ID, key: stoploss_limit, desc: Stoploss Limit Flag, table: HL70136}
+- {name: IN2.69, type: XON, key: organization_name, desc: Insured Organization Name and ID, coll: true}
+- {name: IN2.70, type: XON, key: employer_organization_name, desc: Insured Employer Organization Name and ID, coll: true}
 - {name: IN2.71, type: CE, key: race, desc: Race, table: HL70005, coll: true}
-- {name: IN2.72, type: CE, key: cms_patient_relationship_to_insured, desc: CMS Patient's Relationship to Insured, table: HL70344}
+- {name: IN2.72, type: CE, key: cms_patient_relationship, desc: CMS Patient's Relationship to Insured, table: HL70344}
 URS:
 - {name: URS.1, type: ST, key: r_u_where_subject_definition, desc: R/U Where Subject Definition, req: true, coll: true}
 - {name: URS.2, type: TS, key: r_u_when_data_start_datetime, desc: R/U When Data Start Date/Time}
@@ -2094,37 +2094,37 @@ PTH:
 - {name: PTH.5, type: CE, key: pathway_life_cycle_status, desc: Pathway Life Cycle Status}
 - {name: PTH.6, type: TS, key: change_pathway_life_cycle_status_datetime, desc: Change Pathway Life Cycle Status Date/Time}
 ORC:
-- {name: ORC.1, type: ID, key: order_control, desc: Order Control, table: HL70119, req: true}
-- {name: ORC.2, type: EI, key: placer_order_number, desc: Placer Order Number}
-- {name: ORC.3, type: EI, key: filler_order_number, desc: Filler Order Number}
+- {name: ORC.1, type: ID, key: id, desc: Order Control, table: HL70119, req: true}
+- {name: ORC.2, type: EI, key: placer_number, desc: Placer Order Number}
+- {name: ORC.3, type: EI, key: filler_number, desc: Filler Order Number}
 - {name: ORC.4, type: EI, key: placer_group_number, desc: Placer Group Number}
-- {name: ORC.5, type: ID, key: order_status, desc: Order Status, table: HL70038}
-- {name: ORC.6, type: ID, key: response_flag, desc: Response Flag, table: HL70121}
+- {name: ORC.5, type: ID, key: status, desc: Order Status, table: HL70038}
+- {name: ORC.6, type: ID, key: response, desc: Response Flag, table: HL70121}
 - {name: ORC.7, type: TQ, key: quantity_timing, desc: Quantity/Timing, coll: true}
 - {name: ORC.8, type: EIP, key: parent, desc: Parent}
-- {name: ORC.9, type: TS, key: datetime_of_transaction, desc: Date/Time of Transaction}
+- {name: ORC.9, type: TS, key: transaction_datetime, desc: Date/Time of Transaction}
 - {name: ORC.10, type: XCN, key: entered_by, desc: Entered By, coll: true}
 - {name: ORC.11, type: XCN, key: verified_by, desc: Verified By, coll: true}
-- {name: ORC.12, type: XCN, key: ordering_provider, desc: Ordering Provider, coll: true}
+- {name: ORC.12, type: XCN, key: provider, desc: Ordering Provider, coll: true}
 - {name: ORC.13, type: PL, key: enterer_location, desc: Enterer's Location}
-- {name: ORC.14, type: XTN, key: call_back_phone_number, desc: Call Back Phone Number, coll: true}
-- {name: ORC.15, type: TS, key: order_effective_datetime, desc: Order Effective Date/Time}
-- {name: ORC.16, type: CE, key: order_control_code_reason, desc: Order Control Code Reason}
+- {name: ORC.14, type: XTN, key: callback_phone, desc: Call Back Phone Number, coll: true}
+- {name: ORC.15, type: TS, key: effective_datetime, desc: Order Effective Date/Time}
+- {name: ORC.16, type: CE, key: control_reason, desc: Order Control Code Reason}
 - {name: ORC.17, type: CE, key: entering_organization, desc: Entering Organization}
 - {name: ORC.18, type: CE, key: entering_device, desc: Entering Device}
 - {name: ORC.19, type: XCN, key: action_by, desc: Action By, coll: true}
-- {name: ORC.20, type: CE, key: advanced_beneficiary_notice_code, desc: Advanced Beneficiary Notice Code, table: HL70339}
-- {name: ORC.21, type: XON, key: ordering_facility_name, desc: Ordering Facility Name, coll: true}
-- {name: ORC.22, type: XAD, key: ordering_facility_address, desc: Ordering Facility Address, coll: true}
-- {name: ORC.23, type: XTN, key: ordering_facility_phone_number, desc: Ordering Facility Phone Number, coll: true}
-- {name: ORC.24, type: XAD, key: ordering_provider_address, desc: Ordering Provider Address, coll: true}
-- {name: ORC.25, type: CWE, key: order_status_modifier, desc: Order Status Modifier}
-- {name: ORC.26, type: CWE, key: advanced_beneficiary_notice_override_reason, desc: Advanced Beneficiary Notice Override Reason, table: HL70552}
+- {name: ORC.20, type: CE, key: beneficiary_notice, desc: Advanced Beneficiary Notice Code, table: HL70339}
+- {name: ORC.21, type: XON, key: facility_name, desc: Ordering Facility Name, coll: true}
+- {name: ORC.22, type: XAD, key: facility_address, desc: Ordering Facility Address, coll: true}
+- {name: ORC.23, type: XTN, key: facility_phone, desc: Ordering Facility Phone Number, coll: true}
+- {name: ORC.24, type: XAD, key: provider_address, desc: Ordering Provider Address, coll: true}
+- {name: ORC.25, type: CWE, key: status_modifier, desc: Order Status Modifier}
+- {name: ORC.26, type: CWE, key: beneficiary_notice_override_reason, desc: Advanced Beneficiary Notice Override Reason, table: HL70552}
 - {name: ORC.27, type: TS, key: filler_expected_availability_datetime, desc: Filler's Expected Availability Date/Time}
-- {name: ORC.28, type: CWE, key: confidentiality_code, desc: Confidentiality Code, table: HL70177}
-- {name: ORC.29, type: CWE, key: order_type, desc: Order Type, table: HL70482}
+- {name: ORC.28, type: CWE, key: confidentiality, desc: Confidentiality Code, table: HL70177}
+- {name: ORC.29, type: CWE, key: type, desc: Order Type, table: HL70482}
 - {name: ORC.30, type: CNE, key: enterer_authorization_mode, desc: Enterer Authorization Mode, table: HL70483}
-- {name: ORC.31, type: CWE, key: parent_universal_service_identifier, desc: Parent Universal Service Identifier}
+- {name: ORC.31, type: CWE, key: parent_uid, desc: Parent Universal Service Identifier}
 RXO:
 - {name: RXO.1, type: CE, key: requested_give_code, desc: Requested Give Code}
 - {name: RXO.2, type: NM, key: requested_give_amount_minimum, desc: Requested Give Amount - Minimum}
@@ -2180,14 +2180,14 @@ PD1:
 - {name: PD1.8, type: IS, key: organ_donor_code, desc: Organ Donor Code, table: HL70316}
 - {name: PD1.9, type: ID, key: separate_bill, desc: Separate Bill, table: HL70136}
 - {name: PD1.10, type: CX, key: duplicate_patient, desc: Duplicate Patient, coll: true}
-- {name: PD1.11, type: CE, key: publicity_code, desc: Publicity Code, table: HL70215}
+- {name: PD1.11, type: CE, key: publicity, desc: Publicity Code, table: HL70215}
 - {name: PD1.12, type: ID, key: protection_indicator, desc: Protection Indicator, table: HL70136}
 - {name: PD1.13, type: DT, key: protection_indicator_effective_date, desc: Protection Indicator Effective Date}
 - {name: PD1.14, type: XON, key: place_of_worship, desc: Place of Worship, coll: true}
 - {name: PD1.15, type: CE, key: advance_directive_code, desc: Advance Directive Code, table: HL70435, coll: true}
 - {name: PD1.16, type: IS, key: immunization_registry_status, desc: Immunization Registry Status, table: HL70441}
 - {name: PD1.17, type: DT, key: immunization_registry_status_effective_date, desc: Immunization Registry Status Effective Date}
-- {name: PD1.18, type: DT, key: publicity_code_effective_date, desc: Publicity Code Effective Date}
+- {name: PD1.18, type: DT, key: publicity_effective_date, desc: Publicity Code Effective Date}
 - {name: PD1.19, type: IS, key: military_branch, desc: Military Branch, table: HL70140}
 - {name: PD1.20, type: IS, key: military_rank_grade, desc: Military Rank/Grade, table: HL70141}
 - {name: PD1.21, type: IS, key: military_status, desc: Military Status, table: HL70142}

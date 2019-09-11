@@ -103,36 +103,7 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
 
      )
 
-    ))
-
-
-(defn expectation-file [^File f]
-  (let [name (.getName f)
-        parent (-> f .getParentFile .getParentFile .getAbsoluteFile)]
-    (str parent "/edns/" name ".edn")))
-
-(defn match-file [fname content]
-  (match (-> fname slurp edn/read-string)
-         content))
-
-(defmacro foreach-hl7 [[input expected] & body]
-  `(for [^File input-file# (->> "messages" io/resource io/file file-seq (filter #(.isFile %)))]
-     (let [~input (slurp input-file#)
-           ~expected (expectation-file input-file#)]
-       ~@body)))
-
-(deftest test-parse-examples
-  (foreach-hl7 [input expected]
-               (testing (str "with " expected)
-                 (match-file expected (sut/parse input)))))
-
-
-(comment
-
-  ;; overrride all files
-  (foreach-hl7 [input expected]
-               (spit expected (-> input sut/parse zp/zprint-str)))
-
+    )
 
   (spit "test/results/adt.yaml" (clj-yaml.core/generate-string (sut/parse msg {})))
 
@@ -152,6 +123,55 @@ NTE|2||HCT=LOW||20110529130917-04:00
 ")
 
   (spit "test/results/oru.yaml" (clj-yaml.core/generate-string (sut/parse oru {})))
+  (spit "test/results/oru-r01-1.yaml" (clj-yaml.core/generate-string (sut/parse (slurp "test/messages/oru-r01-1.hl7") {})))
+
+  )
+
+
+(defn expectation-file [^File f]
+  (let [name (.getName f)
+        parent (-> f .getParentFile .getParentFile .getAbsoluteFile)]
+    (str parent "/edns/" name ".edn")))
+
+(defn match-file [fname content]
+  (match (-> fname slurp edn/read-string)
+         content))
+
+(defn read-files []
+  (->> "messages" io/resource io/file file-seq (filter #(.isFile %))))
+
+(defmacro foreach-hl7 [[input expected] & body]
+  `(for [^File input-file# (read-files)]
+     (let [~input (slurp input-file#)
+           ~expected (expectation-file input-file#)]
+       (println (.getName input-file#))
+       ~@body)))
+
+(deftest test-parse-examples
+  (foreach-hl7 [input expected]
+               (testing (str "with " expected)
+                 (match-file expected (sut/parse input)))))
+
+
+(comment
+
+  (read-files)
+
+  ;; overrride all files
+  (foreach-hl7 [input expected]
+               (spit expected (-> input sut/parse zp/zprint-str)))
+
+  (spit "test/edns/a04-1.edn"
+        (zp/zprint-str
+         (sut/parse
+          (slurp "test/messages/a04-1.hl7")
+          )))
+
+  (spit "test/edns/a04-2.edn"
+        (zp/zprint-str
+         (sut/parse
+          (slurp "test/messages/a04-2.hl7"))))
+
 
   )
 
