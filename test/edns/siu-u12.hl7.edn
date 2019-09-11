@@ -1,0 +1,13 @@
+{:MSH {nil "MIN",
+       :control_id "60235",
+       :datetime {:time "20170807092319"},
+       :encoding "^~\\&",
+       :processing_id {:processing_id "T"},
+       :receiving_application {:namespace_id "VITAEH"},
+       :receiving_facility {:namespace_id "VIT"},
+       :security "BARLLH1",
+       :sending_application {:namespace_id "VITAEHRSCH"},
+       :sending_facility {:namespace_id "VIT"},
+       :separator "|",
+       :type {:code "SIU", :event "S12"},
+       :version_id {:version_id "2.3"}}}

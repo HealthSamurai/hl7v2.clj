@@ -1,0 +1,13 @@
+{:MSH {nil "No",
+       :control_id "15837",
+       :datetime {:time "20170726010022"},
+       :encoding "^~\\&",
+       :processing_id {:processing_id "T"},
+       :receiving_application {:namespace_id "IMG_UNLINK"},
+       :receiving_facility {:namespace_id "PHS IMG"},
+       :security "CADENCEBATCHOB",
+       :sending_application {:namespace_id "RADIANT"},
+       :sending_facility {:namespace_id "EPIC"},
+       :separator "|",
+       :type {:code "ORM", :event "O01"},
+       :version_id {:version_id "2.3"}}}

@@ -1,7 +1,7 @@
 .PHONY: test
 
 test:
-	clj -A:test:runner
+	clojure -A:test:runner
 
 deploy: test
 	clj -Spom

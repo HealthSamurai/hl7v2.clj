@@ -3,7 +3,11 @@
             [clj-yaml.core]
             [hl7v2.schema.core :as schema]
             [matcho.core :refer [match]]
-            [clojure.test :refer :all]))
+            [zprint.core :as zp]
+            [clojure.edn :as edn]
+            [clojure.java.io :as io]
+            [clojure.test :refer :all])
+  (:import [java.io File]))
 
 (def msg
   "MSH|^~\\&|AccMgr|1|||20151015200643||ADT^A01|599102|P|2.3|foo||
@@ -90,7 +94,6 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
        :marital_status {:code "W"},
        :death_indicator "N"}])
 
-
     (match 
      (sut/parse-segment
       ctx "PID|1|312626^^^^^Main Lab&05D0557149&CLIA|0362855^^^^^Main Lab&05D0557149&CLIA|^^^^^Main Lab&05D0557149&CLIA|LOPEZ^ADALBERTO||19450409|M|||8753 APPERSON ST^^SUNLAND^CA^91040||(818)429-5631|||||000016715153|572458313")
@@ -100,9 +103,36 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
 
      )
 
-    )
+    ))
 
-  (pr-str msg)
+
+(defn expectation-file [^File f]
+  (let [name (.getName f)
+        parent (-> f .getParentFile .getParentFile .getAbsoluteFile)]
+    (str parent "/edns/" name ".edn")))
+
+(defn match-file [fname content]
+  (match (-> fname slurp edn/read-string)
+         content))
+
+(defmacro foreach-hl7 [[input expected] & body]
+  `(for [^File input-file# (->> "messages" io/resource io/file file-seq (filter #(.isFile %)))]
+     (let [~input (slurp input-file#)
+           ~expected (expectation-file input-file#)]
+       ~@body)))
+
+(deftest test-parse-examples
+  (foreach-hl7 [input expected]
+               (testing (str "with " expected)
+                 (match-file expected (sut/parse input)))))
+
+
+(comment
+
+  ;; overrride all files
+  (foreach-hl7 [input expected]
+               (spit expected (-> input sut/parse zp/zprint-str)))
+
 
   (spit "test/results/adt.yaml" (clj-yaml.core/generate-string (sut/parse msg {})))
 
