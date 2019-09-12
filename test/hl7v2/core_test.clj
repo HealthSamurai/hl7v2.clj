@@ -106,19 +106,19 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
      (sut/parse-segment
       ctx "IN1|1|303401^PRIV HLTH CARE SYS-BCBS OF N CAROLINA|3034|BCBS OF NORTH CAROLINA|CLMS PROCESSING CONTRACTOR PO BOX 9518^^DURHAM^NC^32145-9518^||(845)543-3876^^^^^845^5433876|1233||||20160726||||UPGRADETEST^CPAP^^|Self|19490512|876 MAIN^^BANANA VALLEY^WA^98038^US^^^KING|||1**1|||NO||||20170726102055|BARLLH1^BARLOW^LOUIS^H.^|||||4694998|F8086412450||||||Full|M|1258 ROSE AVE SW^^RENTON^WA^98057^US|Verified Pat||BOTH||")
 
-     ["IN1" {:relationship_to_patient {:code "Self"}, :plan_effective_date "20160726",
+     ["IN1" {:relationship_to_patient {:code "Self"}, :period_start "20160726",
              :address [{:street {:text "876 MAIN"}, :city "BANANA VALLEY", :state "WA",
                         :postal_code "98038", :country "US", :county "KING"}],
              :phone_number [{:phone "(845)543-3876", :area_city "845", :local_number "5433876"}],
              :policy_number "F8086412450", :eligibility_flag "NO", :set_id "1", :group_number "1233",
-             :name [{:family {:surname "UPGRADETEST"}, :given "CPAP"}],
+             :beneficiary [{:family {:surname "UPGRADETEST"}, :given "CPAP"}],
              :employment_status {:code "Full"}, :coverage "BOTH",
              :company_name [{:name "BCBS OF NORTH CAROLINA"}],
              :company_address [{:street {:text "CLMS PROCESSING CONTRACTOR PO BOX 9518"},
                                 :city "DURHAM", :state "NC", :postal_code "32145-9518"}],
-             :company_id [{:id "3034"}], :birth_date {:time "19490512"},
+             :payor [{:id "3034"}], :birth_date {:time "19490512"},
              :verification_datetime {:time "20170726102055"},
-             :plan_id {:code "303401", :display "PRIV HLTH CARE SYS-BCBS OF N CAROLINA"},
+             :identifier_type {:code "303401", :display "PRIV HLTH CARE SYS-BCBS OF N CAROLINA"},
              :gender "M", :benifits_coordination_priority "1**1",
              :employer_address [{:street {:text "1258 ROSE AVE SW"}, :city "RENTON", :state "WA",
                                  :postal_code "98057", :country "US"}],
@@ -130,6 +130,9 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
 
 
 (comment
+  (spit "/tmp/1.yaml" (clj-yaml.core/generate-string (sut/parse-segment
+                                                      ctx "IN1|1|303401^PRIV HLTH CARE SYS-BCBS OF N CAROLINA|3034|BCBS OF NORTH CAROLINA|CLMS PROCESSING CONTRACTOR PO BOX 9518^^DURHAM^NC^32145-9518^||(845)543-3876^^^^^845^5433876|1233||||20160726||||UPGRADETEST^CPAP^^|Self|19490512|876 MAIN^^BANANA VALLEY^WA^98038^US^^^KING|||1**1|||NO||||20170726102055|BARLLH1^BARLOW^LOUIS^H.^|||||4694998|F8086412450||||||Full|M|1258 ROSE AVE SW^^RENTON^WA^98057^US|Verified Pat||BOTH||")))
+
   (spit "test/results/adt.yaml" (clj-yaml.core/generate-string (sut/parse msg {})))
 
 

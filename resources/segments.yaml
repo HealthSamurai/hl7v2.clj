@@ -1317,8 +1317,8 @@ CNS:
 - {name: CNS.6, type: CE, key: ending_notification_code, desc: Ending Notification Code}
 IN1:
 - {name: IN1.1, type: SI, key: set_id, desc: Set ID - IN1, req: true}
-- {name: IN1.2, type: CE, key: plan_id, desc: Insurance Plan ID, table: HL70072, req: true}
-- {name: IN1.3, type: CX, key: company_id, desc: Insurance Company ID, req: true, coll: true}
+- {name: IN1.2, type: CE, key: identifier_type, desc: Insurance Plan ID, table: HL70072, req: true, path: identifier.type}
+- {name: IN1.3, type: CX, key: payor, desc: Insurance Company ID, req: true, coll: true}
 - {name: IN1.4, type: XON, key: company_name, desc: Insurance Company Name, coll: true}
 - {name: IN1.5, type: XAD, key: company_address, desc: Insurance Company Address, coll: true}
 - {name: IN1.6, type: XPN, key: contact_person, desc: Insurance Co Contact Person, coll: true}
@@ -1327,11 +1327,11 @@ IN1:
 - {name: IN1.9, type: XON, key: group_name, desc: Group Name, coll: true}
 - {name: IN1.10, type: CX, key: group_emp_id, desc: Insured's Group Emp ID, coll: true}
 - {name: IN1.11, type: XON, key: group_emp_name, desc: Insured's Group Emp Name, coll: true}
-- {name: IN1.12, type: DT, key: plan_effective_date, desc: Plan Effective Date}
-- {name: IN1.13, type: DT, key: plan_expiration_date, desc: Plan Expiration Date}
+- {name: IN1.12, type: DT, key: period_start, desc: Plan Effective Date, path: period.start}
+- {name: IN1.13, type: DT, key: period_end, desc: Plan Expiration Date, path: period.end}
 - {name: IN1.14, type: AUI, key: authorization_info, desc: Authorization Information}
-- {name: IN1.15, type: IS, key: plan_type, desc: Plan Type, table: HL70086}
-- {name: IN1.16, type: XPN, key: name, desc: Name Of Insured, coll: true}
+- {name: IN1.15, type: IS, key: type, desc: Plan Type, table: HL70086}
+- {name: IN1.16, type: XPN, key: beneficiary, desc: Name Of Insured, coll: true}
 - {name: IN1.17, type: CE, key: relationship_to_patient, desc: Insured's Relationship To Patient, table: HL70063}
 - {name: IN1.18, type: TS, key: birth_date, desc: Insured's Date Of Birth}
 - {name: IN1.19, type: XAD, key: address, desc: Insured's Address, coll: true}
