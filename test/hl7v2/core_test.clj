@@ -147,8 +147,14 @@ NTE|2||HCT=LOW||20110529130917-04:00
            ~expected (expectation-file input-file#)]
        ~@body)))
 
+(defn rewrite-hl7-edn [fname]
+  (let [f (-> (str "messages/" fname) io/resource io/file)]
+    (spit (expectation-file f)
+          (zp/zprint-str (sut/parse (slurp f))))))
+
 (deftest test-parse-examples
   (foreach-hl7 [input expected]
+               (println {:input input :expected expected})
                (testing (str "with " expected)
                  (match-file expected (sut/parse input)))))
 
@@ -161,17 +167,7 @@ NTE|2||HCT=LOW||20110529130917-04:00
   (foreach-hl7 [input expected]
                (spit expected (-> input sut/parse zp/zprint-str)))
 
-  (spit "test/edns/a04-1.edn"
-        (zp/zprint-str
-         (sut/parse
-          (slurp "test/messages/a04-1.hl7")
-          )))
-
-  (spit "test/edns/a04-2.edn"
-        (zp/zprint-str
-         (sut/parse
-          (slurp "test/messages/a04-2.hl7"))))
-
+  (rewrite-hl7-edn "adt-a04-4.hl7")
 
   )
 
