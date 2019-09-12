@@ -1,11 +1,11 @@
 {:MSH {nil "MIN",
-       :control_id "77856",
+       :app {:ns "VITAEHR"},
        :datetime {:time "20170807115912"},
        :encoding "^~\\&",
-       :processing_id {:processing_id "T"},
-       :receiving_facility {:namespace_id "ORCA"},
+       :id "77856",
+       :proc_id {:proc_id "T"},
+       :receiving_facility {:ns "ORCA"},
        :security "P193590",
-       :sending_application {:namespace_id "VITAEHR"},
        :separator "|",
        :type {:code "SIU", :event "S12"},
-       :version_id {:version_id "2.3"}}}
+       :version {:id "2.3"}}}

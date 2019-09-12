@@ -1,1 +1,12 @@
-[:error "Extra input [MSH] pos: 0"]
+{:MSH {nil "40",
+       :app {:ns "VITAEHR"},
+       :datetime {:time "20170807134552"},
+       :encoding "^~\\&",
+       :facility {:ns "ORCA"},
+       :id "541642",
+       :proc_id {:proc_id "T"},
+       :receiving_facility {:ns "AS_AFTER_CHECK_IN"},
+       :security "D454345",
+       :separator "|",
+       :type {:code "ADT", :event "A04"},
+       :version {:id "2.3"}}}

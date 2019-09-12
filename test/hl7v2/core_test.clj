@@ -103,8 +103,9 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
 
      )
 
-    )
+    ))
 
+(comment
   (spit "test/results/adt.yaml" (clj-yaml.core/generate-string (sut/parse msg {})))
 
 
@@ -141,10 +142,9 @@ NTE|2||HCT=LOW||20110529130917-04:00
   (->> "messages" io/resource io/file file-seq (filter #(.isFile %))))
 
 (defmacro foreach-hl7 [[input expected] & body]
-  `(for [^File input-file# (read-files)]
+  `(doseq [^File input-file# (read-files)]
      (let [~input (slurp input-file#)
            ~expected (expectation-file input-file#)]
-       (println (.getName input-file#))
        ~@body)))
 
 (deftest test-parse-examples

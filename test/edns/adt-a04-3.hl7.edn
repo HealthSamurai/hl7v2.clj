@@ -1,1 +1,12 @@
-[:error "Extra input [MSH] pos: 0"]
+{:MSH {nil "30",
+       :app {:ns "EPIC"},
+       :datetime {:time "20170726075341"},
+       :encoding "^~\\&",
+       :facility {:ns "WAMT"},
+       :id "145307",
+       :proc_id {:proc_id "T"},
+       :receiving_facility {:ns "ADT_EVENT"},
+       :security "P296798",
+       :separator "|",
+       :type {:code "ADT", :event "A04"},
+       :version {:id "2.3"}}}
