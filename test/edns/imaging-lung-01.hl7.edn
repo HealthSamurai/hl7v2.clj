@@ -1,16 +1,254 @@
-{:MSH {nil "P",
-       :alt_charset "010107111^^^MS4^PN^",
-       :app {:ns "RISOC"},
-       :charset ["PRELIM\nPID"],
+{:MSH {:app {:ns "RISOC"},
+       :charset ["PRELIM"],
        :datetime {:time "20111115200643"},
        :encoding "^~\\&",
        :facility {:ns "001"},
        :id "30004",
-       :language {:code "1"},
        :proc_id {:proc_id "T"},
-       :profile [{nil "001", :identifier "160922", :type "MS4"}],
        :receiving_app {:ns "MS4OC"},
        :receiving_facility {:ns "001"},
        :separator "|",
        :type {:code "ORU", :event "R01"},
-       :version {:id "2.3"}}}
+       :version {:id "2.3"}},
+ :patient_result
+   [{:order_observation
+       [{:OBR {:clinical_info "SYNCOPE ELEVATED D DIMER CHEST PAIN",
+               :datetime {:time "20111115160900"},
+               :diagnostic_service "CT^Computed Tomography",
+               :filler_number {:identifier "1000718"},
+               :ordering_provider [{:authority {:ns "NPI", :uid "1841336138"},
+                                    :degree "MD",
+                                    :family {:surname "PEREYRA"},
+                                    :given "ROBERT",
+                                    :id "20222",
+                                    :initials "W"}],
+               :placer_number {:identifier "00045"},
+               :principal_interpreter {:end {:time "SAMEER"},
+                                       :facility {:ns "MD"},
+                                       :location_type "NPI&1508081530",
+                                       :name {:id "34831"},
+                                       :point_of_care "A",
+                                       :start {:time "PATEL"}},
+               :quantity_timing [{:duration "30",
+                                  :priority "9",
+                                  :start {:time "20111115094822"}}],
+               :result_status_change_datetime {:time "20111115200600"},
+               :scheduled_datetime {:time "20111115081000"},
+               :set_id "1",
+               :status "P",
+               :technician [{:end {:time "YUNGCHIANG"},
+                             :name {:id "ylee"},
+                             :start {:time "LEE"}}],
+               :transcriptionist [{:end {:time "CHERYL"},
+                                   :facility {:ns "Sched/Transcription"},
+                                   :start {:time "WALKER"}}],
+               :transportation "AMB^Ambulatory",
+               :uid {:alternate_code "AGNKCOM",
+                     :code "4550422",
+                     :display "CT ANGIO NECK W WO CON"}},
+         :observation
+           [{:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["SCREENING LUNG"],
+                   :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["From : Alphonsus Regional Center"],
+                   :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["2, Saint Alphonsus Gem State"],
+                   :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["Medical Center Radiolgy"],
+                   :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["BAKER CHTY"],
+                   :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["Patient: - DOB: - EMPI: - visitiAcct: sassassam. 3 Site:"],
+                :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["PTIMOD: - MiFN:"],
+                   :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value
+                     ["3 Ref. Prov: Exam: - Room/Bed: CTB Add. Providers:"],
+                   :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["SCREENING LUNG \""],
+                   :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value
+                     ["ΕΧΑΜΙ DΑΤΕ: 6/16/2015 13:45 Contrast/Isotope: None"],
+                   :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["PROCEDURE: CT LUNG LOW DOSE CA SCREENING"],
+                   :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["COMPARISON: None."],
+                   :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["INDICATIONS: 64 year old former smoker with 50 pack year history of smoking. Quit April 2015."],
+                :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["PQRS QUALITY INFORMATION:"],
+                   :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["EXAM COUNT: 0 CT exams and 0 NM Myocardial Perfusion exams in past 12 months."],
+                :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["DATA AVAILABILITY: Dicom format image data is available to non-affiliated external entities on secure, media free, reciprocally searchable basis for 12"],
+                :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["month period of time after the study."],
+                   :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["DATA SEARCH. A search was conducted for prior patient CT exams performed at an external facility within 12 months prior to the imaging study being"],
+                :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["performed, and is available through a secure, authorized, media free, shared archive."],
+                :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["CT DOSE REGISTRY: CT study data has been reported to a CT Radiation Dose Index Registry containing all minimum necessary data elements."],
+                :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["Total Dose Length Product (DLP in mGy-cm): 38.50"],
+                   :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["TECHNIQUE: CT images of the lungs were obtained without intravenous contrast and utilizing a very low dose technique."],
+                :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["LUNG FINDINGS:"],
+                   :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["NODULES: Noncalcified linear focus in the lateral basilar right lower lobe seen on series 9"],
+                :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["image 185 measures 0.3 x 0.2 cm. Punctate calcified nodule in the lingula seen on series 9 image 175. Calcified nodule noted in the apical posterior segment left upper lobe, series 9 image 79."],
+                :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["LUNG PARENCHYMA: Within normal limits."],
+                   :value_type "FT"}}
+            {:OBX {:status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["OTHER FINDINGS:"],
+                   :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["HEART: Within normal limits. MEDIASTINUM/HILA: Within normal limits. VASCULATURE: Within normal limits. PLEURAL SPACE: Within normal limits."],
+                :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["CHEST WALL/AXILLA: Within normal limits. LTD, UPPER ABDOMEN: Within normal limits. MUSCULOSKELETAL: Normal for age. ADIOT\"L COMMENTS: None."],
+                :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["CONCLUSION: Solitary linear noncalcified right lower lobe pulmonary nodule measures less than 4 mm"],
+                :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["average diameter and demonstrates benign pattern morphology."],
+                :value_type "FT"}}
+            {:OBX
+               {:status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["RECOMMENDATION: LungPADS 1 - follow up low dose chest CT in 1 year."],
+                :value_type "FT"}}]}],
+     :patient
+       {:PID {:account_number {:authority {:ns "MS4001"},
+                               :facility {:ns "001"},
+                               :id "111",
+                               :type "AN"},
+              :address [{:city "ALBUKERKA",
+                         :country "USA",
+                         :postal_code "98765",
+                         :state "CA",
+                         :street {:text "STRAWBERRY AVE"},
+                         :text "FOUR OAKS LODGE"}],
+              :alternate_id [{:authority {:ns "MS4"},
+                              :facility {:ns "001"},
+                              :id "160933",
+                              :type "MR"}],
+              :birth_date {:time "19440823"},
+              :birth_place "OKLAHOMA",
+              :death_indicator "N",
+              :gender "F",
+              :home_phone [{:phone "(111)222-3333"}],
+              :identifiers [{:authority {:ns "MS4"},
+                             :facility {:ns "001"},
+                             :id "160922",
+                             :type "MR"}],
+              :marital_status {:code "W"},
+              :name [{:family {:surname "BARRETT"},
+                      :given "JEAN",
+                      :initials "SANDY"}],
+              :patient_id {:authority {:ns "MS4"}, :id "010107111", :type "PN"},
+              :primary_language {:code "ENG"},
+              :race [{:code "C"}],
+              :religion {:code "CHR"},
+              :set_id "1",
+              :ssn_number "123-22-121212"},
+        :visit
+          {:PV1 {:admit_datetime {:time "20111113170200"},
+                 :assigned_patient_location {:location_description "5 South",
+                                             :room "5SOUT518A"},
+                 :attending_doctor [{:authority {:ns "NPI", :uid "1467492371"},
+                                     :degree "MD",
+                                     :family {:surname "GANDHI"},
+                                     :given "DEVINDER",
+                                     :id "80231"}],
+                 :patient_class "I",
+                 :set_id "1"}}}}]}
