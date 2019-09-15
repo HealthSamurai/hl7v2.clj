@@ -1318,11 +1318,11 @@ CNS:
 IN1:
 - {name: IN1.1, type: SI, key: set_id, desc: Set ID - IN1, req: true}
 - {name: IN1.2, type: CE, key: identifier_type, desc: Insurance Plan ID, table: HL70072, req: true, path: identifier.type}
-- {name: IN1.3, type: CX, key: payor, desc: Insurance Company ID, req: true, coll: true}
-- {name: IN1.4, type: XON, key: company_name, desc: Insurance Company Name, coll: true}
-- {name: IN1.5, type: XAD, key: company_address, desc: Insurance Company Address, coll: true}
-- {name: IN1.6, type: XPN, key: contact_person, desc: Insurance Co Contact Person, coll: true}
-- {name: IN1.7, type: XTN, key: phone_number, desc: Insurance Co Phone Number, coll: true}
+- {name: IN1.3, type: CX, key: payor_organization_identifier_value, desc: Insurance Company ID, req: true, coll: true}
+- {name: IN1.4, type: XON, key: payor_organization_name, desc: Insurance Company Name, coll: true}
+- {name: IN1.5, type: XAD, key: payor_organization_address, desc: Insurance Company Address, coll: true}
+- {name: IN1.6, type: XPN, key: payor_organization_contact_name, desc: Insurance Co Contact Person, coll: true}
+- {name: IN1.7, type: XTN, key: payor_organization_contact_telecom, desc: Insurance Co Phone Number, coll: true}
 - {name: IN1.8, type: ST, key: group_number, desc: Group Number}
 - {name: IN1.9, type: XON, key: group_name, desc: Group Name, coll: true}
 - {name: IN1.10, type: CX, key: group_emp_id, desc: Insured's Group Emp ID, coll: true}
@@ -1331,10 +1331,10 @@ IN1:
 - {name: IN1.13, type: DT, key: period_end, desc: Plan Expiration Date, path: period.end}
 - {name: IN1.14, type: AUI, key: authorization_info, desc: Authorization Information}
 - {name: IN1.15, type: IS, key: type, desc: Plan Type, table: HL70086}
-- {name: IN1.16, type: XPN, key: beneficiary, desc: Name Of Insured, coll: true}
+- {name: IN1.16, type: XPN, key: beneficiary_name, desc: Name Of Insured, coll: true}
 - {name: IN1.17, type: CE, key: relationship_to_patient, desc: Insured's Relationship To Patient, table: HL70063}
-- {name: IN1.18, type: TS, key: birth_date, desc: Insured's Date Of Birth}
-- {name: IN1.19, type: XAD, key: address, desc: Insured's Address, coll: true}
+- {name: IN1.18, type: TS, key: beneficiary_birthDate, desc: Insured's Date Of Birth}
+- {name: IN1.19, type: XAD, key: beneficiary_address, desc: Insured's Address, coll: true}
 - {name: IN1.20, type: IS, key: benifits_assignment, desc: Assignment Of Benefits, table: HL70135}
 - {name: IN1.21, type: IS, key: benifits_coordination, desc: Coordination Of Benefits, table: HL70173}
 - {name: IN1.22, type: ST, key: benifits_coordination_priority, desc: Coord Of Ben. Priority}
@@ -1350,21 +1350,21 @@ IN1:
 - {name: IN1.32, type: IS, key: billing_status, desc: Billing Status, table: HL70022}
 - {name: IN1.33, type: NM, key: lifetime_reserve_days, desc: Lifetime Reserve Days}
 - {name: IN1.34, type: NM, key: delay_before_lr_day, desc: Delay Before L.R. Day}
-- {name: IN1.35, type: IS, key: company_plan, desc: Company Plan Code, table: HL70042}
-- {name: IN1.36, type: ST, key: policy_number, desc: Policy Number}
+- {name: IN1.35, type: IS, key: class_type, desc: Company Plan Code, table: HL70042}
+- {name: IN1.36, type: ST, key: contract_identifier, desc: Policy Number}
 - {name: IN1.37, type: CP, key: policy_deductible, desc: Policy Deductible}
 - {name: IN1.38, type: CP, key: policy_limit_amount, desc: Policy Limit - Amount}
 - {name: IN1.39, type: NM, key: policy_limit_days, desc: Policy Limit - Days}
 - {name: IN1.40, type: CP, key: room_rate_semi_private, desc: Room Rate - Semi-Private}
 - {name: IN1.41, type: CP, key: room_rate_private, desc: Room Rate - Private}
 - {name: IN1.42, type: CE, key: employment_status, desc: Insured's Employment Status, table: HL70066}
-- {name: IN1.43, type: IS, key: gender, desc: Insured's Administrative Sex, table: HL70001}
+- {name: IN1.43, type: IS, key: beneficiary_gender, desc: Insured's Administrative Sex, table: HL70001}
 - {name: IN1.44, type: XAD, key: employer_address, desc: Insured's Employer's Address, coll: true}
 - {name: IN1.45, type: ST, key: verification_status, desc: Verification Status}
 - {name: IN1.46, type: IS, key: prior_insurance_plan, desc: Prior Insurance Plan ID, table: HL70072}
-- {name: IN1.47, type: IS, key: coverage, desc: Coverage Type, table: HL70309}
+- {name: IN1.47, type: IS, key: class_type, desc: Coverage Type, table: HL70309}
 - {name: IN1.48, type: IS, key: handicap, desc: Handicap, table: HL70295}
-- {name: IN1.49, type: CX, key: insured_id_number, desc: Insured's ID Number, coll: true}
+- {name: IN1.49, type: CX, key: subscribrId, desc: Insured's ID Number, coll: true}
 - {name: IN1.50, type: IS, key: signature, desc: Signature Code, table: HL70535}
 - {name: IN1.51, type: DT, key: signature_date, desc: Signature Code Date}
 - {name: IN1.52, type: ST, key: birth_place, desc: Insured's Birth Place}
