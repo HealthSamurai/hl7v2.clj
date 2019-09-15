@@ -6,6 +6,7 @@
             [zprint.core :as zp]
             [clojure.edn :as edn]
             [clojure.java.io :as io]
+            [clojure.string :as string]
             [clojure.test :refer :all])
   (:import [java.io File]))
 
@@ -159,8 +160,11 @@ NTE|2||HCT=LOW||20110529130917-04:00
 
 (defn expectation-file [^File f]
   (let [name (.getName f)
-        parent (-> f .getParentFile .getParentFile .getAbsoluteFile)]
-    (str parent "/edns/" name ".edn")))
+        parent (-> f .getParentFile .getAbsoluteFile .getPath)
+        edn-path (string/replace parent #"messages" "edns")
+        expectation (str edn-path "/" name ".edn")]
+    (io/make-parents expectation)
+    expectation))
 
 (defn match-file [fname content]
   (match (-> fname slurp edn/read-string)
@@ -194,7 +198,7 @@ NTE|2||HCT=LOW||20110529130917-04:00
   (foreach-hl7 [input expected]
                (spit expected (-> input sut/parse zp/zprint-str)))
 
-  (rewrite-hl7-edn "adt-a04.hl7")
+  (rewrite-hl7-edn "real/admit.hl7")
 
   (sut/parse-segment ctx "MSH|^~\\&|AccMgr|1|||20151015200643||ADT^A01|599102|P|2.3|foo||")
 
