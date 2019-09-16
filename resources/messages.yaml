@@ -284,7 +284,7 @@ ADT_A18:
 ADT_A01:
   procedure: [PR1, ROL*]
   insurance: [IN1, 'IN2?', IN3*, ROL*]
-  msg: [MSH, SFT*, EVN, PID, 'PD1?', ROL*, NK1*, PV1, 'PV2?', ROL*, DB1*, OBX*, AL1*, DG1*, 'DRG?', procedure*, GT1*, insurance*, 'ACC?', 'UB1?', 'UB2?', 'PDA?']
+  msg: [MSH, SFT*, EVN, PID, 'PD1?', 'CON*', ROL*, NK1*, PV1, 'PV2?', ROL*, DB1*, OBX*, AL1*, DG1*, 'DRG?', procedure*, GT1*, insurance*, 'ACC?', 'UB1?', 'UB2?', 'PDA?']
 BAR_P01:
   procedure: [PR1, ROL*]
   insurance: [IN1, 'IN2?', IN3*, ROL*]
