@@ -1,0 +1,223 @@
+MSH:
+  encoding: ^~\&
+  facility: {ns: '1'}
+  proc_id: {proc_id: P}
+  seqnum: foo
+  type: {code: ADT, event: A01}
+  id: '599102'
+  app: {ns: AccMgr}
+  datetime: {time: '20151015200643'}
+  version: {id: '2.3'}
+  separator: '|'
+EVN:
+  event_type_code: A01
+  recorded_datetime: {time: '20151010045502'}
+PID:
+  religion: {code: CHR}
+  patient_id:
+    id: '010107111'
+    authority: {ns: MS4}
+    type: PN
+  address:
+  - street: {text: STRAWBERRY AVE}
+    text: FOUR OAKS LODGE
+    city: ALBUKERKA
+    state: CA
+    postal_code: '98765'
+    country: USA
+  home_phone:
+  - {phone: (111)222-3333}
+  set_id: '1'
+  identifiers:
+  - id: '1609220'
+    authority: {ns: MS4}
+    type: MR
+    facility: {ns: '001'}
+  race:
+  - {code: C}
+  name:
+  - family: {surname: BARRETT}
+    given: JEAN
+    initials: SANDY
+  primary_language: {code: ENG}
+  birth_place: OKLAHOMA
+  alternate_id:
+  - id: '1609220'
+    authority: {ns: MS4}
+    type: MR
+    facility: {ns: '001'}
+  ssn_number: 123-22-1111
+  birth_date: {time: '19440823'}
+  account_number:
+    id: '111155555550'
+    authority: {ns: MS4001}
+    type: AN
+    facility: {ns: '001'}
+  marital_status: {code: W}
+  death_indicator: N
+  gender: F
+PV1:
+  set_id: '1'
+  admission_type: '3'
+  visit_number:
+    id: '40007716'
+    authority: {ns: AccMgr}
+    type: VN
+  hospital_service: '01'
+  account_status: G
+  servicing_facility: '1'
+  assigned_patient_location:
+    point_of_care: PREOP
+    room: '101'
+    bed: '1'
+    facility: {ns: '1'}
+    building: S
+  admit_datetime: {time: '20050110045253'}
+  attending_doctor:
+  - id: '37'
+    family: {surname: REID}
+    given: TIMOTHY
+    initials: Q
+    name_type: AccMgr
+    facility: {ns: CI}
+  patient_class: I
+  admit_source: '1'
+  patient_type: '2'
+  financial_class:
+  - {financial_class_code: '4'}
+  admitting_doctor:
+  - id: '37'
+    family: {surname: REID}
+    given: TIMOTHY
+    initials: Q
+    name_type: AccMgr
+    facility: {ns: CI}
+GT1:
+- religion: {code: CHR}
+  address:
+  - street: {text: 2820 SYCAMORE AVE}
+    text: TWELVE OAKS LODGE
+    city: MONTROSE
+    state: CA
+    postal_code: '91214'
+    country: USA
+  home_phone:
+  - {phone: (818)111-3361}
+  set_id: '1'
+  identifiers:
+  - id: '010107127'
+    authority: {ns: MS4}
+    type: PN
+  race:
+  - {code: C}
+  name:
+  - family: {surname: BARRETT}
+    given: JEAN
+    initials: S
+  death_datetime: {time: '20130711'}
+  job_title: RETIRED
+  publicity: {code: Y}
+  ssn: 354-22-1840
+  relationship: {code: A}
+  employer_name:
+  - family: {surname: RETIRED}
+  employer_id:
+  - {id: '0000007496'}
+  birth_date: {time: '19301013'}
+  marital_status: {code: W}
+  spouse_name:
+  - family: {surname: BARRETT}
+    given: LAWRENCE
+    initials: E
+  gender: F
+  employer_address:
+  - {postal_code: '00000'}
+insurance:
+- IN1:
+    relationship_to_patient: {code: '19301013'}
+    class_type: 354221840A
+    authorization_info: {number: MCR}
+    set_id: '1'
+    identifier_type: {code: '0423'}
+    handicap: '010107127'
+    benifits_coordination: '1'
+    employment_status: {code: F}
+    type: BARRETT^JEAN^S^^
+    beneficiary_birthDate: {time: 2820 SYCAMORE AVE, precision: TWELVE OAKS LODGE, null: USA}
+    payor_organization_identifier_value:
+    - {id: MEDICARE IP}
+    beneficiary_gender: ^^^^00000^
+    beneficiary_name:
+    - family: {surname: A}
+    group_emp_name:
+    - {name: '19951001'}
+    employer_address:
+    - street: {text: N}
+  IN2:
+    religion: {code: CHR}
+    home_phone:
+    - {phone: (818)249-3361}
+    race:
+    - {code: C}
+    job_title: RETIRED
+    publicity: {code: Y}
+    ssn: '354221840'
+    employer_name:
+    - id: '0000007496'
+      family: {surname: RETIRED}
+    marital_status:
+    - {code: W}
+    medicare_id: 354221840A
+- IN1:
+    relationship_to_patient: {code: A}
+    payor_organization_address:
+    - street: {text: PO BOX 14079}
+      text: PO BOX 14079
+      city: LEXINGTON
+      state: KY
+      postal_code: '40512'
+    beneficiary_address:
+    - street: {text: 2820 SYCAMORE AVE}
+      text: TWELVE OAKS LODGE
+      city: MONTROSE
+      state: CA
+      postal_code: '91214'
+      country: USA
+    set_id: '2'
+    identifier_type: {code: '0423'}
+    group_number: '081140101400020'
+    type: COM
+    period_start: '20130101'
+    beneficiary_birthDate: {time: '19301013'}
+    payor_organization_identifier_value:
+    - {id: '2304'}
+    subscribrId:
+    - {id: '010107127'}
+    beneficiary_gender: F
+    group_name:
+    - {name: RETIRED}
+    beneficiary_name:
+    - family: {surname: BARRETT}
+      given: JEAN
+      initials: S
+    payor_organization_name:
+    - {name: AETNA PPO}
+    benifits_coordination_priority: '2'
+    employer_address:
+    - {postal_code: '00000'}
+    contract_identifier: '811001556'
+    verification_status: N
+  IN2:
+    ssn: '354221840'
+    employer_name:
+    - id: '0000007496'
+      family: {surname: RETIRED}
+    publicity: {code: Y}
+    religion: {code: CHR}
+    marital_status:
+    - {code: W}
+    job_title: RETIRED
+    home_phone:
+    - {phone: (818)249-3361}
+    race:
+    - {code: C}
