@@ -1,5 +1,6 @@
 (ns hl7v2.core
   (:require [clojure.string :as str]
+            [flatland.ordered.map :refer [ordered-map]]
             [hl7v2.schema.core :as schema]
             [hl7v2.schema.parsec :as parsec])
   (:import [java.util.regex Pattern]))
@@ -111,13 +112,37 @@
                acc
                (recur fs ss acc))))))]))
 
+;; FIX: grammar desc is a list?
+;; if after is nil = conj
+(defn append [after coll x]
+  (if after
+    (let [pattern (re-pattern (str after ".?"))]
+      (flatten (mapv #(if (re-find pattern %) [% x] %) coll)))
+    (if (vector? coll)
+      (conj coll x)
+      (seq (conj (vec coll) x)))))
+
+;; extension proposal
+;; [:ADT_A01 :ZBC [[:name "ZBC.1" :type ST :key "zbc1"]]]
+;; [:ADT_A01 :ZBC [[:name "ZBC.1" :type ST :key "zbc1"]] {:after #"PID"}]
+;; TODO: support "put after", not only append
+(defn apply-extension [schema [grammar segment-name segment-desc {after :after quant :quant}]]
+  (let [[grammar rule] (if (sequential? grammar) grammar [grammar :msg])
+        rule (or rule :msg)
+        messages-path (conj [:messages] grammar rule)
+        desc (map #(apply ordered-map %) segment-desc)]
+    (-> schema
+        (update-in messages-path (partial append after) (str (name segment-name) (or quant "?")))
+        (assoc-in [:segments segment-name] desc))))
+
 (defn parse
   ([msg] (parse msg {}))
-  ([msg opts]
+  ([msg {extensions :extensions :as opts}]
    (let [errs (pre-condigion msg)]
      (when-not (empty? errs)
        (throw (Exception. (str/join "; " errs))))
      (let [sch (schema/schema)
+           sch (reduce apply-extension sch extensions)
            seps (separators msg)
            ctx {:separators seps
                 :schema sch}

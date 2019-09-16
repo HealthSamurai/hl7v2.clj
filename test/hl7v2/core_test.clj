@@ -6,8 +6,30 @@
             [zprint.core :as zp]
             [clojure.edn :as edn]
             [clojure.java.io :as io]
+            [clojure.string :as string]
             [clojure.test :refer :all])
   (:import [java.io File]))
+
+(def extensions
+  [[:ADT_A01 :ZBC [[:name "ZBC.1" :type "ST" :key "zbc_one"]
+                   [:name "ZBC.2" :type "ST" :key "zbc_two"]
+                   [:name "ZBC.3" :type "ST" :key "zbc_three"]]]
+   [:ADT_A01 :ZG1 [[:name "ZG1.1" :type "ST" :key "zg1_one"]
+                   [:name "ZG1.2" :type "ST" :key "zg1_two"]
+                   [:name "ZG1.3" :type "ST" :key "zg1_three"]
+                   [:name "ZG1.4" :type "ST" :key "zg1_four"]] {:after "GT1" :quant "*"}]
+   [:ADT_A01 :ZPD [[:name "ZPD.1" :type "ST" :key "zpd1"]
+                              [:name "ZPD.2" :type "ST" :key "zpd2"]
+                              [:name "ZPD.3" :type "ST" :key "zpd3"]
+                              [:name "ZPD.4" :type "ST" :key "zpd4"]
+                              [:name "ZPD.5" :type "ST" :key "zpd5"]
+                              [:name "ZPD.6" :type "ST" :key "zpd6"]
+                              [:name "ZPD.7" :type "ST" :key "zpd7"]
+                              [:name "ZPD.8" :type "ST" :key "zpd8"]
+                              [:name "ZPD.9" :type "ST" :key "zpd9"]
+                              [:name "ZPD.10" :type "ST" :key "zpd10"]
+                              [:name "ZPD.11" :type "ST" :key "zpd11"]
+                              [:name "ZPD.12" :type "ST" :key "zpd12"]] {:after "PID"}]])
 
 (def msg
   "MSH|^~\\&|AccMgr|1|||20151015200643||ADT^A01|599102|P|2.3|foo||
@@ -94,16 +116,33 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
        :marital_status {:code "W"},
        :death_indicator "N"}])
 
-    (match 
+    (match
      (sut/parse-segment
       ctx "PID|1|312626^^^^^Main Lab&05D0557149&CLIA|0362855^^^^^Main Lab&05D0557149&CLIA|^^^^^Main Lab&05D0557149&CLIA|LOPEZ^ADALBERTO||19450409|M|||8753 APPERSON ST^^SUNLAND^CA^91040||(818)429-5631|||||000016715153|572458313")
 
      ["PID" {:identifiers [{:id "0362855",
                             :facility {:ns "Main Lab", :uid "05D0557149", :type "CLIA"}}]}]
-
      )
 
-    )
+    (match
+     (sut/parse-segment
+      ctx "IN1|1|303401^PRIV HLTH CARE SYS-BCBS OF N CAROLINA|3034|BCBS OF NORTH CAROLINA|CLMS PROCESSING CONTRACTOR PO BOX 9518^^DURHAM^NC^32145-9518^||(845)543-3876^^^^^845^5433876|1233||||20160726||||UPGRADETEST^CPAP^^|Self|19490512|876 MAIN^^BANANA VALLEY^WA^98038^US^^^KING|||1**1|||NO||||20170726102055|BARLLH1^BARLOW^LOUIS^H.^|||||4694998|F8086412450||||||Full|M|1258 ROSE AVE SW^^RENTON^WA^98057^US|Verified Pat||BOTH||")
+
+     ["IN1" {:beneficiary_address [{:city "BANANA VALLEY", :country "US", :county "KING", :postal_code "98038", :state "WA", :street {:text "876 MAIN"}}], :beneficiary_birthDate {:time "19490512"}, :beneficiary_gender "M",
+             :beneficiary_name [{:family {:surname "UPGRADETEST"}, :given "CPAP"}], :benifits_coordination_priority "1**1", :class_type "BOTH", :contract_identifier "F8086412450", :eligibility_flag "NO",
+             :employer_address [{:city "RENTON", :country "US", :postal_code "98057", :state "WA", :street {:text "1258 ROSE AVE SW"}}], :employment_status {:code "Full"}, :group_number "1233",
+             :identifier_type {:code "303401", :display "PRIV HLTH CARE SYS-BCBS OF N CAROLINA"},
+             :payor_organization_address [{:city "DURHAM", :postal_code "32145-9518", :state "NC", :street {:text "CLMS PROCESSING CONTRACTOR PO BOX 9518"}}],
+             :payor_organization_contact_telecom [{:area_city "845", :local_number "5433876", :phone "(845)543-3876"}], :payor_organization_identifier_value [{:id "3034"}],
+             :payor_organization_name [{:name "BCBS OF NORTH CAROLINA"}], :period_start "20160726", :relationship_to_patient {:code "Self"}, :set_id "1",
+             :verification_by [{:family {:surname "BARLOW"}, :given "LOUIS", :id "BARLLH1", :initials "H."}], :verification_datetime {:time "20170726102055"}, :verification_status "Verified Pat"}]
+     )
+    ))
+
+
+(comment
+  (spit "/tmp/1.yaml" (clj-yaml.core/generate-string (sut/parse-segment
+                                                      ctx "IN1|1|303401^PRIV HLTH CARE SYS-BCBS OF N CAROLINA|3034|BCBS OF NORTH CAROLINA|CLMS PROCESSING CONTRACTOR PO BOX 9518^^DURHAM^NC^32145-9518^||(845)543-3876^^^^^845^5433876|1233||||20160726||||UPGRADETEST^CPAP^^|Self|19490512|876 MAIN^^BANANA VALLEY^WA^98038^US^^^KING|||1**1|||NO||||20170726102055|BARLLH1^BARLOW^LOUIS^H.^|||||4694998|F8086412450||||||Full|M|1258 ROSE AVE SW^^RENTON^WA^98057^US|Verified Pat||BOTH||")))
 
   (spit "test/results/adt.yaml" (clj-yaml.core/generate-string (sut/parse msg {})))
 
@@ -123,6 +162,7 @@ NTE|2||HCT=LOW||20110529130917-04:00
 ")
 
   (spit "test/results/oru.yaml" (clj-yaml.core/generate-string (sut/parse oru {})))
+
   (spit "test/results/oru-r01-1.yaml" (clj-yaml.core/generate-string (sut/parse (slurp "test/messages/oru-r01-1.hl7") {})))
 
   )
@@ -130,8 +170,11 @@ NTE|2||HCT=LOW||20110529130917-04:00
 
 (defn expectation-file [^File f]
   (let [name (.getName f)
-        parent (-> f .getParentFile .getParentFile .getAbsoluteFile)]
-    (str parent "/edns/" name ".edn")))
+        parent (-> f .getParentFile .getAbsoluteFile .getPath)
+        edn-path (string/replace parent #"messages" "edns")
+        expectation (str edn-path "/" name ".edn")]
+    (io/make-parents expectation)
+    expectation))
 
 (defn match-file [fname content]
   (match (-> fname slurp edn/read-string)
@@ -141,16 +184,20 @@ NTE|2||HCT=LOW||20110529130917-04:00
   (->> "messages" io/resource io/file file-seq (filter #(.isFile %))))
 
 (defmacro foreach-hl7 [[input expected] & body]
-  `(for [^File input-file# (read-files)]
+  `(doseq [^File input-file# (read-files)]
      (let [~input (slurp input-file#)
            ~expected (expectation-file input-file#)]
-       (println (.getName input-file#))
        ~@body)))
+
+(defn rewrite-hl7-edn [fname]
+  (let [f (-> (str "messages/" fname) io/resource io/file)]
+    (spit (expectation-file f)
+          (zp/zprint-str (sut/parse (slurp f) {:extensions extensions})))))
 
 (deftest test-parse-examples
   (foreach-hl7 [input expected]
                (testing (str "with " expected)
-                 (match-file expected (sut/parse input)))))
+                 (match-file expected (sut/parse input {:extensions extensions})))))
 
 
 (comment
@@ -159,19 +206,11 @@ NTE|2||HCT=LOW||20110529130917-04:00
 
   ;; overrride all files
   (foreach-hl7 [input expected]
-               (spit expected (-> input sut/parse zp/zprint-str)))
+               (spit expected (-> input (sut/parse {:extensions extensions}) zp/zprint-str)))
 
-  (spit "test/edns/a04-1.edn"
-        (zp/zprint-str
-         (sut/parse
-          (slurp "test/messages/a04-1.hl7")
-          )))
+  (rewrite-hl7-edn "adt-a04-2.hl7")
 
-  (spit "test/edns/a04-2.edn"
-        (zp/zprint-str
-         (sut/parse
-          (slurp "test/messages/a04-2.hl7"))))
-
+  (sut/parse-segment ctx "MSH|^~\\&|AccMgr|1|||20151015200643||ADT^A01|599102|P|2.3|foo||")
 
   )
 

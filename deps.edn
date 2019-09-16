@@ -8,7 +8,7 @@
    :extra-deps {cider/cider-nrepl             {:mvn/version "0.21.0"}
                 refactor-nrepl/refactor-nrepl {:mvn/version "2.4.0"}
                 com.cognitect/test-runner     {:git/url "https://github.com/cognitect-labs/test-runner"
-                                               :sha     "3cb0a9daf1cb746259dc8309b218f9211ad3b33b"}}}
+                                               :sha     "cb96e80f6f3d3b307c59cbeb49bb0dcb3a2a780b"}}}
 
   :test {:extra-paths ["test"]
          :extra-deps {clj-commons/clj-yaml {:mvn/version "0.7.0"}
@@ -19,5 +19,5 @@
   {:extra-deps
    {com.cognitect/test-runner
     {:git/url "https://github.com/cognitect-labs/test-runner"
-     :sha     "78d380d00e7a27f7b835bb90af37e73b20c49bcc"}}
+     :sha     "cb96e80f6f3d3b307c59cbeb49bb0dcb3a2a780b"}}
    :main-opts ["-m" "cognitect.test-runner" "-d" "test"]}}}
