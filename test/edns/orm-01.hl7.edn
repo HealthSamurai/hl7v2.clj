@@ -1,0 +1,213 @@
+{:MSH {:app {:ns "RADIANT"},
+       :datetime {:time "20170726010022"},
+       :encoding "^~\\&",
+       :facility {:ns "EPIC"},
+       :id "15837",
+       :proc_id {:proc_id "T"},
+       :receiving_app {:ns "IMG_UNLINK"},
+       :receiving_facility {:ns "PHS IMG"},
+       :security "CADENCEBATCHOB",
+       :separator "|",
+       :type {:code "ORM", :event "O01"},
+       :version {:id "2.3"}},
+ :order
+   [{:ORC {:callback_phone [{:phone "(503)418-9700"}],
+           :entered_by
+             [{:family {:surname "NGUYEN"}, :given "THOA", :id "P323126"}],
+           :enterer_location {:facility {:ns "501101"},
+                              :location_description "CHC MRI",
+                              :point_of_care "CHC MRI"},
+           :filler_number {:identifier "6004456PRV", :ns "EPC"},
+           :id "XO",
+           :placer_number {:identifier "309132", :ns "EPC"},
+           :provider [{:authority {:ns "OR STAR SER"},
+                       :family {:surname "KIRKLAND"},
+                       :given "MARIA",
+                       :id "18859",
+                       :id_type "OR STAR SER"}
+                      {:authority {:ns "PROVPID"},
+                       :family {:surname "KIRKLAND"},
+                       :given "MARIA",
+                       :id "1066687",
+                       :id_type "PPID"}],
+           :quantity_timing [{:priority "R", :start {:time "20170717000000"}}],
+           :status "CA",
+           :transaction_datetime {:time "20170726010022"},
+           :type {:code "O"}},
+     :order_detail
+       {:DG1
+          [{:diagnosis_code_dg1
+              {:code "R19.00",
+               :display
+                 "Intra-abdominal and pelvic swelling, mass and lump, unspecified site",
+               :system "ICD-10-CM"},
+            :diagnosis_coding_method "ICD-10-CM",
+            :diagnosis_description
+              "Intra-abdominal and pelvic swelling, mass and lump, unspecified site",
+            :diagnosis_type "^180;ORD",
+            :set_id "1"}],
+        :obrrqdrq1rxoodsodt_suppgrp
+          {:OBR {:callback_phone_number [{:phone "(503)418-9700"}],
+                 :diagnostic_service "MR",
+                 :filler_number {:identifier "6004456PRV", :ns "EPC"},
+                 :ordering_provider [{:authority {:ns "OR STAR SER"},
+                                      :family {:surname "KIRKLAND"},
+                                      :given "MARIA",
+                                      :id "18859",
+                                      :id_type "OR STAR SER"}
+                                     {:authority {:ns "PROVPID"},
+                                      :family {:surname "KIRKLAND"},
+                                      :given "MARIA",
+                                      :id "1066687",
+                                      :id_type "PPID"}],
+                 :placer_field_1 "CHC-DI-SC-MR^CHC SC MRI 01^PHS IMG RES",
+                 :placer_number {:identifier "309132", :ns "EPC"},
+                 :priority "R",
+                 :quantity_timing [{:priority "R",
+                                    :start {:time "20170717000000"}}],
+                 :reason [{:display "swelling of stomach"}],
+                 :requested_datetime {:time "20170717"},
+                 :scheduled_datetime {:time "20170720083000"},
+                 :set_id "1",
+                 :specimen_action_code "Imaging",
+                 :status "X",
+                 :uid {:alternate_display "MRI",
+                       :code "IMG1431",
+                       :display "MRI ABDOMEN W CONTRAST MRCP",
+                       :system "RADIANT EAP"}}},
+        :observation
+          [{:OBX {:set_id "1",
+                  :type {:code "IMG.90052034", :display "Reason for exam:"},
+                  :value ["swelling of stomach"],
+                  :value_type "ST"}}
+           {:OBX {:set_id "2",
+                  :type {:code "IMG.12220611",
+                         :display "What is the preferred imaging location?"},
+                  :value ["CA Holy Cross Medical Center (Prov Mission Hills)"],
+                  :value_type "ST"}}
+           {:OBX {:set_id "3",
+                  :type {:code "IMG.120982", :display "Is patient pregnant?"},
+                  :value ["No"],
+                  :value_type "ST"}}
+           {:OBX {:set_id "4",
+                  :type
+                    {:code "IMG.10015901",
+                     :display
+                       "Does the patient have an implanted cardiac device?"},
+                  :value ["No"],
+                  :value_type "ST"}}
+           {:OBX {:set_id "5",
+                  :type
+                    {:code "IMG.12017400",
+                     :display
+                       "Does the patient have a pacemaker / defibrillator?"},
+                  :value ["No"],
+                  :value_type "ST"}}
+           {:OBX
+              {:set_id "6",
+               :type
+                 {:code "IMG.12227546",
+                  :display
+                    "Does the patient have any programable shunts, aneurysm clips, implanted electronic devices, or any attached electronic devices? "},
+               :value ["No"],
+               :value_type "ST"}}
+           {:OBX
+              {:set_id "7",
+               :type
+                 {:code "IMG.1222765",
+                  :display
+                    "Does patient have any allergies or sensitivities to MRI contrast (gadolinium)?"},
+               :value ["No"],
+               :value_type "ST"}}
+           {:OBX
+              {:set_id "8",
+               :type
+                 {:code "IMG.12227559",
+                  :display
+                    "Does patient have any hx renal disease (including only having 1 kidney), renal transplant, renal tumor or is on dialysis?"},
+               :value ["No"],
+               :value_type "ST"}}
+           {:OBX {:set_id "9",
+                  :type {:code "IMG.1222761",
+                         :display
+                           "Has patient ever had metal in his/her eyes?"},
+                  :value ["No"],
+                  :value_type "ST"}}
+           {:OBX {:set_id "10",
+                  :type {:code "IMG.1222756",
+                         :display "Is the patient claustrophobic?"},
+                  :value ["No"],
+                  :value_type "ST"}}
+           {:OBX {:set_id "11",
+                  :type {:code "IMG.12219890",
+                         :display "Has the patient had surgery in scan area?"},
+                  :value ["No"],
+                  :value_type "ST"}}
+           {:OBX {:set_id "12",
+                  :type {:code "IMG.12227242",
+                         :display
+                           "Will an interpreter be needed for the exam?"},
+                  :value ["No"],
+                  :value_type "ST"}}
+           {:OBX {:set_id "13",
+                  :type
+                    {:code "IMG.1201042",
+                     :display
+                       "If the patient needs an interpreter, enter language:"},
+                  :value ["English"],
+                  :value_type "ST"}}
+           {:OBX {:set_id "14",
+                  :type {:code "IMG.1222689",
+                         :display "What is the patients height \\T\\ weight?"},
+                  :value ["Ht:1.651 m (5' 5\") Wt:"],
+                  :value_type "ST"}}
+           {:OBX {:set_id "15",
+                  :type {:code "IMG.12227221",
+                         :display
+                           "Do you have any special mobility requirements?"},
+                  :value ["No"],
+                  :value_type "ST"}}
+           {:OBX {:set_id "16",
+                  :type {:code "IMG.1222686",
+                         :display
+                           "Does the patient have relevant prior films?"},
+                  :value ["No"],
+                  :value_type "ST"}}]}}],
+ :patient
+   {:PD1 {:patient_primary_care_provider_name_id_no_ [{:authority {:ns
+                                                                     "PROVPID"},
+                                                       :family {:surname "PCP"},
+                                                       :given "PROV",
+                                                       :id "1122346",
+                                                       :id_type "PPID",
+                                                       :initials "INACTIVE"}],
+          :patient_primary_facility
+            [{:id "405141", :name "OPH PROVIDENCE PORTLAND MEDICAL CENTER"}]},
+    :PID {:account_number {:id "50000151236"},
+          :address [{:city "PORTLAND",
+                     :country "USA",
+                     :county "MULTNOMAH",
+                     :postal_code "97212",
+                     :state "OR",
+                     :street {:text "487 LEMON AVE."},
+                     :type "P"}],
+          :birth_date {:time "19760601"},
+          :county_code "MULTNOMAH",
+          :gender "F",
+          :home_phone [{:phone "(503)215-3456", :type "H", :use "P"}],
+          :identifiers [{:id "E810", :type "EPI"}
+                        {:authority {:ns "ORCA MRN"},
+                         :id "20000025896",
+                         :type "ORCA MRN"}],
+          :marital_status {:code "SL"},
+          :name [{:family {:surname "PETERS"}, :given "LEAH"}],
+          :patient_id
+            {:authority {:ns "ORCA MRN"}, :id "20000025896", :type "ORCA MRN"},
+          :race [{:code "WHT"}],
+          :set_id "1",
+          :ssn_number "235-12-1234"},
+    :patient_visit {:PV1 {:assigned_patient_location {:facility {:ns "CHC"},
+                                                      :point_of_care "CHC MRI"},
+                          :patient_class "O",
+                          :visit_indicator "V",
+                          :visit_number {:id "50000151236"}}}}}
