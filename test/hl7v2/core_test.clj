@@ -10,6 +10,27 @@
             [clojure.test :refer :all])
   (:import [java.io File]))
 
+(def extensions
+  [[:ADT_A01 :ZBC [[:name "ZBC.1" :type "ST" :key "zbc_one"]
+                   [:name "ZBC.2" :type "ST" :key "zbc_two"]
+                   [:name "ZBC.3" :type "ST" :key "zbc_three"]]]
+   [:ADT_A01 :ZG1 [[:name "ZG1.1" :type "ST" :key "zg1_one"]
+                   [:name "ZG1.2" :type "ST" :key "zg1_two"]
+                   [:name "ZG1.3" :type "ST" :key "zg1_three"]
+                   [:name "ZG1.4" :type "ST" :key "zg1_four"]] {:after "GT1" :quant "*"}]
+   [:ADT_A01 :ZPD [[:name "ZPD.1" :type "ST" :key "zpd1"]
+                              [:name "ZPD.2" :type "ST" :key "zpd2"]
+                              [:name "ZPD.3" :type "ST" :key "zpd3"]
+                              [:name "ZPD.4" :type "ST" :key "zpd4"]
+                              [:name "ZPD.5" :type "ST" :key "zpd5"]
+                              [:name "ZPD.6" :type "ST" :key "zpd6"]
+                              [:name "ZPD.7" :type "ST" :key "zpd7"]
+                              [:name "ZPD.8" :type "ST" :key "zpd8"]
+                              [:name "ZPD.9" :type "ST" :key "zpd9"]
+                              [:name "ZPD.10" :type "ST" :key "zpd10"]
+                              [:name "ZPD.11" :type "ST" :key "zpd11"]
+                              [:name "ZPD.12" :type "ST" :key "zpd12"]] {:after "PID"}]])
+
 (def msg
   "MSH|^~\\&|AccMgr|1|||20151015200643||ADT^A01|599102|P|2.3|foo||
 EVN|A01|20151010045502|||||
@@ -182,12 +203,12 @@ NTE|2||HCT=LOW||20110529130917-04:00
 (defn rewrite-hl7-edn [fname]
   (let [f (-> (str "messages/" fname) io/resource io/file)]
     (spit (expectation-file f)
-          (zp/zprint-str (sut/parse (slurp f))))))
+          (zp/zprint-str (sut/parse (slurp f) {:extensions extensions})))))
 
 (deftest test-parse-examples
   (foreach-hl7 [input expected]
                (testing (str "with " expected)
-                 (match-file expected (sut/parse input)))))
+                 (match-file expected (sut/parse input {:extensions extensions})))))
 
 
 (comment
@@ -196,9 +217,9 @@ NTE|2||HCT=LOW||20110529130917-04:00
 
   ;; overrride all files
   (foreach-hl7 [input expected]
-               (spit expected (-> input sut/parse zp/zprint-str)))
+               (spit expected (-> input (sut/parse {:extensions extensions}) zp/zprint-str)))
 
-  (rewrite-hl7-edn "real/admit.hl7")
+  (rewrite-hl7-edn "adt-a04-2.hl7")
 
   (sut/parse-segment ctx "MSH|^~\\&|AccMgr|1|||20151015200643||ADT^A01|599102|P|2.3|foo||")
 
