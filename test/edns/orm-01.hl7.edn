@@ -107,24 +107,21 @@
               {:set_id "6",
                :type
                  {:code "IMG.12227546",
-                  :display
-                    "Does the patient have any programable shunts, aneurysm clips, implanted electronic devices, or any attached electronic devices? "},
+                  :display "Does the patient have any programable shunts, aneurysm clips, implanted electronic devices, or any attached electronic devices? "},
                :value ["No"],
                :value_type "ST"}}
            {:OBX
               {:set_id "7",
                :type
                  {:code "IMG.1222765",
-                  :display
-                    "Does patient have any allergies or sensitivities to MRI contrast (gadolinium)?"},
+                  :display "Does patient have any allergies or sensitivities to MRI contrast (gadolinium)?"},
                :value ["No"],
                :value_type "ST"}}
            {:OBX
               {:set_id "8",
                :type
                  {:code "IMG.12227559",
-                  :display
-                    "Does patient have any hx renal disease (including only having 1 kidney), renal transplant, renal tumor or is on dialysis?"},
+                  :display "Does patient have any hx renal disease (including only having 1 kidney), renal transplant, renal tumor or is on dialysis?"},
                :value ["No"],
                :value_type "ST"}}
            {:OBX {:set_id "9",
