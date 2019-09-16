@@ -1,0 +1,24 @@
+MSH:
+  null: 20110529130917-04:00
+  encoding: ^~\&
+  facility: {ns: Lab}
+  proc_id: {proc_id: P}
+  seqnum: '2010022217399'
+  receiving_app: {ns: Lab}
+  ack_type: AL
+  type: {code: ORU, event: R30}
+  charset: [312626^^^^^Main Lab&05D0557149&CLIA]
+  app_ack_type: |-
+    NE
+    PID
+  language: {code: '0362855', alternate_system: Main Lab&05D0557149&CLIA}
+  id: 87226A1476977481
+  alt_charset: ^^^^^Main Lab&05D0557149&CLIA
+  app: {ns: LAb}
+  datetime: {time: '20100222024516'}
+  receiving_facility: {ns: Lab}
+  version: {id: '2.4'}
+  separator: '|'
+  country: '1'
+  profile:
+  - {identifier: LOPEZ, ns: ADALBERTO}
