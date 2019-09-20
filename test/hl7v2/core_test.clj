@@ -1,6 +1,7 @@
 (ns hl7v2.core-test
   (:require [hl7v2.core :as sut]
             [clj-yaml.core]
+
             [hl7v2.schema.core :as schema]
             [matcho.core :refer [match]]
             [zprint.core :as zp]
@@ -165,6 +166,12 @@ NTE|2||HCT=LOW||20110529130917-04:00
 
   (spit "test/results/oru-r01-1.yaml" (clj-yaml.core/generate-string (sut/parse (slurp "test/messages/oru-r01-1.hl7") {})))
 
+  (sut/parse-segment ctx "OBX|||^^||||||||||||||||20120529130917-04:00|")
+
+  (sut/parse-segment ctx "PV1|||^^^^^^||||^^^^^^^^^^^^^||||||||||^^^^^^^^^^^^^||^^^^|||||||||||||||||||||||||20050110045253||||||")
+
+  (sut/parse-segment ctx "PID||^^^^^&&|^^^^^&&|^^^^^&&|^||19450409||||^^^^||||||||")
+
   )
 
 
@@ -208,7 +215,7 @@ NTE|2||HCT=LOW||20110529130917-04:00
   (foreach-hl7 [input expected]
                (spit expected (-> input (sut/parse {:extensions extensions}) zp/zprint-str)))
 
-  (rewrite-hl7-edn "adt-a04-2.hl7")
+  (rewrite-hl7-edn "oru_r30.hl7")
 
   (sut/parse-segment ctx "MSH|^~\\&|AccMgr|1|||20151015200643||ADT^A01|599102|P|2.3|foo||")
 
