@@ -2,7 +2,8 @@
   (:require [clojure.string :as str]
             [flatland.ordered.map :refer [ordered-map]]
             [hl7v2.schema.core :as schema]
-            [hl7v2.schema.parsec :as parsec])
+            [hl7v2.schema.parsec :as parsec]
+            [hl7v2.schema.types :as types])
   (:import [java.util.regex Pattern]))
 
 
@@ -41,26 +42,28 @@
       (not (nil? v)))))
 
 (defn parse-value [{sch :schema sep :separators :as ctx} tp v]
-  (if (get schema/primitives (keyword (:type tp)))
-    v
-    (if-let [sub-tp (get-in sch [:types (keyword (:type tp))])]
-      (let [sub-cmps (split-by v (:subcomponet sep))
-            sub-types (:components sub-tp)]
-        (loop [[c & cs] sub-cmps
-               [s & ss] sub-types
-               res {}]
-          (let [res (if-not (str/blank? c)
-                      (let [v (parse-value ctx s c)]
-                        (if (not-empty? v)
-                          (assoc res (keyword (:key s)) v)
-                          res))
-                      res)]
-            (if (empty? cs)
-              res
-              (recur cs ss res)))))
-      (do 
-        (println "WARN:" (pr-str (merge {} tp) v))
-        v))))
+  (if-let [parse-fn (get types/typed-formatters (keyword (:type tp)))]
+    (parse-fn v)
+    (if (get schema/primitives (keyword (:type tp)))
+      v
+      (if-let [sub-tp (get-in sch [:types (keyword (:type tp))])]
+        (let [sub-cmps (split-by v (:subcomponet sep))
+              sub-types (:components sub-tp)]
+          (loop [[c & cs] sub-cmps
+                 [s & ss] sub-types
+                 res {}]
+            (let [res (if-not (str/blank? c)
+                        (let [v (parse-value ctx s c)]
+                          (if (not-empty? v)
+                            (assoc res (keyword (:key s)) v)
+                            res))
+                        res)]
+              (if (empty? cs)
+                res
+                (recur cs ss res)))))
+        (do 
+          (println "WARN:" (pr-str (merge {} tp) v))
+          v)))))
 
 
 (defn parse-component [ctx tp v]
