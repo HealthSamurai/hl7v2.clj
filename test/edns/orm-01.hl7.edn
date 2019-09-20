@@ -1,5 +1,5 @@
 {:MSH {:app {:ns "RADIANT"},
-       :datetime {:time "20170726010022"},
+       :datetime {:time "2017-07-26T01:00:22"},
        :encoding "^~\\&",
        :facility {:ns "EPIC"},
        :id "15837",
@@ -30,9 +30,10 @@
                        :given "MARIA",
                        :id "1066687",
                        :id_type "PPID"}],
-           :quantity_timing [{:priority "R", :start {:time "20170717000000"}}],
+           :quantity_timing [{:priority "R",
+                              :start {:time "2017-07-17T00:00:00"}}],
            :status "CA",
-           :transaction_datetime {:time "20170726010022"},
+           :transaction_datetime {:time "2017-07-26T01:00:22"},
            :type {:code "O"}},
      :order_detail
        {:DG1
@@ -64,10 +65,10 @@
                  :placer_number {:identifier "309132", :ns "EPC"},
                  :priority "R",
                  :quantity_timing [{:priority "R",
-                                    :start {:time "20170717000000"}}],
+                                    :start {:time "2017-07-17T00:00:00"}}],
                  :reason [{:display "swelling of stomach"}],
-                 :requested_datetime {:time "20170717"},
-                 :scheduled_datetime {:time "20170720083000"},
+                 :requested_datetime {:time "2017-07-17"},
+                 :scheduled_datetime {:time "2017-07-20T08:30:00"},
                  :set_id "1",
                  :specimen_action_code "Imaging",
                  :status "X",
@@ -107,21 +108,24 @@
               {:set_id "6",
                :type
                  {:code "IMG.12227546",
-                  :display "Does the patient have any programable shunts, aneurysm clips, implanted electronic devices, or any attached electronic devices? "},
+                  :display
+                    "Does the patient have any programable shunts, aneurysm clips, implanted electronic devices, or any attached electronic devices? "},
                :value ["No"],
                :value_type "ST"}}
            {:OBX
               {:set_id "7",
                :type
                  {:code "IMG.1222765",
-                  :display "Does patient have any allergies or sensitivities to MRI contrast (gadolinium)?"},
+                  :display
+                    "Does patient have any allergies or sensitivities to MRI contrast (gadolinium)?"},
                :value ["No"],
                :value_type "ST"}}
            {:OBX
               {:set_id "8",
                :type
                  {:code "IMG.12227559",
-                  :display "Does patient have any hx renal disease (including only having 1 kidney), renal transplant, renal tumor or is on dialysis?"},
+                  :display
+                    "Does patient have any hx renal disease (including only having 1 kidney), renal transplant, renal tumor or is on dialysis?"},
                :value ["No"],
                :value_type "ST"}}
            {:OBX {:set_id "9",
@@ -188,7 +192,7 @@
                      :state "OR",
                      :street {:text "487 LEMON AVE."},
                      :type "P"}],
-          :birth_date {:time "19760601"},
+          :birth_date {:time "1976-06-01"},
           :county_code "MULTNOMAH",
           :gender "F",
           :home_phone [{:phone "(503)215-3456", :type "H", :use "P"}],

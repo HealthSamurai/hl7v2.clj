@@ -1,5 +1,5 @@
 {:MSH {:app {:ns "VITAEHR"},
-       :datetime {:time "20170807115912"},
+       :datetime {:time "2017-08-07T11:59:12"},
        :encoding "^~\\&",
        :id "77856",
        :proc_id {:proc_id "T"},
@@ -11,7 +11,7 @@
  :SCH {:appointment_duration "60",
        :appointment_duration_units {:code "MIN"},
        :appointment_reason {:code "OMD PSG", :display "OMD SLP PSG"},
-       :appointment_timing_quantity [{:start {:time "20170810090000"}}],
+       :appointment_timing_quantity [{:start {:time "2017-08-10T09:00:00"}}],
        :entered_by_person [{:family {:surname "BARLOW"},
                             :given "LOUIS",
                             :id "P193590",
@@ -29,7 +29,7 @@
                                 :initials "H"}]},
  :patient
    [{:PID {:address [{:country "USA", :type "P"}],
-           :birth_date {:time "19590531"},
+           :birth_date {:time "1959-05-31"},
            :death_indicator "N",
            :gender "M",
            :identifiers [{:id "F56025", :type "VIT"}
@@ -55,7 +55,7 @@
                                   :system "PPID"},
                                :resource_type {:code "2", :display "RESOURCE"},
                                :set_id "1",
-                               :start_datetime {:time "20170810090000"},
+                               :start_datetime {:time "2017-08-10T09:00:00"},
                                :start_datetime_offset "0",
                                :start_datetime_offset_units {:code "MIN"}}}],
      :service [{:AIS {:filler_status_code {:code "Sch"}, :set_id "1"}}]}]}

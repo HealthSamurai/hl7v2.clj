@@ -71,7 +71,7 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
        :seqnum "foo",
        :version {:id "2.3"},
        :proc_id {:proc_id "P"},
-       :datetime {:time "20151015200643"},
+       :datetime {:time "2015-10-15T20:06:43"},
        :facility {:ns "1"},
        :app {:ns "AccMgr"}
        :separator "|"
@@ -95,7 +95,7 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
                         :facility {:ns "001"}},
        :race [{:code "C"}],
        :gender "F",
-       :birth_date {:time "19440823"},
+       :birth_date {:time "1944-08-23"},
        :primary_language  {:code "ENG"},
        :home_phone [{:phone "(111)222-3333"}],
        :ssn_number "123-22-1111",
@@ -129,14 +129,14 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
      (sut/parse-segment
       ctx "IN1|1|303401^PRIV HLTH CARE SYS-BCBS OF N CAROLINA|3034|BCBS OF NORTH CAROLINA|CLMS PROCESSING CONTRACTOR PO BOX 9518^^DURHAM^NC^32145-9518^||(845)543-3876^^^^^845^5433876|1233||||20160726||||UPGRADETEST^CPAP^^|Self|19490512|876 MAIN^^BANANA VALLEY^WA^98038^US^^^KING|||1**1|||NO||||20170726102055|BARLLH1^BARLOW^LOUIS^H.^|||||4694998|F8086412450||||||Full|M|1258 ROSE AVE SW^^RENTON^WA^98057^US|Verified Pat||BOTH||")
 
-     ["IN1" {:beneficiary_address [{:city "BANANA VALLEY", :country "US", :county "KING", :postal_code "98038", :state "WA", :street {:text "876 MAIN"}}], :beneficiary_birthDate {:time "19490512"}, :beneficiary_gender "M",
+     ["IN1" {:beneficiary_address [{:city "BANANA VALLEY", :country "US", :county "KING", :postal_code "98038", :state "WA", :street {:text "876 MAIN"}}], :beneficiary_birthDate {:time "1949-05-12"}, :beneficiary_gender "M",
              :beneficiary_name [{:family {:surname "UPGRADETEST"}, :given "CPAP"}], :benifits_coordination_priority "1**1", :class_type "BOTH", :contract_identifier "F8086412450", :eligibility_flag "NO",
              :employer_address [{:city "RENTON", :country "US", :postal_code "98057", :state "WA", :street {:text "1258 ROSE AVE SW"}}], :employment_status {:code "Full"}, :group_number "1233",
              :identifier_type {:code "303401", :display "PRIV HLTH CARE SYS-BCBS OF N CAROLINA"},
              :payor_organization_address [{:city "DURHAM", :postal_code "32145-9518", :state "NC", :street {:text "CLMS PROCESSING CONTRACTOR PO BOX 9518"}}],
              :payor_organization_contact_telecom [{:area_city "845", :local_number "5433876", :phone "(845)543-3876"}], :payor_organization_identifier_value [{:id "3034"}],
              :payor_organization_name [{:name "BCBS OF NORTH CAROLINA"}], :period_start "20160726", :relationship_to_patient {:code "Self"}, :set_id "1",
-             :verification_by [{:family {:surname "BARLOW"}, :given "LOUIS", :id "BARLLH1", :initials "H."}], :verification_datetime {:time "20170726102055"}, :verification_status "Verified Pat"}]
+             :verification_by [{:family {:surname "BARLOW"}, :given "LOUIS", :id "BARLLH1", :initials "H."}], :verification_datetime {:time "2017-07-26T10:20:55"}, :verification_status "Verified Pat"}]
      )
     ))
 
