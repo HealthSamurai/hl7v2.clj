@@ -1,5 +1,7 @@
 language: java
-script: make test
+script:
+  - make test
+  - make jar && make clojars-push
 
 jdk:
   - openjdk8

@@ -1,14 +1,13 @@
-.PHONY: test
+.PHONY: test deploy jar repl
 
 test:
 	clojure -A:test:runner
 
-deploy: test
-	clj -Spom
-	mvn deploy
+jar:
+	clojure -A:jar
+
+clojars-push:
+	clojure -A:deploy
 
 repl:
 	clj -A:test:nrepl -e "(-main)" -r
-
-push:
-	mvn deploy

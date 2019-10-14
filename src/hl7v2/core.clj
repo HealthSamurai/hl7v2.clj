@@ -3,11 +3,11 @@
             [flatland.ordered.map :refer [ordered-map]]
             [hl7v2.schema.core :as schema]
             [hl7v2.schema.parsec :as parsec])
-  (:import [java.util.regex Pattern]))
+  (:import [java.util.regex Pattern])
+  (:gen-class))
 
 
-
-(defn pre-condigion [msg]
+(defn pre-condition [msg]
   (cond-> []
     (not (str/starts-with? msg "MSH")) (conj "Message should start with MSH segment")
     (< (.length msg) 8) (conj "Message is too short (MSH truncated)")))
@@ -138,9 +138,10 @@
 (defn parse
   ([msg] (parse msg {}))
   ([msg {extensions :extensions :as opts}]
-   (let [errs (pre-condigion msg)]
+   (let [errs (pre-condition msg)]
      (when-not (empty? errs)
        (throw (Exception. (str/join "; " errs))))
+
      (let [sch (schema/schema)
            sch (reduce apply-extension sch extensions)
            seps (separators msg)
@@ -153,6 +154,7 @@
            {c :code e :event} (get-in segments [0 1 :type])
            msg-key (get-in sch [:messages :idx (keyword c) (keyword e)])
            grammar (get-in sch [:messages (when [msg-key] (keyword msg-key))])]
+
        (when-not grammar
          (throw (Exception. (str "Do not know how to parse: " c "|" e " " (first segments)) )))
        #_(println "GR"  (keyword (str c "_" e)) grammar)

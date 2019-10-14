@@ -1,9 +1,23 @@
 {:paths ["src" "resources"]
- :deps  {org.clojure/clojure {:mvn/version "1.10.0"}
-         cheshire            {:mvn/version "5.6.3"}}
+ :deps  {circleci/clj-yaml    {:mvn/version "0.6.0"}
+         org.clojure/clojure  {:mvn/version "1.10.0"}
+         cheshire             {:mvn/version "5.6.3"}}
 
  :aliases
- {:nrepl
+ {:jar
+  {:extra-deps
+   {luchiniatwork/cambada {:mvn/version "1.0.0"}}
+   :main-opts ["-m" "cambada.jar"
+               "-m" "hl7v2.core"
+               "--app-group-id" "com.health-samurai"
+               "--app-artifact-id" "hl7v2"
+               "--app-version" "0.1.0-SNAPSHOT"]}
+
+  :deploy
+  {:extra-deps {deps-deploy {:mvn/version "RELEASE"}}
+   :main-opts ["-m" "deps-deploy.deps-deploy" "deploy" "target/hl7v2-0.1.0-SNAPSHOT.jar"]}
+
+  :nrepl
   {:extra-paths ["dev" "schema"]
    :extra-deps {cider/cider-nrepl             {:mvn/version "0.21.0"}
                 refactor-nrepl/refactor-nrepl {:mvn/version "2.4.0"}

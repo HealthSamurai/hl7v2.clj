@@ -2,7 +2,6 @@
   (:require [clj-yaml.core]
             [clojure.java.io :as io]))
 
-
 (def primitives
   {:DT true
    :DTM true
