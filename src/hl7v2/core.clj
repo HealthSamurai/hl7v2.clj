@@ -103,7 +103,10 @@
             acc {}]
        (let [s (merge s (get-in sch [:fields (keyword (:field s))]))]
          (if (str/blank? f)
-           (recur fs ss acc)
+           (if (empty? fs)
+             acc
+             (recur fs ss acc))
+
            (let [v (parse-field ctx (assoc (or s {}) :value f))
                  acc  (if (not-empty? v) 
                         (assoc acc (keyword (:key s)) v)
