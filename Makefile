@@ -10,4 +10,5 @@ clojars-push:
 	clojure -A:deploy
 
 repl:
-	clj -A:test:nrepl -e "(-main)" -r
+	clj -A:test:nrepl -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware refactor-nrepl.middleware/wrap-refactor]"
+

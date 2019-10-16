@@ -8,8 +8,6 @@
      res#))
 
 (deftest test-parser 
-
-
   (is (= (sut/name-quant "ab?") [:ab :?]))
 
   (is (= (sut/name-quant "ab") [:ab nil]))
@@ -100,6 +98,4 @@
    {:MSH 0,
     :patient {:PID 1, :visit {:PV1 2}},
     :order [{:OBR 3, :result [{:OBX 4} {:OBX 5, :NTE [6]}]}
-            {:ORC 7, :OBR 8, :result [{:OBX 9, :NTE [10 11]} {:OBX 12, :NTE [13]}]}]})
-  
-  )
+            {:ORC 7, :OBR 8, :result [{:OBX 9, :NTE [10 11]} {:OBX 12, :NTE [13]}]}]}))

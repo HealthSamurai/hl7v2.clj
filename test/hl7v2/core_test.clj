@@ -139,35 +139,6 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
      )
     ))
 
-
-(comment
-  (spit "/tmp/1.yaml" (clj-yaml.core/generate-string (sut/parse-segment
-                                                      ctx "IN1|1|303401^PRIV HLTH CARE SYS-BCBS OF N CAROLINA|3034|BCBS OF NORTH CAROLINA|CLMS PROCESSING CONTRACTOR PO BOX 9518^^DURHAM^NC^32145-9518^||(845)543-3876^^^^^845^5433876|1233||||20160726||||UPGRADETEST^CPAP^^|Self|19490512|876 MAIN^^BANANA VALLEY^WA^98038^US^^^KING|||1**1|||NO||||20170726102055|BARLLH1^BARLOW^LOUIS^H.^|||||4694998|F8086412450||||||Full|M|1258 ROSE AVE SW^^RENTON^WA^98057^US|Verified Pat||BOTH||")))
-
-  (spit "test/results/adt.yaml" (clj-yaml.core/generate-string (sut/parse msg {})))
-
-
-  (def oru "MSH|^~\\&|LAb|Lab|Lab|Lab|20100222024516||ORU^R30|87226A1476977481|P|2.4|2010022217399||AL|NE
-PID|1|312626^^^^^Main Lab&05D0557149&CLIA|0362855^^^^^Main Lab&05D0557149&CLIA|^^^^^Main Lab&05D0557149&CLIA|LOPEZ^ADALBERTO||19450409|M|||8753 APPERSON ST^^SUNLAND^CA^91040||(818)429-5631|||||000016715153|572458313
-ORC|NW||||||^^^|||||^^^||||||L7173SB00037^^VHH^Med Surg-6^^|
-OBR|1|||CHEM8+
-NTE|1|||Sample Type=MIX||20110529130917-04:00
-NTE|2|||CPB=Yes||20110529130917-04:00
-OBX|1|NM|8625-6^P-R interval^LN||<10|%PCV||N|||F|||||APOC3214||equipment|20120529130917-04:00|MIX
-OBX|2|DT|41651-1^date^LN||20110529130917-04:00|mg/dL|||||F|||20150529130917-04:00||APOC3214||||MIX
-OBX|3|ST|45541-1^GJU^LN||100500 mm||||||F|||||APOC3214|||20110529130917-04:00|MIX
-OBX|4|CE|45541-1^GJU^LN||43434-1^8890 jkjsdfk^BV||||||F|||||APOC3214|||20110529130917-04:00|MIX
-NTE|1||DSN=314237||20110529130917-04:00
-NTE|2||HCT=LOW||20110529130917-04:00
-")
-
-  (spit "test/results/oru.yaml" (clj-yaml.core/generate-string (sut/parse oru {})))
-
-  (spit "test/results/oru-r01-1.yaml" (clj-yaml.core/generate-string (sut/parse (slurp "test/messages/oru-r01-1.hl7") {})))
-
-  )
-
-
 (defn expectation-file [^File f]
   (let [name (.getName f)
         parent (-> f .getParentFile .getAbsoluteFile .getPath)
@@ -198,6 +169,90 @@ NTE|2||HCT=LOW||20110529130917-04:00
   (foreach-hl7 [input expected]
                (testing (str "with " expected)
                  (match-file expected (sut/parse input {:extensions extensions})))))
+
+(def infinity-recursion "MSH|^~\\&|VITAEHR|ORCA||AS_AFTER_CHECK_IN|20170807134552|D454345|ADT^A04|541642|T|2.3|||||||||||
+EVN|A04|20170807152032||AS_AFTER_CHECK_IN|^DYER^ADRIANNA^R^^^^^JHC^^^^^JHCCC||
+PD1|||CJN FORESIGHT SAINT THOMAS HEALTH CENTER^^945764|||||||||||||||
+PZ1|||||
+CON|1|Ins Card|||||||||||||||||||||||
+CON|2|Photo ID|||||||||||||||||||||||
+CON|3|ADV DIR|||||||||NOT RECV||||||||||||||
+CON|4|POA|||||||||NOT RECV||||||||||||||
+CON|5|HIPAA NOP|||||||||NOT RECV||||||||||||||
+CON|6|Auth Finance|||||||||NOT RECV||||||||||||||
+CON|7|JHC HIPAA|||||||||NOT RECV||||||||||||||
+CON|8|JHC PhysCon|||||||||NOT RECV||||||||||||||
+PV1|1|O|JHCCC IM^^^JHCCC^^^^^^^||||2767546247^SAWYER^BILL^^^^^^VITAEHR^^^^PNPI~SAWYERB^SAWYER^BILL^^^^^^MUSKOGEE REG MED CTR HOME HEALTH SER^^^^MUSKOGEE REG MED CTR HOME HEALTH SER~6154544^SAWYER^BILL^^^^^^VITAPID^^^^PPID||||||||||||97646500222|SELF||||||||||||||||||||||||20170807121901||||||||||
+PV2||||||||20170807171615||||Appointment||||||||||N|||||||||||||||||||||||||||
+GT1|1|2514|ORCASRC^TESTSIX^^||642 MELON AVE^^CLARKSVILLE^TN^37040^USA^^^CLARKSVILLE|(785)254-6658^^^^^785^2546658||19870603|M|P/F|SLF|558-47-2896|||||^^^^^USA|||UNKNOWN|||||||||||||||||||||||||||||")
+
+(deftest infinity-loop-case
+  (println ">>>" (sut/parse infinity-recursion))
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(comment
+  (spit "/tmp/1.yaml" (clj-yaml.core/generate-string (sut/parse-segment
+                                                      ctx "IN1|1|303401^PRIV HLTH CARE SYS-BCBS OF N CAROLINA|3034|BCBS OF NORTH CAROLINA|CLMS PROCESSING CONTRACTOR PO BOX 9518^^DURHAM^NC^32145-9518^||(845)543-3876^^^^^845^5433876|1233||||20160726||||UPGRADETEST^CPAP^^|Self|19490512|876 MAIN^^BANANA VALLEY^WA^98038^US^^^KING|||1**1|||NO||||20170726102055|BARLLH1^BARLOW^LOUIS^H.^|||||4694998|F8086412450||||||Full|M|1258 ROSE AVE SW^^RENTON^WA^98057^US|Verified Pat||BOTH||")))
+
+  (spit "test/results/adt.yaml" (clj-yaml.core/generate-string (sut/parse msg {})))
+
+
+  (def oru "MSH|^~\\&|LAb|Lab|Lab|Lab|20100222024516||ORU^R30|87226A1476977481|P|2.4|2010022217399||AL|NE
+PID|1|312626^^^^^Main Lab&05D0557149&CLIA|0362855^^^^^Main Lab&05D0557149&CLIA|^^^^^Main Lab&05D0557149&CLIA|LOPEZ^ADALBERTO||19450409|M|||8753 APPERSON ST^^SUNLAND^CA^91040||(818)429-5631|||||000016715153|572458313
+ORC|NW||||||^^^|||||^^^||||||L7173SB00037^^VHH^Med Surg-6^^|
+OBR|1|||CHEM8+
+NTE|1|||Sample Type=MIX||20110529130917-04:00
+NTE|2|||CPB=Yes||20110529130917-04:00
+OBX|1|NM|8625-6^P-R interval^LN||<10|%PCV||N|||F|||||APOC3214||equipment|20120529130917-04:00|MIX
+OBX|2|DT|41651-1^date^LN||20110529130917-04:00|mg/dL|||||F|||20150529130917-04:00||APOC3214||||MIX
+OBX|3|ST|45541-1^GJU^LN||100500 mm||||||F|||||APOC3214|||20110529130917-04:00|MIX
+OBX|4|CE|45541-1^GJU^LN||43434-1^8890 jkjsdfk^BV||||||F|||||APOC3214|||20110529130917-04:00|MIX
+NTE|1||DSN=314237||20110529130917-04:00
+NTE|2||HCT=LOW||20110529130917-04:00
+")
+
+  (spit "test/results/oru.yaml" (clj-yaml.core/generate-string (sut/parse oru {})))
+
+  (spit "test/results/oru-r01-1.yaml" (clj-yaml.core/generate-string (sut/parse (slurp "test/messages/oru-r01-1.hl7") {})))
+
+  )
 
 
 (comment
