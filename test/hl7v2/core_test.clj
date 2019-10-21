@@ -168,28 +168,21 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
 (deftest test-parse-examples
   (foreach-hl7 [input expected]
                (testing (str "with " expected)
-                 (match-file expected (sut/parse input {:extensions extensions})))))
+                 (match-file expected (sut/parse input {:extensions extensions :strict? false})))))
 
-(def infinity-recursion "MSH|^~\\&|VITAEHR|ORCA||AS_AFTER_CHECK_IN|20170807134552|D454345|ADT^A04|541642|T|2.3|||||||||||
-EVN|A04|20170807152032||AS_AFTER_CHECK_IN|^DYER^ADRIANNA^R^^^^^JHC^^^^^JHCCC||
-PD1|||CJN FORESIGHT SAINT THOMAS HEALTH CENTER^^945764|||||||||||||||
-PZ1|||||
-CON|1|Ins Card|||||||||||||||||||||||
-CON|2|Photo ID|||||||||||||||||||||||
-CON|3|ADV DIR|||||||||NOT RECV||||||||||||||
-CON|4|POA|||||||||NOT RECV||||||||||||||
-CON|5|HIPAA NOP|||||||||NOT RECV||||||||||||||
-CON|6|Auth Finance|||||||||NOT RECV||||||||||||||
-CON|7|JHC HIPAA|||||||||NOT RECV||||||||||||||
-CON|8|JHC PhysCon|||||||||NOT RECV||||||||||||||
-PV1|1|O|JHCCC IM^^^JHCCC^^^^^^^||||2767546247^SAWYER^BILL^^^^^^VITAEHR^^^^PNPI~SAWYERB^SAWYER^BILL^^^^^^MUSKOGEE REG MED CTR HOME HEALTH SER^^^^MUSKOGEE REG MED CTR HOME HEALTH SER~6154544^SAWYER^BILL^^^^^^VITAPID^^^^PPID||||||||||||97646500222|SELF||||||||||||||||||||||||20170807121901||||||||||
-PV2||||||||20170807171615||||Appointment||||||||||N|||||||||||||||||||||||||||
-GT1|1|2514|ORCASRC^TESTSIX^^||642 MELON AVE^^CLARKSVILLE^TN^37040^USA^^^CLARKSVILLE|(785)254-6658^^^^^785^2546658||19870603|M|P/F|SLF|558-47-2896|||||^^^^^USA|||UNKNOWN|||||||||||||||||||||||||||||")
+(def silly-msg-1 "MSH|^~\\&|VITAEHR|ORCA||AS_AFTER_CHECK_IN|20170807134552|D454345|ADT^A04|541642|T|2.3|||||||||||
+  EVN|A04
+  PID|1")
 
-(deftest infinity-loop-case
-  (println ">>>" (sut/parse infinity-recursion))
-)
+(def silly-msg-2 "MSH|^~\\&|VITAEHR|ORCA||AS_AFTER_CHECK_IN|20170807134552|D454345|ADT^A04|541642|T|2.3|||||||||||
+  EVN|A04|20170807152032||AS_AFTER_CHECK_IN|^DYER^ADRIANNA^R^^^^^JHC^^^^^JHCCC||")
 
+(deftest silly-message-test
+  (is (= [:error "(\"Field EVN.2 is required\" \"Field PID.3 is required\" \"Field PID.5 is required\")"]
+         (sut/parse silly-msg-1)))
+
+  (is (= [:error "Rule :msg [MSH SFT* EVN PID PD1? CON* ROL* NK1* PV1 PV2? ROL* DB1* OBX* AL1* DG1* DRG? procedure* GT1* insurance* ACC? UB1? UB2? PDA?] at PID expected PID at segment position 2"]
+         (sut/parse silly-msg-2))))
 
 
 

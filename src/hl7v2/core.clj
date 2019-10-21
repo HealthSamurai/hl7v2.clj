@@ -58,8 +58,8 @@
             (if (empty? cs)
               res
               (recur cs ss res)))))
-      (do 
-        (println "WARN:" (pr-str (merge {} tp) v))
+      (do
+        ;; (println "WARN:" (pr-str (merge {} tp) v))
         v))))
 
 
@@ -97,23 +97,32 @@
                  fields)
 
         seg-sch (get-in sch [:segments (keyword seg-name)])]
+
     [seg-name
-     (loop [[f & fs] fields
-            [s & ss] seg-sch
+     (loop [[s & ss] seg-sch
+            field-idx 0
             acc {}]
-       (let [s (merge s (get-in sch [:fields (keyword (:field s))]))]
+       (let [f (nth fields field-idx nil)
+             s (merge s (get-in sch [:fields (keyword (:field s))]))]
+
          (if (str/blank? f)
-           (if (empty? fs)
-             acc
-             (recur fs ss acc))
+           (let [next-acc (if (:req s)
+                            (assoc acc :__errors
+                                   (conj (get acc :__errors [])
+                                         (str "Field " (:name s) " is required")))
+                            acc)]
+
+             (if (empty? ss)
+               next-acc
+               (recur ss (inc field-idx) next-acc)))
 
            (let [v (parse-field ctx (assoc (or s {}) :value f))
-                 acc  (if (not-empty? v) 
+                 acc  (if (not-empty? v)
                         (assoc acc (keyword (:key s)) v)
                         acc)]
-             (if (empty? fs)
+             (if (empty? ss)
                acc
-               (recur fs ss acc))))))]))
+               (recur ss (inc field-idx) acc))))))]))
 
 ;; FIX: grammar desc is a list?
 ;; if after is nil = conj
@@ -150,15 +159,23 @@
            seps (separators msg)
            ctx {:separators seps
                 :schema sch}
+
            segments (->> (split-by msg (:segment seps))
                          (mapv str/trim)
                          (filter #(> (.length %) 0))
                          (mapv #(parse-segment ctx %)))
-           {c :code e :event} (get-in segments [0 1 :type])
-           msg-key (get-in sch [:messages :idx (keyword c) (keyword e)])
-           grammar (get-in sch [:messages (when [msg-key] (keyword msg-key))])]
 
-       (when-not grammar
-         (throw (Exception. (str "Do not know how to parse: " c "|" e " " (first segments)) )))
-       #_(println "GR"  (keyword (str c "_" e)) grammar)
-       (parsec/parse grammar (mapv #(keyword (first %)) segments) (fn [idx] (get-in segments [idx 1])))))))
+           errors (mapcat #(get (second %) :__errors []) segments)]
+
+       (if (and (not (empty? errors)) (get opts :strict? true))
+         [:error (pr-str errors)]
+
+         (let [segments (mapv #(update-in % [1] dissoc :__errors) segments)
+               {c :code e :event} (get-in segments [0 1 :type])
+               msg-key (get-in sch [:messages :idx (keyword c) (keyword e)])
+               grammar (get-in sch [:messages (when [msg-key] (keyword msg-key))])]
+
+           (when-not grammar
+             (throw (Exception. (str "Do not know how to parse: " c "|" e " " (first segments)) )))
+
+           (parsec/parse grammar (mapv #(keyword (first %)) segments) (fn [idx] (get-in segments [idx 1])))))))))

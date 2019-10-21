@@ -76,8 +76,10 @@
 
   (parsed-as
    oru
-   [:MSH :PID :PV1]
-   {:MSH 0, :patient {:PID 1, :visit {:PV1 2}}})
+   [:MSH :PID :PV1 :OBR :OBX]
+   {:MSH 0,          
+    :patient {:PID 1, :visit {:PV1 2}},
+    :order [{:OBR 3, :result [{:OBX 4}]}]})
 
   (parsed-as
    oru
