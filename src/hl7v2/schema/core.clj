@@ -22,7 +22,7 @@
 
 (defn load-yaml [nm]
   (if-let [f (io/resource nm)] 
-    (clj-yaml.core/parse-string (slurp (.getPath f)) :keywords true)
+    (clj-yaml.core/parse-string (slurp f) :keywords true)
     (throw (Exception. (str nm " not found")))))
 
 (defn schema []
