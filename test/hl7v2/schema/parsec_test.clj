@@ -3,7 +3,7 @@
             [clojure.test :refer :all]))
 
 (defmacro parsed-as [g a b]
-  `(let [res# (sut/parse ~g ~a)]
+  `(let [res# (sut/parse ~g ~a identity {})]
      (is (= ~b res#))
      res#))
 
