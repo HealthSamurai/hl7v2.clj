@@ -1,4 +1,5 @@
-{:DG1 [{:diagnosis_code_dg1 {:display "specimen paclab"},
+{:DG1 [{:__errors ["Field DG1.6 is required"],
+        :diagnosis_code_dg1 {:display "specimen paclab"},
         :diagnosis_description "specimen paclab",
         :set_id "1"}],
  :EVN {:event_occurred {:time "20170726075300"},
@@ -109,5 +110,4 @@
        :visit_number {:id "10000170987"}},
  :PV2 {:expected_admit_datetime {:time "20170726"},
        :visit_description "Hospital Encounter",
-       :visit_protection_indicator "N"},
- :ZG1 [{:zg1_four "30"}]}
+       :visit_protection_indicator "N"}}

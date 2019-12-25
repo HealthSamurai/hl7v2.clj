@@ -2,6 +2,7 @@
   (:require [clojure.string :as str]
             [flatland.ordered.map :refer [ordered-map]]
             [hl7v2.schema.core :as schema]
+            [cheshire.core]
             [hl7v2.schema.parsec :as parsec])
   (:import [java.util.regex Pattern])
   (:gen-class))
@@ -89,7 +90,7 @@
              (parse-component ctx tp v))]
     vv))
 
-(defn parse-segment [{sch :schema seps :separators :as ctx} seg]
+(defn parse-segment [{sch :schema seps :separators :as ctx} seg opts]
   (let [fields (split-by seg (:field seps))
         [seg-name & fields] fields
         fields (if (= "MSH" seg-name)
@@ -147,8 +148,7 @@
         (update-in messages-path (partial append after) (str (name segment-name) (or quant "?")))
         (assoc-in [:segments segment-name] desc))))
 
-(defn parse
-  ([msg] (parse msg {}))
+(defn parse-only
   ([msg {extensions :extensions :as opts}]
    (let [errs (pre-condition msg)]
      (when-not (empty? errs)
@@ -163,19 +163,49 @@
            segments (->> (split-by msg (:segment seps))
                          (mapv str/trim)
                          (filter #(> (.length %) 0))
-                         (mapv #(parse-segment ctx %)))
+                         (mapv #(parse-segment ctx % opts)))
 
            errors (mapcat #(get (second %) :__errors []) segments)]
 
        (if (and (not (empty? errors)) (get opts :strict? true))
          [:error (pr-str errors)]
 
-         (let [segments (mapv #(update-in % [1] dissoc :__errors) segments)
-               {c :code e :event} (get-in segments [0 1 :type])
-               msg-key (get-in sch [:messages :idx (keyword c) (keyword e)])
-               grammar (get-in sch [:messages (when [msg-key] (keyword msg-key))])]
+         segments)))))
 
-           (when-not grammar
-             (throw (Exception. (str "Do not know how to parse: " c "|" e " " (first segments)) )))
+(defn structurize-only [segments options]
+  (let [sch (schema/schema)
+        {c :code e :event} (get-in segments [0 1 :type])
+        msg-key (get-in sch [:messages :idx (keyword c) (keyword e)])
+        grammar (get-in sch [:messages (when [msg-key] (keyword msg-key))])]
 
-           (parsec/parse grammar (mapv #(keyword (first %)) segments) (fn [idx] (get-in segments [idx 1])))))))))
+    (when-not grammar
+      (throw (Exception. (str "Do not know how to parse: " c "|" e " " (first segments)) )))
+
+    (parsec/parse grammar (mapv #(keyword (first %)) segments) (fn [idx] (get-in segments [idx 1])) options)))
+
+(defn parse
+  ([msg] (parse msg {}))
+  ([msg opts]
+   (let [segments (parse-only msg opts)]
+     (if (= :error (first segments))
+       segments
+       (structurize-only segments opts)))))
+
+
+(comment
+  (defn process-vitalik [d]
+    (doseq [file (filter (fn [x] (and (clojure.string/starts-with? (.getName x) "PROF")
+                                      (clojure.string/ends-with? (.getName x) ".dat")))
+                         (file-seq (clojure.java.io/file d)))]
+      (with-open [fout (clojure.java.io/writer (str (.getPath file) "-parsed.json"))]
+        (let [batch (slurp file)
+              messages (drop 1 (clojure.string/split batch #"\rMSH"))
+              messages (map #(parse (str "MSH" %)) messages)]
+
+          (cheshire.core/generate-stream messages fout {:pretty true})))
+      (println "Processed " (.getName file))))
+
+  
+  (process-vitalik "/Users/mlapshin/work/x12-data/hl7")
+
+  )

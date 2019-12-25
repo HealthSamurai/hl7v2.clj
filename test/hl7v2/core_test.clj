@@ -62,7 +62,7 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
   (testing "segments"
     (match 
      (sut/parse-segment
-      ctx "MSH|^~\\&|AccMgr|1|||20151015200643||ADT^A01|599102|P|2.3|foo||")
+      ctx "MSH|^~\\&|AccMgr|1|||20151015200643||ADT^A01|599102|P|2.3|foo||" {})
      ["MSH"
       {:type {:code "ADT", :event "A01"},
        :id "599102",
@@ -78,7 +78,7 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
 
     (match
      (sut/parse-segment
-      ctx "PID|1|010107111^^^MS4^PN^|1609220^^^MS4^MR^001|1609220^^^MS4^MR^001|BARRETT^JEAN^SANDY^^||19440823|F||C|STRAWBERRY AVE^FOUR OAKS LODGE^ALBUKERKA^CA^98765^USA^^||(111)222-3333||ENG|W|CHR|111155555550^^^MS4001^AN^001|123-22-1111||||OKLAHOMA|||||||N")
+      ctx "PID|1|010107111^^^MS4^PN^|1609220^^^MS4^MR^001|1609220^^^MS4^MR^001|BARRETT^JEAN^SANDY^^||19440823|F||C|STRAWBERRY AVE^FOUR OAKS LODGE^ALBUKERKA^CA^98765^USA^^||(111)222-3333||ENG|W|CHR|111155555550^^^MS4001^AN^001|123-22-1111||||OKLAHOMA|||||||N" {})
      ["PID"
       {:religion {:code "CHR"},
        :patient_id  {:id "010107111",
@@ -118,7 +118,7 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
 
     (match
      (sut/parse-segment
-      ctx "PID|1|312626^^^^^Main Lab&05D0557149&CLIA|0362855^^^^^Main Lab&05D0557149&CLIA|^^^^^Main Lab&05D0557149&CLIA|LOPEZ^ADALBERTO||19450409|M|||8753 APPERSON ST^^SUNLAND^CA^91040||(818)429-5631|||||000016715153|572458313")
+      ctx "PID|1|312626^^^^^Main Lab&05D0557149&CLIA|0362855^^^^^Main Lab&05D0557149&CLIA|^^^^^Main Lab&05D0557149&CLIA|LOPEZ^ADALBERTO||19450409|M|||8753 APPERSON ST^^SUNLAND^CA^91040||(818)429-5631|||||000016715153|572458313" {})
 
      ["PID" {:identifiers [{:id "0362855",
                             :facility {:ns "Main Lab", :uid "05D0557149", :type "CLIA"}}]}]
@@ -126,7 +126,7 @@ IN2||354221840|0000007496^RETIRED|||||||||||||||||||||||||||||||||Y|||CHR||||W||
 
     (match
      (sut/parse-segment
-      ctx "IN1|1|303401^PRIV HLTH CARE SYS-BCBS OF N CAROLINA|3034|BCBS OF NORTH CAROLINA|CLMS PROCESSING CONTRACTOR PO BOX 9518^^DURHAM^NC^32145-9518^||(845)543-3876^^^^^845^5433876|1233||||20160726||||UPGRADETEST^CPAP^^|Self|19490512|876 MAIN^^BANANA VALLEY^WA^98038^US^^^KING|||1**1|||NO||||20170726102055|BARLLH1^BARLOW^LOUIS^H.^|||||4694998|F8086412450||||||Full|M|1258 ROSE AVE SW^^RENTON^WA^98057^US|Verified Pat||BOTH||")
+      ctx "IN1|1|303401^PRIV HLTH CARE SYS-BCBS OF N CAROLINA|3034|BCBS OF NORTH CAROLINA|CLMS PROCESSING CONTRACTOR PO BOX 9518^^DURHAM^NC^32145-9518^||(845)543-3876^^^^^845^5433876|1233||||20160726||||UPGRADETEST^CPAP^^|Self|19490512|876 MAIN^^BANANA VALLEY^WA^98038^US^^^KING|||1**1|||NO||||20170726102055|BARLLH1^BARLOW^LOUIS^H.^|||||4694998|F8086412450||||||Full|M|1258 ROSE AVE SW^^RENTON^WA^98057^US|Verified Pat||BOTH||" {})
 
      ["IN1" {:beneficiary_address [{:city "BANANA VALLEY", :country "US", :county "KING", :postal_code "98038", :state "WA", :street {:text "876 MAIN"}}], :beneficiary_birthDate {:time "19490512"}, :beneficiary_gender "M",
              :beneficiary_name [{:family {:surname "UPGRADETEST"}, :given "CPAP"}], :benifits_coordination_priority "1**1", :class_type "BOTH", :contract_identifier "F8086412450", :eligibility_flag "NO",
@@ -254,7 +254,7 @@ NTE|2||HCT=LOW||20110529130917-04:00
 
   ;; overrride all files
   (foreach-hl7 [input expected]
-               (spit expected (-> input (sut/parse {:extensions extensions}) zp/zprint-str)))
+               (spit expected (-> input (sut/parse {:extensions extensions :strict? false}) zp/zprint-str)))
 
   (rewrite-hl7-edn "adt-a04-2.hl7")
 

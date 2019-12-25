@@ -36,7 +36,7 @@
 
 (comment
 
-  (def sch (schema))
+  
 
   )
 

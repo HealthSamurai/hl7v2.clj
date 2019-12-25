@@ -1,1 +1,387 @@
-[:error "Extra input [DG1] pos: 59"]
+{:MSH {:app {:ns "RISOC"},
+       :charset ["PRELIM"],
+       :datetime {:time "20111115200643"},
+       :encoding "^~\\&",
+       :facility {:ns "001"},
+       :id "30004",
+       :proc_id {:proc_id "T"},
+       :receiving_app {:ns "MS4OC"},
+       :receiving_facility {:ns "001"},
+       :separator "|",
+       :type {:code "ORU", :event "R01"},
+       :version {:id "2.3"}},
+ :patient_result
+   [{:order_observation
+       [{:OBR {:clinical_info "SYNCOPE ELEVATED D DIMER CHEST PAIN",
+               :datetime {:time "20111115160900"},
+               :diagnostic_service "CT^Computed Tomography",
+               :filler_number {:identifier "1000718"},
+               :ordering_provider [{:authority {:ns "NPI", :uid "1841336138"},
+                                    :degree "MD",
+                                    :family {:surname "PEREYRA"},
+                                    :given "ROBERT",
+                                    :id "20222",
+                                    :initials "W"}],
+               :placer_number {:identifier "00045"},
+               :principal_interpreter {:end {:time "SAMEER"},
+                                       :facility {:ns "MD"},
+                                       :location_type "NPI&1508081530",
+                                       :name {:id "34831"},
+                                       :point_of_care "A",
+                                       :start {:time "PATEL"}},
+               :quantity_timing [{:duration "30",
+                                  :priority "9",
+                                  :start {:time "20111115094822"}}],
+               :result_status_change_datetime {:time "20111115200600"},
+               :scheduled_datetime {:time "20111115081000"},
+               :set_id "1",
+               :status "P",
+               :technician [{:end {:time "YUNGCHIANG"},
+                             :name {:id "ylee"},
+                             :start {:time "LEE"}}],
+               :transcriptionist [{:end {:time "CHERYL"},
+                                   :facility {:ns "Sched/Transcription"},
+                                   :start {:time "WALKER"}}],
+               :transportation "AMB^Ambulatory",
+               :uid {:alternate_code "AGNKCOM",
+                     :code "4550422",
+                     :display "CT ANGIO NECK W WO CON"}},
+         :observation
+           [{:OBX {:set_id "2",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["EXAMINATION"],
+                   :value_type "FT"}}
+            {:OBX {:set_id "3",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX {:set_id "4",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["CT ANGIO NECK W WO CON"],
+                   :value_type "FT"}}
+            {:OBX {:set_id "5",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX {:set_id "6",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX {:set_id "7",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["CLINICAL HISTORY NODULE SIZE: 3 "],
+                   :value_type "FT"}}
+            {:OBX
+               {:set_id "8",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["Chest pain, syncope and dizziness.  Rule out carotid stenosis."],
+                :value_type "FT"}}
+            {:OBX {:set_id "9",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX {:set_id "10",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX {:set_id "11",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["COMPARISON"],
+                   :value_type "FT"}}
+            {:OBX {:set_id "12",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["No comparison available."],
+                   :value_type "FT"}}
+            {:OBX {:set_id "13",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX {:set_id "14",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX {:set_id "15",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["TECHNIQUE"],
+                   :value_type "FT"}}
+            {:OBX
+               {:set_id "16",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["CT angiography of the neck was performed and supplemented with "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "17",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["coronal, sagittal, MIP, surface rendered and 3D rotating "],
+                :value_type "FT"}}
+            {:OBX {:set_id "18",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["reconstructions."],
+                   :value_type "FT"}}
+            {:OBX {:set_id "19",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX
+               {:set_id "20",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["Contrast Agent ISOVUE 370 100 milliliter 11/15/2011 INTRAVENOUS"],
+                :value_type "FT"}}
+            {:OBX {:set_id "21",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX {:set_id "22",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX {:set_id "23",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["FINDINGS"],
+                   :value_type "FT"}}
+            {:OBX
+               {:set_id "24",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["Incidentally noted is a bovine arch variant. There is mild tortuosity "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "25",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["and kinking of the proximal great vessels without significant ostial "],
+                :value_type "FT"}}
+            {:OBX {:set_id "26",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["stenosis."],
+                   :value_type "FT"}}
+            {:OBX {:set_id "27",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX
+               {:set_id "28",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["RIGHT CAROTID ARTERY:  The right common and internal carotid arteries "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "29",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["are normal in course and caliber without aneurysmal dilatation or "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "30",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["dissection.  The carotid bifurcation is widely patent. There is very "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "31",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["mild focal short-segment narrowing of the proximal internal carotid "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "32",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["artery with less than 10% stenosis.  The external carotid artery is "],
+                :value_type "FT"}}
+            {:OBX {:set_id "33",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["widely patent and well-opacified as well."],
+                   :value_type "FT"}}
+            {:OBX {:set_id "34",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX
+               {:set_id "35",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["LEFT CAROTID ARTERY:  The left common carotid artery is normal in "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "36",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["course and caliber without aneurysmal dilatation or dissection.  The "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "37",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["carotid bifurcation is patent.  There is a moderate-length high-grade "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "38",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["stenosis of the proximal left internal carotid artery with "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "39",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["circumferential mural thrombus noted best on axial and sagittal "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "40",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["imaging.  This results in approximately 75% narrowing over a 2 cm "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "41",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["length segment. The distal internal carotid artery is unremarkable.  "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "42",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["The origin of the external carotid artery is widely patent without "],
+                :value_type "FT"}}
+            {:OBX {:set_id "43",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["abnormality."],
+                   :value_type "FT"}}
+            {:OBX {:set_id "44",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX
+               {:set_id "45",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["VERTEBROBASILAR SYSTEM: The origin of both vertebral arteries are "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "46",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["patent.  Incidentally noted is a dominant left vertebral artery with "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "47",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["diffuse attenuation of the right vertebral artery.  The vertebral "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "48",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["confluence and proximal basilar artery are unremarkable."],
+                :value_type "FT"}}
+            {:OBX {:set_id "49",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX {:set_id "50",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX {:set_id "51",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["IMPRESSION"],
+                   :value_type "FT"}}
+            {:OBX
+               {:set_id "52",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["1. LEFT INTERNAL CAROTID ARTERY:  Long-segment high-grade stenosis of "],
+                :value_type "FT"}}
+            {:OBX
+               {:set_id "53",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["the proximal ICA with approximately 75% narrowing.  Correlation with "],
+                :value_type "FT"}}
+            {:OBX {:set_id "54",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value ["carotid ultrasound is needed."],
+                   :value_type "FT"}}
+            {:OBX {:set_id "55",
+                   :status "P",
+                   :type {:code "AGNKCOM&GDT"},
+                   :value_type "FT"}}
+            {:OBX
+               {:set_id "56",
+                :status "P",
+                :type {:code "AGNKCOM&GDT"},
+                :value
+                  ["2. RIGHT INTERNAL CAROTID ARTERY: No significant stenosis. "],
+                :value_type "FT"}}]}],
+     :patient
+       {:PID {:account_number {:id "16732000"},
+              :address [{:city "LACRESCENTA",
+                         :postal_code "91214",
+                         :state "CA",
+                         :street {:text "3347 RETA ST"}}],
+              :birth_date {:time "19201214"},
+              :death_indicator "N",
+              :gender "M",
+              :home_phone [{:phone "(818)249-7031", :use "PRN"}],
+              :identifiers [{:facility {:ns "VHH"}, :id "160922"}],
+              :name [{:family {:surname "SENGUL"}, :given "ISO"}],
+              :primary_language {:code "ARM", :display "ARMENIAN"},
+              :race [{:code "C", :display "CAUCASIAN NON-HISPANIC"}],
+              :set_id "1",
+              :ssn_number "605-50-6261"},
+        :visit
+          {:PV1 {:admit_datetime {:time "20111113170200"},
+                 :assigned_patient_location {:location_description "5 South",
+                                             :room "5SOUT518A"},
+                 :attending_doctor [{:authority {:ns "NPI", :uid "1467492371"},
+                                     :degree "MD",
+                                     :family {:surname "GANDHI"},
+                                     :given "DEVINDER",
+                                     :id "80231"}],
+                 :patient_class "I",
+                 :set_id "1"}}}}]}

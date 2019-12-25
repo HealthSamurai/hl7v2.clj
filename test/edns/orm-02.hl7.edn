@@ -39,11 +39,14 @@
            :transaction_datetime {:time "20170807103045"},
            :type {:code "O"}},
      :order_detail
-     {:DG1 [{:diagnosis_code_dg1 {:code "J84.89",
-                                  :display "Other specified interstitial pulmonary diseases (HCC)",
-                                  :system "ICD-10-CM"},
+       {:DG1 [{:diagnosis_code_dg1
+                 {:code "J84.89",
+                  :display
+                    "Other specified interstitial pulmonary diseases (HCC)",
+                  :system "ICD-10-CM"},
                :diagnosis_coding_method "ICD-10-CM",
-               :diagnosis_description "Other specified interstitial pulmonary diseases (HCC)",
+               :diagnosis_description
+                 "Other specified interstitial pulmonary diseases (HCC)",
                :diagnosis_type "^147;ORD",
                :set_id "1"}],
         :obrrqdrq1rxoodsodt_suppgrp
@@ -74,7 +77,8 @@
                        :code "IMG34",
                        :display "XR CHEST PA OR AP",
                        :system "VITARAD EAP"}}},
-        :observation [{:OBX {:set_id "1",
+        :observation [{:OBX {:__errors ["Field OBX.11 is required"],
+                             :set_id "1",
                              :type {:code "ITS.REAS",
                                     :display "Reason for exam:"},
                              :value ["HACKATHON"],

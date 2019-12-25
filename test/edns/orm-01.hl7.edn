@@ -76,27 +76,32 @@
                        :display "MRI ABDOMEN W CONTRAST MRCP",
                        :system "RADIANT EAP"}}},
         :observation
-          [{:OBX {:set_id "1",
+          [{:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "1",
                   :type {:code "IMG.90052034", :display "Reason for exam:"},
                   :value ["swelling of stomach"],
                   :value_type "ST"}}
-           {:OBX {:set_id "2",
+           {:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "2",
                   :type {:code "IMG.12220611",
                          :display "What is the preferred imaging location?"},
                   :value ["CA Holy Cross Medical Center (Prov Mission Hills)"],
                   :value_type "ST"}}
-           {:OBX {:set_id "3",
+           {:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "3",
                   :type {:code "IMG.120982", :display "Is patient pregnant?"},
                   :value ["No"],
                   :value_type "ST"}}
-           {:OBX {:set_id "4",
+           {:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "4",
                   :type
                     {:code "IMG.10015901",
                      :display
                        "Does the patient have an implanted cardiac device?"},
                   :value ["No"],
                   :value_type "ST"}}
-           {:OBX {:set_id "5",
+           {:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "5",
                   :type
                     {:code "IMG.12017400",
                      :display
@@ -104,67 +109,81 @@
                   :value ["No"],
                   :value_type "ST"}}
            {:OBX
-              {:set_id "6",
+              {:__errors ["Field OBX.11 is required"],
+               :set_id "6",
                :type
                  {:code "IMG.12227546",
-                  :display "Does the patient have any programable shunts, aneurysm clips, implanted electronic devices, or any attached electronic devices? "},
+                  :display
+                    "Does the patient have any programable shunts, aneurysm clips, implanted electronic devices, or any attached electronic devices? "},
                :value ["No"],
                :value_type "ST"}}
            {:OBX
-              {:set_id "7",
+              {:__errors ["Field OBX.11 is required"],
+               :set_id "7",
                :type
                  {:code "IMG.1222765",
-                  :display "Does patient have any allergies or sensitivities to MRI contrast (gadolinium)?"},
+                  :display
+                    "Does patient have any allergies or sensitivities to MRI contrast (gadolinium)?"},
                :value ["No"],
                :value_type "ST"}}
            {:OBX
-              {:set_id "8",
+              {:__errors ["Field OBX.11 is required"],
+               :set_id "8",
                :type
                  {:code "IMG.12227559",
-                  :display "Does patient have any hx renal disease (including only having 1 kidney), renal transplant, renal tumor or is on dialysis?"},
+                  :display
+                    "Does patient have any hx renal disease (including only having 1 kidney), renal transplant, renal tumor or is on dialysis?"},
                :value ["No"],
                :value_type "ST"}}
-           {:OBX {:set_id "9",
+           {:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "9",
                   :type {:code "IMG.1222761",
                          :display
                            "Has patient ever had metal in his/her eyes?"},
                   :value ["No"],
                   :value_type "ST"}}
-           {:OBX {:set_id "10",
+           {:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "10",
                   :type {:code "IMG.1222756",
                          :display "Is the patient claustrophobic?"},
                   :value ["No"],
                   :value_type "ST"}}
-           {:OBX {:set_id "11",
+           {:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "11",
                   :type {:code "IMG.12219890",
                          :display "Has the patient had surgery in scan area?"},
                   :value ["No"],
                   :value_type "ST"}}
-           {:OBX {:set_id "12",
+           {:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "12",
                   :type {:code "IMG.12227242",
                          :display
                            "Will an interpreter be needed for the exam?"},
                   :value ["No"],
                   :value_type "ST"}}
-           {:OBX {:set_id "13",
+           {:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "13",
                   :type
                     {:code "IMG.1201042",
                      :display
                        "If the patient needs an interpreter, enter language:"},
                   :value ["English"],
                   :value_type "ST"}}
-           {:OBX {:set_id "14",
+           {:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "14",
                   :type {:code "IMG.1222689",
                          :display "What is the patients height \\T\\ weight?"},
                   :value ["Ht:1.651 m (5' 5\") Wt:"],
                   :value_type "ST"}}
-           {:OBX {:set_id "15",
+           {:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "15",
                   :type {:code "IMG.12227221",
                          :display
                            "Do you have any special mobility requirements?"},
                   :value ["No"],
                   :value_type "ST"}}
-           {:OBX {:set_id "16",
+           {:OBX {:__errors ["Field OBX.11 is required"],
+                  :set_id "16",
                   :type {:code "IMG.1222686",
                          :display
                            "Does the patient have relevant prior films?"},

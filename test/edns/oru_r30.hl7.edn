@@ -12,9 +12,8 @@
        :seqnum "2010022217399",
        :type {:code "ORU", :event "R30"},
        :version {:id "2.4"}},
- :NTE
-   [{nil "20110529130917-04:00", :set_id "1", :type {:code "Sample Type=MIX"}}
-    {nil "20110529130917-04:00", :set_id "2", :type {:code "CPB=Yes"}}],
+ :NTE [{:set_id "1", :type {:code "Sample Type=MIX"}}
+       {:set_id "2", :type {:code "CPB=Yes"}}],
  :OBR {:set_id "1", :uid {:code "CHEM8+"}},
  :ORC {:entering_device
          {:alternate_code "Med Surg-6", :code "L7173SB00037", :system "VHH"},
@@ -66,8 +65,8 @@
            :type {:code "45541-1", :display "GJU", :system "LN"},
            :value ["100500 mm"],
            :value_type "ST"}}
-    {:NTE [{nil "20110529130917-04:00", :comment ["DSN=314237"], :set_id "1"}
-           {nil "20110529130917-04:00", :comment ["HCT=LOW"], :set_id "2"}],
+    {:NTE [{:comment ["DSN=314237"], :set_id "1"}
+           {:comment ["HCT=LOW"], :set_id "2"}],
      :OBX {:analysis_datetime {:time "20110529130917-04:00"},
            :responsible_observer [{:id "APOC3214"}],
            :set_id "4",

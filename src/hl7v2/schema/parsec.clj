@@ -17,15 +17,17 @@
     [(keyword nm) (keyword q)]
     [(keyword x) nil]))
 
+;; (def foo (atom 0))
+
 (defn do-parse [grammar get-value rule inp]
-  ;; (println ">>>> input" inp)
+  ;; (when (< @foo 20)
+  ;;   (println ">>>> rule" (get grammar rule) inp)
+  ;;   (swap! foo inc))
 
   (loop [[stm & stms :as sstms] (get grammar rule)
          inp inp
          out {}
          repeat true]
-
-    ;; (println rule stm (cur inp))
 
     (if (nil? stm)
       [inp out]
@@ -75,11 +77,13 @@
             [inp out]
             [inp [:error (str "Rule " rule " [" (str/join " " (get grammar rule)) "] at " stm  " expected " stm " at segment position " (:pos inp))]]))))))
 
-(defn parse [grammar msg & [get-value]]
+(defn parse [grammar msg get-value opts]
   (let [[inp res] (do-parse grammar (or get-value identity) :msg {:msg msg :pos 0})]
     (if (= :error (first res))
       res
       (if (= (:pos inp) (count (:msg inp)))
         res
-        [:error (str "Extra input [" (name (cur inp)) "] pos: " (:pos inp))]))))
+        (if (get opts :strict? true)
+          [:error (str "Extra input [" (name (cur inp)) "] pos: " (:pos inp))]
+          res)))))
 

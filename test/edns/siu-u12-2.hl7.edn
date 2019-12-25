@@ -58,4 +58,6 @@
                                :start_datetime {:time "20170810090000"},
                                :start_datetime_offset "0",
                                :start_datetime_offset_units {:code "MIN"}}}],
-     :service [{:AIS {:filler_status_code {:code "Sch"}, :set_id "1"}}]}]}
+     :service [{:AIS {:__errors ["Field AIS.3 is required"],
+                      :filler_status_code {:code "Sch"},
+                      :set_id "1"}}]}]}
