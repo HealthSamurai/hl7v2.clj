@@ -54,7 +54,8 @@
 
             (= tp :grp) (let [[inp' res] (do-parse grammar get-value nm inp)]
                           (if-not (= :error (first res))
-                            (if (contains? #{:+ :*} q)
+                            (if (and (contains? #{:+ :*} q)
+                                     (not= (:pos inp) (:pos inp')))
                               (recur sstms inp' (update out nm (fn [x] (conj (or x []) res))) true)
                               (recur stms inp' (assoc out nm res) false))
                             (cond
