@@ -174,6 +174,7 @@
 
 (defn structurize-only [segments options]
   (let [sch (schema/schema)
+        sch (reduce apply-extension sch (:extensions options))
         {c :code e :event} (get-in segments [0 1 :type])
         msg-key (get-in sch [:messages :idx (keyword c) (keyword e)])
         grammar (get-in sch [:messages (when [msg-key] (keyword msg-key))])]
@@ -205,7 +206,6 @@
           (cheshire.core/generate-stream messages fout {:pretty true})))
       (println "Processed " (.getName file))))
 
-  
   (process-vitalik "/Users/mlapshin/work/x12-data/hl7")
 
   )
