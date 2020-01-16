@@ -19,17 +19,17 @@
                    [:name "ZG1.3" :type "ST" :key "zg1_three"]
                    [:name "ZG1.4" :type "ST" :key "zg1_four"]] {:after "GT1" :quant "*"}]
    [:ADT_A01 :ZPD [[:name "ZPD.1" :type "ST" :key "zpd1"]
-                              [:name "ZPD.2" :type "ST" :key "zpd2"]
-                              [:name "ZPD.3" :type "ST" :key "zpd3"]
-                              [:name "ZPD.4" :type "ST" :key "zpd4"]
-                              [:name "ZPD.5" :type "ST" :key "zpd5"]
-                              [:name "ZPD.6" :type "ST" :key "zpd6"]
-                              [:name "ZPD.7" :type "ST" :key "zpd7"]
-                              [:name "ZPD.8" :type "ST" :key "zpd8"]
-                              [:name "ZPD.9" :type "ST" :key "zpd9"]
-                              [:name "ZPD.10" :type "ST" :key "zpd10"]
-                              [:name "ZPD.11" :type "ST" :key "zpd11"]
-                              [:name "ZPD.12" :type "ST" :key "zpd12"]] {:after "PID"}]])
+                   [:name "ZPD.2" :type "ST" :key "zpd2"]
+                   [:name "ZPD.3" :type "ST" :key "zpd3"]
+                   [:name "ZPD.4" :type "ST" :key "zpd4"]
+                   [:name "ZPD.5" :type "ST" :key "zpd5"]
+                   [:name "ZPD.6" :type "ST" :key "zpd6"]
+                   [:name "ZPD.7" :type "ST" :key "zpd7"]
+                   [:name "ZPD.8" :type "ST" :key "zpd8"]
+                   [:name "ZPD.9" :type "ST" :key "zpd9"]
+                   [:name "ZPD.10" :type "ST" :key "zpd10"]
+                   [:name "ZPD.11" :type "ST" :key "zpd11"]
+                   [:name "ZPD.12" :type "ST" :key "zpd12"]] {:after "PID"}]])
 
 (def msg
   "MSH|^~\\&|AccMgr|1|||20151015200643||ADT^A01|599102|P|2.3|foo||
