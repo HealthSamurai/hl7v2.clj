@@ -107,7 +107,7 @@
              s (merge s (get-in sch [:fields (keyword (:field s))]))]
 
          (if (str/blank? f)
-           (let [next-acc (if (:req s)
+           (let [next-acc acc #_(if (:req s)
                             (assoc acc :__errors
                                    (conj (get acc :__errors [])
                                          (str "Field " (:name s) " is required")))

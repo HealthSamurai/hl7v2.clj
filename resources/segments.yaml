@@ -1408,57 +1408,57 @@ RXG:
 - {name: RXG.25, type: CWE, key: give_barcode_identifier, desc: Give Barcode Identifier}
 - {name: RXG.26, type: ID, key: pharmacy_order_type, desc: Pharmacy Order Type, table: HL70480}
 SPM:
-- {name: SPM.1, type: SI, key: set_id, desc: Set ID - SPM}
-- {name: SPM.2, type: EIP, key: specimen_id, desc: Specimen ID}
-- {name: SPM.3, type: EIP, key: specimen_parent_ids, desc: Specimen Parent IDs, coll: true}
-- {name: SPM.4, type: CWE, key: specimen_type, desc: Specimen Type, table: HL70487, req: true}
-- {name: SPM.5, type: CWE, key: specimen_type_modifier, desc: Specimen Type Modifier, table: HL70541, coll: true}
-- {name: SPM.6, type: CWE, key: specimen_additives, desc: Specimen Additives, table: HL70371, coll: true}
-- {name: SPM.7, type: CWE, key: specimen_collection_method, desc: Specimen Collection Method, table: HL70488}
-- {name: SPM.8, type: CWE, key: specimen_source_site, desc: Specimen Source Site}
-- {name: SPM.9, type: CWE, key: specimen_source_site_modifier, desc: Specimen Source Site Modifier, table: HL70542, coll: true}
-- {name: SPM.10, type: CWE, key: specimen_collection_site, desc: Specimen Collection Site, table: HL70543}
-- {name: SPM.11, type: CWE, key: specimen_role, desc: Specimen Role, table: HL70369, coll: true}
-- {name: SPM.12, type: CQ, key: specimen_collection_amount, desc: Specimen Collection Amount}
-- {name: SPM.13, type: NM, key: grouped_specimen_count, desc: Grouped Specimen Count}
-- {name: SPM.14, type: ST, key: specimen_description, desc: Specimen Description, coll: true}
-- {name: SPM.15, type: CWE, key: specimen_handling_code, desc: Specimen Handling Code, table: HL70376, coll: true}
-- {name: SPM.16, type: CWE, key: specimen_risk_code, desc: Specimen Risk Code, table: HL70489, coll: true}
-- {name: SPM.17, type: DR, key: specimen_collection_datetime, desc: Specimen Collection Date/Time}
-- {name: SPM.18, type: TS, key: specimen_received_datetime, desc: Specimen Received Date/Time}
-- {name: SPM.19, type: TS, key: specimen_expiration_datetime, desc: Specimen Expiration Date/Time}
-- {name: SPM.20, type: ID, key: specimen_availability, desc: Specimen Availability, table: HL70136}
-- {name: SPM.21, type: CWE, key: specimen_reject_reason, desc: Specimen Reject Reason, table: HL70490, coll: true}
-- {name: SPM.22, type: CWE, key: specimen_quality, desc: Specimen Quality, table: HL70491}
-- {name: SPM.23, type: CWE, key: specimen_appropriateness, desc: Specimen Appropriateness, table: HL70492}
-- {name: SPM.24, type: CWE, key: specimen_condition, desc: Specimen Condition, table: HL70493, coll: true}
-- {name: SPM.25, type: CQ, key: specimen_current_quantity, desc: Specimen Current Quantity}
-- {name: SPM.26, type: NM, key: number_of_specimen_containers, desc: Number of Specimen Containers}
+- {name: SPM.1, type: SI,   key: set_id, desc: Set ID - SPM}
+- {name: SPM.2, type: EIP,  key: id, desc: Specimen ID}
+- {name: SPM.3, type: EIP,  key: parent_ids, desc: Specimen Parent IDs, coll: true}
+- {name: SPM.4, type: CWE,  key: type, desc: Specimen Type, table: HL70487, req: true}
+- {name: SPM.5, type: CWE,  key: type_modifier, desc: Specimen Type Modifier, table: HL70541, coll: true}
+- {name: SPM.6, type: CWE,  key: additives, desc: Specimen Additives, table: HL70371, coll: true}
+- {name: SPM.7, type: CWE,  key: collection_method, desc: Specimen Collection Method, table: HL70488}
+- {name: SPM.8, type: CWE,  key: source_site, desc: Specimen Source Site}
+- {name: SPM.9, type: CWE,  key: source_site_modifier, desc: Specimen Source Site Modifier, table: HL70542, coll: true}
+- {name: SPM.10, type: CWE, key: collection_site, desc: Specimen Collection Site, table: HL70543}
+- {name: SPM.11, type: CWE, key: role, desc: Specimen Role, table: HL70369, coll: true}
+- {name: SPM.12, type: CQ,  key: collection_amount, desc: Specimen Collection Amount}
+- {name: SPM.13, type: NM,  key: count, desc: Grouped Specimen Count}
+- {name: SPM.14, type: ST,  key: description, desc: Specimen Description, coll: true}
+- {name: SPM.15, type: CWE, key: handling_code, desc: Specimen Handling Code, table: HL70376, coll: true}
+- {name: SPM.16, type: CWE, key: risk_code, desc: Specimen Risk Code, table: HL70489, coll: true}
+- {name: SPM.17, type: DR,  key: collection_datetime, desc: Specimen Collection Date/Time}
+- {name: SPM.18, type: TS,  key: received_datetime, desc: Specimen Received Date/Time}
+- {name: SPM.19, type: TS,  key: expiration_datetime, desc: Specimen Expiration Date/Time}
+- {name: SPM.20, type: ID,  key: availability, desc: Specimen Availability, table: HL70136}
+- {name: SPM.21, type: CWE, key: reject_reason, desc: Specimen Reject Reason, table: HL70490, coll: true}
+- {name: SPM.22, type: CWE, key: quality, desc: Specimen Quality, table: HL70491}
+- {name: SPM.23, type: CWE, key: appropriateness, desc: Specimen Appropriateness, table: HL70492}
+- {name: SPM.24, type: CWE, key: condition, desc: Specimen Condition, table: HL70493, coll: true}
+- {name: SPM.25, type: CQ,  key: current_quantity, desc: Specimen Current Quantity}
+- {name: SPM.26, type: NM,  key: container_count, desc: Number of Specimen Containers}
 - {name: SPM.27, type: CWE, key: container_type, desc: Container Type}
 - {name: SPM.28, type: CWE, key: container_condition, desc: Container Condition, table: HL70544}
-- {name: SPM.29, type: CWE, key: specimen_child_role, desc: Specimen Child Role, table: HL70494}
+- {name: SPM.29, type: CWE, key: child_role, desc: Specimen Child Role, table: HL70494}
 DG1:
 - {name: DG1.1, type: SI, key: set_id, desc: Set ID - DG1, req: true}
-- {name: DG1.2, type: ID, key: diagnosis_coding_method, desc: Diagnosis Coding Method, table: HL70053}
-- {name: DG1.3, type: CE, key: diagnosis_code_dg1, desc: Diagnosis Code - DG1, table: HL70051}
-- {name: DG1.4, type: ST, key: diagnosis_description, desc: Diagnosis Description}
-- {name: DG1.5, type: TS, key: diagnosis_datetime, desc: Diagnosis Date/Time}
-- {name: DG1.6, type: IS, key: diagnosis_type, desc: Diagnosis Type, table: HL70052, req: true}
-- {name: DG1.7, type: CE, key: major_diagnostic_category, desc: Major Diagnostic Category, table: HL70118}
-- {name: DG1.8, type: CE, key: diagnostic_related_group, desc: Diagnostic Related Group, table: HL70055}
-- {name: DG1.9, type: ID, key: drg_approval_indicator, desc: DRG Approval Indicator, table: HL70136}
-- {name: DG1.10, type: IS, key: drg_grouper_review_code, desc: DRG Grouper Review Code, table: HL70056}
+- {name: DG1.2, type: ID, key: code_system, desc: Diagnosis Coding Method, table: HL70053}
+- {name: DG1.3, type: CE, key: code_code, desc: Diagnosis Code - DG1, table: HL70051}
+- {name: DG1.4, type: ST, key: code_text, desc: Diagnosis Description}
+- {name: DG1.5, type: TS, key: onset_datetime, desc: Diagnosis Date/Time}
+- {name: DG1.6, type: IS, key: type, desc: Diagnosis Type, table: HL70052, req: true}
+- {name: DG1.7, type: CE, key: category, desc: Major Diagnostic Category, table: HL70118}
+- {name: DG1.8, type: CE,  key: related_group_code, desc: Diagnostic Related Group, table: HL70055}
+- {name: DG1.9, type: ID,  key: related_group_approval, desc: DRG Approval Indicator, table: HL70136}
+- {name: DG1.10, type: IS, key: related_group_review_code, desc: DRG Grouper Review Code, table: HL70056}
 - {name: DG1.11, type: CE, key: outlier_type, desc: Outlier Type, table: HL70083}
 - {name: DG1.12, type: NM, key: outlier_days, desc: Outlier Days}
 - {name: DG1.13, type: CP, key: outlier_cost, desc: Outlier Cost}
 - {name: DG1.14, type: ST, key: grouper_version_and_type, desc: Grouper Version And Type}
-- {name: DG1.15, type: ID, key: diagnosis_priority, desc: Diagnosis Priority, table: HL70359}
-- {name: DG1.16, type: XCN, key: diagnosing_clinician, desc: Diagnosing Clinician, coll: true}
-- {name: DG1.17, type: IS, key: diagnosis_classification, desc: Diagnosis Classification, table: HL70228}
-- {name: DG1.18, type: ID, key: confidential_indicator, desc: Confidential Indicator, table: HL70136}
+- {name: DG1.15, type: ID, key: priority, desc: Diagnosis Priority, table: HL70359}
+- {name: DG1.16, type: XCN, key: clinician, desc: Diagnosing Clinician, coll: true}
+- {name: DG1.17, type: IS, key: classification, desc: Diagnosis Classification, table: HL70228}
+- {name: DG1.18, type: ID, key: confidential, desc: Confidential Indicator, table: HL70136}
 - {name: DG1.19, type: TS, key: attestation_datetime, desc: Attestation Date/Time}
-- {name: DG1.20, type: EI, key: diagnosis_identifier, desc: Diagnosis Identifier}
-- {name: DG1.21, type: ID, key: diagnosis_action_code, desc: Diagnosis Action Code, table: HL70206}
+- {name: DG1.20, type: EI, key: identifier, desc: Diagnosis Identifier}
+- {name: DG1.21, type: ID, key: action_code, desc: Diagnosis Action Code, table: HL70206}
 STZ:
 - {name: STZ.1, type: CWE, key: sterilization_type, desc: Sterilization Type, table: HL70806}
 - {name: STZ.2, type: CWE, key: sterilization_cycle, desc: Sterilization Cycle}

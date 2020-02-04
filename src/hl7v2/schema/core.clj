@@ -36,6 +36,7 @@
 
 (comment
 
+  (reset! *schema nil)
   
 
   )
