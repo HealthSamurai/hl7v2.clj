@@ -1,0 +1,394 @@
+PID:
+- name: PID.1
+  type: SI
+  key: _seqno
+  desc: Set ID - PID
+- name: PID.2
+  type: CX
+  key: ['identifier', {use: 'official'}]
+  desc: Patient ID
+- name: PID.3
+  type: CX
+  key: ['identifier', {}]
+  desc: Patient Identifier List
+  req: true
+  coll: true
+- name: PID.4
+  type: CX
+  key: ['identifier', {use: 'secondary'}]
+  desc: Alternate Patient ID - PID
+  coll: true
+- name: PID.5
+  type: XPN
+  key: ['name', {use: 'official'}]
+  desc: Patient Name
+  req: true
+  coll: true
+- {name: PID.6, type: XPN,  key: ['mother','name'], desc: Mother's Maiden Name, coll: true}
+- {name: PID.7, type: TS,   key: birth_date, desc: Date/Time of Birth}
+- {name: PID.8, type: IS,   key: gender, desc: Administrative Sex, table: HL70001}
+- name: PID.9
+  type: XPN
+  key: ['name', {use: 'alias'}]
+  desc: Patient Alias
+  coll: true
+- {name: PID.10, type: CE,  key: race, desc: Race, table: HL70005, coll: true}
+- {name: PID.11, type: XAD, key: address, desc: Patient Address, coll: true}
+- {name: PID.12, type: IS,  key: county, desc: County Code, table: HL70289}
+- name: PID.13
+  type: XTN
+  key: ['telecom', {use: 'home', system: 'phone'}]
+  desc: Phone Number - Home
+  coll: true
+- name: PID.14
+  type: XTN
+  key: ['telecom', {use: 'work', system: 'phone'}]
+  desc: Phone Number - Business
+  coll: true
+- {name: PID.15, type: CE,  key: language, desc: Primary Language, table: HL70296}
+- {name: PID.16, type: CE,  key: marital_status, desc: Marital Status, table: HL70002}
+- {name: PID.17, type: CE,  key: religion, desc: Religion, table: HL70006}
+- name: PID.18
+  type: CX
+  key: ['account','identifier']
+  desc: Patient Account Number
+- name: PID.19
+  type: ST
+  key: ['identifier', {system: 'ssn', $as: 'value'}]
+  desc: SSN Number - Patient
+- name: PID.20
+  type: DLN
+  key: ['identifier', {system: 'driver_license'}]
+  desc: Driver's License Number - Patient
+- {name: PID.21, type: CX,  key: ['mother','identifier'], desc: Mother's Identifier, coll: true}
+- {name: PID.22, type: CE,  key: ethnicity, desc: Ethnic Group, table: HL70189, coll: true}
+- {name: PID.23, type: ST,  key: ['birth','place'], desc: Birth Place}
+- {name: PID.24, type: ID,  key: multiple_birth, desc: Multiple Birth Indicator, table: HL70136}
+- {name: PID.25, type: NM,  key: ['birth','order'], desc: Birth Order}
+- {name: PID.26, type: CE,  key: citizenship, desc: Citizenship, table: HL70171, coll: true}
+- {name: PID.27, type: CE,  key: veteran_status, desc: Veterans Military Status, table: HL70172}
+- {name: PID.28, type: CE,  key: nationality, desc: Nationality, table: HL70212}
+- {name: PID.29, type: TS,  key: ['death','datetime'], desc: Patient Death Date and Time}
+- name: PID.30
+  type: ID
+  key: ['death','indicator']
+  desc: Patient Death Indicator
+  table: HL70136
+- name: PID.31
+  type: ID
+  key: ['identity','unknown']
+  desc: Identity Unknown Indicator
+  table: HL70136
+- name: PID.32
+  type: IS
+  key: ['identity', 'reliability', 'code']
+  desc: Identity Reliability Code
+  table: HL70445
+  coll: true
+  valueset:
+    - code: AL
+      display: Patient/Person Name is an Alias	
+    - code: UA
+      display: Unknown/Default Address	
+    - code: UD
+      display: Unknown/Default Date of Birth	
+    - code: US
+      display: Unknown/Default Social Security Number	
+- name: PID.33
+  type: TS
+  key: ['last_update','datetime']
+  desc: Last Update Date/Time}
+- name: PID.34
+  type: HD
+  key: ['last_update','facility']
+  desc: Last Update Facility}
+- name: PID.35
+  type: CE
+  key: ['animal', 'species']
+  desc: Species Code
+  table: HL70446
+  definition: The species of living organism. This may include the common or scientific name, based on the coding system(s) used.
+- name: PID.36
+  type: CE
+  key: ['animal', 'breed']
+  desc: Breed Code
+  table: HL70447
+  definition: "The specific breed of animal. This field, unlike Species and Strain is specific to animals and cannot be generally used for all living organisms. SNOMED is the recommended coding system. Refer to User-defined Table 0447 - Breed Code for suggested values. Conditionality Rule: This field must be valued if PID-37 - Strain is valued."
+- name: PID.37
+  type: ST
+  key: ['animal', 'strain']
+  desc: Strain
+  definition: This field contains the specific strain of animal. It can also be expanded to include strain of any living organism and is not restricted to animals.
+- name: PID.38
+  type: CE
+  key: ['animal', 'production']
+  desc: Production Class Code
+  table: HL70429
+  definition: This field contains the code and/or text indicating the primary use for which the living subject was bred or grown.
+- name: PID.39
+  type: CWE
+  key: indian
+  desc: Tribal Citizenship
+  table: HL70171
+  coll: true
+IN1:
+- {name: IN1.1, type: SI, key: _seqno, desc: Set ID - IN1, req: true}
+- name: IN1.2
+  type: CE
+  key: ['plan', 'identifier']
+  desc: Insurance Plan ID
+  table: HL70072
+  req: true
+- name: IN1.3
+  type: CX
+  key: ['payor','identifier']
+  desc: Insurance Company ID
+  req: true
+  coll: true
+- name: IN1.4
+  type: XON
+  key: ['payor','name']
+  desc: Insurance Company Name
+  coll: true
+- name: IN1.5
+  type: XAD
+  key: ['payor','address']
+  desc: Insurance Company Address
+  coll: true
+- name: IN1.6
+  type: XPN
+  key: ['payor','contact','name']
+  desc: Insurance Co Contact Person
+  coll: true
+- name: IN1.7
+  type: XTN
+  key: ['payor','contact','telecom']
+  desc: Insurance Co Phone Number
+  coll: true
+- name: IN1.8
+  type: ST
+  key: ['group','id']
+  desc: Group Number
+- name: IN1.9
+  type: XON
+  key: ['group','name']
+  desc: Group Name
+  coll: true
+- name: IN1.10
+  type: CX
+  key: ['group','employee', 'identifier']
+  desc: Insured's Group Emp ID
+  coll: true
+- name: IN1.11
+  type: XON
+  key: ['group','employee', 'name']
+  desc: Insured's Group Emp Name
+  coll: true
+- name: IN1.12
+  type: DT
+  key: ['period','start']
+  desc: Plan Effective Date
+- name: IN1.13
+  type: DT
+  key: ['period','end']
+  desc: Plan Expiration Date
+- name: IN1.14
+  type: AUI
+  key: authorization
+  desc: Authorization Information
+- name: IN1.15
+  type: IS
+  key: ['plan', 'type']
+  desc: Plan Type
+  table: HL70086
+- name: IN1.16
+  type: XPN
+  key: ['beneficiary','name']
+  desc: Name Of Insured
+  coll: true
+- name: IN1.17
+  type: CE
+  key: ['beneficiary', 'relationship']
+  desc: Insured's Relationship To Patient
+  table: HL70063
+- name: IN1.18
+  type: TS
+  key: ['beneficiary', 'birth_date']
+  desc: Insured's Date Of Birth
+- name: IN1.19
+  type: XAD
+  key: ['beneficiary', 'address']
+  desc: Insured's Address
+  coll: true
+- name: IN1.20
+  type: IS
+  key: benifits_assignment
+  key: ['benifits', 'assignment']
+  desc: Assignment Of Benefits
+  table: HL70135
+- name: IN1.21
+  type: IS
+  key: ['benifits', 'coordination']
+  desc: Coordination Of Benefits
+  table: HL70173
+- name: IN1.22
+  type: ST
+  key: ['benifits', 'priority']
+  desc: Coord Of Ben. Priority
+- name: IN1.23
+  type: ID
+  key: ['admission','flag']
+  desc: Notice Of Admission Flag
+  table: HL70136
+- name: IN1.24
+  type: DT
+  key: ['admission','date']
+  desc: Notice Of Admission Date
+- name: IN1.25
+  type: ID
+  key: ['eligibility','flag']
+  desc: Report Of Eligibility Flag
+  table: HL70136
+- name: IN1.26
+  type: DT
+  key: ['eligibility','date']
+  desc: Report Of Eligibility Date
+- name: IN1.27
+  type: IS
+  key: release
+  desc: Release Information Code
+  table: HL70093
+- {name: IN1.28, type: ST, key: pre_admit_cert, desc: Pre-Admit Cert (PAC)}
+- name: IN1.29
+  type: TS
+  key: ['verification','datetime']
+  desc: Verification Date/Time
+- name: IN1.30
+  type: XCN
+  key: ['verification','by']
+  desc: Verification By
+  coll: true
+- {name: IN1.31, type: IS, key: agreement, desc: Type Of Agreement Code, table: HL70098}
+- {name: IN1.32, type: IS, key: billing_status, desc: Billing Status, table: HL70022}
+- {name: IN1.33, type: NM, key: ['lifetime_reserve','days'], desc: Lifetime Reserve Days}
+- {name: IN1.34, type: NM, key: ['lifetime_reserve','delay'], desc: Delay Before L.R. Day}
+- {name: IN1.35, type: IS, key: company_plan, desc: Company Plan Code, table: HL70042}
+- {name: IN1.36, type: ST, key: ['policy', 'identifier'], desc: Policy Number}
+- {name: IN1.37, type: CP, key: ['policy','deductible'], desc: Policy Deductible}
+- {name: IN1.38, type: CP, key: ['policy','limit','amount'], desc: Policy Limit - Amount}
+- {name: IN1.39, type: NM, key: ['policy','limit','days'], desc: Policy Limit - Days}
+- {name: IN1.40, type: CP, key: ['room_rate','semi_private'], desc: Room Rate - Semi-Private}
+- {name: IN1.41, type: CP, key: ['room_rate','private'], desc: Room Rate - Private}
+- {name: IN1.42, type: CE, key: ['beneficiary','employer','status'], desc: Insured's Employment Status, table: HL70066}
+- {name: IN1.43, type: IS, key: ['beneficiary','gender'], desc: Insured's Administrative Sex, table: HL70001}
+- {name: IN1.44, type: XAD, key: ['beneficiary','employer','address'], desc: Insured's Employer's Address, coll: true}
+- {name: IN1.45, type: ST, key: ['verification','status'], desc: Verification Status}
+- {name: IN1.46, type: IS, key: prior_plan, desc: Prior Insurance Plan ID, table: HL70072}
+- {name: IN1.47, type: IS, key: class_type, desc: Coverage Type, table: HL70309}
+- {name: IN1.48, type: IS, key: handicap, desc: Handicap, table: HL70295}
+- {name: IN1.49, type: CX, key: ['beneficiary','subscriber_id'], desc: Insured's ID Number, coll: true}
+- {name: IN1.50, type: IS, key: ['signature','code'], desc: Signature Code, table: HL70535}
+- {name: IN1.51, type: DT, key: ['signature','date'], desc: Signature Code Date}
+- {name: IN1.52, type: ST, key: ['beneficiary','birth_place'], desc: Insured's Birth Place}
+- {name: IN1.53, type: IS, key: vip, desc: VIP Indicator, table: HL70099}
+
+IN2:
+- {name: IN2.1, type: CX, key: employee_id, desc: Insured's Employee ID, coll: true}
+- {name: IN2.2, type: ST, key: ssn, desc: Insured's Social Security Number}
+- {name: IN2.3, type: XCN, key: employer_name, desc: Insured's Employer's Name and ID, coll: true}
+- {name: IN2.4, type: IS, key: employer_info, desc: Employer Information Data, table: HL70139}
+- {name: IN2.5, type: IS, key: mail_claim_party, desc: Mail Claim Party, table: HL70137, coll: true}
+- {name: IN2.6, type: ST, key: medicare_id, desc: Medicare Health Ins Card Number}
+- {name: IN2.7, type: XPN, key: medicaid_case, desc: Medicaid Case Name, coll: true}
+- {name: IN2.8, type: ST, key: medicaid_id, desc: Medicaid Case Number}
+- {name: IN2.9, type: XPN, key: military_sponsor_name, desc: Military Sponsor Name, coll: true}
+- {name: IN2.10, type: ST, key: military_id, desc: Military ID Number}
+- {name: IN2.11, type: CE, key: military_recipient, desc: Dependent Of Military Recipient, table: HL70342}
+- {name: IN2.12, type: ST, key: military_organization, desc: Military Organization}
+- {name: IN2.13, type: ST, key: military_station, desc: Military Station}
+- {name: IN2.14, type: IS, key: military_service, desc: Military Service, table: HL70140}
+- {name: IN2.15, type: IS, key: military_rank_grade, desc: Military Rank/Grade, table: HL70141}
+- {name: IN2.16, type: IS, key: military_status, desc: Military Status, table: HL70142}
+- {name: IN2.17, type: DT, key: military_retire_date, desc: Military Retire Date}
+- {name: IN2.18, type: ID, key: military_cert, desc: Military Non-Avail Cert On File, table: HL70136}
+- {name: IN2.19, type: ID, key: baby_coverage, desc: Baby Coverage, table: HL70136}
+- {name: IN2.20, type: ID, key: baby_bill, desc: Combine Baby Bill, table: HL70136}
+- {name: IN2.21, type: ST, key: blood_deductible, desc: Blood Deductible}
+- {name: IN2.22, type: XPN, key: special_coverage_approval_name, desc: Special Coverage Approval Name, coll: true}
+- {name: IN2.23, type: ST, key: special_coverage_approval_title, desc: Special Coverage Approval Title}
+- {name: IN2.24, type: IS, key: non_covered_insurance, desc: Non-Covered Insurance Code, table: HL70143, coll: true}
+- {name: IN2.25, type: CX, key: payor_id, desc: Payor ID, coll: true}
+- {name: IN2.26, type: CX, key: payor_subscriber_id, desc: Payor Subscriber ID, coll: true}
+- {name: IN2.27, type: IS, key: eligibility_source, desc: Eligibility Source, table: HL70144}
+- {name: IN2.28, type: RMC, key: room_coverage_type_amount, desc: Room Coverage Type/Amount, coll: true}
+- {name: IN2.29, type: PTA, key: policy_type_amount, desc: Policy Type/Amount, coll: true}
+- {name: IN2.30, type: DDI, key: daily_deductible, desc: Daily Deductible}
+- {name: IN2.31, type: IS, key: living_dependency, desc: Living Dependency, table: HL70223}
+- {name: IN2.32, type: IS, key: ambulatory_status, desc: Ambulatory Status, table: HL70009, coll: true}
+- {name: IN2.33, type: CE, key: citizenship, desc: Citizenship, table: HL70171, coll: true}
+- {name: IN2.34, type: CE, key: primary_language, desc: Primary Language, table: HL70296}
+- {name: IN2.35, type: IS, key: living_arrangement, desc: Living Arrangement, table: HL70220}
+- {name: IN2.36, type: CE, key: publicity, desc: Publicity Code, table: HL70215}
+- {name: IN2.37, type: ID, key: protection, desc: Protection Indicator, table: HL70136}
+- {name: IN2.38, type: IS, key: student, desc: Student Indicator, table: HL70231}
+- {name: IN2.39, type: CE, key: religion, desc: Religion, table: HL70006}
+- {name: IN2.40, type: XPN, key: mother_maiden_name, desc: Mother's Maiden Name, coll: true}
+- {name: IN2.41, type: CE, key: nationality, desc: Nationality, table: HL70212}
+- {name: IN2.42, type: CE, key: ethnicity, desc: Ethnic Group, table: HL70189, coll: true}
+- {name: IN2.43, type: CE, key: marital_status, desc: Marital Status, table: HL70002, coll: true}
+- {name: IN2.44, type: DT, key: employment_start_date, desc: Insured's Employment Start Date}
+- {name: IN2.45, type: DT, key: employment_stop_date, desc: Employment Stop Date}
+- {name: IN2.46, type: ST, key: job_title, desc: Job Title}
+- {name: IN2.47, type: JCC, key: job_class, desc: Job Code/Class}
+- {name: IN2.48, type: IS, key: job_status, desc: Job Status, table: HL70311}
+- {name: IN2.49, type: XPN, key: employer_contact_person_name, desc: Employer Contact Person Name, coll: true}
+- {name: IN2.50, type: XTN, key: employer_contact_person_phone, desc: Employer Contact Person Phone Number, coll: true}
+- {name: IN2.51, type: IS, key: employer_contact_reason, desc: Employer Contact Reason, table: HL70222}
+- {name: IN2.52, type: XPN, key: contact_name, desc: Insured's Contact Person's Name, coll: true}
+- {name: IN2.53, type: XTN, key: contact_phone, desc: Insured's Contact Person Phone Number, coll: true}
+- {name: IN2.54, type: IS, key: contact_reason, desc: Insured's Contact Person Reason, table: HL70222, coll: true}
+- {name: IN2.55, type: DT, key: relationship_start_date, desc: Relationship to the Patient Start Date}
+- {name: IN2.56, type: DT, key: relationship_stop_date, desc: Relationship to the Patient Stop Date, coll: true}
+- {name: IN2.57, type: IS, key: insurance_contact_reason, desc: Insurance Co. Contact Reason, table: HL70232}
+- {name: IN2.58, type: XTN, key: insurance_contact_phone, desc: Insurance Co Contact Phone Number}
+- {name: IN2.59, type: IS, key: policy_scope, desc: Policy Scope, table: HL70312}
+- {name: IN2.60, type: IS, key: policy_source, desc: Policy Source, table: HL70313}
+- {name: IN2.61, type: CX, key: patient_member_number, desc: Patient Member Number}
+- {name: IN2.62, type: CE, key: guarantor_relationship, desc: Guarantor's Relationship to Insured, table: HL70063}
+- {name: IN2.63, type: XTN, key: home_phone, desc: Insured's Phone Number - Home, coll: true}
+- {name: IN2.64, type: XTN, key: employer_phone, desc: Insured's Employer Phone Number, coll: true}
+- {name: IN2.65, type: CE, key: military_handicap, desc: Military Handicapped Program, table: HL70343}
+- {name: IN2.66, type: ID, key: suspend, desc: Suspend Flag, table: HL70136}
+- {name: IN2.67, type: ID, key: copay_limit, desc: Copay Limit Flag, table: HL70136}
+- {name: IN2.68, type: ID, key: stoploss_limit, desc: Stoploss Limit Flag, table: HL70136}
+- {name: IN2.69, type: XON, key: organization_name, desc: Insured Organization Name and ID, coll: true}
+- {name: IN2.70, type: XON, key: employer_organization_name, desc: Insured Employer Organization Name and ID, coll: true}
+- {name: IN2.71, type: CE, key: race, desc: Race, table: HL70005, coll: true}
+- {name: IN2.72, type: CE, key: cms_patient_relationship, desc: CMS Patient's Relationship to Insured, table: HL70344}
+
+IN3:
+- {name: IN3.1, type: SI, key: _seqno, desc: Set ID - IN3, req: true}
+- {name: IN3.2, type: CX, key: certification_number, desc: Certification Number}
+- {name: IN3.3, type: XCN, key: certified_by, desc: Certified By, coll: true}
+- {name: IN3.4, type: ID, key: certification_required, desc: Certification Required, table: HL70136}
+- {name: IN3.5, type: MOP, key: penalty, desc: Penalty}
+- {name: IN3.6, type: TS, key: certification_datetime, desc: Certification Date/Time}
+- {name: IN3.7, type: TS, key: certification_modify_datetime, desc: Certification Modify Date/Time}
+- {name: IN3.8, type: XCN, key: operator, desc: Operator, coll: true}
+- {name: IN3.9, type: DT, key: certification_begin_date, desc: Certification Begin Date}
+- {name: IN3.10, type: DT, key: certification_end_date, desc: Certification End Date}
+- {name: IN3.11, type: DTN, key: days, desc: Days}
+- {name: IN3.12, type: CE, key: non_concur_code_description, desc: Non-Concur Code/Description, table: HL70233}
+- {name: IN3.13, type: TS, key: non_concur_effective_datetime, desc: Non-Concur Effective Date/Time}
+- {name: IN3.14, type: XCN, key: physician_reviewer, desc: Physician Reviewer, table: HL70010, coll: true}
+- {name: IN3.15, type: ST, key: certification_contact, desc: Certification Contact}
+- {name: IN3.16, type: XTN, key: certification_contact_phone_number, desc: Certification Contact Phone Number, coll: true}
+- {name: IN3.17, type: CE, key: appeal_reason, desc: Appeal Reason, table: HL70345}
+- {name: IN3.18, type: CE, key: certification_agency, desc: Certification Agency, table: HL70346}
+- {name: IN3.19, type: XTN, key: certification_agency_phone_number, desc: Certification Agency Phone Number, coll: true}
+- {name: IN3.20, type: ICD, key: pre_certification_requirement, desc: Pre-Certification Requirement, coll: true}
+- {name: IN3.21, type: ST, key: case_manager, desc: Case Manager}
+- {name: IN3.22, type: DT, key: second_opinion_date, desc: Second Opinion Date}
+- {name: IN3.23, type: IS, key: second_opinion_status, desc: Second Opinion Status, table: HL70151}
+- {name: IN3.24, type: IS, key: second_opinion_documentation_received, desc: Second Opinion Documentation Received, table: HL70152, coll: true}
+- {name: IN3.25, type: XCN, key: second_opinion_physician, desc: Second Opinion Physician, table: HL70010, coll: true}

@@ -154,11 +154,11 @@ ELD:
 CX:
   desc: Extended Composite ID with Check Digit
   components:
-  - {type: ST, name: CX.1, key: id, desc: ID Number}
+  - {type: ST, name: CX.1, key: value, desc: ID Number}
   - {type: ST, name: CX.2, key: check_digit, desc: Check Digit}
   - {type: ID, name: CX.3, key: check_scheme, desc: Check Digit Scheme}
   - {type: HD, name: CX.4, key: authority, desc: Assigning Authority}
-  - {type: ID, name: CX.5, key: type, desc: Identifier Type Code}
+  - {type: ID, name: CX.5, key: system, desc: Identifier Type Code}
   - {type: HD, name: CX.6, key: facility, desc: Assigning Facility}
   - {type: DT, name: CX.7, key: effective_date, desc: Effective Date}
   - {type: DT, name: CX.8, key: expiration_date, desc: Expiration Date}
@@ -176,7 +176,7 @@ RP:
   - {type: ID, name: RP.4, key: subtype, desc: Subtype}
 DLN:
   components:
-  - {type: ST, name: DLN.1, key: number, desc: License Number}
+  - {type: ST, name: DLN.1, key: value, desc: License Number}
   - {type: IS, name: DLN.2, key: state, desc: 'Issuing State, Province, Country'}
   - {type: DT, name: DLN.3, key: expiration_date, desc: Expiration Date}
 EI:

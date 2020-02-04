@@ -108,8 +108,8 @@
 
 
   (def msg
-    "MSH|^~\\&|app|PTG|Billing System|Billing System|20200203125130352||ORM^O01|4131405852|P|2.3|||AL|AL
-  PID|1||697909||Orange^Apple||19900214|F||^White|401 street^Apt 407^Xargo^CA^98980^USA^^^COUNTY||33333333^^^users@gmail.com|333333333|^English|||||||^No, Not Spanish/Hispanic/Latina||||||||N
+   "MSH|^~\\&|app|PTG|Billing System|Billing System|20200203125130352||ORM^O01|4131405852|P|2.3|||AL|AL
+PID|1||697909||Orange^Apple||19900214|F||^White|401 street^Apt 407^Xargo^CA^98980^USA^^^COUNTY||33333333^^^users@gmail.com|333333333|^English|||||||^No, Not Spanish/Hispanic/Latina||||||||N
 PV1|1|O|PTG^^^PTG||||7218386992^John^Doe|1415710292^John^Doe|||||||||||1090949|||||||||||||||||||||||||202002031200||||||1090949
 IN1|1|||Self Pay||||||||||||Orange^Apple|99|19900214|401 street^Apt 407^Xargo^CA^33770||||||||||||N||||||0||||||F||||C||617302
 ORC|NW|LU344574|||||^^^^^R||20200203123404|155^Ogden^Sasha||456717292^Sarah^Smith
