@@ -1,7 +1,7 @@
 {:paths ["src" "resources"]
  :deps  {circleci/clj-yaml    {:mvn/version "0.6.0"}
          org.clojure/clojure  {:mvn/version "1.10.0"}
-         cheshire             {:mvn/version "5.6.3"}}
+         cheshire/cheshire    {:mvn/version "5.6.3"}}
 
  :aliases
  {:jar
@@ -14,7 +14,7 @@
                "--app-version" "0.1.0-SNAPSHOT"]}
 
   :deploy
-  {:extra-deps {deps-deploy {:mvn/version "RELEASE"}}
+  {:extra-deps {deps-deploy/deps-deploy {:mvn/version "RELEASE"}}
    :main-opts ["-m" "deps-deploy.deps-deploy" "deploy" "target/hl7v2-0.1.0-SNAPSHOT.jar"]}
 
   :nrepl
@@ -26,7 +26,7 @@
 
   :test {:extra-paths ["test"]
          :extra-deps {clj-commons/clj-yaml {:mvn/version "0.7.0"}
-                      zprint               {:mvn/version "0.4.16"}
+                      zprint/zprint        {:mvn/version "0.4.16"}
                       healthsamurai/matcho {:mvn/version "0.3.3"}}}
 
   :runner
